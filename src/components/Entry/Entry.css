@@ -1,0 +1,13 @@
+.entry-container
+{
+    background-image: url('../../assets/textures/cardboard.png');
+    overflow: hidden;
+    border: 2px solid black;
+    margin-top: 8px;
+}
+    .entry-title
+    {
+        text-align: center;
+    }
+    
+        

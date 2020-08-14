@@ -1,0 +1,56 @@
+[
+    {
+        "title": "WCSU Kathwari Honors Program",
+        "content":
+        [
+            {
+                "brief":"The Kathwari Honors Progam at WCSU was founded to foster and nurture academic and civic excellence among outstanding students in all four WCSU schools. The Program consists of highly interactive and interdisciplinary classes and is built on the fundamental assumption that acknowledge is an open set of questions and ideas to be explored, rather than a closed set of facts to be memorized.",
+                "media": "https://rocportfolio.s3.amazonaws.com/khs/khpLogo.jpg",
+                "type": false
+            },
+            {
+                "brief":"Me graduating from the Kathwari Honors Program.",
+                "media": "https://rocportfolio.s3.amazonaws.com/khs/gradB.jpg",
+                "type": false
+            },
+            {
+                "brief":"We (Honors Students) come together to volunteer around the community.",
+                "media": "https://rocportfolio.s3.amazonaws.com/khs/khp_dayOfServiceA.png",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "website",
+                "source": "https://www.wcsu.edu/honors/",
+                "type": "web"
+            }
+        ]
+    },
+    {
+        "title": "WCSU COMPUTER SOCIETY FALL 2019 - SPRING 2020",
+        "content":
+        [
+            {
+                "brief":"The WCSU Computer Society works on creating programs that exposes students to various technologies and programming. As the Vice President, I work along side the other Executive Members of the club to bring engaging technological related programs for Computer Science majors and non-majors alike.",
+                "media": "https://rocportfolio.s3.amazonaws.com/compsoc/compSocLogo.png",
+                "type": false
+            },
+            {
+                "brief":"The EBoard members of the club. From left to right we have, Elly (President), Me (Vice-President), Mat (Secretary).",
+                "media": "https://rocportfolio.s3.amazonaws.com/compsoc/eboardMembers.jpg",
+                "type": false
+            },
+            {
+                "brief":"Tech Trivia is a program where all WCSU students are able to test their knowledge of computer science related materials.",
+                "media": "https://rocportfolio.s3.amazonaws.com/compsoc/techtrivia.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            
+        ]
+    }
+]

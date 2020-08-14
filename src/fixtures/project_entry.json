@@ -1,0 +1,246 @@
+[
+    {
+        "title": "WCSU RA Colonial Carnival",
+        "content":
+        [
+            {
+                "brief":"Colonial Carnival is a responsive web application for residential students at Western Connecticut State University (WCSU). By logging into Colonial Carnival students are able to play various games such as a trivia game about WCSU to earn marbles (points).The students are then able to exchange their marbles for prizes. By working with faculty, staff, and other students at WCSU, I was able to effectively maintain Colonial Carnival throughout the Spring 2020 semester.",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/homepage.jpg",
+                "type": false
+            },
+            {
+                "brief": "Colonial Carnival was awarded 'Program of the Year' award.",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg",
+                "type": false
+            },
+            {
+                "brief":"If you are not a WCSU student, use the following information: Student ID: 50212345, Student Name: Guest",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg",
+                "type": false
+            },
+            {
+                "brief": "Student's are able to play a game of rock paper scissors with Colonial Chuck.",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/rps.jpg",
+                "type": false
+            },
+            {
+                "brief": "Students were able to test their knowldege of WCSU.",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg",
+                "type": false
+            },
+            {
+                "brief": "A game where students are able to test their memory.",
+                "media": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "Github",
+                "source": "https://github.com/rocstory/colonialcarnival",
+                "type": "github"
+            },
+
+            {
+                "name": "website",
+                "source": "https://rocstory.github.io/colonialcarnival/",
+                "type": "web"
+            }
+        ],
+        "technologies":
+        [
+            {
+                "icon": ["fab","css3-alt"],
+                "name": "CSS",
+                "colortheme": "#0fbaf2"
+            },
+            {
+                "icon": ["fab","html5"],
+                "name": "HTML",
+                "colortheme": "#FA4C05"
+            },
+            {
+                "icon": ["fab","js-square"],
+                "name": "JavaScript",
+                "colortheme": "#FFCB2B"
+            },
+            {
+                "icon": ["fas","fire"],
+                "name": "Firebase",
+                "colortheme": "#F6820D"
+            }
+        ]
+    },
+    {
+        "title": "GITRG MOCAP 2018-2019",
+        "content":
+        [
+            {
+                "brief":"The goal of this project was to design a cost-effective motion capture system using various components and custom designed software. The project uses a Raspberry Pi 3 and it's software is written in Python.",
+                "media": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/mocap_fritzing.jpg",
+                "type": false
+            },
+
+            {
+                "brief":"A work in progress design of the motion capture camera.",
+                "media": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/model.jpg",
+                "type": false
+            },
+            {
+                "brief":"A running example of the motion capture system.",
+                "media": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/example.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "github",
+                "source": "https://github.com/ChrisIossa/RPi_MoCap",
+                "type": "github"
+            },
+
+            {
+                "name": "GITRG Webpage",
+                "source": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+                "type": "web"
+            }
+        ],
+        "technologies":
+        [
+            {
+                "icon": ["fab","python"],
+                "name": "Python",
+                "colortheme": "#306998"
+            },
+            {
+                "icon": ["fab","raspberry-pi"],
+                "name": "Raspb. Pi 3 ",
+                "colortheme": "#bc1142"
+            },
+            {
+                "icon": ["fas","bolt"],
+                "name": "Fritzing",
+                "colortheme": "#bc1142"
+            },
+            {
+                "icon": ["far","file-code"],
+                "name": "OpenSCAD",
+                "colortheme": "black"
+            }
+        ]
+    },
+    {
+        "title": "GITRG 3D Crayon 2019-2020",
+        "content":
+        [
+            {
+                "brief":"An open source intelligent toy product that allows an individual to draw in a 3D space. This project is in the design phase as of 3/26/20.",
+                "media": "https://rocportfolio.s3.amazonaws.com/3dc_design.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "github",
+                "source": "https://github.com/ChrisIossa/RPi_MoCap",
+                "type": "github"
+            },
+
+            {
+                "name": "GITRG Webpage",
+                "source": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+                "type": "web"
+            }
+        ],
+        "technologies":
+        [
+            {
+                "icon": ["fab","raspberry-pi"],
+                "name": "Raspb. Pi 3 ",
+                "colortheme": "#bc1142"
+            }
+        ]
+    },
+    {
+        "title": "Revealing Roc",
+        "content":
+        [
+            {
+                "brief":"Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock.",
+                "media": "https://rocportfolio.s3.amazonaws.com/revealingroc/revroc_1.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "github",
+                "source": "https://github.com/rocstory/Arduino_RevRoc",
+                "type": "github"
+            }
+        ],
+        "technologies":
+        [
+            {
+                "icon": ["fas","robot"],
+                "name": "Arduino",
+                "colortheme": "#03C0C1"
+            },
+            {
+                "icon": ["fab","cuttlefish"],
+                "name": "C++",
+                "colortheme": "#0047AB"
+            },
+            {
+                "icon": ["fas","bolt"],
+                "name": "Fritzing",
+                "colortheme": "#bc1142"
+            }
+        ]
+    },
+    {
+        "title": "Chev's Escape",
+        "content":
+        [
+            {
+                "brief":"A team based Object Oriented Software Engineering project consisting of five computer science students. Chev's Escape is a single player desktop video game that requires the player to solve four puzzles in order to complete the game. Chev's Escape was assigned to be built without the use of a pre-existing game engine.",
+                "media": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg",
+                "type": false
+            },
+            {
+                "brief":null,
+                "media": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgB.jpg",
+                "type": false
+            }
+        ],
+        "reflinks":
+        [
+            {
+                "name": "github",
+                "source": "https://github.com/rocstory/Arduino_RevRoc",
+                "type": "github"
+            },
+            {
+                "name": "Presentation",
+                "source": "https://docs.google.com/presentation/d/1BBw36gCLBTIBkX_0IM62iNXShmKSzoE8ad-8_UkaoEs/edit?usp=sharing",
+                "type": "web"
+            }
+        ],
+        "technologies":
+        [
+            {
+                "icon": ["fab", "cuttlefish"],
+                "name": "C#",
+                "colortheme": "#0047AB"
+            },
+            {
+                "icon": ["fas","bolt"],
+                "name": "Fritzing",
+                "colortheme": "#bc1142"
+            }
+        ]
+    }
+]

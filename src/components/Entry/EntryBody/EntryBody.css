@@ -1,0 +1,58 @@
+.entry-body
+{
+    
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+}
+    .entry-body > *
+    {
+        margin: auto;
+    }
+    .entry-media
+    {
+        display: inline-block;
+        width: 20em;
+        height: 20em;
+        vertical-align: middle;
+    }
+        .entry-media > *
+        {
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+        }
+        .entry-video
+        {
+            
+            width: 100%;
+            height: 19.4em;
+        }
+
+    .entry-description
+    {
+        display: inline-block;
+        width: 60%;
+        margin: auto auto auto 1em;
+    }
+        .entry-summary
+        {
+            height: 8em;
+            overflow-y: scroll;
+            text-align: left;
+            margin-bottom: 4px;
+            background-color: whitesmoke;
+
+        }
+        .technologies-container
+        {
+            
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+            column-gap: 8px;
+            row-gap: 8px;
+        }

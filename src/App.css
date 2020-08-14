@@ -1,0 +1,14 @@
+.entry-display
+{
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.footer
+{
+    background-color: #33383e;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 8px;
+}

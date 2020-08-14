@@ -1,0 +1,37 @@
+
+/* Contact Links */
+
+.contact-container
+{
+    display: flex;
+    margin-top: 1em;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    #resume-btn
+    {
+        border: 2px solid black;
+        border-radius: 6%;
+        width: 8em;
+        height: 4em;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+        #resume-btn:hover
+        {
+            background-color: #ffc125;
+            cursor: pointer;
+        }
+
+.social-media-container
+{
+    margin-left: 2em;
+    
+    width: 20em;
+
+    display: flex;
+    justify-content: space-evenly;
+}
