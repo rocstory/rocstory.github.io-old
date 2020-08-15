@@ -21,9 +21,9 @@ This portfolio was intended to be a project within itself. The intentions is to 
 - Developing my portfolio over time has been a great experience. As I learn new technologies and participate in activities I am able to reflect on the portfolio to improve it's quality.
 
 ## Versions
-- [Version 3.0](#version-30---react-library)
-- [Version 2.0](#version-20---angular-framework)
-- [Version 1.0](#version-10---vanilla-javascript)
+- [Version 3.0 - React Library & Firebase](#version-30---react-library) 
+- [Version 2.0 - Angular Framework](#version-20---angular-framework)
+- [Version 1.0 - Vanilla JavaScript](#version-10---vanilla-javascript)
 
 
 ### Version 3.0 - React Library
