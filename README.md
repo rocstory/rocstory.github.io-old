@@ -27,8 +27,8 @@ After my recent project, Paw Bytes, I thought it would be a great idea to rebuil
 <img src="./screenshots/v3map.jpg" width="500" height="500">
 
 ### Screenshots
-<img src="./screenshots/v3/v3_laptopview.jpg" width="500" height="500">
-<img src="./screenshots/v3/v3_laptopview2.jpg" width="500" height="500">
+<img src="./screenshots/v3/v3_laptopview.jpg" width="600" height="500">
+<img src="./screenshots/v3/v3_laptopview2.jpg" width="600" height="500">
 
 ### Version 2.0 - Angular Framework
 After understaning HTML, CSS, JavaScript, and JSON I decided to take the next step into learning web development by rebuilding the portfolio using Angular Framework and JSON data file.
@@ -36,8 +36,8 @@ After understaning HTML, CSS, JavaScript, and JSON I decided to take the next st
 <img src="./screenshots/v2map.jpg" width="500" height="500">
 
 #### Screenshots
-<img src="./screenshots/v2/topview.jpg" width="500" height="500">
-<img src="./screenshots/v2/topview2.jpg" width="500" height="500">
+<img src="./screenshots/v2/topview.jpg" width="600" height="500">
+<img src="./screenshots/v2/topview2.jpg" width="600" height="500">
 
 ### Version 1.0 - Vanilla JavaScript
 This portfolio was initially designed by using vanilla JavaScript. This project was my introduction to web development.
@@ -45,4 +45,4 @@ This portfolio was initially designed by using vanilla JavaScript. This project 
 <img src="./screenshots/v1map.jpg" width="500" height="500">
 
 #### Screenshots
-<img src="./screenshots/v1/v1_laptopview2.jpg" width="500" height="500">
+<img src="./screenshots/v1/v1_laptopview2.jpg" width="600" height="500">
