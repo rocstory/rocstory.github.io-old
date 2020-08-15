@@ -13,14 +13,14 @@ class Nav extends React.Component
                     onClick={()=>{this.props.setEntry(false)}}
                     style={prjButtonBg}
                     className="clickable">
-                        Projects
+                        <p>Projects</p>
                 </button>
 
                 <button
                     onClick={()=>{this.props.setEntry(true)}}
                     className="clickable activities-btn"
                     style={actButtonBg}>
-                        Activities
+                        <p>Activities</p>
                 </button>
             </div>
         )

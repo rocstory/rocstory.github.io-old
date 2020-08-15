@@ -1,5 +1,5 @@
 import React from 'react';
-import icon from "../../../assets/rsicon_full.png";
+import icon from "../../../assets/profpic.jpg";
 import "./HeaderBody.css";
 
 function HeaderBody(props)

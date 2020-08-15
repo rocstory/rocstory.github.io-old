@@ -28,12 +28,12 @@ class App extends React.Component
     let project_entry = null; //projects.map((project) => <Entry key={project.title} entry={project} /> );
     let activity_entry = null //activities.map((activity) => <Entry key={activity.title} entry={activity} />);
     
-    await db.collection('projects').get().then( querySnapshot =>{
+    await db.collection('projects').orderBy("index", "desc").get().then( querySnapshot =>{
       const data = querySnapshot.docs.map(doc => doc.data());
       project_entry = data.map((entry) => <Entry key={entry.title} entry={entry} /> );
     });
 
-    await db.collection('activities').get().then( querySnapshot =>{
+    await db.collection('activities').orderBy("index", "desc").get().then( querySnapshot =>{
       const data = querySnapshot.docs.map(doc => doc.data());
       activity_entry = data.map((entry) => <Entry key={entry.title} entry={entry} /> );
     });

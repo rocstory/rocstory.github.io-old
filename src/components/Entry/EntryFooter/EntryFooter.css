@@ -12,6 +12,7 @@
     }
         .entry-button-container > button 
         {
+            background-color: whitesmoke;
             border: 2px solid black;
             width: 6.0em;
             height: 5.0em;

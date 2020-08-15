@@ -3,6 +3,7 @@ a{
 }
 .ref-container
 {
+    background-color: whitesmoke;
     border: 2px solid black;
     border-radius: 6%;
     width: 10em;

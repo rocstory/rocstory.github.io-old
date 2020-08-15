@@ -13,6 +13,10 @@
         font-weight: bold;
         padding: 0;
     }
+        .tab-container > button > p
+        {
+            font-size: 1.5em;
+        }
     .activities-btn
     {
         margin-left: 2em;
