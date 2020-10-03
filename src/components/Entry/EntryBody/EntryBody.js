@@ -3,56 +3,42 @@ import "./EntryBody.css";
 import ReactPlayer from "react-player";
 import Tech from '../Tech/Tech';
 
-class EntryBody extends React.Component
+function EntryBody(props)
 {
-    generateMediaSource = (media) =>
+    function generateMedia(media)
     {
-        let mediaDisplay = null;
-
-        if (media.type)
-        {
-            mediaDisplay = <ReactPlayer url="https://www.youtube.com/watch?v=ue-jihqNRFs" />
-        }
-        else
-        {
-            mediaDisplay =  <img className="entry-img" src={media.media} alt="media"/>
-        }
-
         return (
-            mediaDisplay
-        )
-    };
-
-    generateTechnologies = (techList) =>
-    {
-        const Techs = techList.map((tech) => <Tech key={tech.name} data={tech} /> )   
-        return Techs;
+            media.type ? <ReactPlayer url="https://www.youtube.com/watch?v=ue-jihqNRFs" /> 
+            : <img className="entry-img" src={media.media} alt="media"/> )
     }
+    const {posts,currIndex} = props;
+    const {brief} = posts[currIndex]
 
-    render()
-    {
-        return (
-            <div className="entry-body">
-                <div className="entry-media">
-                    {
-                        this.generateMediaSource(this.props.posts[this.props.currIndex])
-                    }
+    return (
+        <div className="entry-body">
+            <div className="entry-media">
+                {
+                    generateMedia(posts[currIndex])
+                }
+            </div>
+
+            <div className="entry-description">
+                <div className="entry-summary">
+                    {brief}
                 </div>
-
-                <div className="entry-description">
-                    <div className="entry-summary">
-                        {this.props.posts[this.props.currIndex].brief}
-                    </div>
+                {
+                    props.technologies ?
                     <div className="technologies-container">
                         {
-                            this.props.technologies ? 
-                            this.generateTechnologies(this.props.technologies) : null
+                            //console.log(`Techs in:`, props.technologies)
+                            props.technologies.map((tech) => <Tech key={tech} name={tech}/>) 
+                            //<i>Techs exists</i>
                         }
-                    </div>
-                </div>
+                    </div> : null
+                }
             </div>
-        )
-    }
-};
+        </div>
+    )
+}
 
 export default EntryBody;

@@ -1,82 +1,47 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Entry.css";
-import ReferenceLink from './ReferenceLink/ReferenceLink';
 import EntryBody from './EntryBody/EntryBody';
 import EntryFooter from './EntryFooter/EntryFooter';
 
-
-
-class Entry extends React.Component
+function Entry(props)
 {
-    constructor()
-    {
-        super();
+    const [postIndex, setPostIndex] = useState(0); 
 
-        this.state =
+    const {content, reflinks, title, technologies} = props.entry
+
+    function updatePostIndex(value){
+        let nextIndex = postIndex + value;
+        if (nextIndex > content.length - 1)
         {
-            posts: null,
-            postIndex: 0,
-            reflinks: null,
+            nextIndex = 0;
         }
-    }
-
-    updatePostIndex = (value) =>
-    {
-        this.setState((prevState) => {
-            let nextIndex = prevState.postIndex + value;
-            if (nextIndex > this.state.posts.length - 1)
-            {
-                nextIndex = 0;
-            }
-            else if (nextIndex < 0)
-            {
-                nextIndex = this.state.posts.length - 1;
-            }
-            return {postIndex: nextIndex}
-        });
-    }
-
-    componentDidMount()
-    {
-
-        const posts = this.props.entry.content;
-
-        const refs = this.props.entry.reflinks.map(
-            (link) => {
-                return <ReferenceLink key={link.source} link={link} />
-            }
-        )
-        this.setState((prevState) => { return {posts: posts, reflinks: refs}});
-
-    }
-
-    render()
-    {
-        let isScrollable = false;
-        if (this.state.posts)
+        else if (nextIndex < 0)
         {
-            isScrollable = this.state.posts.length > 1 ? true : false;
+            nextIndex = content.length - 1;
         }
-        return (
-            <div className="entry-container">
-                <h1 className="entry-title">{this.props.entry.title}</h1>
+        setPostIndex(nextIndex);
+    }
 
-                { this.state.posts ?
-                    <EntryBody 
-                        posts={this.state.posts} 
-                        currIndex={this.state.postIndex} 
-                        technologies={this.props.entry.technologies}
-                    />
-                    : null
-                }
-                <EntryFooter 
-                    isScrollable={isScrollable}  
-                    reflinks={this.state.reflinks}
-                    updatePostIndex={this.updatePostIndex}/>
-            </div>
-        )
-    };
+    let isScrollable = (content.length > 1)
+    return (
+        <div className="entry-container">
+            <h1 className="entry-title">{title}</h1>
+
+            { content ?
+                <EntryBody 
+                    posts={content} 
+                    currIndex={postIndex} 
+                    technologies={technologies}
+                />
+                : null
+            }
+            <EntryFooter 
+                isScrollable={isScrollable}  
+                reflinks={reflinks}
+                updatePostIndex={updatePostIndex}/>
+        </div>
+    )
+    
 }
-
 
 export default Entry;

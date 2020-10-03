@@ -1,9 +1,23 @@
-import React from 'react';
+import React , {useEffect, useState} from 'react';
+import {db} from '../../../firebase';
+
 import icon from "../../../assets/profpic.jpg";
 import "./HeaderBody.css";
 
 function HeaderBody(props)
 {
+    const [description, setDescription] = useState('')
+
+    useEffect(()=>{
+        db.collection('introduction').get()
+        .then(querySnapshot => {
+            const data = querySnapshot.docs.map(doc => doc.data());
+            let descrData = data[0];
+            setDescription(descrData.description);
+        });
+    }, [])
+
+
     let nameStyle =
     {
         color: "#ffc125",
@@ -22,9 +36,7 @@ function HeaderBody(props)
                 <h3 style={{textAlign: "center", margin: 0}}>(muh-leek rock)</h3>
 
                 <div className="header-descr">
-                    Hi! Thank you for taking the time to view my portfolio! 
-                    I am a software engineer looking for full time employment at 
-                    a team oriented and inclusive company.
+                    {`${description}`}
                 </div>
 
             </div>

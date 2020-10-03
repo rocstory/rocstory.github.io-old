@@ -1,25 +1,26 @@
 import React from 'react';
 import "./EntryFooter.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import ReferenceLink from "./ReferenceLink/ReferenceLink";
 
 function EntryFooter(props)
 {
+    const {isScrollable, updatePostIndex, reflinks} = props
     return (
         <div className="entry-footer">
                 {
-                    props.isScrollable ? 
+                    isScrollable ? 
                     <div className="entry-button-container">
                         <button
                             className="entry-button-left clickable"
-                            onClick={()=> props.updatePostIndex(-1)}
+                            onClick={()=> updatePostIndex(-1)}
                         >
                             <FontAwesomeIcon icon={['fas','caret-left']}/>
                         </button>
 
                         <button
                             className="clickable"
-                            onClick={()=> props.updatePostIndex(1)}
+                            onClick={()=> updatePostIndex(1)}
                         >
                             <FontAwesomeIcon icon={['fas','caret-right']}/>
                         </button>
@@ -28,15 +29,14 @@ function EntryFooter(props)
                     null
                 }
                 {
-                    props.reflinks ?
+                    reflinks ?
                     <div className="reference-link-container">
                         {
-                            props.reflinks ? props.reflinks : null 
+                            reflinks.map(link => <ReferenceLink key={link.source} link={link} />)
                         }
                     </div>
                     :
                     null
-
                 }
         </div>
     )

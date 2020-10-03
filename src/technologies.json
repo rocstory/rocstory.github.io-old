@@ -1,0 +1,122 @@
+[
+    {
+        "name": "react",
+        "color": "#61DBFB",
+        "type": "fab",
+        "icon": "react"
+    },
+    {
+        "name": "c#",
+        "color": "#0047AB",
+        "type": "fab",
+        "icon": "cuttlefish"
+    },
+    {
+        "name": "fritzing",
+        "type": "fas",
+        "color": "#bc1142",
+        "icon": "bolt"
+    },
+    {
+        "name": "CSS",
+        "color": "#0fbaf2",
+        "type": "fab",
+        "icon": "css3-alt"
+    },
+    {
+        "name": "HTML",
+        "color": "#FA4C05",
+        "type": "fab",
+        "icon": "html5"
+    },
+    {
+        "name": "firebase",
+        "color": "#F6820D",
+        "type": "fas",
+        "icon": "fire"
+    },
+    {
+        "name": "javaScript",
+        "color": "#FFCB2B",
+        "type": "fab",
+        "icon": "js-square"
+    },
+    {
+        "name": "python",
+        "color": "#306998",
+        "type": "fab",
+        "icon": "python"
+    },
+    {
+        "name": "raspb pi",
+        "color": "#bc1142",
+        "type": "fab",
+        "icon": "raspberry-pi"
+    },
+    {
+        "name": "openSCAD",
+        "color": "black",
+        "type": "far",
+        "icon": "file-code"
+    },
+    {
+        "name": "mongoDB",
+        "color": "#4DB33D",
+        "type": "fas",
+        "icon": "database"
+    },
+    {
+        "name": "twitter",
+        "color": "#1DA1F2",
+        "type": "fab",
+        "icon": "twitter"
+    },
+    {
+        "name": "c++",
+        "color": "#0047AB",
+        "type": "fab",
+        "icon": "cuttlefish"
+    },
+    {
+        "name": "postgresql",
+        "color": "#0064a5",
+        "type": "fas",
+        "icon": "database"
+    },
+    {
+        "name": "arduino",
+        "color": "#03C0C1",
+        "type": "fas",
+        "icon": "robot"
+    },
+    {
+        "name": "instagram",
+        "color": "#E1306C",
+        "type": "fab",
+        "icon": "instagram"
+    },
+    {
+        "name": "facebook",
+        "color": "#4267B2",
+        "type": "fab",
+        "icon": "facebook"
+    },
+    {
+        "name": "youtube",
+        "color": "#ff0000",
+        "type": "fab",
+        "icon": "youtube"
+    },
+    {
+        "name": "linkedin",
+        "color": "#007bb5",
+        "type": "fab",
+        "icon": "linkedin"
+    },
+    {
+        "name": "github",
+        "color": "#6cc644",
+        "type": "fab",
+        "icon": "github"
+    }
+]
