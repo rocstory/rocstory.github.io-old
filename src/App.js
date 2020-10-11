@@ -3,6 +3,8 @@ import './App.css';
 import Header from './components/Header/Header';
 import Entry from './components/Entry/Entry';
 import {db} from './firebase';
+import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
+
 
 function App(props)
 {
@@ -39,11 +41,12 @@ function App(props)
 
   return (
     <div className="App">
-        <Header setEntry={setEntry} entryDisplay={entryDisplay}/>
+        {/* <Header setEntry={setEntry} entryDisplay={entryDisplay}/> */}
+        <ToggleSwitch name={"entries"}/>
         
-        <div className="entry-display">
+        {/* <div className="entry-display">
           {entryDisplay ? activities : projects}
-        </div>
+        </div> */}
 
         <div className="footer">
           <p>Always be kind. </p>

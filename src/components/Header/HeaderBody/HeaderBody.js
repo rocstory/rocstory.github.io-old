@@ -1,4 +1,4 @@
-import React , {useEffect, useState} from 'react';
+    import React , {useEffect, useState} from 'react';
 import {db} from '../../../firebase';
 
 import icon from "../../../assets/profpic.jpg";
@@ -20,13 +20,14 @@ function HeaderBody(props)
 
     let nameStyle =
     {
-        color: "#ffc125",
+        color: "black",//"#ffc125",
         textAlign: "center",
         margin: 0,
     }
 
     return (
-        <div className={"header-body-container"} >
+        <div className="header-body-container">
+
             <div className="imgContainer-circle profile-img">
                 <img src={icon} alt="profile"/>
             </div>
@@ -38,7 +39,6 @@ function HeaderBody(props)
                 <div className="header-descr">
                     {`${description}`}
                 </div>
-
             </div>
         </div>
     )

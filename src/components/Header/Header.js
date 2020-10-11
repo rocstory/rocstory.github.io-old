@@ -5,7 +5,7 @@ import {db} from '../../firebase';
 
 import HeaderBody from "./HeaderBody/HeaderBody";
 import ContactLinks from "./ContactLinks/ContactLinks";
-import Nav from "./Nav/Nav";
+// import Nav from "./Nav/Nav";
 
 function Header(props)
 {
@@ -25,7 +25,6 @@ function Header(props)
         <div className="header">
             <HeaderBody/>
             <ContactLinks socialButtons={socialButtons}/>
-            <div className="header-nav-container"> <Nav setEntry={props.setEntry} entryDisplay={props.entryDisplay}/> </div>
         </div>
     )
 }
