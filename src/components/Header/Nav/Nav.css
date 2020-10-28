@@ -1,0 +1,62 @@
+.nav
+{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 14rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .entry-toggle-container
+    {
+        /* border: 2px solid blue; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 2rem;
+        height: 5rem;
+    }
+        .entry-toggle-container > span
+        {
+            font-size: 2.2em;
+            transition: color ease-in 0.2s;
+            margin-top: 10px;
+            font-family: "Staatliches";
+        }
+    
+    .active
+    {
+        color: white;
+        text-shadow: 0 0 5px white;
+        animation: glow 3s ease-in;
+
+    }
+
+    .inactive
+    {
+        color: black;
+        text-shadow: 0 0 2px black;
+
+    }
+
+    @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px black;
+        }
+        to {
+            text-shadow: 0 0 10px white; 
+        }
+    }
+
+
+    /* mobile small */
+
+    @media only screen and (max-width: 320px) {
+        /* For desktop: */
+        .nav
+        {
+            
+        }
+      }

@@ -1,7 +1,7 @@
 .header
 {
-    background-color: white;
-    border: 2px solid red;
+    background-color: #33383e;
+    /* border: 2px solid red; */
     width: 100%;
     display: flex;
     flex-direction: "column";

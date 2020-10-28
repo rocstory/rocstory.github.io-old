@@ -20,7 +20,7 @@ function HeaderBody(props)
 
     let nameStyle =
     {
-        color: "black",//"#ffc125",
+        color: "#ffc125",
         textAlign: "center",
         margin: 0,
     }
@@ -34,7 +34,7 @@ function HeaderBody(props)
 
             <div className="header-body-summary">
                 <h1 style={nameStyle}>Malik Roc</h1>
-                <h3 style={{textAlign: "center", margin: 0}}>(muh-leek rock)</h3>
+                <h3 className="pronunciation" style={{textAlign: "center", margin: 0}}>(muh-leek rock)</h3>
 
                 <div className="header-descr">
                     {`${description}`}
