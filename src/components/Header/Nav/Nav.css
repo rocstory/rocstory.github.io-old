@@ -1,9 +1,7 @@
 .nav
 {
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: row;
-    justify-content: center;
     column-gap: 14rem;
     margin: auto;
     overflow: hidden;
@@ -11,19 +9,23 @@
 
     .entry-toggle-container
     {
-        /* border: 2px solid blue; */
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        column-gap: 2rem;
+        column-gap: 0.4rem; /* Media */
         height: 5rem;
     }
+        .switch-label
+        {
+            margin: auto;
+        }
         .entry-toggle-container > span
         {
             font-size: 2.2em;
             transition: color ease-in 0.2s;
             margin-top: 10px;
             font-family: "Staatliches";
+            text-align: center;
+            padding-top: 6px;
         }
     
     .active
@@ -37,7 +39,7 @@
     .inactive
     {
         color: black;
-        text-shadow: 0 0 2px black;
+        text-shadow: 0 0 2px white;
 
     }
 
@@ -55,8 +57,17 @@
 
     @media only screen and (max-width: 320px) {
         /* For desktop: */
-        .nav
+        .entry-toggle-container
         {
-            
+            display: flex;
+            flex-direction: row;
+            column-gap: 0.4rem; /* Media */
+            height: 5rem;
         }
-      }
+
+        .entry-toggle-container > span
+        {
+            font-size: 1.8em;
+            padding-top: 10px;
+        }
+    }

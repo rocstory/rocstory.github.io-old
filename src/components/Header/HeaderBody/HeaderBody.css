@@ -1,16 +1,18 @@
 .header-body-container
 {
-    /* border: 2px solid red; */
     color: black;
     width: 100%;
+
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
     margin-top: 20px; 
 }
     .profile-img
     {
+        
         border: 2px solid white;
         width: 13em;
         height: 13em;
@@ -23,7 +25,6 @@
     .header-body-summary
     {
         margin-left: 0px;
-        /* border: 2px solid blue; */
         overflow: hidden;
     }
         .header-descr
@@ -37,5 +38,26 @@
         .pronunciation
         {
             color: white;
-            /* #727272 */
         }
+
+@media only screen and (max-width: 2560px) 
+{
+    .header-body-summary
+    {
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 1440px) 
+{
+    .header-body-summary
+    {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) 
+{
+    .header-body-summary
+    {
+        width: 90%;
+    }
+}

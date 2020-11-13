@@ -11,7 +11,7 @@ import Nav from "./Nav/Nav";
 function Header(props)
 {
     const [socialButtons, setSocialButtons] = useState(null);
-    const {selected, setEntry, handleChange} = props
+    const {selected, handleChange} = props
 
     useEffect(()=>{
         db.collection('contactLinks').get()
