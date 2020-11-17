@@ -3,26 +3,15 @@ import './App.css';
 import Header from './components/Header/Header';
 import Entry from './components/Entry/Entry';
 import {db} from './firebase';
-import {useSpring, animated} from 'react-spring';
 
-//import ToggleSwitch from "./components/ToggleSwitch/ToggleSwitch";
-//import Nav from './components/Nav/Nav';
+import Bounce from 'react-reveal/Bounce'; 
 
 function App(props)
 {
-  //const [entryDisplay, setEntryDisplay] = useState(false);
   const [projects, setProjects] = useState(null);
   const [activities, setActivities] = useState(null);
-
   const [selected, setSelected] = useState(false);
 
-  const propsx = useSpring({opacity: 1, from: {opacity: 0}})
-
-
-  // function setEntry(value)
-  // {
-  //   //setEntryDisplay(value);
-  // }
 
   useEffect(()=>{
     async function getEntries()
@@ -51,23 +40,19 @@ function App(props)
     setSelected(prev => !prev)
   }
 
-
   return (
     <div className="App">
         <Header selected={selected} handleChange={handleSelectedEntry}/>
-
-        {/* <Nav selected={selected} handleChange={handleSelectedEntry}/> */}
         {
-          (activities && projects ) ?  
+          (activities && projects ) ?
+
             <div className="entry-display">
-              <animated.div style={propsx} >
                 {
                   selected ?
                     activities.map((entry) => <Entry key={entry.title} entry={entry} />)
                     :
                     projects.map((entry) => <Entry key={entry.title} entry={entry} />)
                 }
-              </animated.div>
             </div>
           : null
         }
@@ -76,7 +61,7 @@ function App(props)
           <p>Always be honest.</p>
           <p>Always be consistent.</p>
         </div>
-      </div>
+    </div>
   )
 }
 

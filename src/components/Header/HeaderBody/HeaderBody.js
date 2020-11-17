@@ -3,6 +3,7 @@ import {db} from '../../../firebase';
 
 import icon from "../../../assets/profpic.jpg";
 import "./HeaderBody.css";
+import Flip from 'react-reveal/Flip';
 
 function HeaderBody(props)
 {
@@ -27,10 +28,12 @@ function HeaderBody(props)
 
     return (
         <div className="header-body-container">
-
-            <div className="imgContainer-circle profile-img">
-                <img src={icon} alt="profile"/>
-            </div>
+            <Flip top>
+                <div className="imgContainer-circle profile-img">
+                    <img src={icon} alt="profile"/>
+                </div>
+            </Flip>
+            
 
             <div className="header-body-summary">
                 <h1 style={nameStyle}>Malik Roc</h1>

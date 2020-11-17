@@ -3,6 +3,8 @@ import "./Entry.css";
 import EntryBody from './EntryBody/EntryBody';
 import EntryFooter from './EntryFooter/EntryFooter';
 
+import Bounce from 'react-reveal/Bounce'; 
+
 function Entry(props)
 {
     const [postIndex, setPostIndex] = useState(0); 
@@ -24,22 +26,24 @@ function Entry(props)
 
     let isScrollable = (content.length > 1)
     return (
-        <div className="entry-container">
-            <h1 className="entry-title">{title}</h1>
+        <Bounce top>
+            <div className="entry-container">
+                <h1 className="entry-title">{title}</h1>
 
-            { content ?
-                <EntryBody 
-                    posts={content} 
-                    currIndex={postIndex} 
-                    technologies={technologies}
-                />
-                : null
-            }
-            <EntryFooter 
-                isScrollable={isScrollable}  
-                reflinks={reflinks}
-                updatePostIndex={updatePostIndex}/>
-        </div>
+                { content ?
+                    <EntryBody 
+                        posts={content} 
+                        currIndex={postIndex} 
+                        technologies={technologies}
+                    />
+                    : null
+                }
+                <EntryFooter 
+                    isScrollable={isScrollable}  
+                    reflinks={reflinks}
+                    updatePostIndex={updatePostIndex}/>
+            </div>
+        </Bounce>
     )
     
 }
