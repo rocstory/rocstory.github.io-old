@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" media="all" href="./markdown.css" />
 
 # Roc Portfolio
 Roc Portfolio is my online web page showcasing the projects and activities that I have participated in.
@@ -8,46 +9,72 @@ This portfolio was intended to be a project within itself. The intentions is to 
 ## Technologies
 - React Library
 - Firebase
+- Angular (Version 2.0)
 
 ## Future implementation
-- Integrate component animation
-- Video demonstration of certain projects
-- Normalization of database objects
+- Implement Google analytics (maybe)
+- Integrate test cases
 
 ## Current Bug(s)
-- The fav icon does not appear during deployment, however it does during development.
-
-## Reflection
-- Developing my portfolio over time has been a great experience. As I learn new technologies and participate in activities I am able to reflect on the portfolio to improve it's quality.
+- 
 
 ## Versions
 - [Version 3.0 - React Library & Firebase](#version-30---react-library) 
 - [Version 2.0 - Angular Framework](#version-20---angular-framework)
 - [Version 1.0 - Vanilla JavaScript](#version-10---vanilla-javascript)
 
-
 ### Version 3.0 - React Library
-After my recent project, Paw Bytes, I thought it would be a great idea to rebuild my webpage with React. 
-
-<img src="./screenshots/v3map.jpg" width="500" height="500">
+Version 3 is built using the React Library and Firebase 
+<div class="version-map-wrapper">
+    <img src="./screenshots/v3map.jpg">
+</div>
 
 ### Screenshots
-<img src="./screenshots/v3/v3_laptopview.jpg" width="600" height="500">
-<img src="./screenshots/v3/v3_laptopview2.jpg" width="600" height="500">
+
+#### Version 3.1
+- Animations
+- Video integrations
+- Toggle Button
+
+<div class="screenshot-wrapper">
+    <img src="./screenshots/v3/v3_1_desktop_entry.png">
+    <img src="./screenshots/v3/v3_1_desktop_header.png">
+</div>
+
+#### Version 3.0
+<div class="screenshot-wrapper">
+    <img src="./screenshots/v3/v3_laptopview.jpg">
+    <img src="./screenshots/v3/v3_laptopview2.jpg">
+</div>
+
 
 ### Version 2.0 - Angular Framework
 After understaning HTML, CSS, JavaScript, and JSON I decided to take the next step into learning web development by rebuilding the portfolio using Angular Framework and JSON data file.
 
-<img src="./screenshots/v2map.jpg" width="500" height="500">
+<div class="version-map-wrapper">
+    <img src="./screenshots/v2map.jpg">
+</div>
+
 
 #### Screenshots
-<img src="./screenshots/v2/topview.jpg" width="600" height="500">
-<img src="./screenshots/v2/topview2.jpg" width="600" height="500">
+
+#### Version 2.0
+<div class="screenshot-wrapper">
+    <img src="./screenshots/v2/topview.jpg" >
+    <img src="./screenshots/v2/topview2.jpg" >
+</div>
+
 
 ### Version 1.0 - Vanilla JavaScript
 This portfolio was initially designed by using vanilla JavaScript. This project was my introduction to web development.
 
-<img src="./screenshots/v1map.jpg" width="500" height="500">
+<div class="version-map-wrapper">
+    <img src="./screenshots/v1map.jpg">
+</div>
 
 #### Screenshots
-<img src="./screenshots/v1/v1_laptopview2.jpg" width="600" height="500">
+#### Version 1.0
+
+<div class="screenshot-wrapper">
+    <img src="./screenshots/v1/v1_laptopview2.jpg" >
+</div>
