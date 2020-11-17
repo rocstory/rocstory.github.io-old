@@ -1,21 +1,28 @@
 .entry-body
 {
-    
-    display: inline-block;
-    text-align: center;
+    border-top: 2px solid black;
     width: 100%;
-    margin-bottom: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    margin-bottom: 12px; 
 }
     .entry-body > *
     {
-        margin: auto;
+        margin-right: 2em;
+        /* margin: auto; */
     }
     .entry-media
     {
         display: inline-block;
         width: 20em;
-        height: 20em;
+        height: auto;
         vertical-align: middle;
+        margin-top: 16px;
+        margin-bottom: 25px;
     }
         .entry-media > *
         {
@@ -23,10 +30,10 @@
             max-height: 100%;
             vertical-align: middle;
             object-fit: cover;
+            box-shadow: 5px 10px 8px #888888;
         }
         .entry-video
         {
-            
             width: 100%;
             height: 19.4em;
         }
@@ -34,26 +41,75 @@
     .entry-description
     {
         display: inline-block;
-        width: 60%;
-        margin: auto auto auto 1em;
+        width: 90%;
     }
         .entry-summary
         {
             height: 8em;
             overflow-y: scroll;
             text-align: left;
-            margin-bottom: 4px;
+            margin-bottom: 12px;
             background-color: whitesmoke;
             padding: 10px;
-
+            box-shadow: 5px 10px 8px #888888;
         }
         .technologies-container
         {
-            
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-around;
             column-gap: 8px;
             row-gap: 8px;
+            overflow-y: scroll;
+
         }
+
+        .entry-summary::-webkit-scrollbar, .technologies-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+
+@media only screen and (min-width: 1024px) and (max-width: 2560px) {
+
+    .entry-description
+    {
+        width: 40%;
+    }
+} 
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    .entry-description
+    {
+        width: 60%;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    .entry-body
+    {
+        flex-direction: column;
+    }
+
+    .entry-media
+    {
+        width: 20.5em;
+    }
+        .entry-body > *
+        {
+            /* margin-right: 2em; */
+            margin: auto;
+        }
+    .entry-description
+    {
+        margin-top: 2em;
+    }
+} 
+
+@media only screen and (max-width: 375px) {
+    
+    .entry-media
+    {
+        width: 16.5em;
+    }
+} 

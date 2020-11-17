@@ -1,3 +1,5 @@
+
+
 .entry-display
 {
     overflow: hidden;
@@ -7,6 +9,7 @@
 .footer
 {
     background-color: #33383e;
+    /* background-color: #505861 */
     color: white;
     text-align: center;
     border: 2px solid black;

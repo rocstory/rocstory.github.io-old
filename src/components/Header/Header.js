@@ -6,10 +6,12 @@ import {db} from '../../firebase';
 import HeaderBody from "./HeaderBody/HeaderBody";
 import ContactLinks from "./ContactLinks/ContactLinks";
 import Nav from "./Nav/Nav";
+// import Nav from "./Nav/Nav";
 
 function Header(props)
 {
     const [socialButtons, setSocialButtons] = useState(null);
+    const {selected, handleChange} = props
 
     useEffect(()=>{
         db.collection('contactLinks').get()
@@ -23,9 +25,9 @@ function Header(props)
     
     return (
         <div className="header">
-            <HeaderBody/>
+            <HeaderBody />
             <ContactLinks socialButtons={socialButtons}/>
-            <div className="header-nav-container"> <Nav setEntry={props.setEntry} entryDisplay={props.entryDisplay}/> </div>
+            <Nav selected={selected} handleChange={handleChange}/>
         </div>
     )
 }

@@ -13,10 +13,10 @@ function ReferenceLink(props)
             <button 
                 className="ref-container clickable"
             >
-                <span> 
+                <span className="ref-icon"> 
                     <FontAwesomeIcon icon={[style, icon]}/>
                 </span> 
-                <p>{name}</p>
+                <p className="ref-name">{name}</p>
             </button>
         </a>
     )

@@ -1,25 +1,32 @@
 import React from 'react';
 import "./Nav.css";
+import Switch from 'react-switch';
 
 function Nav(props)
 {
-    const prjButtonBg = props.entryDisplay ? null : {backgroundColor: '#0fbaf2'};
-    const actButtonBg = props.entryDisplay ? {backgroundColor: '#0fbaf2'} : null;
+    const {selected, handleChange} = props
+    
     return (
-        <div className="tab-container">
-            <button
-                onClick={()=>{props.setEntry(false)}}
-                style={prjButtonBg}
-                className="clickable">
-                    <p>Projects</p>
-            </button>
-
-            <button
-                onClick={()=>{props.setEntry(true)}}
-                className="clickable activities-btn"
-                style={actButtonBg}>
-                    <p>Activities</p>
-            </button>
+        <div className="nav">
+            
+            <div className="entry-toggle-container">
+                <span className={selected ? "inactive" : "active"}>Projects</span>
+                <label className="switch-label" htmlFor="entry-switch">
+                    <Switch 
+                        onChange={handleChange}
+                        checked={selected}
+                        offColor="#0fbaf2"
+                        onColor="#ffc125"
+                        width={48}
+                        height={20}
+                        uncheckedIcon={null}
+                        checkedIcon={null}
+                        id="entry-switch"
+                    />
+                </label>
+                
+                <span className={selected ? "active" : "inactive"}>Activities</span>
+            </div>
         </div>
     )
 }

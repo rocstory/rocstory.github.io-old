@@ -1,25 +1,73 @@
-.tab-container
+.nav
 {
-   margin-top: 2em;
-   display: flex;
-   justify-content: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 14rem;
+    margin: auto;
+    overflow: hidden;
 }
-    .tab-container > button
+
+    .entry-toggle-container
     {
-        background-color: whitesmoke;
-        width: 10em;
-        height: 5em;
-        border: 2px solid black;
-        font-weight: bold;
-        padding: 0;
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.4rem; /* Media */
+        height: 5rem;
     }
-        .tab-container > button > p
+        .switch-label
         {
-            font-size: 1.5em;
+            margin: auto;
         }
-    .activities-btn
+        .entry-toggle-container > span
+        {
+            font-size: 2.2em;
+            transition: color ease-in 0.2s;
+            margin-top: 10px;
+            font-family: "Staatliches";
+            text-align: center;
+            padding-top: 6px;
+        }
+    
+    .active
     {
-        margin-left: 2em;
+        color: white;
+        text-shadow: 0 0 5px white;
+        animation: glow 3s ease-in;
+
     }
 
-    
+    .inactive
+    {
+        color: black;
+        text-shadow: 0 0 2px white;
+
+    }
+
+    @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 10px black;
+        }
+        to {
+            text-shadow: 0 0 10px white; 
+        }
+    }
+
+
+    /* mobile small */
+
+    @media only screen and (max-width: 320px) {
+        /* For desktop: */
+        .entry-toggle-container
+        {
+            display: flex;
+            flex-direction: row;
+            column-gap: 0.4rem; /* Media */
+            height: 5rem;
+        }
+
+        .entry-toggle-container > span
+        {
+            font-size: 1.8em;
+            padding-top: 10px;
+        }
+    }

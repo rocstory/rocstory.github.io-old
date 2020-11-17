@@ -3,12 +3,14 @@ import "./EntryBody.css";
 import ReactPlayer from "react-player";
 import Tech from '../Tech/Tech';
 
+import Fade from 'react-reveal/Fade'; 
+
 function EntryBody(props)
 {
     function generateMedia(media)
     {
         return (
-            media.type ? <ReactPlayer url="https://www.youtube.com/watch?v=ue-jihqNRFs" /> 
+            media.type ? <ReactPlayer url={media.media} /> 
             : <img className="entry-img" src={media.media} alt="media"/> )
     }
     const {posts,currIndex} = props;
@@ -16,16 +18,19 @@ function EntryBody(props)
 
     return (
         <div className="entry-body">
-            <div className="entry-media">
-                {
-                    generateMedia(posts[currIndex])
-                }
-            </div>
-
-            <div className="entry-description">
-                <div className="entry-summary">
-                    {brief}
+            <Fade top>
+                <div className="entry-media">
+                    {
+                        generateMedia(posts[currIndex])
+                    }
                 </div>
+            </Fade>
+            <div className="entry-description">
+                <Fade top>
+                    <div className="entry-summary">
+                        {brief}
+                    </div>
+                </Fade>
                 {
                     props.technologies ?
                     <div className="technologies-container">

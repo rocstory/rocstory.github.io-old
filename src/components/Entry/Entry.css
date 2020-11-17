@@ -4,6 +4,18 @@
     overflow: hidden;
     border: 2px solid black;
     margin-top: 8px;
+
+    /* display: grid;
+    grid-template-rows: auto 1fr auto; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.entry-container > * 
+{
+    /* border: 20px solid pink; */
 }
     .entry-title
     {
