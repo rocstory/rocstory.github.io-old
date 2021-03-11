@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Lovely Feathers",
+        "links": [
+            {
+                "name": "github",
+                "url": "https://github.com/rocstory/lovelyfeathers",
+                "type": "github"
+            }
+        ],
+        "startdate": "Dec 20th 2020",
+        "medialist": [
+            {
+                "alt": "home screen",
+                "type": "image",
+                "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Flovelyfeathers%2Flf_home.jpg?alt=media&token=c50426b5-0a7b-4be0-9325-37efb633b326"
+            }
+        ],
+        "technologies": [
+            "react", "firebase","css", "html", "javascript", "web development"
+        ],
+        "summary": "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 20th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
+        "notes": [
+            "Each feather contains a unique message and prompt."
+        ],
+        "acknowledgements": [
+            "Thank you to everyone who created feather!",
+            "Thank you to everyone who participated in this project!"
+        ],
+        "collaborators": [],
+        "icon": {
+            "bgcolor": "lightblue",
+            "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Flovelyfeathers%2Flovelyfeathersicon.jpg?alt=media&token=7aaa4ddb-1437-4f00-910a-9c8f97e44e03"
+        },
+        "likes": 0,
+        "index": 6
+    }
+
+]

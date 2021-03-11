@@ -1,0 +1,179 @@
+.entry-header
+{
+    /* border-bottom: 2px solid red; */
+    background-color: #393E41;
+    width: 100%;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-direction: row;
+}
+    
+    .entry-likes
+    {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start !important;
+        color: white;
+        flex-grow: 1;
+    }
+        .entry-likes > span
+        {
+            margin: auto;
+
+        }
+        #likes-amnt
+        {
+            font-size: 1.2em;
+            margin-right: 3px;
+
+        }
+        #likes-icon
+        {
+            font-size: 2.5em;
+            margin-left: 0;
+            
+        }
+            #likes-icon:hover
+            {
+                cursor: pointer;
+            }
+        span.liked
+        {
+            color: red !important;
+            animation: shake 1.0s 2; 
+        }
+    
+    .entry-name
+    {
+        /* border: 2px solid green; */
+        align-items: center;
+        color: white;
+        flex-grow: 4;
+        text-align: center;
+    }
+        .entry-name > p
+        {
+            font-family: 'Jockey One','Squada One';
+            margin: 0;
+            font-size: 2em;
+        }
+
+    .entry-links
+    {
+        /* border: 2px solid yellow; */
+        flex-grow: 0;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-right: 10px;
+        gap: 1em;
+        justify-content: flex-end;
+    }
+
+@media only screen and (max-width: 425px) 
+{
+    .entry-header
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+        .entry-likes
+        {
+            order: 3;
+            
+        }
+        .entry-name
+        {
+            order: 1; 
+            width: 100%;
+        }
+        .entry-links
+        {
+            order: 2;
+        }
+
+}
+
+/* 
+.entry-header
+{
+    border-bottom: 2px solid red;
+    background-color: #393E41;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; 
+    margin-bottom: 1em;
+    
+}
+    
+    .entry-likes
+    {
+        border: 2px solid red;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start !important;
+        grid-column: 1 / 2;
+        color: white;
+    }
+        .entry-likes > span
+        {
+            margin: auto;
+
+        }
+        #likes-amnt
+        {
+            font-size: 1.2em;
+            margin-right: 3px;
+
+        }
+        #likes-icon
+        {
+            font-size: 2.5em;
+            margin-left: 0;
+            
+        }
+            #likes-icon:hover
+            {
+                cursor: pointer;
+            }
+        span.liked
+        {
+            color: red !important;
+            animation: shake 1.0s 2; 
+        }
+    
+    .entry-name
+    {
+        border: 2px solid green;
+        align-items: center;
+        grid-column: 2 / 3;
+        margin: auto;
+        color: white;
+        width: 30em;
+    }
+        .entry-name > p
+        {
+            font-family: 'Jockey One','Squada One';
+            margin: 0;
+            font-size: 2em;
+        }
+
+    .entry-links
+    {
+        border: 2px solid yellow;
+        grid-column: 3 / 4;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding-right: 10px;
+        gap: 1em;
+        justify-content: flex-end;
+    } */

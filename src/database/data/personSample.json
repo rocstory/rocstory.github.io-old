@@ -1,0 +1,127 @@
+[
+    {
+        "pid": "alexandre1",
+        "name": "matheus alexandre",
+        "imgurl": "https://media-exp1.licdn.com/dms/image/C4D03AQGe1kVOdMCywg/profile-displayphoto-shrink_800_800/0/1542563915813?e=1620259200&v=beta&t=z7IrEisq5oJK6w_Dhk78BDtcHl3JkBYrx2WOJajt2J4",
+        "reflinks": [
+            {
+                "type": "github",
+                "name": "github",
+                "url": "https://github.com/madatedeus"
+            },
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/matheusrochalex/"
+            }
+        ]
+    },
+    {
+        "pid": "griffin1", 
+        "name": "elly griffin",
+        "imgurl": "https://media-exp1.licdn.com/dms/image/C4E03AQG3aijGTshD0A/profile-displayphoto-shrink_400_400/0/1583445810802?e=1620259200&v=beta&t=LUN33ma_GmuMR9tvRobfnRXCFW2l6lzmVD4KPxPJNX4",
+        "reflinks": [
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/eliot-griffin-312600199/"
+            }
+        ]
+    },
+    {
+        "pid": "lin1",
+        "name": "jessica lin",
+        "imgurl": "https://www.wcsu.edu/honors/wp-content/uploads/sites/54/2019/06/IMG_8658-768x756.jpg",
+        "reflinks": [
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/jessica-lin-360107a0/"
+            }
+        ]
+    },
+    {
+        "pid": "kukk1",
+        "name": "christopher kukk",
+        "imgurl": "https://media-exp1.licdn.com/dms/image/C4E03AQFUBzYurV2Wyg/profile-displayphoto-shrink_400_400/0/1599317413706?e=1620259200&v=beta&t=cyXfjKAsr725Wk2APYfx_aB8Fe8lCT7S9det7_Plgoo",
+        "reflinks": [
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/christopher-kukk-429059b9/"
+            }
+        ]
+    },
+    {
+        "pid": "singh1",
+        "name": "krishan singh",
+        "imgurl": "",
+        "reflinks": [
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/krishan-singh-085764174/"
+            }
+        ]
+    },
+    {
+        "pid": "pineau1",
+        "name": "cory pineau",
+        "imgurl": "",
+        "reflinks": []
+    },
+    {
+        "pid": "alpuche1",
+        "name": "Stephen Alpuche",
+        "imgurl": "",
+        "reflinks": []
+    },
+    {
+        "pid": "joel1",
+        "name": "william joel",
+        "imgurl": "https://www.wcsu.edu/cs/wp-content/uploads/sites/174/2018/03/Joel-2018_9714-300x300.jpg",
+        "reflinks": []
+    },
+    {
+        "pid": "doris1",
+        "name": "ty doris",
+        "imgurl": "",
+        "reflinks": []
+    },
+    {
+        "pid": "coffman1",
+        "name": "daniel coffman",
+        "imgurl": "",
+        "reflinks": []
+    },
+    {
+        "pid": "middleton1",
+        "name": "jonathan middleton",
+        "imgurl": "https://media-exp1.licdn.com/dms/image/C5103AQERu_LMVA279g/profile-displayphoto-shrink_400_400/0/1517011214261?e=1620259200&v=beta&t=4AMvCAb4GyBpAbOP_y6lTKdIjRYcZrc0-abmbezm8Js",
+        "reflinks": [
+            {
+                "type": "github",
+                "name": "github",
+                "url": "https://github.com/jrm86"
+            },
+            {
+                "type": "linkedin",
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/jonrmiddleton/detail/contact-info/"
+            }
+        ]
+    }, 
+    
+    {
+        "pid": "iossa1",
+        "name": "christopher iossa",
+        "imgurl": "",
+        "reflinks": [
+            {
+                "type": "github",
+                "name": "github",
+                "url": "https://github.com/ChrisIossa"
+            }
+        ]
+    }
+]

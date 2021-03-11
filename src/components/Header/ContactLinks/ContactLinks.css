@@ -3,6 +3,7 @@
 
 .contact-container
 {
+    /* border: 2px solid red; */
     display: flex;
     margin-top: 1em;
     width: 100%;
@@ -35,4 +36,13 @@
 
     display: flex;
     justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .social-media-container
+    {
+        margin-left: 0em;
+    } 
+    
 }

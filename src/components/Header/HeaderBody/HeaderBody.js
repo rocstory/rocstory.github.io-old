@@ -1,30 +1,19 @@
-    import React , {useEffect, useState} from 'react';
-import {db} from '../../../firebase';
-
+import React from 'react';
 import icon from "../../../assets/profpic.jpg";
 import "./HeaderBody.css";
 import Flip from 'react-reveal/Flip';
 
-function HeaderBody(props)
+function HeaderBody({aboutme})
 {
-    const [description, setDescription] = useState('')
-
-    useEffect(()=>{
-        db.collection('introduction').get()
-        .then(querySnapshot => {
-            const data = querySnapshot.docs.map(doc => doc.data());
-            let descrData = data[0];
-            setDescription(descrData.description);
-        });
-    }, [])
-
+    const {introduction, name, pronounciation} = aboutme
 
     let nameStyle =
     {
         color: "#ffc125",
         textAlign: "center",
-        margin: 0,
+        margin: 0
     }
+    // console.log("hbody rendering")
 
     return (
         <div className="header-body-container">
@@ -36,11 +25,11 @@ function HeaderBody(props)
             
 
             <div className="header-body-summary">
-                <h1 style={nameStyle}>Malik Roc</h1>
-                <h3 className="pronunciation" style={{textAlign: "center", margin: 0}}>(muh-leek rock)</h3>
+                <h1 className="my-name" style={nameStyle}>{name}</h1>
+                <h3 className="pronunciation" style={{textAlign: "center", margin: 0}}>{pronounciation}</h3>
 
                 <div className="header-descr">
-                    {`${description}`}
+                    {`${introduction}`}
                 </div>
             </div>
         </div>

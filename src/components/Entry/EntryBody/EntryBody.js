@@ -1,45 +1,31 @@
 import React from 'react';
 import "./EntryBody.css";
-import ReactPlayer from "react-player";
-import Tech from '../Tech/Tech';
+import MediaDisplay from "./MediaDisplay/MediaDisplay";
+import TechnologyDisplay from "./TechnologyDisplay/TechnologyDisplay";
 
-import Fade from 'react-reveal/Fade'; 
-
-function EntryBody(props)
-{
-    function generateMedia(media)
-    {
-        return (
-            media.type ? <ReactPlayer url={media.media} /> 
-            : <img className="entry-img" src={media.media} alt="media"/> )
-    }
-    const {posts,currIndex} = props;
-    const {brief} = posts[currIndex]
+function EntryBody({ entry }) {
+    const { startdate, medialist, technologies } = entry;
 
     return (
         <div className="entry-body">
-            <Fade top>
-                <div className="entry-media">
-                    {
-                        generateMedia(posts[currIndex])
-                    }
-                </div>
-            </Fade>
-            <div className="entry-description">
-                <Fade top>
-                    <div className="entry-summary">
-                        {brief}
-                    </div>
-                </Fade>
+            <div className="eb-header">
                 {
-                    props.technologies ?
-                    <div className="technologies-container">
-                        {
-                            //console.log(`Techs in:`, props.technologies)
-                            props.technologies.map((tech) => <Tech key={tech} name={tech}/>) 
-                            //<i>Techs exists</i>
-                        }
-                    </div> : null
+                    (startdate && startdate.length !== 0) ? 
+                        <span className="date-started">Date Started: {startdate}</span>
+                        : null
+                }
+            </div>
+
+            <div className="eb-body">
+                {/* <div className="media-wrapper" > */}
+                    <MediaDisplay medialist={medialist} />
+                {/* </div> */}
+                {
+                    technologies ?
+                        <div className="techdisplay-wrapper">
+                            <TechnologyDisplay technologies={technologies} />
+                        </div>
+                        : null
                 }
             </div>
         </div>

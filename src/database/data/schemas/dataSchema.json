@@ -1,0 +1,77 @@
+{
+    "entrySchema": {
+        "name": "",
+        "links": [
+            {
+                "name": "",
+                "url": "",
+                "type": ""
+            }
+        ],
+        "startdate": "",
+        "medialist": [
+            {
+                "alt": "",
+                "type": "",
+                "url": ""
+            }
+        ],
+        "technologies": [
+            ""
+        ],
+        "summary": "",
+        "notes": [
+            ""
+        ],
+        "acknowledgements": [
+            ""
+        ],
+        "collaborators": [
+            {
+                "imgurl": "",
+                "role": "",
+                "name": "",
+                "reflinks": [
+                    {
+                        "type": "",
+                        "name": "",
+                        "url": ""
+                    }
+                ]
+            }
+        ],
+        "icon": {
+            "bgcolor": "",
+            "url": ""
+        },
+        "likes": 0,
+        "index": -1
+    },
+    "generalSchema": {
+        "contactlinks": [
+            {
+                "type": "",
+                "name": "",
+                "src": ""
+            }
+        ],
+        "aboutme": {
+            "name": "",
+            "pronounciation": "",
+            "introduction": ""
+        }
+    },
+    "person":
+    {
+        "name": "",
+        "role": "",
+        "imgurl": "",
+        "reflinks": [
+            {
+                "type": "",
+                "name": "",
+                "url": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+.cl-container
+{
+    /* border: 2px solid red; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3px;
+}
+    .cl-icon-container
+    {
+        margin: auto;
+    }
+        .cl-icon
+        {
+            border: 2px solid black;
+            width: 2.5em;
+            height: 2.5em;
+            margin: 0;
+        }
+            .cl-icon > *
+            {
+                padding: 0;
+                font-size: 1.3em;
+            }
+            .cl-icon:hover
+            {
+                cursor: pointer;
+            }
+    .cl-name-container
+    {
+        text-align: center;
+    }
+        .cl-name-container > p
+        {
+            font-size: 0.5em;
+            padding: 0;
+            margin: 0;
+        }

@@ -1,0 +1,26 @@
+.entry-panel
+{
+    /* border: 2px solid red; */
+    width: 96%;
+    height: 5em;
+    display: grid;
+    grid-template-columns: minmax(150px, 40%) 1fr;
+    z-index: 1
+}
+
+.entry-panel-chld-height
+{
+  height: 5em;
+}
+
+
+
+@media only screen and (max-width: 550px) 
+{
+    .entry-panel
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+}

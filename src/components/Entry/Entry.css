@@ -5,13 +5,11 @@
     border: 2px solid black;
     margin-top: 8px;
 
-    /* display: grid;
-    grid-template-rows: auto 1fr auto; */
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 1em;
 }
 .entry-container > * 
 {

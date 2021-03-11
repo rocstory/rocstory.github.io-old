@@ -1,0 +1,172 @@
+[
+    {
+        "name": "WCSU RA Colonial Carnival",
+        "links": [
+            {
+                "name": "github",
+                "url": "https://github.com/rocstory/colonialcarnival",
+                "type": "github"
+            },
+            {
+                "name": "website",
+                "url": "https://rocstory.github.io/colonialcarnival/",
+                "type": "web"
+            }
+        ],
+        "startdate": "Dec 20th 2019",
+        "medialist": [
+            {
+                "alt": "Program of the Year Award 2019-2020",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg"
+            },
+            {
+                "alt": "Login Page",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
+            },
+            {
+                "alt": "Home Page",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/homepage.jpg"
+            }, 
+            {
+                "alt": "Rock Paper Scissors",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/rps.jpg"
+            },
+            {
+                "alt": "WCSU Trivia",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
+            },
+            {
+                "alt": "Memory Match",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
+            }
+        ],
+        "technologies": [
+            "CSS", "HTML", "JavaScript", "Firebase"
+        ],
+        "summary": "Colonial Carnival is a web application designed for students at Western Connecticut State University (WCSU) to play from anywhere! The residential students are able to earn marbles (points) and exchange them for numerous items, ranging from school supplies to gift cards.",
+        "notes": [
+            "Accumulated 35 active users over the Spring 2020 semester."
+        ],
+        "acknowledgements": [
+            "Big shoutout to the Housing and Residence Life team for their input on improving the quality of the application!"
+        ],
+        "collaborators": [
+            {
+                "imgurl": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg",
+                "role": "developer",
+                "name": "Malik Roc",
+                "reflinks": [
+                    {
+                        "type": "github",
+                        "name": "github",
+                        "url": "https://github.com/rocstory"
+                    },
+                    {
+                        "type": "linkedin",
+                        "name": "linkedin",
+                        "url": "youtube.com"
+                    },
+                    {
+                        "type": "instagram",
+                        "name": "instagram",
+                        "url": "google.com"
+                    }
+                ]
+            }
+        ],
+        "icon": {
+            "bgcolor": "orange",
+            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
+        },
+        "likes": 0,
+        "index": 5
+    },
+    {
+        "name": "Chev's Escape",
+        "links": [
+            {
+                "name": "github",
+                "url": "https://github.com/rocstory/Cs_ChevEscape",
+                "type": "github"
+            }
+        ],
+        "startdate": "September 1st 2019",
+        "medialist": [
+            {
+                "alt": "Main Menu",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
+            },
+            {
+                "alt": "Game Tutorial",
+                "type": "image",
+                "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgB.jpg"
+            }
+        ],
+        "technologies": [
+            "C#", "Fritzing"
+        ],
+        "summary": "This repository contains files relating to the development of a 2D top down video game using Visual Studio 2019 (VS) Winforms. Chev's Escape is a team based Object Oriented Software Engineering project at Western Connecticut State University (WCSU).",
+        "notes": [
+            "Used Aseprite to create the artwork.",
+            "Used Audacity for the sound effects.",
+            "Developed using WinForms 2019."
+        ],
+        "acknowledgements": [],
+        "collaborators": [
+            {
+                "imgurl": "",
+                "role": "Developer",
+                "name": "Matheus Alexandre",
+                "reflinks": [
+                    {
+                        "type": "github",
+                        "name": "github",
+                        "url": "https://github.com/madatedeus"
+                    },
+                    {
+                        "type": "linkedin",
+                        "name": "linkedin",
+                        "url": "https://www.linkedin.com/in/matheusrochalex/"
+                    }
+                ]
+            },
+            {
+                "imgurl": "",
+                "role": "Developer",
+                "name": "Krishan Singh",
+                "reflinks": []
+            },
+            {
+                "imgurl": "",
+                "role": "Developer",
+                "name": "Stephen Alpuche",
+                "reflinks": []
+            },
+            {
+                "imgurl": "",
+                "role": "Developer",
+                "name": "Cory Pineau",
+                "reflinks": [
+                    {
+                        "type": "linkedin",
+                        "name": "linkedin",
+                        "url": "https://www.linkedin.com/in/krishan-singh-085764174/"
+                    }
+                ]
+            }
+        ],
+        "icon": {
+            "bgcolor": "orange",
+            "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
+        },
+        "likes": 0,
+        "index": 5
+    }
+]

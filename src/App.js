@@ -1,60 +1,36 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect, useContext, useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Entry from './components/Entry/Entry';
-import {db} from './firebase';
+import {PortfolioContext} from "./PortfolioContext";
+import WelcomeScreen from  "./components/WelcomeScreen/WelcomeScreen";
 
-import Bounce from 'react-reveal/Bounce'; 
+var db = require('./database/database');
+var util = require('./helper/utilities');
 
-function App(props)
+function App()
 {
-  const [projects, setProjects] = useState(null);
-  const [activities, setActivities] = useState(null);
-  const [selected, setSelected] = useState(false);
-
+  const {setDBConfig, entryType, selEntry} = useContext(PortfolioContext);
+  // const [entry, setEntry] = useState(null);
 
   useEffect(()=>{
+
     async function getEntries()
     {
-      let project_entry = null;
-      let activity_entry = null;
-      await db.collection('projects').orderBy("index", "desc").get().then( querySnapshot =>{
-        const data = querySnapshot.docs.map(doc => doc.data());
-        project_entry = data; //data.map((entry) => <Entry key={entry.title} entry={entry} /> );
-      });
-      
-      await db.collection('activities').orderBy("index", "desc").get().then( querySnapshot =>{
-        const data = querySnapshot.docs.map(doc => doc.data());
-        activity_entry = data; //data.map((entry) => <Entry key={entry.title} entry={entry} /> );
-      });
-      setProjects(project_entry);
-      setActivities(activity_entry);
+      let config = await db.getDBConfigObj();
+      setDBConfig(config);
     }
-
     getEntries();
-
   }, [])
-
-  function handleSelectedEntry()
-  {
-    setSelected(prev => !prev)
-  }
-
+  
   return (
     <div className="App">
-        <Header selected={selected} handleChange={handleSelectedEntry}/>
+        <Header />
         {
-          (activities && projects ) ?
-
-            <div className="entry-display">
-                {
-                  selected ?
-                    activities.map((entry) => <Entry key={entry.title} entry={entry} />)
-                    :
-                    projects.map((entry) => <Entry key={entry.title} entry={entry} />)
-                }
-            </div>
-          : null
+          selEntry ?
+            <Entry entry={selEntry}/>
+          :
+          <WelcomeScreen />
         }
         <div className="footer">
           <p>Always be kind. </p>
@@ -66,3 +42,4 @@ function App(props)
 }
 
 export default App;
+

@@ -1,115 +1,55 @@
 .entry-body
 {
-    border-top: 2px solid black;
     width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-
+    display: grid;
+    grid-template: auto 1fr 1fr auto;
     margin-bottom: 12px; 
 }
-    .entry-body > *
+    .eb-header
     {
-        margin-right: 2em;
-        /* margin: auto; */
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr;
     }
-    .entry-media
-    {
-        display: inline-block;
-        width: 20em;
-        height: auto;
-        vertical-align: middle;
-        margin-top: 16px;
-        margin-bottom: 25px;
-    }
-        .entry-media > *
+        .date-started
         {
-            max-width: 100%;
-            max-height: 100%;
-            vertical-align: middle;
-            object-fit: cover;
-            box-shadow: 5px 10px 8px #888888;
-        }
-        .entry-video
-        {
-            width: 100%;
-            height: 19.4em;
+            grid-column: 4;
+            text-align: right;
+            padding-right: 2em;
         }
 
-    .entry-description
+    .eb-body
     {
-        display: inline-block;
-        width: 90%;
-    }
-        .entry-summary
-        {
-            height: 8em;
-            overflow-y: scroll;
-            text-align: left;
-            margin-bottom: 12px;
-            background-color: whitesmoke;
-            padding: 10px;
-            box-shadow: 5px 10px 8px #888888;
-        }
-        .technologies-container
-        {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            justify-content: space-around;
-            column-gap: 8px;
-            row-gap: 8px;
-            overflow-y: scroll;
-
-        }
-
-        .entry-summary::-webkit-scrollbar, .technologies-container::-webkit-scrollbar {
-            display: none;
-        }
-        
-
-@media only screen and (min-width: 1024px) and (max-width: 2560px) {
-
-    .entry-description
-    {
-        width: 40%;
-    }
-} 
-
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
-    .entry-description
-    {
-        width: 60%;
-    }
-} 
-
-@media only screen and (max-width: 768px) {
-    .entry-body
-    {
+        /* border: 2px solid red; */
+        padding-top: 1em;
+        display: flex;
+        justify-content: center;
         flex-direction: column;
     }
-
-    .entry-media
-    {
-        width: 20.5em;
-    }
-        .entry-body > *
+        .techdisplay-wrapper
         {
-            /* margin-right: 2em; */
-            margin: auto;
+            /* border: 2px solid blue;  */
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
-    .entry-description
-    {
-        margin-top: 2em;
-    }
-} 
-
-@media only screen and (max-width: 375px) {
     
-    .entry-media
+    .eb-footer
     {
-        width: 16.5em;
+        padding-left: 12px;
     }
-} 
+
+@media only screen and (max-width: 529px) 
+{
+
+    .entry-body
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px; 
+    }
+    .date-started
+        {
+            font-size: 0.7em;
+        }
+}

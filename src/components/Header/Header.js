@@ -1,35 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import "./Header.css";
-import SocialMediaButton from "../SocialMediaButton/SocialMediaButton";
-import {db} from '../../firebase';
-
 import HeaderBody from "./HeaderBody/HeaderBody";
 import ContactLinks from "./ContactLinks/ContactLinks";
 import Nav from "./Nav/Nav";
-// import Nav from "./Nav/Nav";
+import EntryPanel from "./EntryPanel/EntryPanel";
+var db = require('../../database/database')
 
-function Header(props)
-{
-    const [socialButtons, setSocialButtons] = useState(null);
-    const {selected, handleChange} = props
+function Header(props) {
+    const { collection} = props
+    const [aboutMe, setAboutMe] = useState(null);
+    const [contactLinks, setContactLinks] = useState(null);
 
-    useEffect(()=>{
-        db.collection('contactLinks').get()
-        .then(querySnapshot => {
-            const data = querySnapshot.docs.map(doc => doc.data());
-            let socialMediaButtons = null;
-            socialMediaButtons = data.map((social) => <SocialMediaButton key={social.type} link={social} /> );
-            setSocialButtons(socialMediaButtons);
-        });
+    useEffect(() => {
+        async function getGeneralData() {
+            // console.log("Getting general data");
+            let generalData = await db.getGeneralData();
+            setAboutMe(generalData.aboutme);
+            setContactLinks(generalData.contactlinks);
+        }
+        getGeneralData();
     }, [])
-    
-    return (
+
+    // console.log("Header rendering")
+    return (aboutMe && contactLinks) ? (
         <div className="header">
-            <HeaderBody />
-            <ContactLinks socialButtons={socialButtons}/>
-            <Nav selected={selected} handleChange={handleChange}/>
+            {
+                (aboutMe && contactLinks) ?
+                    <>
+                        <HeaderBody aboutme={aboutMe} />
+                        <ContactLinks links={contactLinks} />
+                        <Nav collection={collection} />
+                        <EntryPanel/>
+                    </>
+                    :
+                    null
+            }
         </div>
-    )
+    ) : null
 }
 
 export default Header;

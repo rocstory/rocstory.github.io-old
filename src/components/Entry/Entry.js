@@ -1,51 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./Entry.css";
+import EntryHeader from './EntryHeader/EntryHeader';
 import EntryBody from './EntryBody/EntryBody';
-import EntryFooter from './EntryFooter/EntryFooter';
+import EntryFooter from "./EntryFooter/EntryFooter";
+import Bounce from 'react-reveal/Bounce';
 
-import Bounce from 'react-reveal/Bounce'; 
-
-function Entry(props)
-{
-    const [postIndex, setPostIndex] = useState(0); 
-
-    const {content, reflinks, title, technologies} = props.entry
-
-    function updatePostIndex(value){
-        let nextIndex = postIndex + value;
-        if (nextIndex > content.length - 1)
-        {
-            nextIndex = 0;
-        }
-        else if (nextIndex < 0)
-        {
-            nextIndex = content.length - 1;
-        }
-        setPostIndex(nextIndex);
-    }
-
-    let isScrollable = (content.length > 1)
-    return (
+function Entry({entry}) {
+    
+    return entry ? (
         <Bounce top>
             <div className="entry-container">
-                <h1 className="entry-title">{title}</h1>
-
-                { content ?
-                    <EntryBody 
-                        posts={content} 
-                        currIndex={postIndex} 
-                        technologies={technologies}
-                    />
-                    : null
-                }
-                <EntryFooter 
-                    isScrollable={isScrollable}  
-                    reflinks={reflinks}
-                    updatePostIndex={updatePostIndex}/>
+                <EntryHeader entry={entry} />
+                <EntryBody entry={entry} />
+                <EntryFooter entry={entry} />
             </div>
         </Bounce>
-    )
-    
+    ) : null
+
 }
 
 export default Entry;

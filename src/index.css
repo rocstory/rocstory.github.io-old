@@ -3,11 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+
+
 
 
 *
 {
-    font-family: Tahoma;
+    font-family: Helvetica,'Segoe UI', Tahoma;
 }
 
 .imgContainer-circle
@@ -26,6 +30,14 @@
 .clickable
 {
     cursor: pointer;
+}
+
+
+.clip-text
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* width */

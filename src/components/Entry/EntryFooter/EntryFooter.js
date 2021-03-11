@@ -1,46 +1,51 @@
 import React from 'react';
 import "./EntryFooter.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ReferenceLink from "./ReferenceLink/ReferenceLink";
+import ContactCard from "../../ContactCard/ContactCard";
 
-function EntryFooter(props)
-{
-    const {isScrollable, updatePostIndex, reflinks} = props
+function EntryFooter({ entry }) {
+    const { summary, notes, acknowledgements, collaborators } = entry;
+
     return (
         <div className="entry-footer">
-                {
-                    isScrollable ? 
-                    <div className="entry-button-container">
-                        <button
-                            className="entry-button-left clickable"
-                            onClick={()=> updatePostIndex(-1)}
-                        >
-                            <FontAwesomeIcon icon={['fas','caret-left']}/>
-                        </button>
+            
+            <div className="eb-footer">
 
-                        <button
-                            className="clickable"
-                            onClick={()=> updatePostIndex(1)}
-                        >
-                            <FontAwesomeIcon icon={['fas','caret-right']}/>
-                        </button>
-                    </div>
-                    :
-                    null
-                }
-                {
-                    reflinks ?
-                    <div className="reference-link-container">
+                <div className="aboutme-container">
+                    <h2>About</h2>
+                    <hr/>
+                    <p>{summary}</p>
+                </div>
+                
+                <div className="highlights-container">
+                    <h2>Highlights</h2>
+                    <hr/>
+                    <ul className="notes-container">
                         {
-                            reflinks.map(link => <ReferenceLink key={link.source} link={link} />)
+                            notes ? notes.map( note => <li key={note}>{note}</li>) : null
+                        }
+                    </ul>
+                </div>
+
+                <div className="ack-container">
+                    <h2>{`Acknowledgements & Collaborators`}</h2>
+                    <hr/>
+                    <ul>
+                        {
+                            acknowledgements ? acknowledgements.map( note => <li key={note}>{note}</li>) : null
+                        }
+                    </ul>
+
+                    <div className="collaborators-container">
+                        {
+                            collaborators ? collaborators.map(collab => <ContactCard contact={collab} key={collab.pid} />) : null
                         }
                     </div>
-                    :
-                    null
-                }
+                </div>
+            </div>
+
+
         </div>
     )
-};
-
+}
 
 export default EntryFooter;

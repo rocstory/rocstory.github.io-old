@@ -27,6 +27,10 @@
         margin-left: 0px;
         overflow: hidden;
     }
+        .my-name
+        {
+            text-transform: capitalize;
+        }
         .header-descr
         {
             margin-top: 1em;
