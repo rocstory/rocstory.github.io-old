@@ -1,6 +1,6 @@
 var configData = require('./app-config.json');
 
-async function getConfig(key) {
+export async function getConfig(key) {
     try 
     {
         const value = configData[key];
@@ -11,7 +11,7 @@ async function getConfig(key) {
         return null;
     }
 }
-async function getConfigObj()
+export async function getConfigObj()
 {
     try 
     {
@@ -24,8 +24,8 @@ async function getConfigObj()
     }
 }
 
-module.exports =
-{
-    getConfig, 
-    getConfigObj
-}
+// module.exports =
+// {
+//     getConfig, 
+//     getConfigObj
+// }

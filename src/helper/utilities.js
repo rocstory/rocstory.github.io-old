@@ -4,18 +4,18 @@ var technologies = require("../data/technologies.json");
 var projectTags = require("../data/projectTags.json");
 
 // centralize obtaining the collection name based on the entry type
-async function getCollectionName(entryType)
+export async function getCollectionName(entryType)
 {
     const {ActivityCollectionName, ProjectCollectionName} = (await db.getDBConfigObj()); 
     return entryType ? ActivityCollectionName : ProjectCollectionName
 }
 
-function getProjectTags()
+export function getProjectTags()
 {
     return projectTags;
 }
 
-function getTechIcon(name)
+export function getTechIcon(name)
 {
     name = name.toLowerCase().trim();
 
@@ -25,12 +25,12 @@ function getTechIcon(name)
     return iconData;
 }
 
-function getIconByProperty(iconName, property="name")
+export function getIconByProperty(iconName, property="name")
 {
     return technologies.filter(tech => tech[property].toLowerCase().localeCompare(iconName) === 0)[0];
 }
 
-function sortAscendingOrder(array)
+export function sortAscendingOrder(array)
 {
     array = array.sort((itemA, itemB) => {
         if (itemA < itemB) return -1;
@@ -40,7 +40,7 @@ function sortAscendingOrder(array)
     return array;
 }
 
-function modifyName(name = '')
+export function modifyName(name = '')
 {
     if (name.length < 14 ) return name;
     const nameArr = name.split(' ');
@@ -57,11 +57,20 @@ function modifyName(name = '')
     return name;
 }
 
-module.exports =
-{
-    getCollectionName,
-    getTechIcon,
-    getProjectTags,
-    sortAscendingOrder,
-    modifyName
-}
+// exports =
+// {
+//     getCollectionName,
+//     getTechIcon,
+//     getProjectTags,
+//     sortAscendingOrder,
+//     modifyName
+// }
+
+// module.exports =
+// {
+//     getCollectionName,
+//     getTechIcon,
+//     getProjectTags,
+//     sortAscendingOrder,
+//     modifyName
+// }

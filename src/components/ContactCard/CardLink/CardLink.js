@@ -19,7 +19,7 @@ function CardLink({ link }) {
         <div className="cl-container">
             <a className="cl-icon-container" href={url}>
                 <button className="cl-icon">
-                    <FontAwesomeIcon icon={[icon.type, icon.icon]} />
+                    <span> <FontAwesomeIcon icon={[icon.type, icon.icon]} /> </span>
                 </button>
             </a>
 

@@ -6,7 +6,6 @@ import {PortfolioContext} from "./PortfolioContext";
 import WelcomeScreen from  "./components/WelcomeScreen/WelcomeScreen";
 
 var db = require('./database/database');
-var util = require('./helper/utilities');
 
 function App()
 {

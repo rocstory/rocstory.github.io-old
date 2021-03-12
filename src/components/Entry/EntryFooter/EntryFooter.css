@@ -60,5 +60,6 @@
                         flex-wrap: wrap;
                         justify-content: center;
                         gap: 2em;
+                        row-gap: 2em;
                     }
 

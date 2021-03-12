@@ -11,7 +11,7 @@ var prjImports = require('./imports/prjImports.json');
 // var generalImports = require('./imports/actImports.json');
 
 
-async function getGeneralData() {
+export async function getGeneralData() {
     try {
         // console.log("Getting general data...")
         const {GeneralCollectionName, AboutMeDocName, ContactLinksDocName} = await dbConfig.getAllConfigObj();
@@ -31,7 +31,7 @@ async function getGeneralData() {
     }
 }
 
-async function getEntries(collection)
+export async function getEntries(collection)
 {
     try
     {
@@ -59,7 +59,7 @@ async function getEntries(collection)
     }
 }
 
-async function getEntry(entryName, collectionName)
+export async function getEntry(entryName, collectionName)
 {
     try
     {
@@ -84,12 +84,12 @@ async function getEntry(entryName, collectionName)
     }
 }
 
-function getDBConfigObj() {
+export function getDBConfigObj() {
     // console.log("Getting DB config...");
     return dbConfig.getAllConfigObj();
 }
 
-async function getPerson(personID) {
+export async function getPerson(personID) {
     try {
         personID = personID.toLowerCase();
         const collection = await dbConfig.getConfig("PersonCollectionName");
@@ -109,7 +109,7 @@ async function getPerson(personID) {
     }
 }
 
-async function addLikesToEntry(entryName, collection, numOfLikes = 1) {
+export async function addLikesToEntry(entryName, collection, numOfLikes = 1) {
     try {
         numOfLikes = parseInt(numOfLikes);
         // const prjCollection = await dbConfig.getConfig('ProjectCollectionName');
@@ -155,16 +155,28 @@ async function addEntry(entry, collection)
     }
 }
 
-module.exports =
-{
-    getGeneralData,
-    getEntries,
-    getDBConfigObj,
-    addLikesToEntry,
-    getPerson,
-    getEntry,
+// exports =
+// {
+//     getGeneralData,
+//     getEntries,
+//     getDBConfigObj,
+//     addLikesToEntry,
+//     getPerson,
+//     getEntry,
 
-    importEntries
-}
+//     importEntries
+// }
+
+// module.exports =
+// {
+//     getGeneralData,
+//     getEntries,
+//     getDBConfigObj,
+//     addLikesToEntry,
+//     getPerson,
+//     getEntry,
+
+//     importEntries
+// }
 
 
