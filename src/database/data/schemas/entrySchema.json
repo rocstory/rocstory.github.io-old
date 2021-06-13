@@ -1,0 +1,54 @@
+{
+    "name": "",
+    "caption": "",
+    "links": [
+        {
+            "name": "",
+            "url": "",
+            "type": ""
+        },
+        {
+            "name": "",
+            "url": "",
+            "type": ""
+        }
+    ],
+    "startdate": null,
+    "video": null,
+    "images": [
+        {
+            "alt": "",
+            "url": ""
+        },
+        {
+            "alt": "",
+            "url": ""
+        },
+        {
+            "alt": "",
+            "url": ""
+        }
+    ],
+    "tags": [
+        
+    ],
+    "summary": "",
+    "notes": [
+    ],
+    "collaborators": [
+        {
+            "pid": "",
+            "role":""
+        },
+        {
+            "pid": "",
+            "role": ""
+        }
+    ],
+    "icon": {
+        "bgcolor": "",
+        "url": ""
+    },
+    "likes": 0,
+    "index": -1
+}

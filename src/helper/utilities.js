@@ -3,11 +3,32 @@ var db = require("../database/database");
 var technologies = require("../data/technologies.json");
 var projectTags = require("../data/projectTags.json");
 
+const PROJECTS_TYPE = 'projects';
+const ACTIVITIES_TYPE = 'activities';
+
 // centralize obtaining the collection name based on the entry type
 export async function getCollectionName(entryType)
 {
     const {ActivityCollectionName, ProjectCollectionName} = (await db.getDBConfigObj()); 
-    return entryType ? ActivityCollectionName : ProjectCollectionName
+
+    switch (entryType.toLowerCase())
+    {
+        case PROJECTS_TYPE:
+            return ProjectCollectionName;
+        case ACTIVITIES_TYPE:
+            return ActivityCollectionName;
+    }
+    return '';
+}
+
+/**
+ * Returns a list of primary tags that will appear at the top of the drop down menu
+ * @returns 
+ */
+export function getEntryPrimaryTags()
+{
+    //concat other tags to be considered primary tags
+    return projectTags;
 }
 
 export function getProjectTags()
@@ -56,21 +77,3 @@ export function modifyName(name = '')
     }
     return name;
 }
-
-// exports =
-// {
-//     getCollectionName,
-//     getTechIcon,
-//     getProjectTags,
-//     sortAscendingOrder,
-//     modifyName
-// }
-
-// module.exports =
-// {
-//     getCollectionName,
-//     getTechIcon,
-//     getProjectTags,
-//     sortAscendingOrder,
-//     modifyName
-// }

@@ -6,20 +6,7 @@ export async function getConfig(key)
     return configData[key];
 }
 
-export async function getAllConfigObj()
+export  function getAllConfigObj()
 {
     return configData;
 }
-
-// exports =
-// {
-//     getConfig,
-//     getAllConfigObj
-// }
-
-
-// module.exports =
-// {
-//     getConfig,
-//     getAllConfigObj
-// }

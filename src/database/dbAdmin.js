@@ -20,7 +20,7 @@ export async function addEntryToCollection(entry, collection)
     }
     catch(error)
     {
-        // console.log(error);
+        //  (error);
         return false;
     }
 }

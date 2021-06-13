@@ -1,21 +1,46 @@
-
 var dbConfig = require("./db-config");
 var { db } = require('./firebase');
+const NodeCache = require("node-cache");
+const dbCache = new NodeCache();
 
-// var activitySample = require('./data/activityData.json');
-// var projectSample = require('./data/projectData.json') //require("./data/entrySample.json");
-// var generalSample = require("./data/generalSample.json");
 var prjImports = require('./imports/prjImports.json');
-// var actImports = require('./imports/actImports.json');
-// var peopleImports = require('./imports/actImports.json');
-// var generalImports = require('./imports/actImports.json');
+var projectEntries = require('./data/projectEntries.json');
+var activityEntries = require('./data/activityEntries.json');
+var generalData = require('./data/generalData.json');
 
+
+const GENERAL_CACHE_KEY = 'general';
 
 export async function getGeneralData() {
+    try 
+    {
+        // throw "forced error";
+        return getGeneralDataFromCache() || await getGeneralDataFromDB();
+    }
+    catch (error) {
+        throw error;
+    }
+}
+
+function getGeneralDataFromCache()
+{
+    try
+    {
+        const generalData = dbCache.get(GENERAL_CACHE_KEY);
+        return generalData;
+    }
+    catch (error)
+    {
+        throw error
+    }
+}
+
+async function getGeneralDataFromDB()
+{
     try {
-        // console.log("Getting general data...")
+        
         const {GeneralCollectionName, AboutMeDocName, ContactLinksDocName} = await dbConfig.getAllConfigObj();
-        // console.log("General config names:", GeneralCollectionName, AboutMeDocName, ContactLinksDocName);
+        
         let generalData = {};
         const docRef = db.collection(GeneralCollectionName);
         const aboutMe = await docRef.doc(AboutMeDocName).get().then((doc) => doc.data().aboutme);
@@ -23,20 +48,48 @@ export async function getGeneralData() {
         
         generalData[AboutMeDocName] = aboutMe;
         generalData[ContactLinksDocName] = contactLinks;
-        // console.log("General data sample:", genData, generalData);
+        dbCache.set(GENERAL_CACHE_KEY, generalData);
         return generalData;
     }
     catch (error) {
-        throw new Error(error);
+        throw error;
     }
+}
+export function getLocalGeneralData()
+{
+    return generalData;
 }
 
 export async function getEntries(collection)
 {
     try
     {
-        collection = collection.toLowerCase();
-        //const collectionName = await dbConfig.getConfig('ActivityCollectionName');
+        // throw "forced error";
+        return getEntriesFromCache(collection) || await getEntriesFromDB(collection)
+    }
+    catch (error)
+    {
+        throw error;
+    }
+}
+
+function getEntriesFromCache(collection)
+{
+    try
+    {
+        const entries = dbCache.get(collection);
+        return entries;
+    }
+    catch (error)
+    {
+        return null
+    }
+}
+
+async function getEntriesFromDB(collection)
+{
+    try
+    {
         const docRef = db.collection(collection);
         const entries = await docRef.get().then(snapshot => {
             let entryList = [];
@@ -49,13 +102,26 @@ export async function getEntries(collection)
 
             return entryList;
         });
-        // console.log("Retireved Entries:", entries);
-        // console.log("From:", collection);
+        dbCache.set(collection, entries);
+
         return entries;
     }
     catch (error)
     {
         throw new Error('Unable to retrieve data from database');
+    }
+}
+
+export function getLocalEntries(collection)
+{
+    const {ProjectCollectionName, ActivityCollectionName} = dbConfig.getAllConfigObj();
+
+    switch (collection)
+    {
+        case ProjectCollectionName:
+            return projectEntries;
+        case ActivityCollectionName:
+            return activityEntries;
     }
 }
 
@@ -85,7 +151,6 @@ export async function getEntry(entryName, collectionName)
 }
 
 export function getDBConfigObj() {
-    // console.log("Getting DB config...");
     return dbConfig.getAllConfigObj();
 }
 
@@ -104,7 +169,7 @@ export async function getPerson(personID) {
         return person;
     }
     catch (error) {
-        // console.log(error);
+        //  (error);
         throw new Error(`Unable to retrieve ${personID} from database.`);
     }
 }
@@ -124,59 +189,33 @@ export async function addLikesToEntry(entryName, collection, numOfLikes = 1) {
         return newLikes;
     }
     catch (error) {
-        console.log(error);
+        //  (error);
         throw new Error(error);
     }
 }
 
 
-async function importEntries()
-{
-    const entries =  prjImports;
-    for (const entry of entries)
-    {
-        console.log("Importing entry:");
-        console.log(entry);
-        await addEntry(entry, 'projectstore');
-    }
-}
-
-async function addEntry(entry, collection)
-{
-    try
-    {
-        const doc = entry.name;
-        delete entry.name;
-        db.collection(collection).doc(doc).set(entry);
-    }
-    catch (error)
-    {
-        console.error(error);
-    }
-}
-
-// exports =
+// export async function importEntries(name)
 // {
-//     getGeneralData,
-//     getEntries,
-//     getDBConfigObj,
-//     addLikesToEntry,
-//     getPerson,
-//     getEntry,
-
-//     importEntries
+//     console.log("Adding entries!", name);
+//     const entries = (name === "project") ? projectEntries : activityEntries;
+//     for (const entry of entries)
+//     {
+//         await addEntry(entry, 'activitystore2');
+//     }
 // }
 
-// module.exports =
+// async function addEntry(entry, collection)
 // {
-//     getGeneralData,
-//     getEntries,
-//     getDBConfigObj,
-//     addLikesToEntry,
-//     getPerson,
-//     getEntry,
-
-//     importEntries
+//     try
+//     {
+//         console.log("Entry:", entry);
+//         const doc = entry.name;
+//         delete entry.name;
+//         await db.collection(collection).doc(doc).set(entry);
+//     }
+//     catch (error)
+//     {
+//         console.error(error);
+//     }
 // }
-
-

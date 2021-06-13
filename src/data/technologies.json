@@ -1,8 +1,8 @@
 [
     {
         "name": "react",
-        "color": "#61DBFB",
-        "type": "fab",
+        "color": "#47CDF6",
+        "type":  "fab",
         "icon": "react"
     },
     {
@@ -37,7 +37,7 @@
     },
     {
         "name": "javaScript",
-        "color": "#FFCB2B",
+        "color": "#F1BB47",
         "type": "fab",
         "icon": "js-square"
     },

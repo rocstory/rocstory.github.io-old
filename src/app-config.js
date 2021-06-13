@@ -23,9 +23,3 @@ export async function getConfigObj()
         return null; 
     }
 }
-
-// module.exports =
-// {
-//     getConfig, 
-//     getConfigObj
-// }
