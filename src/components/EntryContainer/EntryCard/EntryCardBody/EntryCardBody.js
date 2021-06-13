@@ -5,8 +5,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import TechnologyDisplay from './TechnologyDisplay/TechnologyDisplay';
 import ContactCard from '../../../ContactCard/ContactCard';
 
-
-
 function EntryCardBody({entryPayload}) {
     // const [selEntry, setSelEntry] = useState(null);
     const {startdate, summary, collaborators} = entryPayload;
@@ -89,7 +87,7 @@ function EntryCardBody({entryPayload}) {
                         <h4>Highlights</h4>
                         <ul>
                             {
-                                notes.map((note, index) => <li key={index}>{note}</li>)
+                                notes.map((note, index) => <li key={index} className="entry-note">{note}</li>)
                             }
                         </ul>
                     </div>

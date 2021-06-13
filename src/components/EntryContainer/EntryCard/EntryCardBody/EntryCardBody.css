@@ -1,8 +1,4 @@
 
-.card-body
-{
-    
-}
     .card-body > .entry-start-date
     {
         margin-top: 2em;
@@ -32,7 +28,6 @@
     .card-carousel
     {
         margin: auto;
-        /* border: 4px solid red; */
         width: 30em;
         height: 40em;
         margin-top: 1em;
@@ -69,13 +64,13 @@
     }
 
 
-@media only screen and (max-width: 425px) 
+@media only screen and (max-width: 510px) 
 {
     .card-carousel
     {
         /* border: 4px solid red; */
-        width: 25em;
-        height: 25em;
+        width: 90%;
+        height: 20%;
     }
 }
 
@@ -88,6 +83,8 @@
         height: 20em;
     }
 }
+
+
 
 @media only screen and (max-width: 320px) 
 {

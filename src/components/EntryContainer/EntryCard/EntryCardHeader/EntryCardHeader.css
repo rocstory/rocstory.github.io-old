@@ -62,7 +62,7 @@
         max-width: 16em;
     }
 
-@media only screen and (max-width: 425px) 
+@media only screen and (max-width: 676px) 
 {
 
     .card-header
@@ -75,13 +75,21 @@
         .card-header > *
         {
             margin: auto;
+            /* border: 2px solid red; */
+            width: 100%;
         }
 
         .likes-container
         {
-
             order: 3;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
         }
+            .likes-container > *
+            {
+                float: none;
+            }
 
         .card-header > .card-title
         {
