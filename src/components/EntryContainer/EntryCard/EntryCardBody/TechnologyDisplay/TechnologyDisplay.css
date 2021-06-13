@@ -1,0 +1,30 @@
+.techdisplay-container
+{
+    /* border: 2px solid red; */
+    margin: auto;
+    border-radius: 2%;
+    width: 30em;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 8px;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 529px) 
+{
+    .techdisplay-container
+    {
+        grid-template-columns: repeat(2, auto);
+        overflow-y: scroll;
+        width: 97%;
+        column-gap: 0;
+
+
+    }
+    .techdisplay-container::-webkit-scrollbar
+    {
+        display: none;
+    }
+}

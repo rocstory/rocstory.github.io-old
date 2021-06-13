@@ -1,0 +1,130 @@
+[
+    {
+        "name": "WCSU Kathwari Honors Program",
+        "caption": "Innovative learning and entrepreneurial thinking in a compassionate community.",
+        "links": [
+            {
+                "name": "website",
+                "url": "https://www.wcsu.edu/honors/",
+                "type": "web"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/wcsukathwarihonors/",
+                "type": "instagram"
+            }
+        ],
+        "startdate": null,
+        "video": "https://youtu.be/ue-jihqNRFs",
+        "images": [
+            {
+                "alt": "Honors graduation photo",
+                "url": "https://rocportfolio.s3.amazonaws.com/khs/gradB.jpg"
+            },
+            {
+                "alt": "volunteering - day of service",
+                "url": "https://rocportfolio.s3.amazonaws.com/khs/khp_dayOfServiceA.png"
+            }
+        ],
+        "tags": [
+            "wcsu", "academic", "volunteer"
+        ],
+        "summary": "The Kathwari Honors Program at Western Connecticut State University was founded to foster and nurture academic and civic excellence among outstanding students in all four WCSU schools. The Program consists of highly interactive and interdisciplinary classes and is built on the fundamental assumption that knowledge is an open set of questions and ideas to be explored, rather than a closed set of facts to be memorized. WestConn’s Kathwari Honors Program is arguably one of the more innovative programs in the country. It is designed to expose students to fundamental modes of inquiry found in various academic fields, and to illustrate the importance of an interdisciplinary approach to exploring a topic or issue.",
+        "notes": [
+            "2020 Alumni.",
+            "Presented The Hate U Give directed by George Tillman Jr to students at WCSU."
+        ],
+        "collaborators": [
+            {
+                "pid": "lin1",
+                "role":"assistant director"
+            },
+            {
+                "pid": "kukk1",
+                "role": "director (2020)"
+            }
+        ],
+        "icon": {
+            "bgcolor": "",
+            "url": "https://yt3.ggpht.com/ytc/AAUvwngCkH-OBvvcv5khFgV9OSs5EBXCXJ56j-p_HIo=s900-c-k-c0x00ffffff-no-rj"
+        },
+        "likes": 0,
+        "index": 2
+    },
+    {
+        "name": "WCSU Computer Society",
+        "caption": "A club that exposes students at WCSU to different areas of technologies.",
+        "links": [],
+        "startdate": "September 1st 2019",
+        "video": null,
+        "images": [
+            {
+                "alt": "Tech Trivia",
+                "url": "https://rocportfolio.s3.amazonaws.com/compsoc/techtrivia.jpg"
+            },
+            {
+                "alt": "Executive Board Members (3/5)",
+                "url": "https://rocportfolio.s3.amazonaws.com/compsoc/eboardMembers.jpg"
+            }
+        ],
+        "tags": [
+            "wcsu", "academic", "volunteer", "club", "leadership"
+        ],
+        "summary": "Computer Society open up oopportunities for students to be exposed to different areas within the technology space.",
+        "notes": [
+            "Vice President"
+        ],
+        "collaborators": [
+            {
+                "pid":"griffin1",
+                "role": "president"
+            },
+            {
+                "pid":"alexandre1",
+                "role": "secretary"
+            },
+            {
+                "pid":"middleton1",
+                "role": "treasurer (fall 2019)"
+            },
+            {
+                "pid":"pineau1",
+                "role": "treasurer (spring 2020)"
+            },
+            {
+                "pid":"joel1",
+                "role": "club advisor"
+            }
+        ],
+        "icon": {
+            "bgcolor": "",
+            "url": "https://rocportfolio.s3.amazonaws.com/compsoc/compSocLogo.png"
+        },
+        "likes": 0,
+        "index": 1
+    },
+    {
+        "name": "Rocket Labs",
+        "caption": "Build, learn, grow. A community where creators come together to bring great ideas to life.",
+        "links": [],
+        "startdate": null,
+        "video": null,
+        "images": [],
+        "tags": [
+            "club"
+        ],
+        "summary": "Rocket Labs is a community of people who are passionate about growing. Rocket Labs was created after I graduated from college to continue learning and growing with the help of a community.",
+        "notes": [
+            "Founder of Rocket Labs",
+            "5 members as of 6/11/21"
+
+        ],
+        "collaborators": [],
+        "icon": {
+            "bgcolor": "#41c0eb",
+            "url": ""
+        },
+        "likes": 0,
+        "index": 3
+    }
+]

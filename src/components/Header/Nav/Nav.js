@@ -11,7 +11,6 @@ function Nav()
     {
         setEntryType(!entryType);
     }
-    // console.log("Nav rendering")
 
     return (
         <div className="nav">
