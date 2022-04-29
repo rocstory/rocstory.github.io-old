@@ -3,8 +3,8 @@ import EntryCard from './EntryCard/EntryCard';
 import EntryMenu from './EntryMenu/EntryMenu';
 import "./EntryContainer.css";
 
-var db = require('../../database/database');
-var dbConfig = require('../../database/db-config');
+var db = require('../../dataStore/dataStore');
+var dbConfig = require('../../dataStore/db-config');
 var utilities = require('../../helper/utilities');
 
 const PROJECTS_TYPE = 'projects';

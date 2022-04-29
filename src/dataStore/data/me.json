@@ -1,0 +1,31 @@
+{
+    "general":
+    {
+        "name": "malik roc",
+        "title": "software engineer",
+        "pronounciation": "(ma-leek)",
+        "introduction": "Hi! My name is Malik. I am a software engineer that is very passionate about tech! Below are my projects and recent activities that I've participated in."
+    },
+    "contactlinks": [
+        {
+            "type": "github",
+            "name": "github",
+            "src": "https://github.com/rocstory"
+        },
+        {
+            "type": "linkedin",
+            "name": "linkedin",
+            "src": "https://www.linkedin.com/in/malikroc/"
+        },
+        {
+            "type": "instagram",
+            "name": "instagram",
+            "src": "https://www.instagram.com/rocstory/"
+        },
+        {
+            "type": "twitter",
+            "name": "twitter",
+            "src": "https://twitter.com/rocstory"
+        }
+    ]
+}

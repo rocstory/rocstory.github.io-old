@@ -1,33 +1,43 @@
 import React, { useEffect, useContext, useState} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-// import Entry from './components/Entry/Entry';
-import EntryContainer from "./components/EntryContainer/EntryContainer"; 
-import {PortfolioContext} from "./PortfolioContext";
-// import WelcomeScreen from  "./components/WelcomeScreen/WelcomeScreen";
+import Navigator from './components/Navigator/Navigator';
+
+import {PortfolioContext} from "./contexts/PortfolioContext";
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import appConfig from './appConfig';
+import LinksPage from './pages/LinksPage/LinksPage';
+import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
+import Entry from './components/Entry/Entry';
 
 
-var db = require('./database/database');
+var db = require('./dataStore/dataStore');
 
 function App()
 {
-  const {setDBConfig, entryType, selEntry} = useContext(PortfolioContext);
+  const {selPage,selEntry} = useContext(PortfolioContext);
+  const {WebPages} = appConfig
 
-  useEffect(()=>{
-
-    async function getEntries()
-    {
-      let config = await db.getDBConfigObj();
-      setDBConfig(config);
-    }
-    getEntries();
-  }, [])
+  
   
   return (
     <div className="App">
         <Header />
-        <EntryContainer />
+        <Navigator />
+        {
+          (selPage === WebPages.linkPage) && <LinksPage/>
+        }
+        {
+          (selPage === WebPages.projectPage) && <ProjectsPage/>
+        }
+        {
+          (selPage === WebPages.activityPage) && <>activites</>
+        }
+        {
+          selEntry && <Entry/>
+        }
 
         <div className="footer">
           <p>Always <span>be kind</span>.</p>

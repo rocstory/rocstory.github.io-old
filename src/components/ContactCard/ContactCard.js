@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 var util = require('../../helper/utilities');
 
-var dbController = require('../../database/database');
+var dbController = require('../../dataStore/dataStore');
 
 function ContactCard({contact})
 {

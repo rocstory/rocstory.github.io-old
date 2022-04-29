@@ -1,6 +1,7 @@
 [
     {
         "name": "WCSU RA Colonial Carnival",
+        "type": "Web Development",
         "caption": "A web application designed for students at Western Connecticut State University (WCSU).",
         "links": [
             {
@@ -15,7 +16,7 @@
             }
         ],
         "startdate": "December 29th 2019",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory",
         "images": [
             {
                 "alt": "Program of the Year Award 2019-2020",
@@ -56,14 +57,29 @@
         ],
         "collaborators": [],
         "icon": {
-            "bgcolor": "orange",
-            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
+            "type": "fas",
+            "name": "ticket-alt",
+            "color": "#FFA26D"
         },
-        "likes": 0,
+        "refLinks": [
+            {
+                "url": "www.youtube.com",
+                "label": "sample linkz"
+            },
+            {
+                "url": "rocstory.github.io",
+                "label": "sample link"
+            },
+            {
+                "url": "rocstory.github.io",
+                "label": "sample link"
+            }
+        ],
         "index": 5
     },
     {
         "name": "Chev's Escape",
+        "type": "Game Development",
         "caption": "An object oriented software engineering class project (2019).",
         "links": [
             {
@@ -115,14 +131,17 @@
             }
         ],
         "icon": {
-            "bgcolor": "lightblue",
-            "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
+            "type": "fas",
+            "name": "gamepad",
+            "color": "#EEC299"
+
         },
         "likes": 0,
         "index": 4
     },
     {
         "name": "GITRG MOCAP 2018-2019",
+        "type": "Web Development",
         "caption": "A cost effective motion capturing system",
         "links": [
             {
@@ -178,14 +197,16 @@
             }
         ],
         "icon": {
-            "bgcolor": "",
-            "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/mocap_fritzing.jpg"
+            "type": "fas",
+            "name": "camera",
+            "color": "#E8EBE4"
+
         },
-        "likes": 0,
         "index": 1
     },
     {
         "name": "GITRG 3D Crayon 2019-2020",
+        "type": "Embedded Systems",
         "caption": "An open source intelligent toy which allows someone to draw in a 3D space",
         "links": [
             {
@@ -216,14 +237,16 @@
             }
         ],
         "icon": {
-            "bgcolor": "",
-            "url": "https://rocportfolio.s3.amazonaws.com/3dc_design.jpg"
+            "type": "fas",
+            "name": "pen",
+            "color": "#FF6961"
+
         },
-        "likes": 0,
         "index": 2
     },
     {
         "name": "Revealing Roc",
+        "type": "Embedded System",
         "caption": "An embedded systems class project",
         "links": [
             {
@@ -248,14 +271,16 @@
         "notes": [],
         "collaborators": [],
         "icon": {
-            "bgcolor": "",
-            "url": "https://rocportfolio.s3.amazonaws.com/revealingroc/revroc_1.jpg"
+            "type": "fas",
+            "name": "lightbulb",
+            "color": "#FDFD96"
+
         },
-        "likes": 0,
         "index": 3
     },
     {
         "name": "Paw Bytes",
+        "type": "Web Application",
         "caption": "A three part project that incorporates a Twitter bot, database, and website.",
         "links": [
             {
@@ -301,14 +326,16 @@
         ],
         "collaborators": [],
         "icon": {
-            "bgcolor": "",
-            "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fpawbytesicon.png?alt=media&token=f55ec6e6-e03f-4982-afb7-21d3e9fdae3c"
+            "type": "fas",
+            "name": "paw",
+            "color": "#AD8B7A"
+
         },
-        "likes": 0,
         "index": 6
     },
     {
         "name": "Lovely Feathers",
+        "type": "Web Application",
         "caption": "A web application that gives people the opportunitiy to spread kindness.",
         "links": [],
         "startdate": null,
@@ -328,10 +355,10 @@
         ],
         "collaborators": [],
         "icon": {
-            "bgcolor": "blue",
-            "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Flovelyfeathers%2Flovelyfeathersicon.jpg?alt=media&token=7aaa4ddb-1437-4f00-910a-9c8f97e44e03"
+            "type": "fas",
+            "name": "feather",
+            "color": "#4CC3EB"
         },
-        "likes": 0,
         "index": 7
     }
 ]

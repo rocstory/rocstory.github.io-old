@@ -6,7 +6,7 @@ import EntryLink from '../EntryLink/EntryLink';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Spinner from 'react-bootstrap/Spinner';
 var util = require('../../../../helper/utilities');
-var db = require('../../../../database/database');
+var db = require('../../../../dataStore/dataStore');
 
 // var db = require('../../database/database')
 const PROJECTS_TYPE = 'projects';

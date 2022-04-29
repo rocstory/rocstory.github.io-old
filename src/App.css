@@ -8,11 +8,7 @@
 }
 .footer
 {
-    background-color: #33383e;
-    /* background-color: #505861 */
-    color: white;
     text-align: center;
-    border: 2px solid black;
     margin-top: 8px;
     padding-top: 2em;
 }
@@ -22,5 +18,5 @@
     }
         .footer > p > span
         {
-            color: #FFC025;
+            /* color: #FFC025; */
         }

@@ -1,0 +1,21 @@
+.entry-cntr
+{
+    max-width: none !important;
+    max-height: none !important;
+    width: 62em;
+    height: 100%;
+    /* overflow-y: auto; */
+}
+    
+    #entry-title {
+        margin: auto;
+        
+    }
+    .entry-cntr > .modal-content > .modal-header > .close {
+        margin-left: 0 !important;
+    }
+
+    .elt-cntr {
+        display: flex;
+        justify-content: space-between;
+    }

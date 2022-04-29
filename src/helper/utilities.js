@@ -1,5 +1,5 @@
 
-var db = require("../database/database");
+var db = require("../dataStore/dataStore");
 var technologies = require("../data/technologies.json");
 var projectTags = require("../data/projectTags.json");
 

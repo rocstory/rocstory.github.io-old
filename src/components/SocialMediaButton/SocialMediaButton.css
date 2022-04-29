@@ -1,6 +1,5 @@
 .social-container
 {
-    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,20 +8,22 @@
 
 .social-btn
 {
-    /* border: 2px solid red !important; */
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     padding: 0 !important;
     text-decoration: none !important;
     margin: auto;
+    background-color: #4E4B4B !important;
+    /* border: 2px solid red !important; */
+
 }  
     .social-btn-icon
     {
-        color: black;
+        color: #f8f8f8;
         font-size: 1.5em;
     }
     .social-btn-name
     {
-        color: white !important;
+        color: #4E4B4B !important;
         text-transform: capitalize;
     }

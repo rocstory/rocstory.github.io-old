@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import './fontawesome';
-import { PortfolioContextProvider } from './PortfolioContext';
+import { PortfolioContextProvider } from './contexts/PortfolioContext';
 
 ReactDOM.render(
   <PortfolioContextProvider>

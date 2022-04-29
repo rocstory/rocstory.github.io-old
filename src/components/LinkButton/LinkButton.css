@@ -1,0 +1,13 @@
+.link-button
+{
+    border: 2px solid #383838;
+    background-color: #383838;
+    width: 25em;
+    height: 3.2em;
+    align-items: center;
+    border-radius: 5em;
+}
+ .link-button i {
+     font-style: normal;
+     color: #F8F8F8;
+ }

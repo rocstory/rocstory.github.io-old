@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import appConfig from '../appConfig';
 
 
 const PortfolioContext = React.createContext();
@@ -8,14 +9,14 @@ const PortfolioContextProvider = ({children}) =>  {
     const [selEntry, setSelEntry] = useState(null);
     const [entryType, setEntryType] = useState(false); 
 
+    const [selPage, setSelPage] = useState(appConfig.WebPages.linkPage)
+
     return (
         <PortfolioContext.Provider value={{
-            dbConfig, 
-            setDBConfig,
-            selEntry,
-            setSelEntry,
-            entryType,
-            setEntryType
+            dbConfig, setDBConfig,
+            selEntry, setSelEntry,
+            entryType, setEntryType,
+            selPage, setSelPage
         }} >
             {children}
         </PortfolioContext.Provider>
