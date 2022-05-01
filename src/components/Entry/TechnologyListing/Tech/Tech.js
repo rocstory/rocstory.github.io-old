@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from 'react-bootstrap/Badge'
 import "./Tech.css";
-var util = require('../../../../../../helper/utilities');
+var util = require('../../../../helper/utilities');
+
 function Tech({ name }) {
     const [icon, setIcon] = useState(null);
 

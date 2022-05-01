@@ -1,0 +1,30 @@
+.eot-cntr
+{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 50em;
+}
+
+    .tl-cntr {
+        /* border: 2px solid red; */
+        align-self: center;
+        width: 45em;
+        margin-top: 0.5em;
+    }
+
+    .eot-title {
+        align-self: center;
+        padding-bottom: 0.1em;
+        margin-bottom: 0px;
+        
+    }
+    .eot-caption {
+        align-self: center;
+        margin-top: 0px;
+    }
+
+    .tl-cntr > .tech-container {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }

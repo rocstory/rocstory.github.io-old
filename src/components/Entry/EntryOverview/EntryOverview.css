@@ -1,6 +1,6 @@
 .eo-cntr
 {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -8,12 +8,17 @@
 }
 
 .eo-created {
-    border: 2px solid blue;
-    align-self:flex-end;
+    /* border: 2px solid blue; */
+    width: 50em;
+    text-align: right; 
+    align-self:center;
 }
 
 .ref-links {
+    align-self: center;
+    width: 50em;
     list-style: none;
+    padding-left: 0em;
 }
 
 .eol-icon {
@@ -21,7 +26,7 @@
 }
 
 .eod-cntr {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     align-self: center;
     width: 50em;
 }

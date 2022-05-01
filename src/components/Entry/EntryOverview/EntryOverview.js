@@ -53,6 +53,7 @@ function EntryOverview()
                 </div>
             }
             <TechnologyListing />
+            
         </div>
     )
 }

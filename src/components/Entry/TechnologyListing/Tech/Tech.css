@@ -8,16 +8,19 @@
     min-width: 10em;
     box-shadow: 2.5px 5px 4px #888888;
 }
-        .tech-icon
-        {
-            color: black;
-            font-size: 1.3em;
-            margin-right: 8px;
-        }
-        .tech-name
-        {
-            color: black;
-            font-weight: bold;
-            text-transform: capitalize;
-        }
+    .tech-container > span {
+        font-size: 1.5em;
+    }
+    .tech-icon
+    {
+        color: black;
+        font-size: 1.3em;
+        margin-right: 8px;
+    }
+    .tech-name
+    {
+        color: black;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
 
