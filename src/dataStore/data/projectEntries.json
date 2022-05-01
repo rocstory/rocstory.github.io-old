@@ -3,18 +3,8 @@
         "name": "WCSU RA Colonial Carnival",
         "type": "Web Development",
         "caption": "A web application designed for students at Western Connecticut State University (WCSU).",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/rocstory/colonialcarnival",
-                "type": "github"
-            },
-            {
-                "name": "website",
-                "url": "https://rocstory.github.io/colonialcarnival/",
-                "type": "web"
-            }
-        ],
+        "repoUrl": "https://github.com/rocstory/colonialcarnival",
+        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
         "startdate": "December 29th 2019",
         "video": "https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory",
         "images": [
@@ -48,7 +38,7 @@
         ],
         "summary": "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla javascript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
         "notes": [
-            "First individual project",
+            "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla JavaScript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
             "35 active users!",
             "The idea of using marbles as a point system came from the Fitness Jar activity",
             "First experience with using Firebase",
@@ -61,25 +51,14 @@
             "name": "ticket-alt",
             "color": "#FFA26D"
         },
-        "refLinks": [
-            {
-                "url": "www.youtube.com",
-                "label": "sample linkz"
-            },
-            {
-                "url": "rocstory.github.io",
-                "label": "sample link"
-            },
-            {
-                "url": "rocstory.github.io",
-                "label": "sample link"
-            }
-        ],
+        "refLinks": [],
         "index": 5
     },
     {
         "name": "Chev's Escape",
         "type": "Game Development",
+        "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
+        "demoUrl": null,
         "caption": "An object oriented software engineering class project (2019).",
         "links": [
             {
@@ -136,12 +115,15 @@
             "color": "#EEC299"
 
         },
+        "refLinks": [],
         "likes": 0,
         "index": 4
     },
     {
         "name": "GITRG MOCAP 2018-2019",
         "type": "Web Development",
+        "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
+        "demoUrl": null,
         "caption": "A cost effective motion capturing system",
         "links": [
             {
@@ -196,6 +178,12 @@
                 "role": "Developer"
             }
         ],
+        "refLinks": [
+            {
+                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+                "label": "Graphics & Interactive Techniques Research Group"
+            }
+        ],
         "icon": {
             "type": "fas",
             "name": "camera",
@@ -242,11 +230,19 @@
             "color": "#FF6961"
 
         },
+        "refLinks":[
+            {
+                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+                "label": "Graphics & Interactive Techniques Research Group"
+            }
+        ],
         "index": 2
     },
     {
         "name": "Revealing Roc",
         "type": "Embedded System",
+        "demoUrl": null,
+        "repoUrl": "https://github.com/rocstory/Arduino_RevRoc", 
         "caption": "An embedded systems class project",
         "links": [
             {
@@ -276,11 +272,14 @@
             "color": "#FDFD96"
 
         },
+        "refLinks": [],
         "index": 3
     },
     {
         "name": "Paw Bytes",
         "type": "Web Application",
+        "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
+        "demoUrl": "https://pawbytes.netlify.app/",
         "caption": "A three part project that incorporates a Twitter bot, database, and website.",
         "links": [
             {
@@ -325,6 +324,21 @@
             "Thank you to everyone who submitted pictures of their dogs and cats!"
         ],
         "collaborators": [],
+        "refLinks": [
+            {
+                "url": "https://github.com/rocstory/PawBytes_WebApp",
+                "label": "Client - Source Code"
+            },
+            {
+                "url": "https://github.com/rocstory/PawBytes_Database",
+                "label": "Database - Source Code"
+            },
+            {
+                "url": "https://github.com/rocstory/PawBytes_PawBot",
+                "label": "Bot - Source Code"
+            }
+        ],
+
         "icon": {
             "type": "fas",
             "name": "paw",
@@ -359,6 +373,7 @@
             "name": "feather",
             "color": "#4CC3EB"
         },
+        "refLinks":[],
         "index": 7
     }
 ]

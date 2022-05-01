@@ -33,6 +33,7 @@ function EntryMediaDisplay()
                         images.map(image => 
                             <Carousel.Item 
                                 className="image-item"
+                                key={image.url}
                             >
                                 <img
                                     className="d-block w-100 carousel-img"

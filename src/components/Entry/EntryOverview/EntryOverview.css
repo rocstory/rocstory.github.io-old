@@ -4,9 +4,24 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    list-style: none;
 }
 
 .eo-created {
     border: 2px solid blue;
     align-self:flex-end;
+}
+
+.ref-links {
+    list-style: none;
+}
+
+.eol-icon {
+    padding-right: 0.6em;
+}
+
+.eod-cntr {
+    border: 2px solid blue;
+    align-self: center;
+    width: 50em;
 }

@@ -3,6 +3,7 @@ import './EntryOverview.css';
 import { PortfolioContext } from '../../../contexts/PortfolioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import appConfig from '../../../appConfig';
+import TechnologyListing from '../TechnologyListing/TechnologyListing';
 
 const {EntryRefLinkIcon} = appConfig
 
@@ -12,10 +13,10 @@ function EntryOverview()
 
     const {
         startdate, 
-        refLinks
+        refLinks,
+        notes
     } = selEntry
 
-    console.log(selEntry)
     return (
         <div className="eo-cntr">
             <p className="eo-created">
@@ -24,22 +25,34 @@ function EntryOverview()
             {
                 <ul className="ref-links">
                 {
-                    refLinks.map(link => 
-                        <li
-                            
-                        >
+                    refLinks && refLinks.map(link => 
+                        <li key={link}>
                             <a
                                 href={link.url}
                                 target="_blank"
                             >
-                                <span><FontAwesomeIcon icon={EntryRefLinkIcon} /></span>
-                                <span>{link.label}</span>
+                                <span className="eol-icon"><FontAwesomeIcon icon={EntryRefLinkIcon} /></span>
+                                <span className="eol-label">{link.label}</span>
                             </a>
                         </li>)
                 }
-            </ul>
-
+                </ul>
             }
+            {
+                notes &&
+                <div
+                    className="eod-cntr"
+                >
+                    {
+                        notes.map(note => 
+                            <p key={note}>
+                                {note}
+                            </p>)
+                    }
+                
+                </div>
+            }
+            <TechnologyListing />
         </div>
     )
 }

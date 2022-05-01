@@ -12,10 +12,15 @@ const {ELT_Type} = appConfig
 function Entry()
 {
     const [show, setShow] = useState(true);
-    const {selEntry, setSelEntry} = useContext(PortfolioContext);
+    const {
+        selEntry, 
+        setSelEntry,
+    
+    } = useContext(PortfolioContext);
 
     const {
-        video
+        repoUrl,
+        demoUrl
     } = selEntry
 
     const handleHideModal = () => {
@@ -38,12 +43,16 @@ function Entry()
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='elt-cntr'>
-                    <EntryLinkTrigger type={ELT_Type.github} linkUrl={'.'}/>
-                    <EntryLinkTrigger type={ELT_Type.demo} linkUrl={'.'}/>
-                </div>
+                {
+                    (repoUrl || demoUrl) &&
+                    <div className='elt-cntr'>
+                        {repoUrl && <EntryLinkTrigger type={ELT_Type.github} linkUrl={repoUrl}/>}
+                        {demoUrl && <EntryLinkTrigger type={ELT_Type.demo} linkUrl={demoUrl}/>}
+                    </div>
+                }
                 <EntryMediaDisplay />
                 <EntryOverview />
+                
                 
             </Modal.Body>
         </Modal>
