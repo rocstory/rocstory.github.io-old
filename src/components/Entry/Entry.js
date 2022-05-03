@@ -6,7 +6,6 @@ import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
 import appConfig from '../../appConfig';
 import EntryMediaDisplay from './EntryMediaDisplay/EntryMediaDisplay';
 import EntryOverview from './EntryOverview/EntryOverview';
-import ContactCard from '../ContactCard/ContactCard'
 import CollabListing from '../CollabListing/CollabListing';
 
 const { ELT_Type } = appConfig

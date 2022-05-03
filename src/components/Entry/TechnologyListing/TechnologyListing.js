@@ -10,7 +10,7 @@ function TechnologyListing() {
         tags
     } = selEntry
 
-    return (
+    return tags && tags.length && (
         <div className="eot-cntr">
             <h2 className="eot-title"> Technologies</h2>
             <span className='eot-caption'>The technologies listed below are what was used to build this project</span>
