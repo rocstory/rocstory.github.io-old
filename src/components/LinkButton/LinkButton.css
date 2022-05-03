@@ -12,3 +12,27 @@
      color: #F8F8F8;
      margin: 0 !important;
  }
+
+ @media screen and (max-width: 425px) {
+     .link-button {
+         width: 20em;
+         height: 2.5em;
+     }
+ }
+
+ @media screen and (max-width: 375px) {
+    .link-button {
+        width: 18em;
+        height: 2.5em;
+    }
+}
+
+ @media screen and (max-width: 320px) {
+    .link-button {
+        width: 15em;
+        height: 2.2em;
+    }
+    .link-button p {
+        font-size: 0.8em;
+    }
+}

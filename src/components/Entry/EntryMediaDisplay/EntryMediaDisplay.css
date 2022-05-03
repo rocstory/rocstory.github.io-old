@@ -31,3 +31,12 @@
     {
         background-color: #41c0eb !important;
     }
+
+@media screen and (max-width: 768px) {
+    .emd-carousel
+    {
+        /* border: 2px solid red; */
+        width: 35em;
+        height: 30em;
+    }
+}

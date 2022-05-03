@@ -19,3 +19,24 @@
         display: flex;
         justify-content: space-between;
     }
+
+
+@media screen and (max-width: 1024px) {
+    .entry-cntr
+    {
+        width: 55em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .entry-cntr {
+        width: 42em;
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .entry-card-cntr {
+        width: 18em;
+    }
+}

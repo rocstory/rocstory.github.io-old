@@ -41,3 +41,22 @@
     {
         font-size: 1em;
     }
+
+@media screen and (max-width: 425px) {
+    .entry-card-cntr {
+        width: 24em;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .entry-card-cntr {
+        width: 21em;
+        
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .entry-card-cntr {
+        width: 18em;
+    }
+}
