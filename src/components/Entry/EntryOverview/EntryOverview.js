@@ -24,7 +24,7 @@ function EntryOverview() {
             {
                 <ul className="ref-links">
                     {
-                        refLinks && refLinks.length && refLinks.map(link =>
+                        refLinks && refLinks.length > 0 && refLinks.map(link =>
                             <li key={link}>
                                 <a
                                     href={link.url}
