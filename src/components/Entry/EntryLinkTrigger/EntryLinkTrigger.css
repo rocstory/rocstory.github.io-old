@@ -8,6 +8,7 @@
 
 .elt-btn:hover{
     cursor: pointer;
+    color: #f8f8f8;
 }
 
 .elt-icon
@@ -23,4 +24,5 @@
 .elt-demo
 {
     background-color: #3CB043;
+    border: 2px solid #398f3f;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState} from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import './Entry.css';
 import { PortfolioContext } from '../../contexts/PortfolioContext';
 import { Modal } from 'react-bootstrap';
@@ -6,21 +6,23 @@ import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
 import appConfig from '../../appConfig';
 import EntryMediaDisplay from './EntryMediaDisplay/EntryMediaDisplay';
 import EntryOverview from './EntryOverview/EntryOverview';
+import ContactCard from '../ContactCard/ContactCard'
+import CollabListing from '../CollabListing/CollabListing';
 
-const {ELT_Type} = appConfig
+const { ELT_Type } = appConfig
 
-function Entry()
-{
+function Entry() {
     const [show, setShow] = useState(true);
     const {
-        selEntry, 
+        selEntry,
         setSelEntry,
-    
+
     } = useContext(PortfolioContext);
 
     const {
         repoUrl,
-        demoUrl
+        demoUrl,
+        collaborators
     } = selEntry
 
     const handleHideModal = () => {
@@ -28,9 +30,10 @@ function Entry()
         setSelEntry(undefined)
     }
 
+    console.log('Collabs:', collaborators)
 
     return (
-        <Modal 
+        <Modal
             show={show}
             onHide={handleHideModal}
             dialogClassName="entry-cntr"
@@ -46,15 +49,17 @@ function Entry()
                 {
                     (repoUrl || demoUrl) &&
                     <div className='elt-cntr'>
-                        {repoUrl && <EntryLinkTrigger type={ELT_Type.github} linkUrl={repoUrl}/>}
-                        {demoUrl && <EntryLinkTrigger type={ELT_Type.demo} linkUrl={demoUrl}/>}
+                        {repoUrl && <EntryLinkTrigger type={ELT_Type.github} linkUrl={repoUrl} />}
+                        {demoUrl && <EntryLinkTrigger type={ELT_Type.demo} linkUrl={demoUrl} />}
                     </div>
                 }
                 <EntryMediaDisplay />
                 <EntryOverview />
-                
-                
             </Modal.Body>
+            <Modal.Footer >
+                <CollabListing />
+
+            </Modal.Footer>
         </Modal>
     )
 }

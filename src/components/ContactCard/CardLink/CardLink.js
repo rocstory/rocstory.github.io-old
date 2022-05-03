@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CardLink.css";
+import "./CardLink.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
 
@@ -17,21 +17,24 @@ function CardLink({ link }) {
         getLinkIcon();
     })
 
-    return icon ? (
+    return icon && (
         <div className="cl-container">
-            <a className="cl-icon-container" href={url}>
-                <Button
-                    className="cl-icon"
+            <Button
+                href={url}
+                className="cl-icon"
+            >
+                <p
+                    className="cl-icon-content"
                 >
-                    <span> <FontAwesomeIcon icon={[icon.type, icon.icon]} /> </span>
-                </Button>
-            </a>
+                    <FontAwesomeIcon icon={[icon.type, icon.icon]} />
+                </p>
+            </Button>
 
             <div className="cl-name-container">
                 <p>{name}</p>
             </div>
         </div>
-    ) : null
+    )
 }; // class
 
 export default CardLink;

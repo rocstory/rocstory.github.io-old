@@ -3,8 +3,10 @@ var dbConfig = require("./data/misc/db-config");
 var prjImports = require('./imports/prjImports.json');
 var projectEntries = require('./data/projectEntries.json');
 var activityEntries = require('./data/activityEntries.json');
+
 const meData = require('./data/me.json')
 const linksData = require('./data/links.json')
+const peopleCollection = require('./data/peopleCollection.json')
 
 export async function getMeData() {
     return meData;
@@ -18,6 +20,10 @@ export function getProjectsData() {
 
 export function getActivitiesData() {
     return activityEntries;
+}
+
+export function getPerson(pid) {
+    return peopleCollection.find(person => person.pid === pid)
 }
 
 

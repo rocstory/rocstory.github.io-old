@@ -2,7 +2,7 @@ const appConfig = {
     WebPages: {
         linkPage: "links",
         projectPage: "projects",
-        activityPage: "activities"
+        // activityPage: "activities"
     },
     ELT_Type: {
         github: "github",
