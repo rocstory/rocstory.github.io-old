@@ -15,6 +15,7 @@ function EntryLinkTrigger({ type, linkUrl }) {
         <Button
             href={linkUrl}
             target="_blank"
+            rel="noopener noreferrer"
             variant={null}
             className={`elt-btn ${eltTypeClassName}`}
         >

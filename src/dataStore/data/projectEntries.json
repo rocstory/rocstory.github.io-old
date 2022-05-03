@@ -38,10 +38,12 @@
         ],
         "summary": "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla javascript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
         "notes": [
-            "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla JavaScript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
+            "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes.",
+            "This web application is also my very first web application. I took on the challenge of building this web application with vanilla JavaScript in order to learn the fundamentals of web development.",
+            "Because of COVID-19, the development of this application was put to a halt.",
             "35 active users!",
             "The idea of using marbles as a point system came from the Fitness Jar activity",
-            "First experience with using Firebase",
+            "First experience using Firebase",
             "Each game within Colonial Carnival targets one of the Housing and Residence Life programming types (iMatter, Cultural Awareness, Current Event, & Social)",
             "Big thank you to the Housing and Residence Life team for their input on improving the quality of the application"
         ],
@@ -86,10 +88,10 @@
         ],
         "summary": "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
         "notes": [
-            "Team lead",
+            "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
+            "Became team lead",
             "Created the artwork using Aseprite",
-            "Used Audacity for the sound effects",
-            "Leveraged WinForms 2019"
+            "We used WinForms 2019 to bring this game to life."
         ],
         "collaborators": [
             {
@@ -264,7 +266,9 @@
             "arduino", "c++", "fritzing", "embedded systems"
         ],
         "summary": "Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock.",
-        "notes": [],
+        "notes": [
+            "Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock."
+        ],
         "collaborators": [],
         "icon": {
             "type": "fas",
@@ -281,23 +285,6 @@
         "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
         "demoUrl": "https://pawbytes.netlify.app/",
         "caption": "A three part project that incorporates a Twitter bot, database, and website.",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/rocstory/PawBytes_Webapp",
-                "type": "github"
-            },
-            {
-                "name": "website",
-                "url": "https://pawbytes.netlify.app/",
-                "type": "web"
-            },
-            {
-                "name": "twitter",
-                "url": "https://twitter.com/PawBytes",
-                "type": "twitter"
-            }
-        ],
         "startdate": "May 1st 2020",
         "video": null,
         "images": [
@@ -319,9 +306,9 @@
         ],
         "summary": "A three part personal project which models a fictional restaurant. The project involved the development of a Twitter Bot, database, and web application.",
         "notes": [
-            "People can tweet at any of the Paw Pals by interacting with the Paw Bot which will reply with a message.",
-            "Initially designed to be a DBMS project using PostgreSQL. This was changed to MongoDB because it is free.",
-            "Thank you to everyone who submitted pictures of their dogs and cats!"
+            "Paw Bytes is my first full stack web application.",
+            "This project started off as a database project and grew to be something bigger!",
+            "Thank you to everyone who submitted pictures of their cats and dogs!"
         ],
         "collaborators": [],
         "refLinks": [
@@ -351,8 +338,8 @@
         "name": "Lovely Feathers",
         "type": "Web Application",
         "caption": "A web application that gives people the opportunitiy to spread kindness.",
+        "startdate":"December 20th 2020",
         "links": [],
-        "startdate": null,
         "video": null,
         "images": [
             {
@@ -365,7 +352,9 @@
         ],
         "summary": "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 11th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
         "notes": [
-            "Each feather contains a unique message and prompt"
+            "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 11th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
+            "This application is still in development as of March 11th 2021.",
+            "Since 2020 was such a very difficult and negative year, I wanted to create an application that gives people an opportunity to spread a bit of kindness."
         ],
         "collaborators": [],
         "icon": {

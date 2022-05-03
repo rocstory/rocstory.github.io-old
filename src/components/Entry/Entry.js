@@ -29,8 +29,6 @@ function Entry() {
         setSelEntry(undefined)
     }
 
-    console.log('Collabs:', collaborators)
-
     return (
         <Modal
             show={show}

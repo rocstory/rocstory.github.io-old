@@ -20,8 +20,9 @@ function CollabListing() {
             <span className='collab-descr'>These are the people who helped me with this project</span>
             <div className='cl-cntr'>
                 {
-                    collaborators.map(collab =>
+                    collaborators.map((collab, index) =>
                         <ContactCard
+                            key={index}
                             contact={collab}
                         />
                     )

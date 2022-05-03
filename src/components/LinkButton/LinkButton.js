@@ -1,23 +1,23 @@
-import React, { useEffect, useContext, useState} from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import './LinkButton.css';
 
 import { Button } from 'react-bootstrap';
 
 
-function LinkButton({linkUrl, linkLabel})
-{
+function LinkButton({ linkUrl, linkLabel }) {
 
-  
-  
+
+
   return (
     <Button
       variant={null}
-        className="link-button"
-        size="lg"
-        href={linkUrl}
-        target="_blank"
+      className="link-button"
+      size="lg"
+      href={linkUrl}
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      <i>{linkLabel}</i>
+      <p>{linkLabel}</p>
     </Button>
   )
 }

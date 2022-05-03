@@ -21,6 +21,8 @@ function CardLink({ link }) {
         <div className="cl-container">
             <Button
                 href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cl-icon"
             >
                 <p

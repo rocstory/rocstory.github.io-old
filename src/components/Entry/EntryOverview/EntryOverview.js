@@ -24,11 +24,12 @@ function EntryOverview() {
             {
                 <ul className="ref-links">
                     {
-                        refLinks && refLinks.length > 0 && refLinks.map(link =>
-                            <li key={link}>
+                        refLinks && refLinks.length > 0 && refLinks.map((link, index) =>
+                            <li key={index}>
                                 <a
                                     href={link.url}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     <span className="eol-icon"><FontAwesomeIcon icon={EntryRefLinkIcon} /></span>
                                     <span className="eol-label">{link.label}</span>
