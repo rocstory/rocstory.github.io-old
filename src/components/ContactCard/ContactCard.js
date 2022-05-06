@@ -1,37 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ContactCard.scss";
 import CardLink from "./CardLink/CardLink";
-import defaultImage from '../../assets/default_icon.png';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import { Image } from "react-bootstrap";
-var util = require('../../helper/utilities');
-
-var dbController = require('../../dataStore/dataStore');
-
+import useContactCard from "./useContactCard";
 function ContactCard({ contact }) {
-    const { pid, role } = contact;
-    const [person, setPerson] = useState(null);
-    const [imgurl, setImgUrl] = useState(null);
-    const [name, setName] = useState('');
-    // const [reflinks, setRefLinks] = useState(null);
 
-    function handleImageLoading() {
-        setImgUrl(defaultImage);
-    }
+    const {
+        person,
+        role,
+        imgUrl,
+        name,
+        handleImageLoadingError
 
-    useState(() => {
-        async function getPerson() {
-            const dbPerson = await dbController.getPerson(pid);
-            const imgsrc = dbPerson.imgurl ? dbPerson.imgurl : defaultImage;
-            const personName = await util.modifyName(dbPerson.name);
-            setPerson(dbPerson);
-            setImgUrl(imgsrc);
-            setName(personName);
-        }
-        getPerson();
-    }, [pid])
-
+    } = useContactCard(contact);
 
     return person && (
 
@@ -40,8 +21,8 @@ function ContactCard({ contact }) {
         >
             <Image
                 className="cc-image"
-                src={imgurl}
-                onError={handleImageLoading}
+                src={imgUrl}
+                onError={handleImageLoadingError}
                 roundedCircle
             />
             <div
@@ -62,6 +43,6 @@ function ContactCard({ contact }) {
 
         </div>
     )
-}; // class
+};
 
 export default ContactCard;

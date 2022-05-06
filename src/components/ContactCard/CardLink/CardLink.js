@@ -3,15 +3,15 @@ import "./CardLink.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
 
-var util = require('../../../helper/utilities');
+const dStore = require('../../../dataStore/dataStore');
 
 function CardLink({ link }) {
     const { type, name, url } = link;
     const [icon, setIcon] = useState(null)
 
     useEffect(() => {
-        async function getLinkIcon() {
-            const linkIcon = await util.getTechIcon(type);
+        function getLinkIcon() {
+            const linkIcon = dStore.getTechIcon(type);
             setIcon(linkIcon);
         }
         getLinkIcon();

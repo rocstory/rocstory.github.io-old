@@ -1,14 +1,16 @@
-var dbConfig = require("./data/misc/db-config");
 
-var prjImports = require('./imports/prjImports.json');
-var projectEntries = require('./data/projectEntries.json');
-var activityEntries = require('./data/activityEntries.json');
+const projectEntries = require('./data/projectEntries.json');
+const activityEntries = require('./data/activityEntries.json');
 
 const meData = require('./data/me.json')
 const linksData = require('./data/links.json')
 const peopleCollection = require('./data/peopleCollection.json')
 
-export async function getMeData() {
+const technologies = require("./data/technologies.json");
+
+
+
+export function getMeData() {
     return meData;
 }
 export function getLinksData() {
@@ -26,20 +28,20 @@ export function getPerson(pid) {
     return peopleCollection.find(person => person.pid === pid)
 }
 
+export function getTechIcon(name) {
+    name = name.toLowerCase().trim();
 
-export function getLocalEntries(collection)
-{
-    // const {ProjectCollectionName, ActivityCollectionName} = dbConfig.getAllConfigObj();
-
-    // switch (collection)
-    // {
-    //     case ProjectCollectionName:
-    //         return projectEntries;
-    //     case ActivityCollectionName:
-    //         return activityEntries;
-    // }
-    return 0
+    const iconData = getIconByProperty(name);
+    // return default icon if icon is not found 
+    if (!iconData) return getIconByProperty('default');
+    return iconData;
 }
+
+function getIconByProperty(iconName, property = "name") {
+    return technologies.filter(tech => tech[property].toLowerCase().localeCompare(iconName) === 0)[0];
+}
+
+
 
 
 

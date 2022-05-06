@@ -23,6 +23,17 @@ $entryContentWidth: 90%;
     }
 
 
+// Fade in from bottom - https://stackoverflow.com/questions/34164889/how-to-make-a-bootstrap-modal-fade-in-from-the-bottom
+.modal.fade .modal-dialog {
+    transform: translate3d(0, 100vh, 0);
+
+}
+    
+.modal.show .modal-dialog {
+    transform: translate3d(0, 0, 0);
+    transition: all 0.30s ease-out;
+}
+
 @media screen and (max-width: 1024px) {
     .entry-cntr
     {

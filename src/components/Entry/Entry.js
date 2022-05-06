@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Entry.scss';
 import { PortfolioContext } from '../../contexts/PortfolioContext';
 import { Modal } from 'react-bootstrap';
@@ -15,13 +15,11 @@ function Entry() {
     const {
         selEntry,
         setSelEntry,
-
     } = useContext(PortfolioContext);
 
     const {
         repoUrl,
         demoUrl,
-        collaborators
     } = selEntry
 
     const handleHideModal = () => {

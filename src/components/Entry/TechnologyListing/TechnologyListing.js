@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { PortfolioContext } from '../../../contexts/PortfolioContext';
 import './TechnologyListing.scss';
 import Tech from './Tech/Tech';
@@ -9,6 +9,8 @@ function TechnologyListing() {
     const {
         tags
     } = selEntry
+
+    tags.sort()
 
     return tags && tags.length && (
         <div className="eot-cntr">

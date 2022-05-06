@@ -12,9 +12,9 @@ function Header() {
 
 	useEffect(() => {
 		async function getGeneralData() {
-            let { general, contactlinks } = await dStore.getMeData();
-            setAboutMe(general);
-            setContactLinks(contactlinks);
+			let { general, contactlinks } = dStore.getMeData();
+			setAboutMe(general);
+			setContactLinks(contactlinks);
 		}
 		getGeneralData();
 	}, []);
@@ -22,20 +22,20 @@ function Header() {
 	return aboutMe && contactLinks ? (
 		<div className="header">
 			<ContactLinks links={contactLinks} />
-			<Image 
-                src={icon} 
-                roundedCircle
-                className="profile-img"
-            />
+			<Image
+				src={icon}
+				roundedCircle
+				className="profile-img"
+			/>
 			<div className="header-body-summary">
-				<h1 
-                    className="my-name"
-                >
+				<h1
+					className="my-name"
+				>
 					{aboutMe.name}
 				</h1>
 				<div className="titles">
-                    {aboutMe.title}
-                </div>
+					{aboutMe.title}
+				</div>
 			</div>
 		</div>
 	) : null;

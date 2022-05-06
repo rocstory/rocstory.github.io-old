@@ -1,368 +1,398 @@
 [
     {
-        "name": "WCSU RA Colonial Carnival",
-        "type": "Web Development",
-        "caption": "A web application designed for students at Western Connecticut State University (WCSU).",
-        "repoUrl": "https://github.com/rocstory/colonialcarnival",
-        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
-        "startdate": "December 29th 2019",
-        "video": "https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory",
-        "images": [
-            {
-                "alt": "Program of the Year Award 2019-2020",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg"
-            },
-            {
-                "alt": "Login Page",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
-            },
-            {
-                "alt": "Home Page",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/homepage.jpg"
-            }, 
-            {
-                "alt": "Rock Paper Scissors",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/rps.jpg"
-            },
-            {
-                "alt": "WCSU Trivia",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
-            },
-            {
-                "alt": "Memory Match",
-                "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
-            }
-        ],
-        "tags": [
-            "web development", "firebase", "javascript", "html", "css"
-        ],
-        "summary": "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla javascript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
-        "notes": [
-            "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes.",
-            "This web application is also my very first web application. I took on the challenge of building this web application with vanilla JavaScript in order to learn the fundamentals of web development.",
-            "Because of COVID-19, the development of this application was put to a halt.",
-            "35 active users!",
-            "The idea of using marbles as a point system came from the Fitness Jar activity",
-            "First experience using Firebase",
-            "Each game within Colonial Carnival targets one of the Housing and Residence Life programming types (iMatter, Cultural Awareness, Current Event, & Social)",
-            "Big thank you to the Housing and Residence Life team for their input on improving the quality of the application"
-        ],
-        "collaborators": [],
-        "icon": {
-            "type": "fas",
-            "name": "ticket-alt",
-            "color": "#FFA26D"
+      "name": "WCSU RA Colonial Carnival",
+      "type": "Web Development",
+      "caption": "A web application designed for students at Western Connecticut State University (WCSU).",
+      "repoUrl": "https://github.com/rocstory/colonialcarnival",
+      "demoUrl": "https://rocstory.github.io/colonialcarnival/",
+      "startdate": "December 29th 2019",
+      "video": "https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory",
+      "images": [
+        {
+          "alt": "Program of the Year Award 2019-2020",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg"
         },
-        "refLinks": [],
-        "index": 5
+        {
+          "alt": "Login Page",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
+        },
+        {
+          "alt": "Home Page",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/homepage.jpg"
+        },
+        {
+          "alt": "Rock Paper Scissors",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/rps.jpg"
+        },
+        {
+          "alt": "WCSU Trivia",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
+        },
+        {
+          "alt": "Memory Match",
+          "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
+        }
+      ],
+      "tags": [
+        "web development",
+        "firebase",
+        "javascript",
+        "html",
+        "css"
+      ],
+      "summary": "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes. This web application is also my very first web application. I took on the challenge of building this web application with vanilla javascript in order to learn the fundamentals of web development. Due to COVID-19, the development of this application was put to a halt.",
+      "notes": [
+        "Colonial Carnival is a web application designed for students at WCSU to play anywhere! Residents are able to earn marbles (points) and exchange them for a variety of prizes.",
+        "This web application is also my very first personal project. I took on the challenge of building this web application with vanilla JavaScript in order to learn the fundamentals of web development.",
+        "Because of COVID-19, the enhancement of this application was put to a halt. As a Resident Assistant juggling many other responsibilities I was not able to focus on improving the application throughout the semester. The main focus was to make sure that the students were able to move out of the residential building safely.",
+        "There were 35 active users!",
+        "The idea of using marbles as a point system came from my Fitness Jar activity",
+        "This is my first experience using Firebase.",
+        "Each game within Colonial Carnival targets one of the Housing and Residence Life programming types (iMatter, Cultural Awareness, Current Event, & Social)",
+        "I want to give a big thank you to the Housing and Residence Life team for their input on improving the quality of this application"
+      ],
+      "collaborators": [],
+      "icon": {
+        "type": "fas",
+        "name": "ticket-alt",
+        "color": "#FFA26D"
+      },
+      "refLinks": [],
+      "index": 5
     },
     {
-        "name": "Chev's Escape",
-        "type": "Game Development",
-        "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
-        "demoUrl": null,
-        "caption": "An object oriented software engineering class project (2019).",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/rocstory/Cs_ChevEscape",
-                "type": "github"
-            }
-        ],
-        "startdate": "September 1st 2019",
-        "video": null,
-        "images": [
-            {
-                "alt": "Main Menu",
-                "type": "image",
-                "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
-            },
-            {
-                "alt": "Game Tutorial",
-                "type": "image",
-                "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgB.jpg"
-            }
-        ],
-        "tags": [
-            "c#", "game development"
-        ],
-        "summary": "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
-        "notes": [
-            "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
-            "Became team lead",
-            "Created the artwork using Aseprite",
-            "We used WinForms 2019 to bring this game to life."
-        ],
-        "collaborators": [
-            {
-                "pid": "alexandre1",
-                "role": "developer"
-            },
-            {
-                "pid": "singh1",
-                "role": "developer"
-            },
-            {
-                "pid": "alpuche1",
-                "role": "Developer"
-            },
-            {
-                "pid": "pineau1",
-                "role": "developer"
-            }
-        ],
-        "icon": {
-            "type": "fas",
-            "name": "gamepad",
-            "color": "#EEC299"
-
+      "name": "Chev's Escape",
+      "type": "Game Development",
+      "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
+      "demoUrl": null,
+      "caption": "An object oriented software engineering class project (2019).",
+      "links": [
+        {
+          "name": "github",
+          "url": "https://github.com/rocstory/Cs_ChevEscape",
+          "type": "github"
+        }
+      ],
+      "startdate": "September 1st 2019",
+      "video": null,
+      "images": [
+        {
+          "alt": "Main Menu",
+          "type": "image",
+          "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
         },
-        "refLinks": [],
-        "likes": 0,
-        "index": 4
+        {
+          "alt": "Game Tutorial",
+          "type": "image",
+          "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgB.jpg"
+        }
+      ],
+      "tags": [
+        "c#",
+        "game development"
+      ],
+      "summary": "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
+      "notes": [
+        "Chev's Escape is a class project focused on building an object oriented program with 4-5 other students. The goal for this project is to create a video game without the use of a pre-exisitng game engine such as Unity.",
+        "Chev's Escape is about the professor Dr. Ganchev who needs to solve a number of puzzles in order to escape the Computer Science building",
+        "I took on the role as the team lead.",
+        "We used WinForms 2019 to bring this game to life."
+      ],
+      "collaborators": [
+        {
+          "pid": "alexandre1",
+          "role": "developer"
+        },
+        {
+          "pid": "singh1",
+          "role": "developer"
+        },
+        {
+          "pid": "alpuche1",
+          "role": "Developer"
+        },
+        {
+          "pid": "pineau1",
+          "role": "developer"
+        }
+      ],
+      "icon": {
+        "type": "fas",
+        "name": "gamepad",
+        "color": "#EEC299"
+      },
+      "refLinks": [],
+      "likes": 0,
+      "index": 4
     },
     {
-        "name": "GITRG MOCAP 2018-2019",
-        "type": "Web Development",
-        "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
-        "demoUrl": null,
-        "caption": "A cost effective motion capturing system",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/ChrisIossa/RPi_MoCap",
-                "type": "github"
-            },
-            {
-                "name": "webpage",
-                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
-                "type": "web"
-            }
-        ],
-        "startdate": "August 1st 2018",
-        "video": null,
-        "images": [
-            {
-                "alt": "freecad drawing",
-                "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/mocap_fritzing.jpg"
-            },
-            {
-                "alt": "mocap example",
-                "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/model.jpg"
-            },
-            {
-                "alt": "mocap running example",
-                "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/example.jpg"
-            }
-        ],
-        "tags": [
-            "python", "raspberry pi", "fritzing", "openScad", "embedded systems", "software development"
-        ],
-        "summary": "The goal of this project was to design a cost-effective motion capture system using “off the shelf” components and custom designed software. The project uses Raspberry Pi 3 computers for development but targets Raspberry Pi Zeroes for deployment. The system also uses NoIR cameras for computer vision purposes. The software is written in Python and utilizes the OpenCV computer vision library.",
-        "notes": [
-        ],
-        "collaborators": [
-            {
-                
-                "pid": "joel1",
-                "role": "Faculty Advisor"
-            },
-            {
-                "pid": "iossa1",
-                "role": "Project Lead (2018)"
-            },
-            {
-                "pid": "alexandre1",
-                "role": "Project Lead (2019)"
-            },
-            {
-                "pid": "doris1",
-                "role": "Developer"
-            }
-        ],
-        "refLinks": [
-            {
-                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
-                "label": "Graphics & Interactive Techniques Research Group"
-            }
-        ],
-        "icon": {
-            "type": "fas",
-            "name": "camera",
-            "color": "#E8EBE4"
-
+      "name": "GITRG MOCAP 2018-2019",
+      "type": "Web Development",
+      "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
+      "demoUrl": null,
+      "caption": "A cost effective motion capturing system",
+      "links": [
+        {
+          "name": "github",
+          "url": "https://github.com/ChrisIossa/RPi_MoCap",
+          "type": "github"
         },
-        "index": 1
+        {
+          "name": "webpage",
+          "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+          "type": "web"
+        }
+      ],
+      "startdate": "August 1st 2018",
+      "video": null,
+      "images": [
+        {
+          "alt": "freecad drawing",
+          "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/mocap_fritzing.jpg"
+        },
+        {
+          "alt": "mocap example",
+          "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/model.jpg"
+        },
+        {
+          "alt": "mocap running example",
+          "url": "https://rocportfolio.s3.amazonaws.com/gitrg_mocap/example.jpg"
+        }
+      ],
+      "tags": [
+        "python",
+        "raspberry pi",
+        "fritzing",
+        "openScad",
+        "embedded systems",
+        "software development"
+      ],
+      "summary": "The goal of this project was to design a cost-effective motion capture system using “off the shelf” components and custom designed software. The project uses Raspberry Pi 3 computers for development but targets Raspberry Pi Zeroes for deployment. The system also uses NoIR cameras for computer vision purposes. The software is written in Python and utilizes the OpenCV computer vision library.",
+      "notes": [
+        "The goal of this project was to design a cost-effective motion capture system using “off the shelf” components and custom designed software. ",
+        "The project uses Raspberry Pi 3 computers for development but targets Raspberry Pi Zeroes for deployment. The system also uses NoIR cameras for computer vision purposes. The software is written in Python and utilizes the OpenCV computer vision library."
+      ],
+      "collaborators": [
+        {
+          "pid": "joel1",
+          "role": "Faculty Advisor"
+        },
+        {
+          "pid": "iossa1",
+          "role": "Project Lead (2018)"
+        },
+        {
+          "pid": "alexandre1",
+          "role": "Project Lead (2019)"
+        },
+        {
+          "pid": "doris1",
+          "role": "Developer"
+        }
+      ],
+      "refLinks": [
+        {
+          "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+          "label": "Graphics & Interactive Techniques Research Group"
+        }
+      ],
+      "icon": {
+        "type": "fas",
+        "name": "camera",
+        "color": "#E8EBE4"
+      },
+      "index": 1
     },
     {
-        "name": "GITRG 3D Crayon 2019-2020",
-        "type": "Embedded Systems",
-        "caption": "An open source intelligent toy which allows someone to draw in a 3D space",
-        "links": [
-            {
-                "name": "webpage",
-                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
-                "type": "web"
-            }
-        ],
-        "startdate": "August 1st 2019",
-        "video": null,
-        "images": [
-            {
-                "alt": "3dc design",
-                "url": "https://rocportfolio.s3.amazonaws.com/3dc_design.jpg"
-            }
-        ],
-        "tags": [
-            "raspberry pi", "embedded systems"
-        ],
-        "summary": "An open source intelligent toy product that allows an individual to draw in a 3D space.",
-        "notes": [
-            "This project is in the design phase as of 3/26/20."
-        ],
-        "collaborators": [
-            {
-                "pid": "joel1",
-                "role": "Faculty Advisor"
-            }
-        ],
-        "icon": {
-            "type": "fas",
-            "name": "pen",
-            "color": "#FF6961"
-
-        },
-        "refLinks":[
-            {
-                "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
-                "label": "Graphics & Interactive Techniques Research Group"
-            }
-        ],
-        "index": 2
+      "name": "GITRG 3D Crayon 2019-2020",
+      "type": "Embedded Systems",
+      "caption": "An open source intelligent toy which allows someone to draw in a 3D space",
+      "links": [
+        {
+          "name": "webpage",
+          "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+          "type": "web"
+        }
+      ],
+      "startdate": "August 1st 2019",
+      "video": null,
+      "images": [
+        {
+          "alt": "3dc design",
+          "url": "https://rocportfolio.s3.amazonaws.com/3dc_design.jpg"
+        }
+      ],
+      "tags": [
+        "raspberry pi",
+        "embedded systems"
+      ],
+      "summary": "An open source intelligent toy product that allows an individual to draw in a 3D space.",
+      "notes": [
+        "An open source intelligent toy which allows someone to draw in a 3D space",
+        "This project is in the design phase as of 3/26/20."
+      ],
+      "collaborators": [
+        {
+          "pid": "joel1",
+          "role": "Faculty Advisor"
+        }
+      ],
+      "icon": {
+        "type": "fas",
+        "name": "pen",
+        "color": "#FF6961"
+      },
+      "refLinks": [
+        {
+          "url": "https://www.wcsu.edu/cs/computer-science-research/computer-science-grg/",
+          "label": "Graphics & Interactive Techniques Research Group"
+        }
+      ],
+      "index": 2
     },
     {
-        "name": "Revealing Roc",
-        "type": "Embedded System",
-        "demoUrl": null,
-        "repoUrl": "https://github.com/rocstory/Arduino_RevRoc", 
-        "caption": "An embedded systems class project",
-        "links": [
-            {
-                "name": "github",
-                "url": "https://github.com/rocstory/Arduino_RevRoc",
-                "type": "github"
-            }
-        ],
-        "startdate": "Fall 2017",
-        "video": null,
-        "images": [
-            {
-                "alt": "rev roc",
-                "type": "image",
-                "url": "https://rocportfolio.s3.amazonaws.com/revealingroc/revroc_1.jpg"
-            }
-        ],
-        "tags": [
-            "arduino", "c++", "fritzing", "embedded systems"
-        ],
-        "summary": "Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock.",
-        "notes": [
-            "Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock."
-        ],
-        "collaborators": [],
-        "icon": {
-            "type": "fas",
-            "name": "lightbulb",
-            "color": "#FDFD96"
-
-        },
-        "refLinks": [],
-        "index": 3
+      "name": "Revealing Roc",
+      "type": "Embedded System",
+      "demoUrl": null,
+      "repoUrl": "https://github.com/rocstory/Arduino_RevRoc",
+      "caption": "An embedded systems class project",
+      "links": [
+        {
+          "name": "github",
+          "url": "https://github.com/rocstory/Arduino_RevRoc",
+          "type": "github"
+        }
+      ],
+      "startdate": "Fall 2017",
+      "video": null,
+      "images": [
+        {
+          "alt": "rev roc",
+          "type": "image",
+          "url": "https://rocportfolio.s3.amazonaws.com/revealingroc/revroc_1.jpg"
+        }
+      ],
+      "tags": [
+        "arduino",
+        "c++",
+        "fritzing",
+        "embedded systems"
+      ],
+      "summary": "Revealing Roc is an Intro to Embedded Systems project that utilizes an Arduino Nano and various components. The software is written in the programming language C++. It is a handheld game that instructs the user to find the hidden rock.",
+      "notes": [
+        "Revealing Roc is an Intro to Embedded Systems project that uses an Arduino Nano and other components.",
+        "Revealing Roc is a 'Hide and Seek' like game across a 4x4 RGB LED board where the player has to find the spot that the \"Roc\" is hidden. The player has three chances to guess correctly. "
+      ],
+      "collaborators": [],
+      "icon": {
+        "type": "fas",
+        "name": "lightbulb",
+        "color": "#FDFD96"
+      },
+      "refLinks": [],
+      "index": 3
     },
     {
-        "name": "Paw Bytes",
-        "type": "Web Application",
-        "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
-        "demoUrl": "https://pawbytes.netlify.app/",
-        "caption": "A three part project that incorporates a Twitter bot, database, and website.",
-        "startdate": "May 1st 2020",
-        "video": null,
-        "images": [
-            {
-                "alt": "paw bytes main page",
-                "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fpawbytes_homepage.jpg?alt=media&token=31b0797a-fd85-44c3-8456-81ac4b21fa90"
-            },
-            {
-                "alt": "project plan",
-                "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fpawbytes_designplan.jpg?alt=media&token=d6e23485-8a98-4591-8572-e8a10a0e24c4"
-            },
-            {
-                "alt": "database change",
-                "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fdbchange.jpg?alt=media&token=167b8db7-d69b-4050-820b-4ec4cdae2ae4"
-            }
-        ],
-        "tags": [
-            "python", "mongodb", "postgresql", "twitter","react","javascript", "html", "css", "web development"
-        ],
-        "summary": "A three part personal project which models a fictional restaurant. The project involved the development of a Twitter Bot, database, and web application.",
-        "notes": [
-            "Paw Bytes is my first full stack web application.",
-            "This project started off as a database project and grew to be something bigger!",
-            "Thank you to everyone who submitted pictures of their cats and dogs!"
-        ],
-        "collaborators": [],
-        "refLinks": [
-            {
-                "url": "https://github.com/rocstory/PawBytes_WebApp",
-                "label": "Client - Source Code"
-            },
-            {
-                "url": "https://github.com/rocstory/PawBytes_Database",
-                "label": "Database - Source Code"
-            },
-            {
-                "url": "https://github.com/rocstory/PawBytes_PawBot",
-                "label": "Bot - Source Code"
-            }
-        ],
-
-        "icon": {
-            "type": "fas",
-            "name": "paw",
-            "color": "#AD8B7A"
-
+      "name": "Paw Bytes",
+      "type": "Web Application",
+      "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
+      "demoUrl": "https://pawbytes.netlify.app/",
+      "caption": "A three part project that incorporates a Twitter bot, database, and website.",
+      "startdate": "May 1st 2020",
+      "video": null,
+      "images": [
+        {
+          "alt": "paw bytes main page",
+          "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fpawbytes_homepage.jpg?alt=media&token=31b0797a-fd85-44c3-8456-81ac4b21fa90"
         },
-        "index": 6
+        {
+          "alt": "project plan",
+          "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fpawbytes_designplan.jpg?alt=media&token=d6e23485-8a98-4591-8572-e8a10a0e24c4"
+        },
+        {
+          "alt": "database change",
+          "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Fpawbytes%2Fdbchange.jpg?alt=media&token=167b8db7-d69b-4050-820b-4ec4cdae2ae4"
+        }
+      ],
+      "tags": [
+        "python",
+        "mongodb",
+        "postgresql",
+        "twitter",
+        "react",
+        "javascript",
+        "html",
+        "css",
+        "web development"
+      ],
+      "summary": "A three part personal project which models a fictional restaurant. The project involved the development of a Twitter Bot, database, and web application.",
+      "notes": [
+        "Paw Bytes is my first full stack web application.",
+        "This project started off as a database project and grew to be something bigger!",
+        "Thank you to everyone who submitted pictures of their cats and dogs!",
+        "After struggling with CS205 (Intro to Database Management Systems) and barely passing I made a decision to revisit the material whenever I can. During my last semester, I asked my professor if I could sit in their database class from time to time while working on this project. ",
+        "After completing the database for this project, I wanted to do more. I wanted to take the chance to learn React so I used it to build the website for this project.",
+        "I was having a lot of fun seeing it come together and wanted to push myself even further. At the time I was interested in familiarizing myself with Python. So I decided to create a Twitter Bot with it (with the help of CS Dojo!). "
+      ],
+      "collaborators": [],
+      "refLinks": [
+        {
+          "url": "https://github.com/rocstory/PawBytes_WebApp",
+          "label": "Client - Source Code"
+        },
+        {
+          "url": "https://github.com/rocstory/PawBytes_Database",
+          "label": "Database - Source Code"
+        },
+        {
+          "url": "https://github.com/rocstory/PawBytes_PawBot",
+          "label": "Paw Bot - Source Code"
+        },
+        {
+          "url": "https://twitter.com/PawBytes",
+          "label": "Paw Bot - Twitter Bot"
+        }
+      ],
+      "icon": {
+        "type": "fas",
+        "name": "paw",
+        "color": "#AD8B7A"
+      },
+      "index": 6
     },
     {
-        "name": "Lovely Feathers",
-        "type": "Web Application",
-        "caption": "A web application that gives people the opportunitiy to spread kindness.",
-        "startdate":"December 20th 2020",
-        "links": [],
-        "video": null,
-        "images": [
-            {
-                "alt": "landing page",
-                "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Flovelyfeathers%2Flf_home.jpg?alt=media&token=c50426b5-0a7b-4be0-9325-37efb633b326"
-            }
-        ],
-        "tags": [
-            "react", "firebase", "css", "html", "javascript"
-        ],
-        "summary": "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 11th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
-        "notes": [
-            "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 11th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
-            "This application is still in development as of March 11th 2021.",
-            "Since 2020 was such a very difficult and negative year, I wanted to create an application that gives people an opportunity to spread a bit of kindness."
-        ],
-        "collaborators": [],
-        "icon": {
-            "type": "fas",
-            "name": "feather",
-            "color": "#4CC3EB"
-        },
-        "refLinks":[],
-        "index": 7
+      "name": "Lovely Feathers",
+      "type": "Web Application",
+      "caption": "A web application that gives people the opportunitiy to spread kindness.",
+      "startdate": "December 20th 2020",
+      "links": [],
+      "video": null,
+      "images": [
+        {
+          "alt": "landing page",
+          "url": "https://firebasestorage.googleapis.com/v0/b/rocportfolio-1b669.appspot.com/o/projects%2Flovelyfeathers%2Flf_home.jpg?alt=media&token=c50426b5-0a7b-4be0-9325-37efb633b326"
+        }
+      ],
+      "tags": [
+        "react",
+        "firebase",
+        "css",
+        "html",
+        "javascript"
+      ],
+      "summary": "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application. This application is still in development as of March 11th 2021. Since 2020 was such a very difficult and negative year, I wanted to create an application that gives an opportunity to provide people with a unique form of positivity.",
+      "notes": [
+        "Lovely Feathers is an application that gives people the opportuninity to spread kindness through the act of passing a card (feather) containing a kind message. A card is referred to as a feather throughout the application.",
+        "This application is still in development as of March 11th 2021.",
+        "Since 2020 was such a very difficult and negative year, I wanted to create an application that gives people an opportunity to spread a bit of kindness."
+      ],
+      "collaborators": [],
+      "icon": {
+        "type": "fas",
+        "name": "feather",
+        "color": "#4CC3EB"
+      },
+      "refLinks": [],
+      "index": 7
     }
-]
+  ]

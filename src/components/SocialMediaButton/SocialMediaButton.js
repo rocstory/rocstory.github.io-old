@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
 
 import "./SocialMediaButton.css";
-var util = require('../../helper/utilities');
+const dStore = require('../../dataStore/dataStore');
 
 function SocialMediaButton({ link }) {
     const [isHovered, setIsHovered] = useState(false)
@@ -12,7 +12,7 @@ function SocialMediaButton({ link }) {
 
     useEffect(() => {
         async function loadData() {
-            const iconData = await util.getTechIcon(type);
+            const iconData = dStore.getTechIcon(type);
             setIcon(iconData);
         }
         loadData();
