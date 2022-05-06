@@ -13,6 +13,7 @@
         align-self: center;
         width: 100%;
         margin-top: 0.5em;
+        // border: 2px solid red;
     }
 
     .eot-title {
@@ -30,3 +31,10 @@
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
+
+@media screen and (max-width: 393px) {
+    .tl-cntr {
+        width: 70%;
+    }
+    
+}

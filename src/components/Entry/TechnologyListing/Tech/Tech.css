@@ -24,3 +24,11 @@
         text-transform: capitalize;
     }
 
+@media screen and (max-width: 393px) {
+
+    .tech-container
+    {
+        width: 13em;
+    }
+
+}

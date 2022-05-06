@@ -61,18 +61,19 @@ $entryContentWidth: 90%;
     .entry-cntr {
         width: 22em;
     }
-}
 
-// @media screen and (max-width: 414px) {
-//     .entry-cntr {
-//         width: 21em;
-//     }
-// }
+    #entry-title {
+        text-align: center;
+    }
+}
 
 
 @media screen and (max-width: 393px) {
     .entry-cntr {
         width: 20em;
+    }
+    #entry-title {
+        text-align: center;
     }
 }
 
@@ -80,10 +81,18 @@ $entryContentWidth: 90%;
     .entry-cntr {
         width: 16em;
     }
+
+    #entry-title {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 280px) {
     .entry-cntr {
         width: 14em;
+    }
+
+    #entry-title {
+        text-align: center;
     }
 }
