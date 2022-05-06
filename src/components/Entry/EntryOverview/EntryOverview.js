@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react';
-import './EntryOverview.css';
+import './EntryOverview.scss';
 import { PortfolioContext } from '../../../contexts/PortfolioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import appConfig from '../../../appConfig';
@@ -22,9 +22,9 @@ function EntryOverview() {
                 Created: {`${startdate}`}
             </p>
             {
-                <ul className="ref-links">
+                refLinks && <ul className="ref-links">
                     {
-                        refLinks && refLinks.length > 0 && refLinks.map((link, index) =>
+                        refLinks.length > 0 && refLinks.map((link, index) =>
                             <li key={index}>
                                 <a
                                     href={link.url}

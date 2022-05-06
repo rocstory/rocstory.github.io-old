@@ -13,15 +13,6 @@
         margin: auto;
     }
 
-.collab-title
-{
-    /* border: 2px solid green; */
-}
-.collab-descr
-{
-    /* border: 2px solid green; */
-}
-
 .collab-cntr .cl-cntr {
     /* border: 2px solid blue; */
     display: flex;
@@ -29,4 +20,26 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+}
+
+@media screen and (max-width: 425px) {
+    .collab-cntr
+    {
+        width: 20em;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .collab-cntr
+    {
+        width: 18em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .collab-cntr
+    {
+        width: 13em;
+
+    }
 }

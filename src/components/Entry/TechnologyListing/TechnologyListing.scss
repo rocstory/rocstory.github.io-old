@@ -1,15 +1,17 @@
+@import "../Entry.scss";
+
 .eot-cntr
 {
+    // border: 2px solid red;
     align-self: center;
     display: flex;
     flex-direction: column;
-    width: 50em;
+    width: $entryContentWidth;
 }
 
     .tl-cntr {
-        /* border: 2px solid red; */
         align-self: center;
-        width: 45em;
+        width: 100%;
         margin-top: 0.5em;
     }
 

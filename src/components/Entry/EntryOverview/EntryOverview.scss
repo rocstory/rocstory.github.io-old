@@ -1,6 +1,9 @@
+@import "../Entry.scss";
+
+
 .eo-cntr
 {
-    /* border: 2px solid red; */
+    // border: 2px solid red;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -9,14 +12,15 @@
 
 .eo-created {
     /* border: 2px solid blue; */
-    width: 50em;
+    width: $entryContentWidth;
     text-align: right; 
     align-self:center;
 }
 
 .ref-links {
+    // border: 2px solid blue;
     align-self: center;
-    width: 50em;
+    width: $entryContentWidth;
     list-style: none;
     padding-left: 0em;
 }
@@ -26,7 +30,14 @@
 }
 
 .eod-cntr {
-    /* border: 2px solid blue; */
+    // border: 2px solid blue;
     align-self: center;
-    width: 50em;
+    width: $entryContentWidth;
+}
+
+@media screen and (max-width: 280px) {
+    .eol-icon, .eol-label
+    {
+        font-size: 0.8em;
+    }
 }

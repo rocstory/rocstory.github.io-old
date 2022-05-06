@@ -20,7 +20,7 @@
      }
  }
 
- @media screen and (max-width: 375px) {
+ @media screen and (max-width: 393px) {
     .link-button {
         width: 18em;
         height: 2.5em;
@@ -34,5 +34,15 @@
     }
     .link-button p {
         font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .link-button {
+        width: 13em;
+        height: 2em;
+    }
+    .link-button p {
+        font-size: 0.7em;
     }
 }

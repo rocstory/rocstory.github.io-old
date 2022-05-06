@@ -42,3 +42,21 @@ $buttonSize: 2.1em;
             padding: 0;
             margin: 0;
         }
+
+@media screen and (max-width: 320px) {
+    .cl-icon
+    {
+        width: 1.2em; 
+        height: 1.2em;
+
+    }
+    .cl-icon-content
+    {
+        font-size: 1em;
+    }
+    .cl-name-container > p
+    {
+        font-size: 0.5em;
+        display: none;
+    }
+}

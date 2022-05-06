@@ -60,3 +60,18 @@
         width: 18em;
     }
 }
+
+@media screen and (max-width: 280px) {
+    .entry-card-cntr {
+        width: 16em;
+    }
+
+    .ec-descr > .ec-name
+    {
+        font-size: 1em;
+    }
+    .ec-descr > .ec-type
+    {
+        font-size: 0.8em;
+    }
+}

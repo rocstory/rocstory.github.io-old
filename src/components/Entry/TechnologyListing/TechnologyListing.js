@@ -1,6 +1,6 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { PortfolioContext } from '../../../contexts/PortfolioContext';
-import './TechnologyListing.css';
+import './TechnologyListing.scss';
 import Tech from './Tech/Tech';
 
 

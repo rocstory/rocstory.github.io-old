@@ -58,6 +58,14 @@ function ContactCard({ contact }) {
                                 link={link}
                             />)
                     }
+                    <CardLink
+                        key={90}
+                        link={{
+                            "type": "github",
+                            "name": "github",
+                            "url": "https://github.com/jrm86"
+                        }}
+                    />
                 </div>
             </div>
 

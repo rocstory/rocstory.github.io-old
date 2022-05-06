@@ -1,31 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
 
 import "./SocialMediaButton.css";
 var util = require('../../helper/utilities');
 
-function SocialMediaButton({link})
-{
+function SocialMediaButton({ link }) {
     const [isHovered, setIsHovered] = useState(false)
     const [icon, setIcon] = useState(null);
-    const {type, src, name} = link
+    const { type, src, name } = link
 
-    useEffect(()=> {
-        async function loadData()
-        {
+    useEffect(() => {
+        async function loadData() {
             const iconData = await util.getTechIcon(type);
             setIcon(iconData);
         }
         loadData();
     }, [link, type])
 
-    function toggleHover()
-    {
-        setIsHovered(prev => !prev); 
+    function toggleHover() {
+        setIsHovered(prev => !prev);
     }
 
-    let btnStyle = {backgroundColor: "white"}
+    let btnStyle = { backgroundColor: "white" }
     isHovered ? btnStyle.backgroundColor = icon.color : btnStyle.backgroundColor = "white";
 
     return icon ? (
@@ -35,7 +32,7 @@ function SocialMediaButton({link})
             target="_blank"
             rel="noopener noreferrer"
         >
-            <Button 
+            <Button
                 style={btnStyle}
                 className="social-btn clickable"
                 onMouseEnter={toggleHover}

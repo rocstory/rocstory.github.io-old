@@ -11,6 +11,7 @@ $image-size: 5em;
     padding-top: 5px;
     padding-bottom: 8px;
     box-shadow: -1px 1px 5px -1px #D7D4D4;
+    overflow: hidden;
 }
 
 .cc-image
@@ -52,4 +53,42 @@ $image-size: 5em;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 414px) {
+    .cc-cntr
+    {
+        width: 19em;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    .cc-cntr
+    {
+        width: 16em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .cc-cntr
+    {
+        width: 11em;
+        height: 5.5em;
+    }
+
+    .cc-image {
+        width: 2em;
+        height: 2em !important;
+    }
+
+    .cc-name
+    {
+        font-size: 1.2em;
+    }
+
+    .cc-role
+    {
+        font-size: 0.8em;
+        margin-bottom: 0;
+    }
 }

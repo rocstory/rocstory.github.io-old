@@ -1,5 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react';
-import './Entry.css';
+import './Entry.scss';
 import { PortfolioContext } from '../../contexts/PortfolioContext';
 import { Modal } from 'react-bootstrap';
 import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
