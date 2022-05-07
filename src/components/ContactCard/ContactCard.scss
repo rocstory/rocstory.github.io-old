@@ -16,7 +16,6 @@ $image-size: 5em;
 
 .cc-image
 {
-    // border: 2px solid green;
     width: $image-size;
     height: $image-size !important;
     margin: auto;
@@ -62,14 +61,14 @@ $image-size: 5em;
     }
 }
 
-@media screen and (max-width: 393px) {
+@media screen and (max-width: 396px) {
     .cc-cntr
     {
         width: 16em;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 326px) {
     .cc-cntr
     {
         width: 11em;
