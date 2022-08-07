@@ -1,13 +1,21 @@
 .link-button
 {
     border: 2px solid #383838;
+    border-radius: 5em;
     background-color: #383838;
     width: 25em;
     height: 3.2em;
+    text-align: center;
+
+    
+
+    /* background-color: #383838;
+    width: 25em;
+    height: 3.2em;
     align-items: center;
-    border-radius: 5em;
+    border-radius: 5em; */
 }
- .link-button p {
+ .link-button span {
      font-style: normal;
      color: #F8F8F8;
      margin: 0 !important;

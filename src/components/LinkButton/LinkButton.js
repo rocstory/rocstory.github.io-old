@@ -9,18 +9,28 @@ function LinkButton({ linkUrl, linkLabel }) {
 
 
   return (
-    <Button
-      variant={null}
+    <a
       className="link-button"
-      size="lg"
-      href={linkUrl}
-      target="_blank"
-      rel="noopener noreferrer"
     >
-      <p>{linkLabel}</p>
-    </Button>
+      <span>{linkLabel}</span>
+    </a>
   )
+
+
 }
 
 export default LinkButton;
 
+
+// return (
+//   <Button
+//     variant={null}
+//     className="link-button"
+//     size="lg"
+//     href={linkUrl}
+//     target="_blank"
+//     rel="noopener noreferrer"
+//   >
+//     <span>{linkLabel}</span>
+//   </Button>
+// )
