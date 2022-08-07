@@ -1,14 +1,20 @@
 [
     {
-        "label": "Twinlande Superstore Repository",
-        "url":"https://github.com/rocstory/twinlande-super-store"
+        "label": "Twinlande Super Store Repository",
+        "url":"https://github.com/rocstory/twinlande-super-store",
+        "color": "#2B8069",
+        "icon": {"type": "fab", "name":"github"}
     },
     {
-        "label": "Twinlande Superstore Website",
-        "url": "https://twinlande.netlify.app"
+        "label": "Twinlande Super Store Website",
+        "url": "https://twinlande.netlify.app",
+        "color": "#2B8069",
+        "icon": {"type": "fas", "name":"seedling"}
     },
     {
         "label": "Code & Chill Playlist",
-        "url":"https://open.spotify.com/playlist/3UwTUe0Y9nTCeRNUK3HK2I?si=2fea85f981e84cb7"
+        "url":"https://open.spotify.com/playlist/3UwTUe0Y9nTCeRNUK3HK2I?si=2fea85f981e84cb7", 
+        "color": "#1DB954",
+        "icon": {"type": "fab", "name":"spotify"}
     }
 ]

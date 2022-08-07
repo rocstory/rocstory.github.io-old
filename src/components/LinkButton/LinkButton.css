@@ -5,25 +5,30 @@
     width: 25em;
     height: 3.2em;
     text-align: center;
-
-
-
-    /* background-color: #383838;
-    width: 25em;
-    height: 3.2em;
-    align-items: center;
-    border-radius: 5em; */
 }
 
 .link-button:hover {
-    background-color: #56C8ED;
-    border: #56C8ED;
+    background-color: #56C8ED !important;
+    border: #56C8ED !important;
+}
+
+.link-button a {
+    margin: 0;
+    text-decoration: none;
 }
 
 .link-button span {
     font-style: normal;
     color: #F8F8F8;
     margin: 0 !important;
+}
+
+.link-icon {
+    font-size: 1.2em !important;
+}
+
+.link-label {
+    font-size: 1em !important;
 }
 
 @media screen and (max-width: 428px) {
