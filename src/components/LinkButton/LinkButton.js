@@ -9,11 +9,11 @@ function LinkButton({ linkUrl, linkLabel }) {
 
 
   return (
-    <a
+    <Button
       className="link-button"
     >
       <span>{linkLabel}</span>
-    </a>
+    </Button>
   )
 
 
