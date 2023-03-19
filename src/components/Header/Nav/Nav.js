@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import "./Nav.css";
 import Switch from 'react-switch';
-import {PortfolioContext} from '../../../contexts/PortfolioContext';
+import {PortfolioContext} from '../../../contexts/PageContext';
 
 function Nav()
 {

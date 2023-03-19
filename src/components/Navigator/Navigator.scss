@@ -1,3 +1,22 @@
+@use "../../scss/utilities.scss" as util;
+
+.main-nav {
+    background-color: #33658A;
+    color: #EDF2F4;
+
+    .nav-item {
+        margin: 0 20px 0;   
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    
+    .nav-item.active {
+        color: util.$active-color;
+    }
+}
+
 .nav-cntr
 {
     /* border: 2px solid red !important; */

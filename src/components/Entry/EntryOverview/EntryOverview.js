@@ -1,14 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './EntryOverview.scss';
-import { PortfolioContext } from '../../../contexts/PortfolioContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import appConfig from '../../../appConfig';
 import TechnologyListing from '../TechnologyListing/TechnologyListing';
+import { useEntryContext } from '../../../hooks/useEntryContext';
 
 const { EntryRefLinkIcon } = appConfig
 
 function EntryOverview() {
-    const { selEntry } = useContext(PortfolioContext);
+    const { selEntry } = useEntryContext()
 
     const {
         startdate,

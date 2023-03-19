@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, {  useState } from 'react';
 import './Entry.scss';
-import { PortfolioContext } from '../../contexts/PortfolioContext';
 import { Modal } from 'react-bootstrap';
 import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
 import appConfig from '../../appConfig';
 import EntryMediaDisplay from './EntryMediaDisplay/EntryMediaDisplay';
 import EntryOverview from './EntryOverview/EntryOverview';
 import CollabListing from '../CollabListing/CollabListing';
+import { useEntryContext } from '../../hooks/useEntryContext';
 
 const { ELT_Type } = appConfig
 
@@ -15,7 +15,7 @@ function Entry() {
     const {
         selEntry,
         setSelEntry,
-    } = useContext(PortfolioContext);
+    } = useEntryContext
 
     const {
         repoUrl,

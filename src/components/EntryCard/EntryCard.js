@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React  from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./EntryCard.css"
-import { PortfolioContext } from '../../contexts/PortfolioContext';
+import { useEntryContext } from '../../hooks/useEntryContext';
 
 
 function EntryCard({ data }) {
@@ -11,8 +11,7 @@ function EntryCard({ data }) {
         icon
     } = data
 
-    const { setSelEntry } = useContext(PortfolioContext)
-
+    const { setSelEntry } = useEntryContext()
     const handleEntryCardClick = () => {
         setSelEntry(data)
     }

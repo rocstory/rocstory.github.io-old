@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react';
 import './CollabListing.css';
-import { PortfolioContext } from '../../contexts/PortfolioContext';
+import { PortfolioContext } from '../../contexts/PageContext';
 import ContactCard from '../ContactCard/ContactCard'
+import { useEntryContext } from '../../hooks/useEntryContext';
 
 
 function CollabListing() {
     const {
         selEntry
-    } = useContext(PortfolioContext);
+    } = useEntryContext()
 
     const {
         collaborators

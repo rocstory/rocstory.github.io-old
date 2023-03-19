@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
-import { PortfolioContext } from '../../../contexts/PortfolioContext';
+import React from 'react';
+import { PortfolioContext } from '../../../contexts/PageContext';
 import './TechnologyListing.scss';
 import Tech from './Tech/Tech';
+import { useEntryContext } from '../../../hooks/useEntryContext';
 
 
 function TechnologyListing() {
-    const { selEntry } = useContext(PortfolioContext)
+    const { selEntry } = useEntryContext()
     const {
         tags
     } = selEntry
