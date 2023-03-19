@@ -14,6 +14,7 @@ import Entry from './components/Entry/Entry';
 import { EntryProvider } from './contexts/EntryContext';
 import { usePageContext } from './hooks/usePageContext';
 import HomePage from './pages/Home/HomePage';
+import ContactLinks from './components/Header/ContactLinks/ContactLinks';
 
 function App() {
   const { selPage} = usePageContext();
@@ -24,6 +25,7 @@ function App() {
       <div className="App">
         <Navigator />
         <Header />
+        <ContactLinks />
         {
           (selPage === EPortfolioPages.Home) && <HomePage />
         }

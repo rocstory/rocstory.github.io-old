@@ -30,12 +30,14 @@
 
 .social-media-container
 {
+    padding: 20px 0;
     margin-left: 0.3em;
     
-    width: 20em;
+    width: 100%;
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1em;
 }
 
 @media only screen and (max-width: 425px) 

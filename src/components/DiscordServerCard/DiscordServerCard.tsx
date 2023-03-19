@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Button, ButtonGroup } from 'react-bootstrap'
+import { Card, Button} from 'react-bootstrap'
 
 import './DiscordServerCard.scss'
 
@@ -20,8 +20,8 @@ const DiscordServerCard = () => {
             <Card.Body>
                 <Card.Title className="text-center dsc-title">Roc Labs</Card.Title>
                 <div className={'dsc-btn-container'}>
-                    <Button className={`dsc-btn join-server`}>Join Server</Button>
-                    <Button className={`dsc-btn read-more`}>Read More</Button>
+                    <Button className={`dsc-btn join-server shadow`}>Join Server</Button>
+                    <Button className={`dsc-btn read-more shadow`}>Read More</Button>
                 </div>
                
             </Card.Body>

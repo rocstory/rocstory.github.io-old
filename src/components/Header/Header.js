@@ -19,9 +19,8 @@ function Header() {
 		getGeneralData();
 	}, []);
 
-	return aboutMe && contactLinks ? (
+	return aboutMe ? (
 		<div className="header">
-			<ContactLinks links={contactLinks} />
 			<Image
 				src={icon}
 				roundedCircle

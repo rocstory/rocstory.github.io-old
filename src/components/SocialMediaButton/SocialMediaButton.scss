@@ -1,0 +1,45 @@
+@use '../../scss/utilities.scss' as util;
+
+// .social-container
+// {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     text-decoration: none !important;
+// }
+
+.social-btn
+{
+    border: none !important;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    text-decoration: none !important;
+    gap: 0.5em;
+
+    text-decoration: none !important;
+    background-color: #4E4B4B;
+
+    font-weight: bolder !important;
+
+    span {
+        // color: #f8f8f8;
+        color: util.$light-font-color;
+        font-size: 1.1em;
+    }
+
+    .social-btn-name {
+        text-transform: capitalize;
+    }
+
+}  
+    // .social-btn-icon
+    // {
+    //     color: #f8f8f8;
+    //     font-size: 1.5em;
+    // }
+    // .social-btn-name
+    // {
+    //     color: #4E4B4B !important;
+    //     text-transform: capitalize;
+    // }
