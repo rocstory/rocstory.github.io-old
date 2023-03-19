@@ -8,7 +8,7 @@ import { EPortfolioPages, PageProvider } from "./contexts/PageContext";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import appConfig from './appConfig.json';
-import LinksPage from './pages/LinksPage/LinksPage';
+import LinksPage from './components/LinkTree/LinkTree';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import Entry from './components/Entry/Entry';
 import { EntryProvider } from './contexts/EntryContext';

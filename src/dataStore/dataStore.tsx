@@ -1,3 +1,4 @@
+import { ITreeLink } from '../models/TreeLink';
 
 const projectEntries = require('./data/projectEntries.json');
 const activityEntries = require('./data/activityEntries.json');
@@ -10,11 +11,18 @@ const technologies = require("./data/technologies.json");
 
 
 
+
 export function getMeData() {
     return meData;
 }
-export function getLinksData() {
-    return linksData;
+export function getLinksData() : ITreeLink[] {
+    
+    return linksData.map((link: any) => ({
+        link: link.link,
+        url: link.url,
+        color: link.color,
+        icon: link.icon
+    }));
 }
 export function getProjectsData() {
     return projectEntries;
@@ -24,11 +32,11 @@ export function getActivitiesData() {
     return activityEntries;
 }
 
-export function getPerson(pid) {
-    return peopleCollection.find(person => person.pid === pid)
+export function getPerson(pid: string) {
+    return peopleCollection.find((person: any) => person.pid === pid)
 }
 
-export function getTechIcon(name) {
+export function getTechIcon(name: string) {
     name = name.toLowerCase().trim();
 
     const iconData = getIconByProperty(name);
@@ -37,8 +45,8 @@ export function getTechIcon(name) {
     return iconData;
 }
 
-function getIconByProperty(iconName, property = "name") {
-    return technologies.filter(tech => tech[property].toLowerCase().localeCompare(iconName) === 0)[0];
+function getIconByProperty(iconName: string, property: string = "name") {
+    return technologies.filter((tech: any) => tech[property].toLowerCase().localeCompare(iconName) === 0)[0];
 }
 
 

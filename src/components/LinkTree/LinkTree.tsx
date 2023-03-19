@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import LinkButton from '../../components/LinkButton/LinkButton';
-import './LinksPage.css';
+import LinkButton from '../LinkButton/LinkButton';
+import './LinkTree.scss';
+import { ITreeLink } from '../../models/TreeLink';
 
 const dataStore = require("../../dataStore/dataStore")
 
-function LinksPage() {
-  const [links, setLinks] = useState([])
+function LinkTree() {
+  const [links, setLinks] = useState<ITreeLink[]>([])
 
   useEffect(() => {
 
@@ -30,5 +31,5 @@ function LinksPage() {
   )
 }
 
-export default LinksPage;
+export default LinkTree;
 
