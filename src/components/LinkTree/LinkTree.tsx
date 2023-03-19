@@ -18,7 +18,7 @@ function LinkTree() {
   }, [])
 
   return (
-    <div className="links-page">
+    <div className="link-tree-container ltc-collapsed">
       {
         links.map(link =>
           <LinkButton

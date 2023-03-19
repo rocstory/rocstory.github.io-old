@@ -16,9 +16,9 @@ export function getMeData() {
     return meData;
 }
 export function getLinksData() : ITreeLink[] {
-    
+
     return linksData.map((link: any) => ({
-        link: link.link,
+        label: link.label,
         url: link.url,
         color: link.color,
         icon: link.icon
