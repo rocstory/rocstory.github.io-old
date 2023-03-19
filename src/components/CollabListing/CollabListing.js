@@ -1,6 +1,5 @@
-import React, { useContext, useState } from 'react';
+import React from 'react';
 import './CollabListing.css';
-import { PortfolioContext } from '../../contexts/PageContext';
 import ContactCard from '../ContactCard/ContactCard'
 import { useEntryContext } from '../../hooks/useEntryContext';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { PortfolioContext } from '../../../contexts/PageContext';
 import './TechnologyListing.scss';
 import Tech from './Tech/Tech';
 import { useEntryContext } from '../../../hooks/useEntryContext';

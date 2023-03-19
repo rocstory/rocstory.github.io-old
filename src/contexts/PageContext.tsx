@@ -8,8 +8,7 @@ interface PortfolioPageProps {
 
 export enum EPortfolioPages {
     Home = "home",
-    Projects = "projects",
-    Activities = "activites"
+    Projects = "projects"
 }
 
 export const PageContext = createContext({

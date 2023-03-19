@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navigator from './components/Navigator/Navigator';
 
-import { PageProvider } from "./contexts/PageContext";
+import { EPortfolioPages, PageProvider } from "./contexts/PageContext";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,30 +12,24 @@ import LinksPage from './pages/LinksPage/LinksPage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import Entry from './components/Entry/Entry';
 import { EntryProvider } from './contexts/EntryContext';
+import { usePageContext } from './hooks/usePageContext';
+import HomePage from './pages/Home/HomePage';
 
 function App() {
-  // const { selPage, selEntry } = useContext(PortfolioContext);
-  // const { WebPages } = appConfig
+  const { selPage} = usePageContext();
 
   return (
     <PageProvider>
     <EntryProvider >
       <div className="App">
         <Navigator />
-        {/* <Header /> */}
-        {/* {
-          (selPage === WebPages.linkPage) && <LinksPage />
+        <Header />
+        {
+          (selPage === EPortfolioPages.Home) && <HomePage />
         }
         {
-          (selPage === WebPages.projectPage) && <ProjectsPage />
+          (selPage === EPortfolioPages.Projects) && <ProjectsPage />
         }
-        {
-          (selPage === WebPages.activityPage) && <>TBB</>
-        }
-        {
-          selEntry && <Entry />
-        } */}
-
         <div className="footer">
           <p>Always <span>be kind</span>.</p>
           <p>Always <span>be honest</span>.</p>
