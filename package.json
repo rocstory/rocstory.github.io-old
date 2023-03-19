@@ -31,7 +31,7 @@
     "react-switch": "^5.0.1",
     "sass": "^1.51.0",
     "save-dev": "0.0.1-security",
-    "typescript": "^5.0.2"
+    "typescript": "^3.2.1 || ^4 || ^5.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
