@@ -1,0 +1,94 @@
+@use "../../scss/utilities.scss" as util;
+
+.link-button {
+    border: 2px solid #383838;
+    border-radius: 5em;
+    background-color: #383838;
+    width: 25em;
+    height: 3.2em;
+    text-align: center;
+
+    .link-icon {
+        font-size: 1.8em !important;
+    }
+    
+    .link-label-container {
+        display: flex;
+        // border:  2px solid red;
+        justify-content: center;
+        height: 100%;
+
+        .link-label {
+            margin: auto !important;
+            font-weight: bolder;
+        }
+    }
+}
+
+.link-button:hover {
+    background-color: util.$btn-hover-color !important;
+    border: util.$btn-hover-color !important;
+}
+
+.link-button a {
+    margin: 0;
+    text-decoration: none;
+}
+
+.link-button span {
+    font-style: normal;
+    color: #F8F8F8;
+    margin: 0 !important;
+}
+
+// .link-icon {
+//     font-size: 1.2em !important;
+// }
+
+// .link-label {
+//     font-size: 1em !important;
+// }
+
+// @media screen and (max-width: 428px) {
+//     .link-button {
+//         width: 20em;
+//         height: 2.5em;
+//     }
+// }
+
+// @media screen and (max-width: 414px) {
+//     .link-button {
+//         width: 19em;
+//         height: 2.5em;
+//     }
+// }
+
+// @media screen and (max-width: 393px) {
+//     .link-button {
+//         width: 18em;
+//         height: 2.5em;
+//     }
+// }
+
+// @media screen and (max-width: 375px) {
+//     .link-button {
+//         width: 15em;
+//         height: 2.2em;
+//     }
+
+//     .link-button p {
+//         font-size: 0.8em;
+//     }
+// }
+
+
+// @media screen and (max-width: 296px) {
+//     .link-button {
+//         width: 13em;
+//         height: 2em;
+//     }
+
+//     .link-button p {
+//         font-size: 0.7em;
+//     }
+// }

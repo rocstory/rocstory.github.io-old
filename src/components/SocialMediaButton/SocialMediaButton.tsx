@@ -20,19 +20,16 @@ const SocialMediaButton = ({ link } : ISocialMediaButtonProps) => {
     useEffect(() => {
         async function loadData() {
             const iconData = dStore.getTechIcon(type);
-            console.log(iconData);
             setIcon(iconData);
         }
         loadData();
     }, [link, type])
 
     function toggleHover() {
-        console.log("Toggling hover!")
         setIsHovered(prev => !prev);
     }
 
-    let btnStyle = { backgroundColor: icon.color }
-    // isHovered ? btnStyle.backgroundColor = icon.color : btnStyle.backgroundColor = "white";
+    let btnStyle = icon && { backgroundColor: icon.color }
 
     return icon ? (
         <Button
