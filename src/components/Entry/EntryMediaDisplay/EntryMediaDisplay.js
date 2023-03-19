@@ -1,12 +1,12 @@
 import React, { useEffect, useContext, useState } from 'react';
 import './EntryMediaDisplay.scss';
 import Carousel from 'react-bootstrap/Carousel';
-import { PortfolioContext } from '../../../contexts/PortfolioContext';
 import ReactPlayer from 'react-player';
+import { useEntryContext } from '../../../hooks/useEntryContext';
 
 
 function EntryMediaDisplay() {
-    const { selEntry } = useContext(PortfolioContext);
+    const { selEntry } = useEntryContext()
 
     const {
         video,
