@@ -33,13 +33,18 @@
     }
 
 }  
-    // .social-btn-icon
-    // {
-    //     color: #f8f8f8;
-    //     font-size: 1.5em;
-    // }
-    // .social-btn-name
-    // {
-    //     color: #4E4B4B !important;
-    //     text-transform: capitalize;
-    // }
+
+@media screen and (max-width: 648px) {
+    .social-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .social-btn-icon {
+            font-size: 1.4em;
+        }
+
+        .social-btn-name {
+            font-size: 0.4em;
+        }
+    }
+}

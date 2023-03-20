@@ -114,6 +114,12 @@
         "icon": "linkedin"
     },
     {
+        "name": "twitch",
+        "color": "#6441a5",
+        "type": "fab",
+        "icon": "twitch"
+    },
+    {
         "name": "github",
         "color": "#7289da",
         "type": "fab",

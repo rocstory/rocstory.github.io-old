@@ -23,6 +23,11 @@
             "src": "https://www.instagram.com/rocstory/"
         },
         {
+            "type": "twitch",
+            "name": "twitch",
+            "src": "https://www.twitch.tv/malikmoments"
+        },
+        {
             "type": "twitter",
             "name": "twitter",
             "src": "https://twitter.com/rocstory"
