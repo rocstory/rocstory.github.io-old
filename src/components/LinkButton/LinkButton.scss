@@ -30,10 +30,10 @@
     border: util.$btn-hover-color !important;
 }
 
-.link-button a {
-    margin: 0;
-    text-decoration: none;
-}
+// .link-button a {
+//     margin: 0;
+//     text-decoration: none;
+// }
 
 .link-button span {
     font-style: normal;
@@ -41,54 +41,81 @@
     margin: 0 !important;
 }
 
-// .link-icon {
-//     font-size: 1.2em !important;
-// }
+@media screen and (max-width: 428px) {
+    .link-button {
+        width: 20em;
+        height: 2.5em;
 
-// .link-label {
-//     font-size: 1em !important;
-// }
+        .link-icon {
+            font-size: 1.2em !important;
+        }
 
-// @media screen and (max-width: 428px) {
-//     .link-button {
-//         width: 20em;
-//         height: 2.5em;
-//     }
-// }
+        .link-label-container .link-label {
+            font-size: 1em !important;
+        }
+    }
+}
 
-// @media screen and (max-width: 414px) {
-//     .link-button {
-//         width: 19em;
-//         height: 2.5em;
-//     }
-// }
+@media screen and (max-width: 414px) {
+    .link-button {
+        width: 19em;
+        height: 2.5em;
 
-// @media screen and (max-width: 393px) {
-//     .link-button {
-//         width: 18em;
-//         height: 2.5em;
-//     }
-// }
+        .link-icon {
+            font-size: 1.2em !important;
+        }
 
-// @media screen and (max-width: 375px) {
-//     .link-button {
-//         width: 15em;
-//         height: 2.2em;
-//     }
+        .link-label-container .link-label {
+            font-size: 1em !important;
+        }
+    }
+}
 
-//     .link-button p {
-//         font-size: 0.8em;
-//     }
-// }
+@media screen and (max-width: 393px) {
+    .link-button {
+        width: 20em;
+        height: 2.5em;
+
+        .link-icon {
+            font-size: 1.2em !important;
+        }
+
+        .link-label-container .link-label {
+            font-size: 1em !important;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .link-button {
+        width: 18.6em;
+        height: 2.2em;
+
+        .link-icon {
+            font-size: 1.2em !important;
+        }
+
+        .link-label-container .link-label {
+            font-size: 1em !important;
+        }
+    }
+}
 
 
-// @media screen and (max-width: 296px) {
-//     .link-button {
-//         width: 13em;
-//         height: 2em;
-//     }
+@media screen and (max-width: 296px) {
+    // .link-icon {
+    //     font-size: 1.2em !important;
+    // }
+    .link-button {
+        width: 16em;
+        height: 2em;
 
-//     .link-button p {
-//         font-size: 0.7em;
-//     }
-// }
+        .link-icon {
+            font-size: 1.2em !important;
+        }
+        
+        .link-label-container .link-label {
+            font-size: 0.8em !important
+        }
+    }
+}
