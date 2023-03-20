@@ -75,11 +75,54 @@
   margin-top: 1em;
 }
 
-// @media only screen and (max-width: 2560px) {
-//   .header-body-summary {
-//     width: 30%;
-//   }
-// }
+@media only screen and (max-width: 485px) {
+  .header .description {
+    width: 25em;
+    height: 12em;
+    gap: 15px;
+  }
+}
+
+@media only screen and (max-width: 404px) {
+  .header {
+    
+    .description {
+      flex-direction: column;
+      width: 20em;
+      height: 18em;
+      gap: 0;
+
+      margin-top: 2.7em !important;
+
+      .profile-img {
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 325px) {
+  .header {
+    
+    .description {
+      flex-direction: column;
+      width: 15em;
+      height: 18em;
+      gap: 0;
+
+      margin-top: 2.7em !important;
+
+      .profile-img {
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+
+    }
+  }
+}
+
 // @media only screen and (max-width: 1440px) {
 //   .header-body-summary {
 //     width: 50%;
