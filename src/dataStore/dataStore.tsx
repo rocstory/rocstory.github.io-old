@@ -1,4 +1,5 @@
 import { ESocialMedia } from '../enums/ESocialMedia';
+import { IPersonalBio } from '../models/IPersonalBio';
 import { ISocialLink } from '../models/ISocialLink';
 import { ITechnologyIcon } from '../models/ITechnologyIcon';
 import { ITreeLink } from '../models/TreeLink';
@@ -17,6 +18,16 @@ const technologies = require("./data/technologies.json");
 
 export function getMeData() {
     return meData;
+}
+
+export function getPersonalBio() {
+    const bio = meData.general;
+    return {
+        name: bio.name,
+        title: bio.title,
+        pronounciation: bio.prnounciation,
+        introduction: bio.introduction
+    } as IPersonalBio
 }
 
 export function getSocialLinks(): ISocialLink[] {
