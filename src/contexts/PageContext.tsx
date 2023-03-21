@@ -1,4 +1,4 @@
-import React, {useState, createContext} from 'react';
+import React, {useState, createContext, FC} from 'react';
 // import appConfig from '../appConfig.json';
 
 
@@ -11,20 +11,38 @@ export enum EPortfolioPages {
     Projects = "projects"
 }
 
-export const PageContext = createContext({
+export const PageContext = createContext<any>({
     selPage: EPortfolioPages.Home,
-    setSelPage: (selPage: EPortfolioPages) => {}
+    changeSelPage: () => {} 
 })
 
-export const PageProvider = ({children}: PortfolioPageProps) => {
+export const PageProvider = ({children} : PortfolioPageProps) => {
     const [selPage, setSelPage] = useState<EPortfolioPages>(EPortfolioPages.Home)
 
+    const changeSelPage = (page: EPortfolioPages) => setSelPage(page);
     return (
         <PageContext.Provider value={{
             selPage,
-            setSelPage,
+            changeSelPage,
         }}>
             {children}
         </PageContext.Provider>
     );
 };
+
+// const TodosProvider: FC = ({ children } : any) => {
+//     const [todos, setTodos] = useState<string[]>(contextDefaultValues.todos);
+  
+//     const addTodo = (newTodo: string) => setTodos((todos) => [...todos, newTodo]);
+  
+//     return (
+//       <TodosContext.Provider
+//         value={{
+//           todos,
+//           addTodo
+//         }}
+//       >
+//         {children}
+//       </TodosContext.Provider>
+//     );
+//   };

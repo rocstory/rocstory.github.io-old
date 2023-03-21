@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Navigator from './components/Navigator/Navigator';
 
-import { EPortfolioPages, PageProvider } from "./contexts/PageContext";
+import { EPortfolioPages, PageContext, PageProvider } from "./contexts/PageContext";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,10 +17,10 @@ import HomePage from './pages/Home/HomePage';
 import ContactLinks from './components/Header/ContactLinks/ContactLinks';
 
 function App() {
-  const { selPage} = usePageContext();
+  // console.log("SelPage:", selPage);
+  const {selPage} = useContext(PageContext)
 
   return (
-    <PageProvider>
     <EntryProvider >
       <div className="App">
         <Navigator />
@@ -39,7 +39,6 @@ function App() {
         </div>
       </div>
     </EntryProvider>
-    </PageProvider>
     
   )
 }

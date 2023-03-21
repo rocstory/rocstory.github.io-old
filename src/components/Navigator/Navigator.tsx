@@ -1,14 +1,14 @@
-import React  from 'react';
+import React, { useContext }  from 'react';
 import { Nav } from 'react-bootstrap';
-import { usePageContext } from '../../hooks/usePageContext';
-import { EPortfolioPages } from '../../contexts/PageContext';
+
+import { EPortfolioPages, PageContext } from '../../contexts/PageContext';
 import "./Navigator.scss"
 
 const Navigator = () => {
-    const {selPage, setSelPage} = usePageContext();
+    const {selPage, changeSelPage} = useContext(PageContext)
 
     const handleSelectedNavItem = (selNavItem: EPortfolioPages) => {
-        setSelPage(selNavItem);
+        changeSelPage(selNavItem);
     }
 
     return (
