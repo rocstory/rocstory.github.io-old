@@ -4,12 +4,13 @@ import icon from "../../assets/profpic.jpg";
 import backgroundImg from "../../assets/website-background.jpg";
 import Image from "react-bootstrap/Image";
 import { IPersonalBio } from "../../models/IPersonalBio";
+import {useImageRetriever} from "../../hooks/useImageRetriever";
 
 var dStore = require("../../dataStore/dataStore");
 
 function Header() {
 	const [aboutMe, setAboutMe] = useState<IPersonalBio | undefined>(undefined);
-
+	const {headerBanner} = useImageRetriever()
 	useEffect(() => {
 		async function getGeneralData() {
 			let bio: IPersonalBio = dStore.getPersonalBio();
@@ -23,7 +24,7 @@ function Header() {
 			<div className="row">
 				<div className="col rs-background-cntr">
 					<Image 
-						src={backgroundImg}
+						src={headerBanner}
 						className="rs-background"
 						fluid
 					/>
