@@ -1,5 +1,6 @@
 import { ESocialMedia } from '../enums/ESocialMedia';
 import { IPersonalBio } from '../models/IPersonalBio';
+import { IProjectEntry } from '../models/IProjectEntry';
 import { ISocialLink } from '../models/ISocialLink';
 import { ITechnologyIcon } from '../models/ITechnologyIcon';
 import { ITreeLink } from '../models/TreeLink';
@@ -47,8 +48,25 @@ export function getLinksData() : ITreeLink[] {
         icon: link.icon
     }));
 }
-export function getProjectsData() {
-    return projectEntries;
+export function getProjectsData() : IProjectEntry[] {
+
+    // return projectEntries;
+    return projectEntries.map((entry: any, index: number) => ({
+        id: entry.id ?? undefined,
+        index: entry.index ?? index,
+        name: entry.name ?? undefined,
+        type: entry.type ?? undefined,
+        icon: entry.icon ?? {type: 'fas', name:'lightbulb', color: '#FDFD96'},
+        referenceLinks: entry.refLinks ?? [],
+        caption: entry.caption ?? undefined,
+        repoUrl: entry.repoUrl ?? undefined,
+        demoUrl: entry.demoUrl ?? undefined,
+        startDate: entry.startDate ?? undefined,
+        videoUrl: entry.video ?? undefined,
+        images: entry.images ??  undefined,
+        tags: entry.tags ?? [],
+        collaborators: entry.collaborators ?? []
+    })); 
 }
 
 export function getActivitiesData() {

@@ -1,5 +1,6 @@
 [
   {
+    "id": "colonialcarnival",
     "name": "WCSU RA Colonial Carnival",
     "type": "Web Development",
     "caption": "A web application designed for students at Western Connecticut State University (WCSU).",
@@ -61,6 +62,7 @@
     "index": 5
   },
   {
+    "id": "chevescape",
     "name": "Chev's Escape",
     "type": "Game Development",
     "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
@@ -126,8 +128,9 @@
     "index": 4
   },
   {
+    "id": "mocap",
     "name": "GITRG MOCAP 2018-2019",
-    "type": "Web Development",
+    "type": "Embedded Systems",
     "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
     "demoUrl": null,
     "caption": "A cost effective motion capturing system",
@@ -204,6 +207,7 @@
     "index": 1
   },
   {
+    "id": "gitrg3dcrayon",
     "name": "GITRG 3D Crayon 2019-2020",
     "type": "Embedded Systems",
     "caption": "An open source intelligent toy which allows someone to draw in a 3D space",
@@ -251,6 +255,7 @@
     "index": 2
   },
   {
+    "id": "revealingroc",
     "name": "Revealing Roc",
     "type": "Embedded System",
     "demoUrl": null,
@@ -293,6 +298,7 @@
     "index": 3
   },
   {
+    "id": "pawbytes",
     "name": "Paw Bytes",
     "type": "Web Application",
     "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
@@ -361,6 +367,7 @@
     "index": 6
   },
   {
+    "id": "lovelyfeathers",
     "name": "Lovely Feathers",
     "type": "Web Application",
     "caption": "A web application that gives people the opportunitiy to spread kindness.",
@@ -396,9 +403,10 @@
     "index": 7
   },
   {
+    "id": "twinlande",
     "name": "Twinlande Super Store",
-    "type": "Web Development",
-    "caption": "",
+    "type": "Web Application",
+    "caption": "A 3 part web app built with the Roc Labs community",
     "repoUrl": "https://github.com/rocstory/twinlande-super-store",
     "demoUrl": "https://twinlande.netlify.app/",
     "startdate": "August 2nd 2021",

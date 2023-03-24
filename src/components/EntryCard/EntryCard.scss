@@ -1,15 +1,50 @@
+@use "../../scss/utilities.scss" as util;
+
+.entry-card-container {
+    width: 25em;
+    // height: 20em;
+    .btn {
+        font-weight: bolder;
+    }
+    .btn:hover {
+        background-color: util.$btn-hover-color;
+    }
+}
+
+.ec-title-container {
+    display: flex;
+    flex-direction: column;
+
+    .entry-title {
+        font-size: 0.9em;
+        font-weight: bolder;
+    }
+    .entry-type {
+        font-size: 0.6em;
+    }
+}
+
+.demo-btn {
+    background-color: util.$demo-btn-color;
+    .demo-btn-icon {
+        margin-right: 0.5em;
+    }
+}
+
+
+
 .entry-card-cntr
 {
     border: 2px solid #383838;
     display: flex;
     width: 25em;
     box-shadow: 2px 2px 2px #383838;
-
 }
     .entry-card-cntr:hover
     {
         cursor: pointer;
     }
+
 
 .ec-thumbnail
 {

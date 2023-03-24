@@ -1,50 +1,27 @@
 import React, {useState, createContext} from 'react';
-// import appConfig from '../appConfig.json';
-
 
 interface EntryProps {
     children: React.ReactNode 
 }
 
-export const EntryContext = createContext({
+
+
+export const EntryContext = createContext<any>({
     selEntry: undefined,
-    setSelEntry: (selEntry: any) => {}
+    updateSelEntry: () => {}
 })
 
 export const EntryProvider = ({children}: EntryProps) => {
     const [selEntry, setSelEntry] = useState<any>(undefined);
+    const updateSelEntry = (entry: any) => setSelEntry(entry);
 
 
     return (
         <EntryContext.Provider value={{
             selEntry,
-            setSelEntry,
+            updateSelEntry,
         }}>
             {children}
         </EntryContext.Provider>
     );
 };
-
-// const PortfolioContext = React.createContext();
-
-// const PortfolioContextProvider = ({children}) =>  {
-//     const [dbConfig, setDBConfig] = useState(null);
-//     const [selEntry, setSelEntry] = useState(null);
-//     const [entryType, setEntryType] = useState(false); 
-
-//     const [selPage, setSelPage] = useState(appConfig.WebPages.linkPage)
-
-//     return (
-//         <PortfolioContext.Provider value={{
-//             dbConfig, setDBConfig,
-//             selEntry, setSelEntry,
-//             entryType, setEntryType,
-//             selPage, setSelPage
-//         }} >
-//             {children}
-//         </PortfolioContext.Provider>
-//     )
-// }
-
-// export {PortfolioContext, PortfolioContextProvider} 
-
