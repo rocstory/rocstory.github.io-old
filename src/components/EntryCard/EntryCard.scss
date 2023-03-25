@@ -9,6 +9,11 @@
     .btn:hover {
         background-color: util.$btn-hover-color;
     }
+
+    .btn.read-more {
+        background-color: #EDF2F4;
+        color: util.$dark-font-color;
+    }
 }
 
 .ec-title-container {

@@ -60,7 +60,7 @@ function EntryCard({ data } : EntryCardProps ) {
                     </Button>
                 }
                 <Button
-                    className="float-right"
+                    className="float-right read-more shadow"
                     onClick={handleSelectedEntryCard}
                 >
                     Read More
