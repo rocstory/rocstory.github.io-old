@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext}  from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./EntryCard.scss"
-import { useEntryContext } from '../../hooks/useEntryContext';
 import { Card, Button } from 'react-bootstrap';
 import { useEntryConfig } from '../../hooks/useEntryConfig';
 import { IProjectEntry } from '../../models/IProjectEntry';
@@ -25,6 +24,7 @@ function EntryCard({ data } : EntryCardProps ) {
 
     
     const handleSelectedEntryCard  =  () => {
+        // console.log("handling selected entry:", data)
         updateSelEntry(data)
     }
 

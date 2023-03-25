@@ -1,21 +1,25 @@
-import React, {  useState } from 'react';
-import './Entry.scss';
+import React, {  useContext, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
-import appConfig from '../../appConfig';
+// import appConfig from '../../appConfig';
 import EntryMediaDisplay from './EntryMediaDisplay/EntryMediaDisplay';
 import EntryOverview from './EntryOverview/EntryOverview';
 import CollabListing from '../CollabListing/CollabListing';
-import { useEntryContext } from '../../hooks/useEntryContext';
+import { EntryContext } from '../../contexts/EntryContext';
 
-const { ELT_Type } = appConfig
+import './Entry.scss';
+
+enum EELT_Type {
+    Github = "github",
+    Demo = "demo"
+}
 
 function Entry() {
     const [show, setShow] = useState(true);
     const {
         selEntry,
-        setSelEntry,
-    } = useEntryContext
+        updateSelEntry,
+    } = useContext(EntryContext)
 
     const {
         repoUrl,
@@ -24,7 +28,7 @@ function Entry() {
 
     const handleHideModal = () => {
         setShow(false)
-        setSelEntry(undefined)
+        updateSelEntry(undefined)
     }
 
     return (
@@ -37,22 +41,28 @@ function Entry() {
                 <Modal.Title
                     id="entry-title"
                 >
-                    {selEntry.name}
+                    <span className="title">
+                        {selEntry.name}
+                    </span>
+                    <span className='divider'>|</span>
+                    <span className="entry-type">
+                        {selEntry.type}
+                    </span>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 {
                     (repoUrl || demoUrl) &&
                     <div className='elt-cntr'>
-                        {repoUrl && <EntryLinkTrigger type={ELT_Type.github} linkUrl={repoUrl} />}
-                        {demoUrl && <EntryLinkTrigger type={ELT_Type.demo} linkUrl={demoUrl} />}
+                        {repoUrl && <EntryLinkTrigger type={EELT_Type.Github} linkUrl={repoUrl} />}
+                        {demoUrl && <EntryLinkTrigger type={EELT_Type.Demo} linkUrl={demoUrl} />}
                     </div>
                 }
                 <EntryMediaDisplay />
                 <EntryOverview />
             </Modal.Body>
             <Modal.Footer >
-                <CollabListing />
+                {/* <CollabListing /> */}
 
             </Modal.Footer>
         </Modal>

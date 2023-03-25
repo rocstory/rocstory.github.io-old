@@ -29,7 +29,7 @@ function EntryMediaDisplay() {
                     pause="hover"
                 >
                     {
-                        images.map(image =>
+                        images.map((image: any) =>
                             <Carousel.Item
                                 className="image-item"
                                 key={image.url}

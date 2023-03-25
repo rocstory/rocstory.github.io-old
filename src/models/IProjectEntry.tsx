@@ -13,7 +13,7 @@ export interface IProjectEntry {
     startDate?: string,
     videoUrl?: string,
     images?: IProjectImg[]
-    tags?: [],
+    tags?: string[],
     collaborators?: IProjectCollaborator[],
 
 }

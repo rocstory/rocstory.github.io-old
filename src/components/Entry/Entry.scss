@@ -1,5 +1,22 @@
 $entryContentWidth: 90%;
 
+
+#entry-title {
+    margin: auto;
+    
+    .title {
+        font-weight: bolder;    
+    }
+
+    .divider {
+        margin: 0 0.4em;
+    }
+    .entry-type {
+        font-size: 0.6em;
+    }
+}
+
+
 .entry-cntr
 {
     max-width: none !important;
@@ -7,20 +24,23 @@ $entryContentWidth: 90%;
     width: 62em;
     height: 100%;
     /* overflow-y: auto; */
-}
-    
-    #entry-title {
-        margin: auto;
-        
-    }
-    .entry-cntr > .modal-content > .modal-header > .close {
-        margin-left: 0 !important;
+
+    .modal-content {
+        .modal-header {
+             .close {
+                margin-left: 0 !important;
+                span {
+                    font-weight: 1.6em;
+                }
+            }
+        }
     }
 
     .elt-cntr {
         display: flex;
         justify-content: space-between;
     }
+}
 
 
 // Fade in from bottom - https://stackoverflow.com/questions/34164889/how-to-make-a-bootstrap-modal-fade-in-from-the-bottom
