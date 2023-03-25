@@ -11,7 +11,10 @@ export const useEntryConfig = ({entryId} : EntryConfigProp) => {
     const [thumbnail, setThumbnail] = useState(undefined);
     const {
         twinlandeThumbnail,
-        projectDefaultThumbnail
+        projectDefaultThumbnail,
+        chevEscapeThumbnail,
+        pawbytesCafeThumbnail,
+        colonialCarnivalThumbnail
     } = useImageRetriever()
 
     const getThumbnail = (entryId: string) => {
@@ -19,6 +22,12 @@ export const useEntryConfig = ({entryId} : EntryConfigProp) => {
         switch (entryId) {
             case EProjectId.TwinlandeSuperStore:
                 return twinlandeThumbnail;
+            case EProjectId.ChevEscape:
+                return chevEscapeThumbnail;
+            case EProjectId.PawBytes:
+                return pawbytesCafeThumbnail;
+            case EProjectId.ColonialCarnival:
+                return colonialCarnivalThumbnail
             default:
                 return projectDefaultThumbnail;
         }
@@ -26,7 +35,7 @@ export const useEntryConfig = ({entryId} : EntryConfigProp) => {
 
     useEffect(() => {
         const thmbnail = getThumbnail(entryId);
-        
+
         setThumbnail(thmbnail);
     }, [])
 
