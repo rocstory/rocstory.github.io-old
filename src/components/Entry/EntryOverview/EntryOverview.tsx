@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './EntryOverview.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import appConfig from '../../../appConfig';
 import TechnologyListing from '../TechnologyListing/TechnologyListing';
 import { useEntryContext } from '../../../hooks/useEntryContext';
-
-// const { EntryRefLinkIcon } = appConfig
+import { EntryContext } from '../../../contexts/EntryContext';
 
 
 function EntryOverview() {
-    const { selEntry } = useEntryContext()
+    const { selEntry } = useContext(EntryContext);
 
     const {
         startdate,
