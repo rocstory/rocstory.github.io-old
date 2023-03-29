@@ -4,15 +4,15 @@ import './index.scss';
 import App from './App';
 import './fontawesome';
 import { PageProvider } from './contexts/PageContext';
-import { EntryProvider } from './contexts/EntryContext';
+import { ArticleProvider } from './contexts/ArticleContext';
 
 
 ReactDOM.render(
     <React.StrictMode>
       <PageProvider>
-        <EntryProvider>
+        <ArticleProvider>
           <App />
-        </EntryProvider>
+        </ArticleProvider>
       </PageProvider>
     </React.StrictMode>,
   document.getElementById('root')

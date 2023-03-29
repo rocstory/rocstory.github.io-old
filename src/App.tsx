@@ -10,8 +10,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import appConfig from './appConfig.json';
 import LinksPage from './components/LinkTree/LinkTree';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
-import Entry from './components/Entry/Entry';
-import { EntryContext, EntryProvider } from './contexts/EntryContext';
+import ArticleModal from './components/ArticleModal/ArticleModal';
+import { ArticleContext} from './contexts/ArticleContext';
 import { usePageContext } from './hooks/usePageContext';
 import HomePage from './pages/Home/HomePage';
 import ContactLinks from './components/Header/ContactLinks/ContactLinks';
@@ -19,7 +19,7 @@ import ContactLinks from './components/Header/ContactLinks/ContactLinks';
 function App() {
   // console.log("SelPage:", selPage);
   const {selPage} = useContext(PageContext)
-  const {selEntry} = useContext(EntryContext);
+  const {selArticle} = useContext(ArticleContext);
 
   return (
       <div className="App">
@@ -38,8 +38,10 @@ function App() {
           <p>Always <span>be consistent</span>.</p>
         </div>
         {
-          selEntry && 
-            <Entry />
+          selArticle && 
+            <ArticleModal 
+              selArticle={selArticle}
+            />
         }
       </div> 
   )

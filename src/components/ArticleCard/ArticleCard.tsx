@@ -1,16 +1,16 @@
 import React, {useState, useEffect, useContext}  from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import "./EntryCard.scss"
+import "./ArticleCard.scss"
 import { Card, Button } from 'react-bootstrap';
 import { useEntryConfig } from '../../hooks/useEntryConfig';
 import { IProjectEntry } from '../../models/IProjectEntry';
-import { EntryContext } from '../../contexts/EntryContext';
+import { ArticleContext } from '../../contexts/ArticleContext';
 
 
-type EntryCardProps = {
+type ArticleCardProps = {
     data: IProjectEntry
 }
-function EntryCard({ data } : EntryCardProps ) {
+function ArticleCard({ data } : ArticleCardProps ) {
     const {
         id,
         name,
@@ -19,13 +19,13 @@ function EntryCard({ data } : EntryCardProps ) {
         demoUrl
     } = data
 
-    const { updateSelEntry} = useContext(EntryContext);
+    const { updateSelArticle} = useContext(ArticleContext);
     const { thumbnail }  = useEntryConfig({entryId: id})
 
     
     const handleSelectedEntryCard  =  () => {
         // console.log("handling selected entry:", data)
-        updateSelEntry(data)
+        updateSelArticle(data)
     }
 
     useEffect(() => {
@@ -71,5 +71,5 @@ function EntryCard({ data } : EntryCardProps ) {
     )
 }
 
-export default EntryCard;
+export default ArticleCard;
 

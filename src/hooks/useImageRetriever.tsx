@@ -1,5 +1,3 @@
-import {useContext} from 'react'
-import { EntryContext } from '../contexts/EntryContext'
 
 // banners
 import headerBanner from "../assets/website-bg-compressed.jpg"

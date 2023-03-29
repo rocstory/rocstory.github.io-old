@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import EntryCard from '../../components/EntryCard/EntryCard';
+import EntryCard from '../../components/ArticleCard/ArticleCard';
 import './ProjectsPage.scss';
 import { IProjectEntry } from '../../models/IProjectEntry';
 

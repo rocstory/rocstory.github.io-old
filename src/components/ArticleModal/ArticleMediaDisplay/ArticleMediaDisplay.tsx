@@ -1,25 +1,23 @@
 import React from 'react';
-import './EntryMediaDisplay.scss';
+import './ArticleMediaDisplay.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import ReactPlayer from 'react-player';
-import { useEntryContext } from '../../../hooks/useEntryContext';
 
 
-function EntryMediaDisplay() {
-    const { selEntry } = useEntryContext()
-
-    const {
-        video,
-        images
-    } = selEntry
+interface IArticleMediaDisplay {
+    videoUrl: string,
+    images: any
+}
+function ArticleMediaDisplay(props: IArticleMediaDisplay) {
+    const { videoUrl, images} = props
 
     return (
         <div className="emd-cntr">
             {
-                video &&
+                videoUrl &&
                 <ReactPlayer
                     className="emd-media"
-                    url={video}
+                    url={videoUrl}
                 />
             }
             {
@@ -48,5 +46,5 @@ function EntryMediaDisplay() {
     )
 }
 
-export default EntryMediaDisplay;
+export default ArticleMediaDisplay;
 
