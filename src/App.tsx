@@ -39,9 +39,7 @@ function App() {
         </div>
         {
           selArticle && 
-            <ArticleModal 
-              selArticle={selArticle}
-            />
+            <ArticleModal />
         }
       </div> 
   )

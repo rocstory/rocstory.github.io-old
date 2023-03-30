@@ -1,42 +1,46 @@
 import React, {  useContext, useState } from 'react';
 import { Modal } from 'react-bootstrap';
 import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
-// import appConfig from '../../appConfig';
-// import ArticleMediaDisplay from './ArticleMediaDisplay/ArticleMediaDisplay';
+
 import ArticleOverview from './EntryOverview/ArticleOverview';
-import CollabListing from '../CollabListing/CollabListing';
 import { ArticleContext } from '../../contexts/ArticleContext';
 
-import './Entry.scss';
 import ArticleMediaDisplay from './ArticleMediaDisplay/ArticleMediaDisplay';
+
+import './ArticleModal.scss';
+import { useArticleRetriever } from '../../hooks/useArticleRetriever';
+
 
 enum EELT_Type {
     Github = "github",
     Demo = "demo"
 }
 
-interface IArticleProps {
-    selArticle: any
-}
-
-function ArticleModal({selArticle} : IArticleProps) {
+function ArticleModal() {
     const [show, setShow] = useState(true);
 
     const {
+        selArticle,
+        updateSelArticle,
+    } = useContext(ArticleContext)
+
+    const {
+        id,
         repoUrl,
         demoUrl,
         video,
         images
     } = selArticle
 
-    const {
-        updateSelArticle,
-    } = useContext(ArticleContext)
+    const { tabs } = useArticleRetriever(id); 
 
     const handleHideModal = () => {
         setShow(false)
         updateSelArticle(undefined)
     }
+
+    console.log("Tabs:", id, tabs)
+
 
     return (
         <Modal
@@ -70,7 +74,7 @@ function ArticleModal({selArticle} : IArticleProps) {
                     images={images} 
                 />
                 <ArticleOverview
-                    tabs={[]}
+                    tabs={tabs}
                 />
             </Modal.Body>
             <Modal.Footer >

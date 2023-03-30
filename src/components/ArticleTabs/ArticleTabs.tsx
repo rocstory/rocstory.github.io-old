@@ -10,7 +10,7 @@ interface IArticleTabsProps {
 
 
 const ArticleTabs = ({ tabs }: IArticleTabsProps) => {
-    const [curTabKey, setCurTabKey] = useState('home');
+    const [curTabKey, setCurTabKey] = useState('');
 
     useEffect(() => {
         // get the first tab
@@ -40,7 +40,7 @@ const ArticleTabs = ({ tabs }: IArticleTabsProps) => {
                             title={tab.title}
                             className={`mb-3 ${tab.className ?? ''}`}
                         >
-                            {tab.content}
+                            {tab.content && tab.content()}
                         </Tab>
                     )
                 })

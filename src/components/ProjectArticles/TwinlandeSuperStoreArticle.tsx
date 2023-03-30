@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 // import './EntryOverview.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IArticleTab } from '../../models/IArticleTab';
 
 
@@ -8,7 +7,7 @@ const AboutTab = () => {
 
     return (
         <div>
-            This tab is about Twinlande Super Store 
+            This tab is about Twinlande Super Store
         </div>
     )
    
@@ -33,7 +32,8 @@ const TwinlandeTabs: IArticleTab[] = [
         eventKey: "story",
         title: "Story",
         content: StoryTab
-    }
+    },
+
 ]
 
 
