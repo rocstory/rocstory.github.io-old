@@ -3,6 +3,8 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import { IArticleTab } from '../../models/IArticleTab';
 
+import "./ArticleTabs.scss";
+
 interface IArticleTabsProps {
     tabs: IArticleTab[],
 }
@@ -27,10 +29,10 @@ const ArticleTabs = ({ tabs }: IArticleTabsProps) => {
 
     return (
         <Tabs
-            id="entry-tab-container"
+            id="article-tab-container"
             activeKey={curTabKey}
             onSelect={handleTabChange}
-            className={`mb-3`}
+            className={`mb-3 article-tab-container`}
         >
             {
                 tabs.map((tab: IArticleTab) => {
