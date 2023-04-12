@@ -2,6 +2,7 @@ import React from 'react';
 import './ArticleMediaDisplay.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import ReactPlayer from 'react-player';
+import ImageCarousel from '../../ImageCarousel/ImageCarousel';
 
 
 interface IArticleMediaDisplay {
@@ -22,25 +23,7 @@ function ArticleMediaDisplay(props: IArticleMediaDisplay) {
             }
             {
                 (images && images.length > 0) &&
-                <Carousel
-                    className="emd-carousel"
-                    pause="hover"
-                >
-                    {
-                        images.map((image: any) =>
-                            <Carousel.Item
-                                className="image-item"
-                                key={image.url}
-                            >
-                                <img
-                                    className="d-block w-100 carousel-img"
-                                    src={image.url}
-                                    alt={image.alt}
-                                />
-                            </Carousel.Item>
-                        )
-                    }
-                </Carousel>
+                <ImageCarousel images={images} />
             }
         </div>
     )
