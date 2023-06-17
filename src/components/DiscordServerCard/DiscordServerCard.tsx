@@ -7,6 +7,8 @@ import serverLogoIcon from '../../assets/rsicon_full.png'
 
 const DiscordServerCard = () => {
 
+    const discordInviteUrl = "https://discord.gg/SkVZeKXk6H"
+
     return (
         <Card
             className={'shadow dsc-container'}
@@ -20,7 +22,13 @@ const DiscordServerCard = () => {
             <Card.Body>
                 <Card.Title className="text-center dsc-title">Roc Labs</Card.Title>
                 <div className={'dsc-btn-container'}>
-                    <Button className={`dsc-btn join-server shadow`}>Join Server</Button>
+                    <Button 
+                        as={'a'} 
+                        className={`dsc-btn join-server shadow`}
+                        href={discordInviteUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >Join Server</Button>
                     <Button className={`dsc-btn read-more shadow`}>Read More</Button>
                 </div>
                
