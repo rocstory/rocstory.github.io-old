@@ -1,0 +1,22 @@
+[
+    {
+        "id": "colonialcarnival",
+        "index": 5,
+        "name": "WCSU RA Colonial Carnival",
+        "typeId": "web-dev",
+        "iconId": "paw",
+        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
+        "repoUrl": "https://github.com/rocstory/colonialcarnival",
+        "caption": "A web application designed for students at Western Connecticut State University (WCSU)."
+    },
+    {
+        "id": "pawbytes",
+        "index": 1,
+        "name": "Paw Bytes Cafe",
+        "typeId": "web-dev",
+        "iconId": "paw",
+        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
+        "repoUrl": "https://github.com/rocstory/colonialcarnival",
+        "caption": "A three part project that incorporates a Twitter bot, database, and website."
+    }
+]

@@ -1,6 +1,6 @@
 import { ESocialMedia } from '../enums/ESocialMedia';
 import { IPersonalBio } from '../models/IPersonalBio';
-import { IProjectEntry } from '../models/IProjectEntry';
+import { IProjectMetadata} from '../models/IProjectMetadata';
 import { ISocialLink } from '../models/ISocialLink';
 import { ITechnologyIcon } from '../models/ITechnologyIcon';
 import { ITreeLink } from '../models/TreeLink';
@@ -48,7 +48,7 @@ export function getLinksData() : ITreeLink[] {
         icon: link.icon
     }));
 }
-export function getProjectsData() : IProjectEntry[] {
+export function getProjectsData() : IProjectMetadata[] {
 
     // return projectEntries;
     return projectEntries.map((entry: any, index: number) => ({

@@ -1,30 +1,32 @@
 import React, { useEffect, useState } from 'react';
-import EntryCard from '../../components/ArticleCard/ArticleCard';
+import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import './ProjectsPage.scss';
-import { IProjectEntry } from '../../models/IProjectEntry';
-
-const dataStore = require("../../dataStore/dataStore")
+import { IProjectMetadata } from '../../models/IProjectMetadata';
+import projectsMetadata from "../../metadata/projects_metadata.json";
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState<IProjectEntry[]>([])
+  const [projects, setProjects] = useState<IProjectMetadata[]>([])
 
+  
   useEffect(() => {
 
-    const prjsData = dataStore.getProjectsData();
-    prjsData.sort((prjA : IProjectEntry, prjB : IProjectEntry) => {
+    const prjsData : IProjectMetadata[] = projectsMetadata;
+
+    prjsData.sort((prjA : IProjectMetadata, prjB : IProjectMetadata) => {
       return prjB.index - prjA.index;
     })
+
     setProjects(prjsData)
+
   }, [])
   
   return (
     <div className="projects-page">
       {
-
         projects.map(project =>
-          <EntryCard
+          <ArticleCard
             key={project.id}
-            data={project}
+            articleData={project}
           />)
       }
     </div>

@@ -2,30 +2,32 @@ import React, {useState, useEffect, useContext}  from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./ArticleCard.scss"
 import { Card, Button } from 'react-bootstrap';
-import { useEntryConfig } from '../../hooks/useEntryConfig';
-import { IProjectEntry } from '../../models/IProjectEntry';
+import { useProjectConfig } from '../../hooks/useProjectConfig';
+import { IProjectMetadata } from '../../models/IProjectMetadata';
 import { ArticleContext } from '../../contexts/ArticleContext';
 
 
 type ArticleCardProps = {
-    data: IProjectEntry
+    articleData: IProjectMetadata,
+    
 }
-function ArticleCard({ data } : ArticleCardProps ) {
-    const {
-        id,
-        name,
-        type,
-        caption,
-        demoUrl
-    } = data
+function ArticleCard({articleData}: ArticleCardProps ) {
 
-    const { updateSelArticle} = useContext(ArticleContext);
-    const { thumbnail }  = useEntryConfig({entryId: id})
+    const {
+        name,
+        demoUrl,
+        caption
+    } = articleData
+
+    const { updateSelArticle } = useContext(ArticleContext);
+    const { thumbnail, prjType }  = useProjectConfig({prjMetadata: articleData})
+
+    // const [prjType, setPrjType] = useState('')
 
     
     const handleSelectedEntryCard  =  () => {
         // console.log("handling selected entry:", data)
-        updateSelArticle(data)
+        updateSelArticle(articleData)
     }
 
     useEffect(() => {
@@ -41,7 +43,7 @@ function ArticleCard({ data } : ArticleCardProps ) {
                     className="ec-title-container"
                 >
                     <span className='entry-title'>{name}</span>
-                    <span className="entry-type">{type}</span>
+                    <span className="entry-type">{prjType}</span>
                 </Card.Title>
                 <Card.Text>
                     {caption}
