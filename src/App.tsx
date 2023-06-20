@@ -20,7 +20,6 @@ function App() {
   // console.log("SelPage:", selPage);
   const {selPage} = useContext(PageContext)
   const {selArticle} = useContext(ArticleContext);
-
   return (
       <div className="App">
         <Navigator />

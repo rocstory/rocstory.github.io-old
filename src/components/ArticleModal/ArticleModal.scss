@@ -38,8 +38,12 @@ $entryContentWidth: 90%;
 
     .elt-cntr {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end; 
+        :last-child {
+            margin-left: 0.5em;
+        }
     }
+
 }
 
 

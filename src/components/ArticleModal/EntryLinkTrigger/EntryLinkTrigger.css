@@ -4,6 +4,9 @@
     color: #f8f8f8;
     text-transform: capitalize;
     font-size: 1.2em;
+
+    width: 7em;
+    height: 2.2em;
 }
 
 .elt-btn:hover{

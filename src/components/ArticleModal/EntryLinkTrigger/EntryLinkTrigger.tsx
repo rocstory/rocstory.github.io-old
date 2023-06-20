@@ -29,10 +29,10 @@ function EntryLinkTrigger({ type, linkUrl } : EntryLinkTriggerProps) {
             variant={undefined}
             className={`elt-btn ${eltTypeClassName}`}
         >
-            <span className="elt-icon">
+            <span className="elt-icon m-0">
                 {eltIcon}
             </span>
-            <span className="elt-label">{eltLabel}</span>
+            <span className="elt-label ml-2">{eltLabel}</span>
 
         </Button>
     )

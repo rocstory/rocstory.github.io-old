@@ -1,30 +1,31 @@
 import React, { useContext, useState } from 'react';
 import { Modal } from 'react-bootstrap';
+import { useProjectConfig } from '../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
 import EntryLinkTrigger from '../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
-
-// import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
-
-// import ArticleOverview from './EntryOverview/ArticleOverview';
-// import { ArticleContext } from '../../contexts/ArticleContext';
-
-// import ArticleMediaDisplay from './ArticleMediaDisplay/ArticleMediaDisplay';
-
-// import './ArticleModal.scss';
-// import { useArticleRetriever } from '../../hooks/useArticleRetriever';
-
 
 enum EELT_Type {
     Github = "github",
     Demo = "demo"
 }
-function ColonialCarnivalArticle() {
 
-    const demoUrl = 'https://rocstory.github.io/colonialcarnival/';
-    const repoUrl = 'https://github.com/rocstory/colonialcarnival';
-    const articleName = "Colonial Carnival"
-    const articleType = "web application"
 
+
+
+function ColonialCarnivalArticle({articlePayload} : any) {
+
+    const {
+        demoUrl,
+        repoUrl,
+        name
+    } = articlePayload;
+
+    const articleName = name
+
+    const { 
+        prjType
+    } = useProjectConfig({prjMetadata: articlePayload})
+    
     const videoUrl = 'https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory';
     const images: any = [
         {
@@ -53,8 +54,6 @@ function ColonialCarnivalArticle() {
           }
     ];
 
-
-
     return (
         <>
             <Modal.Header closeButton>
@@ -66,7 +65,7 @@ function ColonialCarnivalArticle() {
                     </span>
                     <span className='divider'>|</span>
                     <span className="entry-type">
-                        {articleType}
+                        {prjType}
                     </span>
                 </Modal.Title>
             </Modal.Header>
