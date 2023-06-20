@@ -5,7 +5,7 @@ import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
 import { ArticleContext } from '../../contexts/ArticleContext';
 
 import './ArticleModal.scss';
-import ColonialCarnivalArticle from '../Articles/ColonialCarnivalArticle';
+import ColonialCarnivalArticle from '../Articles/ColonialCarnivalArticle/ColonialCarnivalArticle';
 import { EProjectId } from '../../enums/EProjectId';
 
 

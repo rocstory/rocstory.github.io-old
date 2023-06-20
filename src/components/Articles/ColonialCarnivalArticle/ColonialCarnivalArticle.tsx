@@ -1,18 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Modal } from 'react-bootstrap';
-import { useProjectConfig } from '../../hooks/useProjectConfig';
-import ArticleMediaDisplay from '../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
-import EntryLinkTrigger from '../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
+import { Modal, Tab, Tabs } from 'react-bootstrap';
+import { useProjectConfig } from '../../../hooks/useProjectConfig';
+import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
+import EntryLinkTrigger from '../../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
+import CCAboutTab from './CCAboutTab';
 
 enum EELT_Type {
     Github = "github",
     Demo = "demo"
 }
 
-
-
-
-function ColonialCarnivalArticle({articlePayload} : any) {
+function ColonialCarnivalArticle({ articlePayload }: any) {
 
     const {
         demoUrl,
@@ -22,36 +20,36 @@ function ColonialCarnivalArticle({articlePayload} : any) {
 
     const articleName = name
 
-    const { 
+    const {
         prjType
-    } = useProjectConfig({prjMetadata: articlePayload})
-    
+    } = useProjectConfig({ prjMetadata: articlePayload })
+
     const videoUrl = 'https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory';
     const images: any = [
         {
             "alt": "Program of the Year Award 2019-2020",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg"
-          },
-          {
+        },
+        {
             "alt": "Login Page",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/login.jpg"
-          },
-          {
+        },
+        {
             "alt": "Home Page",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/homepage.jpg"
-          },
-          {
+        },
+        {
             "alt": "Rock Paper Scissors",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/rps.jpg"
-          },
-          {
+        },
+        {
             "alt": "WCSU Trivia",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
-          },
-          {
+        },
+        {
             "alt": "Memory Match",
             "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
-          }
+        }
     ];
 
     return (
@@ -81,6 +79,19 @@ function ColonialCarnivalArticle({articlePayload} : any) {
                     videoUrl={videoUrl}
                     images={images}
                 />
+
+                <Tabs
+                    defaultActiveKey="about"
+                    className="mb-3"
+                >
+                    <Tab eventKey="about" title="About">
+                        <CCAboutTab />
+                    </Tab>
+                    <Tab eventKey="tech" title="Tech">
+                        Tab content for Profile
+                    </Tab>
+                </Tabs>
+                
             </Modal.Body>
             <Modal.Footer >
                 {/* <CollabListing /> */}
