@@ -29,7 +29,7 @@ function ArticleModal() {
         <Modal
             show={show}
             onHide={handleHideModal}
-            dialogClassName="entry-cntr"
+            dialogClassName="article-modal-wrapper"
         >
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.PawBytes) && <></>}

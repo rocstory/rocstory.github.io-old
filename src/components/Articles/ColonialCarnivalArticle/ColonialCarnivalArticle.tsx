@@ -4,6 +4,8 @@ import { useProjectConfig } from '../../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
 import EntryLinkTrigger from '../../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
 import CCAboutTab from './CCAboutTab';
+import "../../ArticleModal/ArticleModal.scss"
+import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
 
 enum EELT_Type {
     Github = "github",
@@ -55,17 +57,10 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
     return (
         <>
             <Modal.Header closeButton>
-                <Modal.Title
-                    id="entry-title"
-                >
-                    <span className="title">
-                        {articleName}
-                    </span>
-                    <span className='divider'>|</span>
-                    <span className="entry-type">
-                        {prjType}
-                    </span>
-                </Modal.Title>
+                <ArticleTitle 
+                    entryName={articleName}
+                    categoryName={prjType}
+                />
             </Modal.Header>
             <Modal.Body>
                 {
@@ -80,17 +75,25 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                     images={images}
                 />
 
-                <Tabs
-                    defaultActiveKey="about"
-                    className="mb-3"
+                <div
+                    className={`tab-wrapper`}
                 >
-                    <Tab eventKey="about" title="About">
-                        <CCAboutTab />
-                    </Tab>
-                    <Tab eventKey="tech" title="Tech">
-                        Tab content for Profile
-                    </Tab>
-                </Tabs>
+                    <Tabs
+                        className={`mb-3`}
+                        defaultActiveKey="about"
+                    >
+                        <Tab href={''} eventKey="about" title="About">
+                            <CCAboutTab />
+                        </Tab>
+                        <Tab href={''} eventKey="tech" title="Tech">
+                            Tab content for Profile
+                        </Tab>
+                        <Tab href={''} eventKey="collaborators" title="Collaborators">
+                            Tab content for Profile
+                        </Tab>
+                    </Tabs>
+                </div>
+                
                 
             </Modal.Body>
             <Modal.Footer >

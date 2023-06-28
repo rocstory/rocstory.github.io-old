@@ -1,7 +1,7 @@
 $entryContentWidth: 90%;
 
 
-#entry-title {
+.article-title {
     margin: auto;
     
     .title {
@@ -17,15 +17,15 @@ $entryContentWidth: 90%;
 }
 
 
-.entry-cntr
+.article-modal-wrapper
 {
     max-width: none !important;
     max-height: none !important;
     width: 62em;
     height: 100%;
-    /* overflow-y: auto; */
 
     .modal-content {
+        border-radius: 0 !important;
         .modal-header {
              .close {
                 margin-left: 0 !important;
@@ -44,6 +44,15 @@ $entryContentWidth: 90%;
         }
     }
 
+    .tab-wrapper {
+        margin-top: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+
 }
 
 
@@ -59,129 +68,129 @@ $entryContentWidth: 90%;
 }
 
 @media screen and (max-width: 1024px) {
-    .entry-cntr
+    .article-modal-wrapper
     {
         width: 55em;
     }
 }
 
 @media screen and (max-width: 933px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 42em;
         
     }
 }
 
 @media screen and (max-width: 788px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 42em;
         
     }
 }
 
 @media screen and (max-width: 726px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 35em;
         
     }
 }
 
 @media screen and (max-width: 596px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 32em;
     }
 }
 
 @media screen and (max-width: 547px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 31em;
     }
 }
 
 @media screen and (max-width: 518px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 26em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 @media screen and (max-width: 456px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 25em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 
 @media screen and (max-width: 443px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 24em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 
 @media screen and (max-width: 428px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 26em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 
 @media screen and (max-width: 396px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 23em;
     }
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 @media screen and (max-width: 381px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 21em;
     }
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 @media screen and (max-width: 376px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 22.2em;
     }
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 @media screen and (max-width: 326px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 17em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
 
 @media screen and (max-width: 280px) {
-    .entry-cntr {
+    .article-modal-wrapper {
         width: 14em;
     }
 
-    #entry-title {
+    .article-title {
         text-align: center;
     }
 }
