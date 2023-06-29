@@ -1,5 +1,5 @@
 import React, {  useContext, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
 
 import { ArticleContext } from '../../contexts/ArticleContext';
@@ -33,6 +33,16 @@ function ArticleModal() {
         >
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.PawBytes) && <></>}
+            <Modal.Footer>
+                <div className={``}>
+                    <Button
+                        as={"button"}
+                        onClick={handleHideModal}
+                    >
+                        Close
+                    </Button>
+                </div>
+            </Modal.Footer>
         </Modal>
     )
 }

@@ -6,11 +6,10 @@ import EntryLinkTrigger from '../../ArticleModal/EntryLinkTrigger/EntryLinkTrigg
 import CCAboutTab from './CCAboutTab';
 import "../../ArticleModal/ArticleModal.scss"
 import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
-
-enum EELT_Type {
-    Github = "github",
-    Demo = "demo"
-}
+import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResources';
+import CollabListing from '../../CollabListing/CollabListing';
+import { EPersonId } from '../../../enums/EPersonId';
+import { IContactCard } from '../../../models/IContactCard';
 
 function ColonialCarnivalArticle({ articlePayload }: any) {
 
@@ -21,6 +20,20 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
     } = articlePayload;
 
     const articleName = name
+    const collaborators = [
+        {
+            cid: EPersonId.ChrisKukk,
+            role: "Developer"
+        },
+        {
+            cid: EPersonId.MatheusAlexandre,
+            role: "Developer"
+        },
+        {
+            cid: EPersonId.EllyGriffin,
+            role: "Developer"
+        }
+    ] as IContactCard[]
 
     const {
         prjType
@@ -63,18 +76,14 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                 />
             </Modal.Header>
             <Modal.Body>
-                {
-                    (repoUrl || demoUrl) &&
-                    <div className='elt-cntr'>
-                        {repoUrl && <EntryLinkTrigger type={EELT_Type.Github} linkUrl={repoUrl} />}
-                        {demoUrl && <EntryLinkTrigger type={EELT_Type.Demo} linkUrl={demoUrl} />}
-                    </div>
-                }
+                <ArticleResources
+                    repoUrl={repoUrl}
+                    demoUrl={demoUrl}
+                />
                 <ArticleMediaDisplay
                     videoUrl={videoUrl}
                     images={images}
                 />
-
                 <div
                     className={`tab-wrapper`}
                 >
@@ -85,22 +94,17 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                         <Tab href={''} eventKey="about" title="About">
                             <CCAboutTab />
                         </Tab>
-                        <Tab href={''} eventKey="tech" title="Tech">
+                        <Tab href={''} eventKey="tech" title="Technology">
                             Tab content for Profile
                         </Tab>
                         <Tab href={''} eventKey="collaborators" title="Collaborators">
-                            Tab content for Profile
+                            <CollabListing 
+                                collabList={collaborators}
+                            />
                         </Tab>
                     </Tabs>
                 </div>
-                
-                
             </Modal.Body>
-            <Modal.Footer >
-                {/* <CollabListing /> */}
-
-            </Modal.Footer>
-
         </>
     )
 }

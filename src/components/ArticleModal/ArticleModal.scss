@@ -22,10 +22,10 @@ $entryContentWidth: 90%;
     max-width: none !important;
     max-height: none !important;
     width: 62em;
-    height: 100%;
 
     .modal-content {
         border-radius: 0 !important;
+        height: 126em; //100%;
         .modal-header {
              .close {
                 margin-left: 0 !important;
@@ -48,6 +48,7 @@ $entryContentWidth: 90%;
         margin-top: 1em;
         padding-left: 2em;
         padding-right: 2em;
+        border: 2px solid red;
         h2 {
             font-size: 1.5rem;
         }

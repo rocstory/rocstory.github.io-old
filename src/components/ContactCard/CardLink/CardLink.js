@@ -15,7 +15,7 @@ function CardLink({ link }) {
             setIcon(linkIcon);
         }
         getLinkIcon();
-    })
+    }, [])
 
     return icon && (
         <div className="cl-container">

@@ -1,4 +1,3 @@
-
 export function modifyName(name = '') {
     // TODO: Remove hard coded value - move to appConfig.js
     if (name.length < 14) return name;

@@ -3,17 +3,25 @@ import "./ContactCard.scss";
 import CardLink from "./CardLink/CardLink";
 import { Image } from "react-bootstrap";
 import useContactCard from "./useContactCard";
-function ContactCard({ contact }) {
+
+export type ContactCardProps = {
+    contactId: string,
+    role?: string
+}
+
+function ContactCard(props: ContactCardProps) {
+    const {
+        contactId,
+        role
+    } = props
 
     const {
         person,
-        role,
         imgUrl,
         name,
         handleImageLoadingError
-
-    } = useContactCard(contact);
-
+    } = useContactCard(contactId);
+    
     return person && (
 
         <div
@@ -32,7 +40,7 @@ function ContactCard({ contact }) {
                 <p className="cc-role cc-details">{role}</p>
                 <div className="cc-link-cntr">
                     {
-                        person.reflinks.map(link =>
+                        person.reflinks.map((link: any) =>
                             <CardLink
                                 key={link.url}
                                 link={link}
