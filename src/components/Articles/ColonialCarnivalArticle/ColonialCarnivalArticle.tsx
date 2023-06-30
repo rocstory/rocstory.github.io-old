@@ -67,6 +67,8 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         }
     ];
 
+    const collabListingDescription = "Thank you to everyone who helped with this project!"
+
     return (
         <>
             <Modal.Header closeButton>
@@ -88,10 +90,10 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                     className={`tab-wrapper`}
                 >
                     <Tabs
-                        className={`mb-3`}
+                        className={`mb-3 article-tabs`}
                         defaultActiveKey="about"
                     >
-                        <Tab href={''} eventKey="about" title="About">
+                        <Tab className={`about-tab`} href={''} eventKey="about" title="About">
                             <CCAboutTab />
                         </Tab>
                         <Tab href={''} eventKey="tech" title="Technology">
@@ -100,6 +102,7 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                         <Tab href={''} eventKey="collaborators" title="Collaborators">
                             <CollabListing 
                                 collabList={collaborators}
+                                description={collabListingDescription}
                             />
                         </Tab>
                     </Tabs>

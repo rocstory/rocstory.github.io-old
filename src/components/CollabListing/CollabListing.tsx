@@ -5,19 +5,27 @@ import { IContactCard } from '../../models/IContactCard';
 
 type CollabListProps = {
     collabList: IContactCard[],
+    description?: string,
+
 }
 
 function CollabListing( props : CollabListProps ) {
     
     const {
-        collabList
+        collabList,
+        description
      } = props
 
     return (
 
         <div className='collab-cntr'>
-            <h2 className='collab-title'> Collaborators</h2>
-            <span className='collab-descr'>These are the people who helped me with this project</span>
+            <div className={`collab-heading`}>
+                <h2 className='collab-title'> Collaborators</h2>
+                {
+                    description && <p className='collab-descr'>{description}</p>
+                }
+            </div>
+            
             <div className='cl-cntr'>
                 {
                     collabList.map((collab, index) =>
