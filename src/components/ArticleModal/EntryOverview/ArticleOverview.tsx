@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import './EntryOverview.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import appConfig from '../../../appConfig';
 import TechnologyListing from '../TechnologyListing/TechnologyListing';
 import { ArticleContext } from '../../../contexts/ArticleContext';

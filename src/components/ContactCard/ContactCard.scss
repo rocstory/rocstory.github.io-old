@@ -3,6 +3,7 @@ $image-size: 5em;
 .cc-cntr
 {
     border: 1.4px solid #342E37;
+    border-radius: 2%;
     display: grid;
     grid-gap: 1rem;
     grid-template: 'date content';
@@ -35,6 +36,7 @@ $image-size: 5em;
             margin-bottom: 0 !important;
             font-size: 1.4em;
             margin-bottom: 0;
+            font-weight: 900;
         }
 
         .cc-role

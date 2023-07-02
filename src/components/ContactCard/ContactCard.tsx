@@ -22,11 +22,11 @@ function ContactCard(props: ContactCardProps) {
         name,
         handleImageLoadingError
     } = useContactCard(contactId);
-    console.log('Person:', person)
+
     return person && (
 
         <div
-            className="cc-cntr"
+            className="cc-cntr shadow"
         >
             <div className={`content-wrapper`}>
                 <Image
@@ -72,7 +72,8 @@ function ContactCard(props: ContactCardProps) {
                                     target={"_blank"}
                                     rel={'noopener noreferrer'}
                                 >
-                                    {link.name}
+                                    <span><FontAwesomeIcon icon={['fas', 'ellipsis-h']}/></span>
+                                    <span>{link.name}</span>
                                 </Dropdown.Item>
                             )
                         }
