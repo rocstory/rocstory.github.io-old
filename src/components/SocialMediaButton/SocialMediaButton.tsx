@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import "./SocialMediaButton.scss";
 import { ISocialLink } from '../../models/ISocialLink';
 import { ITechnologyIcon } from '../../models/ITechnologyIcon';
+import RSIcon from '../RSIcon/RSIcon';
 const dStore = require('../../dataStore/dataStore');
 
 interface ISocialMediaButtonProps {
@@ -44,7 +45,7 @@ const SocialMediaButton = ({ link } : ISocialMediaButtonProps) => {
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
         >
-            <span className="social-btn-icon"><FontAwesomeIcon icon={[icon.type, icon.icon]} /></span>
+            <span className="social-btn-icon"><RSIcon iconName={icon.name} /></span>
             <span className="social-btn-name">{name}</span>
         </Button>
     ) : null

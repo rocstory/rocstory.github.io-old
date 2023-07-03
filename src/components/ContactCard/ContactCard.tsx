@@ -4,6 +4,8 @@ import CardLink from "./CardLink/CardLink";
 import { Image, Button, Dropdown } from "react-bootstrap";
 import useContactCard from "./useContactCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import RSIcon from "../RSIcon/RSIcon";
+import { ERSIcon } from "../../enums/ERSIcons";
 
 export type ContactCardProps = {
     contactId: string,
@@ -72,7 +74,7 @@ function ContactCard(props: ContactCardProps) {
                                     target={"_blank"}
                                     rel={'noopener noreferrer'}
                                 >
-                                    <span><FontAwesomeIcon icon={['fas', 'ellipsis-h']}/></span>
+                                    <span><RSIcon iconName={ERSIcon.Github} /></span>
                                     <span>{link.name}</span>
                                 </Dropdown.Item>
                             )

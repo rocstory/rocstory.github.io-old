@@ -30,6 +30,7 @@ function RSIcon(props: RSIconProps) {
     const {
         iconName
     } = props
+    
     const getFontAwesomeIcon = () => {
         switch (iconName) {
             case ERSIcon.Github:
