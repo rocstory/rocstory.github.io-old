@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Badge from 'react-bootstrap/Badge'
 import "./Tech.css";
+import RSIcon from '../../../RSIcon/RSIcon';
+import { ERSIcon } from '../../../../enums/ERSIcons';
 const dStore = require('../../../../dataStore/dataStore');
 
 function Tech({ name }) {
@@ -27,7 +28,7 @@ function Tech({ name }) {
                 className="tech-icon"
                 style={{ color: icon.color ? icon.color : 'black' }}
             >
-                <FontAwesomeIcon icon={[icon.type, icon.icon]} />
+                <RSIcon iconName={icon.type} />
             </span>
             <span className="tech-name">{icon.name}</span>
         </Badge>

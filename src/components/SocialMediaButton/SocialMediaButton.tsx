@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
 
 import "./SocialMediaButton.scss";
 import { ISocialLink } from '../../models/ISocialLink';
-import { ITechnologyIcon } from '../../models/ITechnologyIcon';
 import RSIcon from '../RSIcon/RSIcon';
 const dStore = require('../../dataStore/dataStore');
 

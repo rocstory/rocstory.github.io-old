@@ -1,9 +1,7 @@
 import React from "react";
 import "./ContactCard.scss";
-import CardLink from "./CardLink/CardLink";
 import { Image, Button, Dropdown } from "react-bootstrap";
 import useContactCard from "./useContactCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import RSIcon from "../RSIcon/RSIcon";
 import { ERSIcon } from "../../enums/ERSIcons";
 
@@ -42,17 +40,7 @@ function ContactCard(props: ContactCardProps) {
                 >
                     <p className="cc-name cc-details">{name}</p>
                     <p className="cc-role cc-details">{role}</p>
-                    {/* <div className="cc-link-cntr">
-                    {
-                        person.reflinks.map((link: any) =>
-                            <CardLink
-                                key={link.url}
-                                link={link}
-                            />)
-                    }
-                </div> */}
                 </div>
-
             </div>
             <div className={`dropdown-wrapper`} >
                 <Dropdown
@@ -64,7 +52,7 @@ function ContactCard(props: ContactCardProps) {
                         bsPrefix={' '}
                         as="button"
                     >
-                        <FontAwesomeIcon icon={['fas', 'ellipsis-h']} />
+                        <RSIcon iconName={ERSIcon.EllipsisH}/>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                         {
@@ -74,7 +62,7 @@ function ContactCard(props: ContactCardProps) {
                                     target={"_blank"}
                                     rel={'noopener noreferrer'}
                                 >
-                                    <span><RSIcon iconName={ERSIcon.Github} /></span>
+                                    <span><RSIcon iconName={link.type} /></span>
                                     <span>{link.name}</span>
                                 </Dropdown.Item>
                             )

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./CardLink.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from 'react-bootstrap/Button';
+import RSIcon from "../../RSIcon/RSIcon";
 
 const dStore = require('../../../dataStore/dataStore');
 
@@ -28,7 +29,7 @@ function CardLink({ link }) {
                 <p
                     className="cl-icon-content"
                 >
-                    <FontAwesomeIcon icon={[icon.type, icon.icon]} />
+                    <RSIcon icon={icon.type} />
                 </p>
             </Button>
 

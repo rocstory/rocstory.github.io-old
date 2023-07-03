@@ -1,9 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Button } from 'react-bootstrap';
-import { ITreeLink } from '../../models/TreeLink';
 import "./LinkButton.scss";
+import RSIcon from '../RSIcon/RSIcon';
 
 interface LinkButtonProps {
   link: any
@@ -12,7 +11,6 @@ interface LinkButtonProps {
 function LinkButton({ link } : LinkButtonProps) {
   const { label, url, icon, color } = link
   const iconType = icon.type;
-  const iconName = icon.name;
 
   const bgColor = { backgroundColor: color, border: color };
 
@@ -28,7 +26,7 @@ function LinkButton({ link } : LinkButtonProps) {
       <span
         className={'link-icon float-left'}
       >
-        <FontAwesomeIcon icon={[iconType, iconName]} />
+        <RSIcon iconName={iconType} />
       </span>
       <div
         className="link-label-container"

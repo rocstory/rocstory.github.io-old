@@ -1,8 +1,8 @@
 import React from 'react';
 import './EntryLinkTrigger.css';
 import { Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import appConfig from '../../../appConfig';
+import RSIcon from '../../RSIcon/RSIcon';
+import { ERSIcon } from '../../../enums/ERSIcons';
 
 enum EELT_Type {
     Github = "github",
@@ -17,7 +17,7 @@ type EntryLinkTriggerProps = {
 function EntryLinkTrigger({ type, linkUrl } : EntryLinkTriggerProps) {
     const isGithubTrigger = (type === EELT_Type.Github);
     const eltTypeClassName = isGithubTrigger ? 'elt-github' : 'elt-demo';
-    const eltIcon = isGithubTrigger ? <FontAwesomeIcon icon={["fab", "github"]} /> : <FontAwesomeIcon icon={["fas", "play"]} />
+    const eltIcon = isGithubTrigger ? <RSIcon iconName={ERSIcon.Github} /> : <RSIcon iconName={ERSIcon.Play} />;
     const eltLabel = isGithubTrigger ? "github" : "demo";
 
     return (

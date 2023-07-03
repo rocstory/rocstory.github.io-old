@@ -5,6 +5,8 @@ import { Card, Button } from 'react-bootstrap';
 import { useProjectConfig } from '../../hooks/useProjectConfig';
 import { IProjectMetadata } from '../../models/IProjectMetadata';
 import { ArticleContext } from '../../contexts/ArticleContext';
+import RSIcon from '../RSIcon/RSIcon';
+import { ERSIcon } from '../../enums/ERSIcons';
 
 
 type ArticleCardProps = {
@@ -57,7 +59,9 @@ function ArticleCard({articleData}: ArticleCardProps ) {
                         target="_blank"
                         rel="noopeneer no referrer"
                     >
-                        <span className='demo-btn-icon'><FontAwesomeIcon icon={['fas', 'play']}/></span>
+                        <span className='demo-btn-icon'>
+                            <RSIcon iconName={ERSIcon.Play} />
+                        </span>
                         <span>Demo</span>
                     </Button>
                 }
