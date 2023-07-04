@@ -4,6 +4,7 @@ import { Image, Button, Dropdown } from "react-bootstrap";
 import useContactCard from "./useContactCard";
 import RSIcon from "../RSIcon/RSIcon";
 import { ERSIcon } from "../../enums/ERSIcons";
+import ContactLink from "./ContactLink";
 
 export type ContactCardProps = {
     contactId: string,
@@ -57,14 +58,11 @@ function ContactCard(props: ContactCardProps) {
                     <Dropdown.Menu>
                         {
                             person.reflinks.map((link: any) => 
-                                <Dropdown.Item 
-                                    href={link.url}
-                                    target={"_blank"}
-                                    rel={'noopener noreferrer'}
-                                >
-                                    <span><RSIcon iconName={link.type} /></span>
-                                    <span>{link.name}</span>
-                                </Dropdown.Item>
+                                <ContactLink
+                                    name={link.name}
+                                    type={link.type}
+                                    url={link.url}
+                                />
                             )
                         }
                     </Dropdown.Menu>

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import "./SocialMediaButton.scss";
 import { ISocialLink } from '../../models/ISocialLink';
 import RSIcon from '../RSIcon/RSIcon';
+import { getIconHoverClassName } from '../../helper/iconStylingHelper';
 const dStore = require('../../dataStore/dataStore');
 
 interface ISocialMediaButtonProps {
@@ -27,14 +28,15 @@ const SocialMediaButton = ({ link } : ISocialMediaButtonProps) => {
     function toggleHover() {
         setIsHovered(prev => !prev);
     }
+    let btnHoverClassName = getIconHoverClassName(type);
 
-    let btnStyle = icon && { backgroundColor: icon.color }
+    console.log("Btn hover:", btnHoverClassName);
 
     return icon ? (
         <Button
-            style={isHovered ? btnStyle : {backgroundColor: "#4E4B4B"}}
-            variant={undefined}
-            className="social-btn clickable"
+            // style={isHovered ? btnStyle : {backgroundColor: "#4E4B4B"}}
+            variant={' '}
+            className={`social-btn clickable ${btnHoverClassName}`}
             as="a"
             href={src}
             target="_blank"

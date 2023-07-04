@@ -64,6 +64,13 @@ $image-size: 5em;
         }
     }
 
+    .contact-link {
+        text-transform: capitalize;
+        :first-child {
+            margin-right: 0.3em;
+        }
+    }
+
 }
 
 
