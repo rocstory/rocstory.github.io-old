@@ -12,13 +12,15 @@ enum EELT_Type {
 type EntryLinkTriggerProps = {
     type: string,
     linkUrl: string
+    className?: string
 }
 
-function EntryLinkTrigger({ type, linkUrl } : EntryLinkTriggerProps) {
+function EntryLinkTrigger({ type, linkUrl, className } : EntryLinkTriggerProps) {
     const isGithubTrigger = (type === EELT_Type.Github);
     const eltTypeClassName = isGithubTrigger ? 'elt-github' : 'elt-demo';
     const eltIcon = isGithubTrigger ? <RSIcon iconName={ERSIcon.Github} /> : <RSIcon iconName={ERSIcon.Play} />;
     const eltLabel = isGithubTrigger ? "github" : "demo";
+    const addClassName = className ?? '';
 
     return (
         <Button
@@ -26,8 +28,8 @@ function EntryLinkTrigger({ type, linkUrl } : EntryLinkTriggerProps) {
             href={linkUrl}
             target="_blank"
             rel="noopener noreferrer"
-            variant={undefined}
-            className={`elt-btn ${eltTypeClassName}`}
+            variant={"-"}
+            className={`elt-btn ${eltTypeClassName} ${addClassName}`}
         >
             <span className="elt-icon m-0">
                 {eltIcon}
