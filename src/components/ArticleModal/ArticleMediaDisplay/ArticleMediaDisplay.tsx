@@ -3,6 +3,7 @@ import './ArticleMediaDisplay.scss';
 import Carousel from 'react-bootstrap/Carousel';
 import ReactPlayer from 'react-player';
 import ImageCarousel from '../../ImageCarousel/ImageCarousel';
+import ImageGallery from '../../ImageGallery/ImageGallery';
 
 
 interface IArticleMediaDisplay {
@@ -23,7 +24,8 @@ function ArticleMediaDisplay(props: IArticleMediaDisplay) {
             }
             {
                 (images && images.length > 0) &&
-                <ImageCarousel images={images} />
+                <ImageGallery images={images} />
+                // <ImageCarousel images={images} />
             }
         </div>
     )

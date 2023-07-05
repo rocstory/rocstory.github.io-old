@@ -3,52 +3,12 @@
     background-color: #f2f2f2;
     padding: 1em;
     
-}
-
-
-
-
-// $image-height: 30em;
-// .img-carousel-container {
-//     border: 2px solid orange;
-//     border-radius: 1%;
-//     background-color: #f2f2f2;
-//     width: 40em;
-//     height: 30em;
-
-//     margin: auto;
-//     display: flex;
-//     justify-content: center;
-
-//     .image-carousel {
-//         border: 2px solid blue;
-//         width: 20em;
-//         height: 10em;
-//         overflow: hidden;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 100vh;
     
-//         .image-item {
-//             border: 2px solid green;
-//             height: 100%;
-//             width: 100%;
-//             object-fit: contain;
-//             img {
-//                 border: 2px solid red !important;
-//                 width: 100%; /* or any custom size */
-//                 height: 100%; 
-//                 object-fit: contain;
-//             }
-//         }
-//     }
-// }
-
-
-
-
-
-
-
-
-
+}
 
 .emd-cntr
 {

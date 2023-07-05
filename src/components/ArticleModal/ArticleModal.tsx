@@ -28,6 +28,8 @@ function ArticleModal() {
     return selArticle && (
         <Modal
             show={show}
+            centered={true}
+            // backdrop={true}
             onHide={handleHideModal}
             dialogClassName="article-modal-wrapper"
         >

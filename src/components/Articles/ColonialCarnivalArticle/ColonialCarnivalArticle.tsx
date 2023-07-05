@@ -63,7 +63,7 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         },
         {
             "alt": "Memory Match",
-            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
+            "url": "https://www.creativeuncut.com/gallery-44/art/loztotk-vertical-key-art.jpg"
         }
     ];
 
