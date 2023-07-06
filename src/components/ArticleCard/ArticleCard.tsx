@@ -47,7 +47,9 @@ function ArticleCard({articleData}: ArticleCardProps ) {
                     <span className='entry-title'>{name}</span>
                     <span className="entry-type">{prjType}</span>
                 </Card.Title>
-                <Card.Text>
+                <Card.Text
+                    className={'ac-caption'}
+                >
                     {caption}
                 </Card.Text>
                 {

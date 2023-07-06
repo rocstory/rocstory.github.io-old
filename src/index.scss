@@ -27,6 +27,11 @@ body {
   border: none !important;
 }
 
+button.rs-close {
+  color: #fff;
+  background-color: #006992; 
+}
+
 
 .imgContainer-circle {
   border-radius: 50%;
@@ -49,9 +54,12 @@ body {
   text-overflow: ellipsis;
 }
 
-/* width */
+// /* width */
+
+$scrollBarColor: #ECA400;
+
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 8px;
 }
 
 /* Track */
@@ -62,11 +70,11 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0fbaf2;
-  border-radius: 10px;
+  background: $scrollBarColor;
+  border-radius: 1px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f99c7;
+  background: $scrollBarColor;
 }

@@ -7,14 +7,12 @@ import { EPortfolioPages, PageContext, PageProvider } from "./contexts/PageConte
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import appConfig from './appConfig.json';
-import LinksPage from './components/LinkTree/LinkTree';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 import ArticleModal from './components/ArticleModal/ArticleModal';
 import { ArticleContext} from './contexts/ArticleContext';
-import { usePageContext } from './hooks/usePageContext';
 import HomePage from './pages/Home/HomePage';
 import ContactLinks from './components/Header/ContactLinks/ContactLinks';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   // console.log("SelPage:", selPage);
@@ -22,15 +20,25 @@ function App() {
   const {selArticle} = useContext(ArticleContext);
   return (
       <div className="App">
-        <Navigator />
+        {/* <Navigator />
         <Header />
-        <ContactLinks />
-        {
+        <ContactLinks /> */}
+        <BrowserRouter>
+          <Navigator />
+          <Header />
+          <ContactLinks />
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path={`/${EPortfolioPages.Home}`} element={<HomePage />} />
+            <Route path={`/${EPortfolioPages.Projects}`} element={<ProjectsPage />} />
+          </Routes>
+        {/* {
           (selPage === EPortfolioPages.Home) && <HomePage />
         }
         {
           (selPage === EPortfolioPages.Projects) && <ProjectsPage />
-        }
+        } */}
+        </BrowserRouter>
         <div className="footer">
           <p>Always <span>be kind</span>.</p>
           <p>Always <span>be honest</span>.</p>

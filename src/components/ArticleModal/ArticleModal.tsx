@@ -38,7 +38,9 @@ function ArticleModal() {
             <Modal.Footer>
                 <div className={``}>
                     <Button
+                        className={'rs-close'}
                         as={"button"}
+                        variant={' '}
                         onClick={handleHideModal}
                     >
                         Close

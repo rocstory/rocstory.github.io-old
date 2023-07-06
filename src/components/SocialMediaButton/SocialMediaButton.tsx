@@ -30,8 +30,6 @@ const SocialMediaButton = ({ link } : ISocialMediaButtonProps) => {
     }
     let btnHoverClassName = getIconHoverClassName(type);
 
-    console.log("Btn hover:", btnHoverClassName);
-
     return icon ? (
         <Button
             // style={isHovered ? btnStyle : {backgroundColor: "#4E4B4B"}}
