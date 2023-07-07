@@ -49,6 +49,15 @@ $entryContentWidth: 90%;
         padding-left: 2em;
         padding-right: 2em;
 
+        .article-tabs {
+
+            .nav-item {
+                color: #006992;
+            }
+            .nav-item.active {
+                color: #ECA400;
+            }
+        }
         .tab-content {
             height: 25em;
             overflow-y: auto;
