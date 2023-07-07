@@ -7,8 +7,26 @@ import "./Navigator.scss"
 
 const Navigator = () => {
     const location = useLocation();
-    let curPathArray = location && location.pathname && location.pathname.split(/\//g)
-    
+    let curPage = location && location.pathname && location.pathname.split(/\//g)[1]
+    const PortfolioPages = Object.values(EPortfolioPages);
+
+    const isPageSelected = (page: any) => {
+        
+        // const curPage = 
+        // const isSelected = curPage > -1;
+        const doesPageExist = PortfolioPages.indexOf(page) > -1;
+        if (doesPageExist) {
+            const isCurrentPage = page === curPage 
+            return isCurrentPage;
+        }
+        else  {
+            if (page ===  EPortfolioPages.Home && curPage === '') {
+                return true;
+            }
+        }
+
+        return false;
+    }
     return (
         <Navbar expand="lg" className="main-nav">
             <Container>
@@ -18,8 +36,7 @@ const Navigator = () => {
                 <Nav className="me-auto nav-items">
                     {
                         Object.values(EPortfolioPages).map((page) => {
-                            const curPage = curPathArray.indexOf(page);
-                            const isSelected = curPage > -1; 
+                            const isSelected = isPageSelected(page)
                             return (
                                 <Nav.Link 
                                     href={`/${page}`}
