@@ -3,9 +3,7 @@
 .entry-card-container {
     width: 25em;
     // height: 20em;
-    .btn {
-        font-weight: bolder;
-    }
+    
     .btn:hover {
         background-color: util.$btn-hover-color;
     }

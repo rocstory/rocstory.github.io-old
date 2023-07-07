@@ -55,19 +55,3 @@ const Navigator = () => {
 }
 
 export default Navigator;
-
-// return (
-//     <Nav className="justify-content-center main-nav">
-//         {
-//             Object.values(EPortfolioPages).map((page) => {
-//                 const isSelected = selPage === page
-//                 return <Nav.Item 
-//                     className={`${isSelected ? 'active' : ''}`}
-//                     onClick={() => { handleSelectedNavItem(page)}}
-//                 >
-//                     {page}
-//                 </Nav.Item>
-//             })
-//         }
-//     </Nav>
-// )
