@@ -1,6 +1,5 @@
 {
-    "general":
-    {
+    "general": {
         "name": "malik roc",
         "title": "software engineer",
         "pronounciation": "(ma-leek)",
@@ -14,7 +13,7 @@
         },
         {
             "type": "linkedin",
-            "name": "linkedin",
+            "name": "linkedIn",
             "src": "https://www.linkedin.com/in/malikroc/"
         },
         {

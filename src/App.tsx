@@ -29,6 +29,7 @@ function App() {
           <ContactLinks />
           <Routes>
             <Route index element={<HomePage />} />
+            <Route path={`/`} element={<HomePage />} />
             <Route path={`/${EPortfolioPages.Home}`} element={<HomePage />} />
             <Route path={`/${EPortfolioPages.Projects}`} element={<ProjectsPage />} />
           </Routes>

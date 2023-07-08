@@ -12,11 +12,9 @@ const Navigator = () => {
 
     const isPageSelected = (page: any) => {
         
-        // const curPage = 
-        // const isSelected = curPage > -1;
         const doesPageExist = PortfolioPages.indexOf(page) > -1;
         if (doesPageExist) {
-            const isCurrentPage = page === curPage 
+            const isCurrentPage = page === curPage || (curPage === '' &&  page === EPortfolioPages.Home)
             return isCurrentPage;
         }
         else  {
