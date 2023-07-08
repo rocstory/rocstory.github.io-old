@@ -1,4 +1,5 @@
 import { ESocialMedia } from '../enums/ESocialMedia';
+import { ETechnology } from '../enums/ETechnology';
 import { IPersonalBio } from '../models/IPersonalBio';
 import { IProjectMetadata} from '../models/IProjectMetadata';
 import { ISocialLink } from '../models/ISocialLink';
@@ -77,8 +78,8 @@ export function getPerson(pid: string) {
     return peopleCollection.find((person: any) => person.pid === pid)
 }
 
-export function getTechIcon(name: string) : ITechnologyIcon {
-    name = name.toLowerCase().trim();
+export function getTechIcon(name: ETechnology) : ITechnologyIcon {
+    // name = name.toLowerCase().trim();
     const iconData = getIconByProperty(name);
     // return default icon if icon is not found 
     if (!iconData) return getIconByProperty('default');

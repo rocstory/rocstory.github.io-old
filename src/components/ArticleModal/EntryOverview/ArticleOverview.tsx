@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './EntryOverview.scss';
 // import appConfig from '../../../appConfig';
-import TechnologyListing from '../TechnologyListing/TechnologyListing';
+import TechnologyListing from '../TechnologyListing/TechnologyGallery';
 import { ArticleContext } from '../../../contexts/ArticleContext';
 import ArticleTabs from '../../ArticleTabs/ArticleTabs';
 

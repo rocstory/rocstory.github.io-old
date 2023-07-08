@@ -9,6 +9,7 @@ export enum ERSIcon {
     Python = 'python',
     RaspberryPi = 'raspberry-pi',
     Twitter = 'twitter',
+    TypeScript = "",
     Twitch = 'twitch',
     Instagram = 'instagram',
     Facebook = 'facebook',
@@ -18,7 +19,8 @@ export enum ERSIcon {
 
     // fas - solid
     FileCode = 'file-code',
-    LightBulb = 'light-bulb', 
+    LightBulb = 'light-bulb',
+    Bolt = 'bolt',
 
     EllipsisH = "ellipsis-h",
     Play = "play",

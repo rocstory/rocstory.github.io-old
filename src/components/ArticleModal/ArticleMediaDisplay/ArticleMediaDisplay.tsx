@@ -1,8 +1,6 @@
 import React from 'react';
 import './ArticleMediaDisplay.scss';
-import Carousel from 'react-bootstrap/Carousel';
 import ReactPlayer from 'react-player';
-import ImageCarousel from '../../ImageCarousel/ImageCarousel';
 import ImageGallery from '../../ImageGallery/ImageGallery';
 
 

@@ -10,6 +10,8 @@ import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResourc
 import CollabListing from '../../CollabListing/CollabListing';
 import { EPersonId } from '../../../enums/EPersonId';
 import { IContactCard } from '../../../models/IContactCard';
+import CCTechnologyTab from './CCTechnologyTab';
+import { ETechnology } from '../../../enums/ETechnology';
 
 function ColonialCarnivalArticle({ articlePayload }: any) {
 
@@ -34,6 +36,14 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
             role: "Developer"
         }
     ] as IContactCard[]
+
+    const techList: ETechnology[] = [
+        ETechnology.CSS,
+        ETechnology.Firebase,
+        ETechnology.HTML,
+        ETechnology.JavaScript,
+    ];
+
 
     const {
         prjType
@@ -97,7 +107,9 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                             <CCAboutTab />
                         </Tab>
                         <Tab href={''} eventKey="tech" title="Technology">
-                            Tab content for Profile
+                            <CCTechnologyTab 
+                                technologies={techList}
+                            />
                         </Tab>
                         <Tab href={''} eventKey="collaborators" title="Collaborators">
                             <CollabListing 
