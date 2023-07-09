@@ -8,7 +8,7 @@ $techGalleryMaxHeight: calc((6 * $techContainerHeight) + 18px);
     margin: auto;
 }
 .technology-gallery {
-    // border: 2px solid green;
+    // border: 2px solid green;579
     width: $techGalleryWidth;
     max-height: $techGalleryMaxHeight;
     overflow-y: auto;
@@ -32,42 +32,11 @@ $techGalleryMaxHeight: calc((6 * $techContainerHeight) + 18px);
     }
 }
 
-
-// .eot-cntr
-// {
-//     // border: 2px solid red;
-//     align-self: center;
-//     display: flex;
-//     flex-direction: column;
-//     width: $entryContentWidth;
-// }
-
-//     .tl-cntr {
-//         align-self: center;
-//         width: 100%;
-//         margin-top: 0.5em;
-//         // border: 2px solid red;
-//     }
-
-//     .eot-title {
-//         align-self: center;
-//         padding-bottom: 0.1em;
-//         margin-bottom: 0px;
-        
-//     }
-//     .eot-caption {
-//         align-self: center;
-//         margin-top: 0px;
-//     }
-
-//     .tl-cntr > .tech-container {
-//         margin-left: 0.5em;
-//         margin-right: 0.5em;
-//     }
-
-// @media screen and (max-width: 393px) {
-//     .tl-cntr {
-//         width: 70%;
-//     }
+@media screen and (max-width: 579px) {
     
-// }
+
+    .technology-gallery {
+        width: auto;
+        justify-content: center;
+    }
+}
