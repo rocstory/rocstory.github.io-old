@@ -32,7 +32,6 @@ const SocialMediaButton = ({ link } : ISocialMediaButtonProps) => {
 
     return icon ? (
         <Button
-            // style={isHovered ? btnStyle : {backgroundColor: "#4E4B4B"}}
             variant={' '}
             className={`social-btn clickable ${btnHoverClassName}`}
             as="a"

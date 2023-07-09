@@ -8,7 +8,7 @@ import {
     faHtml5, faJsSquare, faPython,
     faRaspberryPi, faTwitter, faTwitch,
     faInstagram, faFacebook, faYoutube,
-    faLinkedin, faGithubAlt, faUnity,
+    faLinkedin, faGithubAlt, faUnity, faReact,
 
 } from '@fortawesome/free-brands-svg-icons';
 import { 
@@ -16,6 +16,9 @@ import {
     faRobot,
     faEllipsisH,
     faQuestionCircle,
+    faLeaf,
+    faLaptopCode,
+    faBolt
  
 } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -75,10 +78,22 @@ function RSIcon(props: RSIconProps) {
                 return faDatabase;
             case ERSIcon.Robot:
                 return faRobot;
+            case ERSIcon.MongoDB:
+                return faLeaf;
+            case ERSIcon.OpenSCAD:
+                return faFileCode;
+            case ERSIcon.TypeScript:
+                return faLaptopCode;
+            case ERSIcon.React:
+                return faReact;
+            case ERSIcon.Bolt:
+                return faBolt
             case ERSIcon.Other:
-                return faQuestionCircle
-            default:
                 return faLightbulb
+            case ERSIcon.QuestionCircle:
+                return faQuestionCircle;
+            default:
+                return faQuestionCircle;
         }
     }
 

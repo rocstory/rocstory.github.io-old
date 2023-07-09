@@ -1,62 +1,62 @@
 import { useContext, useState, useEffect } from 'react'
-import { ERSIcon } from '../../../../enums/ERSIcons';
-import { ETechnology } from '../../../../enums/ETechnology';
+import { ERSIcon } from '../../../enums/ERSIcons';
+import { ETechnology } from '../../../enums/ETechnology';
 
 
 export const useTech = (techName: ETechnology) => {
 
-    const [iconName, setIconName] = useState(ERSIcon.LightBulb)
+    const [iconName, setIconName] = useState<ERSIcon>(ERSIcon.LightBulb)
     const [iconColor, setIconColor] = useState('black')
     const [secondaryColor, setSecondaryColor] = useState('white')
 
     const getSecondaryColor = () => {
         switch (techName) {
             case ETechnology.Arduino:
-                return 'red';
+                return 'white';
             case ETechnology.Cpp:
-                return 'red';
+                return 'white';
             case ETechnology.CSharp:
-                return 'red';
+                return 'white';
             case ETechnology.CSS:
-                return 'red';
+                return 'white';
             case ETechnology.Facebook:
-                return 'red';
+                return 'white';
             case ETechnology.Firebase:
-                return 'red';
+                return 'white';
             case ETechnology.Fritzing:
-                return 'red';
+                return 'white';
             case ETechnology.Github:
-                return 'red';
+                return 'white';
             case ETechnology.HTML:
-                return 'red';
+                return 'white';
             case ETechnology.Instagram:
-                return 'red';
+                return 'white';
             case ETechnology.JavaScript:
-                return 'red';
+                return 'white';
             case ETechnology.LinkedIn:
-                return 'red';
+                return 'white';
             case ETechnology.MongoDB:
-                return 'red';
+                return 'white';
             case ETechnology.OpenSCAD:
-                return 'red';
+                return 'white';
             case ETechnology.PostgresSQL:
-                return 'red';
+                return 'white';
             case ETechnology.Python:
-                return 'red';
+                return 'white';
             case ETechnology.RaspberryPi:
-                return 'red';
+                return 'white';
             case ETechnology.React:
-                return 'red';
+                return 'white';
             case ETechnology.Twitch:
-                return 'red';
+                return 'white';
             case ETechnology.Twitter:
-                return 'red';
+                return 'white';
             case ETechnology.TypeScript:
-                return 'red';
+                return 'white';
             case ETechnology.Unity:
-                return 'red';
+                return 'white';
             case ETechnology.Youtube:
-                return 'red';
+                return 'white';
             default:
                 return 'white';
         }
@@ -65,51 +65,51 @@ export const useTech = (techName: ETechnology) => {
     const getIconColor = () => {
         switch (techName) {
             case ETechnology.Arduino:
-                return 'red';
+                return '#03C0C1';
             case ETechnology.Cpp:
-                return 'red';
+                return '#0047AB';
             case ETechnology.CSharp:
-                return 'red';
+                return '#0047AB';
             case ETechnology.CSS:
-                return 'red';
+                return '#0fbaf2';
             case ETechnology.Facebook:
-                return 'red';
+                return '#4267B2';
             case ETechnology.Firebase:
-                return 'red';
+                return '#F6820D';
             case ETechnology.Fritzing:
-                return 'red';
+                return '#bc1142';
             case ETechnology.Github:
-                return 'red';
+                return '#7289da';
             case ETechnology.HTML:
-                return 'red';
+                return '#FA4C05';
             case ETechnology.Instagram:
-                return 'red';
+                return '#E1306C';
             case ETechnology.JavaScript:
-                return 'red';
+                return '#F1BB47';
             case ETechnology.LinkedIn:
-                return 'red';
+                return '#007bb5';
             case ETechnology.MongoDB:
-                return 'red';
+                return '#4DB33D';
             case ETechnology.OpenSCAD:
-                return 'red';
+                return 'black';
             case ETechnology.PostgresSQL:
-                return 'red';
+                return '#0064a5';
             case ETechnology.Python:
-                return 'red';
+                return '#306998';
             case ETechnology.RaspberryPi:
-                return 'red';
+                return '#bc1142';
             case ETechnology.React:
-                return 'red';
+                return '#47CDF6';
             case ETechnology.Twitch:
-                return 'red';
+                return '#6441a5';
             case ETechnology.Twitter:
-                return 'red';
+                return '#1DA1F2';
             case ETechnology.TypeScript:
-                return 'red';
+                return '#0064a5';
             case ETechnology.Unity:
-                return 'red';
+                return '#6A82CA';
             case ETechnology.Youtube:
-                return 'red';
+                return '#ff0000';
             default:
                 return 'black'
         }
@@ -132,41 +132,49 @@ export const useTech = (techName: ETechnology) => {
             case ETechnology.Fritzing:
                 return ERSIcon.Bolt;
             case ETechnology.Github:
-                return 'red';
+                return ERSIcon.Github;
             case ETechnology.HTML:
-                return 'red';
+                return ERSIcon.HTML;
             case ETechnology.Instagram:
-                return 'red';
+                return ERSIcon.Instagram;
             case ETechnology.JavaScript:
-                return 'red';
+                return ERSIcon.JsSquare;
             case ETechnology.LinkedIn:
-                return 'red';
+                return ERSIcon.LinkedIn;
             case ETechnology.MongoDB:
-                return 'red';
+                return ERSIcon.MongoDB;
             case ETechnology.OpenSCAD:
-                return 'red';
+                return ERSIcon.OpenSCAD;
             case ETechnology.PostgresSQL:
-                return 'red';
+                return ERSIcon.Database;
             case ETechnology.Python:
-                return 'red';
+                return ERSIcon.Python;
             case ETechnology.RaspberryPi:
-                return 'red';
+                return ERSIcon.RaspberryPi;
             case ETechnology.React:
-                return 'red';
+                return ERSIcon.React;
             case ETechnology.Twitch:
-                return 'red';
+                return ERSIcon.Twitch;
             case ETechnology.Twitter:
-                return 'red';
+                return ERSIcon.Twitter;
             case ETechnology.TypeScript:
-                return 'red';
+                return ERSIcon.TypeScript;
             case ETechnology.Unity:
-                return 'red';
+                return ERSIcon.Unity;
             case ETechnology.Youtube:
-                return 'red';
+                return  ERSIcon.Youtube;
+            default:
+                return ERSIcon.QuestionCircle
         }
     }
     useEffect(() => {
+        const icoName = getIconName()
+        const icoColor = getIconColor()
+        const sndColor = getSecondaryColor()
 
+        setIconName(icoName);
+        setIconColor(icoColor);
+        setSecondaryColor(sndColor);
     }, [techName])
 
     return {

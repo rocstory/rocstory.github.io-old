@@ -1,7 +1,35 @@
-@import "../ArticleModal.scss";
+// @import "../ArticleModal.scss";
+$techContainerWidth: 9em;
+$techContainerHeight: 2.5em;
+$techGalleryWidth: calc((3 * $techContainerWidth) + 25px);
+$techGalleryMaxHeight: calc((6 * $techContainerHeight) + 18px);
 
+.technology-gallery-centered {
+    margin: auto;
+}
 .technology-gallery {
-    border: 2px solid red;
+    // border: 2px solid green;
+    width: $techGalleryWidth;
+    max-height: $techGalleryMaxHeight;
+    overflow-y: auto;
+    padding-top: 5px;
+
+    // margin: auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2px;
+    row-gap: 2px;
+
+    .tech-container {
+        // border: 2px solid red;
+        width: $techContainerWidth;
+        height: $techContainerHeight;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+    }
 }
 
 

@@ -31,7 +31,7 @@ function ArticleModal() {
             centered={true}
             // backdrop={true}
             onHide={handleHideModal}
-            dialogClassName="article-modal-wrapper"
+            dialogClassName="article-modal-wrapper article-modal"
         >
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.PawBytes) && <></>}

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Badge from 'react-bootstrap/Badge'
 import "./Tech.scss";
-import RSIcon from '../../../RSIcon/RSIcon';
-import { ERSIcon } from '../../../../enums/ERSIcons';
-import { ETechnology } from '../../../../enums/ETechnology';
+import RSIcon from '../../RSIcon/RSIcon';
+import { ERSIcon } from '../../../enums/ERSIcons';
+import { ETechnology } from '../../../enums/ETechnology';
 import { useTech } from './useTech';
-const dStore = require('../../../../dataStore/dataStore');
 
 type TechProps = {
     techName: ETechnology
@@ -22,10 +21,9 @@ function Tech(props : TechProps) {
     } = useTech(techName);
 
     return (
-        <Badge
-            pill
-            variant="info"
-            className="tech-container"
+        <div
+            className="tech"
+            style={{backgroundColor: secondaryColor}}
         >
             <span
                 className="tech-icon"
@@ -34,7 +32,7 @@ function Tech(props : TechProps) {
                 <RSIcon iconName={iconName} />
             </span>
             <span className="tech-name">{techName}</span>
-        </Badge>
+        </div>
     ) 
 }
 

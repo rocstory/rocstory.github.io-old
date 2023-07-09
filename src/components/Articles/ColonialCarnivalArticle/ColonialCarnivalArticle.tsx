@@ -5,6 +5,8 @@ import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleM
 import EntryLinkTrigger from '../../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
 import CCAboutTab from './CCAboutTab';
 import "../../ArticleModal/ArticleModal.scss"
+import "../../ArticleModal/ArticleTabs.scss"
+import "./ColonialCarnivalArticle.scss";
 import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
 import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResources';
 import CollabListing from '../../CollabListing/CollabListing';
@@ -39,9 +41,27 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
 
     const techList: ETechnology[] = [
         ETechnology.CSS,
+        ETechnology.CSharp,
+        ETechnology.Cpp,
+        ETechnology.Arduino,
+        ETechnology.Facebook,
         ETechnology.Firebase,
+        ETechnology.Fritzing,
+        ETechnology.Github,
         ETechnology.HTML,
+        ETechnology.Instagram,
         ETechnology.JavaScript,
+        ETechnology.LinkedIn,
+        ETechnology.MongoDB,
+        ETechnology.OpenSCAD,
+        ETechnology.PostgresSQL,
+        ETechnology.Python,
+        ETechnology.RaspberryPi,
+        ETechnology.React,
+        ETechnology.Twitch,
+        ETechnology.Twitter,
+        ETechnology.TypeScript,
+        ETechnology.Unity
     ];
 
 
@@ -103,15 +123,15 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                         className={`mb-3 article-tabs`}
                         defaultActiveKey="about"
                     >
-                        <Tab className={`about-tab`} href={''} eventKey="about" title="About">
+                        <Tab className={`about-tab`} eventKey="about" title="About">
                             <CCAboutTab />
                         </Tab>
-                        <Tab href={''} eventKey="tech" title="Technology">
+                        <Tab eventKey="tech" title="Technology">
                             <CCTechnologyTab 
                                 technologies={techList}
                             />
                         </Tab>
-                        <Tab href={''} eventKey="collaborators" title="Collaborators">
+                        <Tab eventKey="collaborators" title="Collaborators">
                             <CollabListing 
                                 collabList={collaborators}
                                 description={collabListingDescription}

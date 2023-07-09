@@ -16,18 +16,23 @@ export enum ERSIcon {
     Youtube = 'youtube',
     LinkedIn = 'linkedin',
     Unity = 'unity',
+    MongoDB = 'leaf',
+    OpenSCAD = 'file-code',
+    React = 'react',
 
     // fas - solid
     FileCode = 'file-code',
     LightBulb = 'light-bulb',
     Bolt = 'bolt',
 
+
     EllipsisH = "ellipsis-h",
     Play = "play",
     Fire = "fire",
     Database = "database",
     Robot = "robot",
-    Other = "other"
+    Other = "other",
+    QuestionCircle = 'question-circle'
 
     
     
