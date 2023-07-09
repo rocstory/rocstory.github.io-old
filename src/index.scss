@@ -33,6 +33,11 @@ button.rs-close {
   background-color: #006992; 
 }
 
+button.rs-close:hover {
+  color: #fff !important;
+  background-color: #ECA400 !important;
+}
+
 
 .imgContainer-circle {
   border-radius: 50%;

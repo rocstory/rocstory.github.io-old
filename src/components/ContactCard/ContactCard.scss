@@ -82,40 +82,31 @@ $image-size: 5em;
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 414px) {
+
+@media screen and (max-width: 513px) {
     .cc-cntr
     {
-        width: 19em;
-    }
-}
+        margin: auto;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        grid-gap: 0;
 
-@media screen and (max-width: 396px) {
-    .cc-cntr
-    {
-        width: 16em;
+        .content-wrapper {
+            // border: 2px solid red;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            margin: 0;
+            margin-bottom: 5px;
+            .cc-image, .cc-content {
+                margin: auto;
+            }
+        }
+        .dropdown-wrapper {
+            margin: 0;
+        }
     }
-}
-
-@media screen and (max-width: 326px) {
-    .cc-cntr
-    {
-        width: 11em;
-        height: 5.5em;
-    }
-
-    .cc-image {
-        width: 2em;
-        height: 2em !important;
-    }
-
-    .cc-name
-    {
-        font-size: 1.2em;
-    }
-
-    .cc-role
-    {
-        font-size: 0.8em;
-        margin-bottom: 0;
-    }
+    
 }

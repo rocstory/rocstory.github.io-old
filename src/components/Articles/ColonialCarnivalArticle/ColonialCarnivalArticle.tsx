@@ -89,7 +89,7 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         },
         {
             "alt": "WCSU Trivia",
-            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
+            "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
         },
         {
             "alt": "Memory Match",
