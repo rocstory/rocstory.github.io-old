@@ -26,7 +26,7 @@ const Navigator = () => {
         return false;
     }
     return (
-        <Navbar expand="lg" className="main-nav">
+        <Navbar expand="lg" className="main-nav" variant="dark">
             <Container>
                 <Navbar.Brand href={`/${EPortfolioPages.Home}`} className={`rs-brand`} >Rocstory</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
