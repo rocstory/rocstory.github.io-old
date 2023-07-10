@@ -2,16 +2,14 @@ import React, { useContext, useState } from 'react';
 import { Modal, Tab, Tabs } from 'react-bootstrap';
 import { useProjectConfig } from '../../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
-import CCAboutTab from './CCAboutTab';
+import AboutTab from './AboutTab';
 import "../../ArticleModal/ArticleModal.scss"; 
-import "../../ArticleModal/ArticleTabs.scss";
+import "../../ArticleTabs/ArticleTabs.scss"
 import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
 import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResources';
-import CollabListing from '../../CollabListing/CollabListing';
-import { EPersonId } from '../../../enums/EPersonId';
 import { IContactCard } from '../../../models/IContactCard';
 import { ETechnology } from '../../../enums/ETechnology';
-import TechnologyTab from './TechnologyTab';
+import TechnologyTab from '../../ArticleTabs/TechnologyTab';
 
 function PawBytesCafeArticle({ articlePayload }: any) {
 
@@ -79,7 +77,7 @@ function PawBytesCafeArticle({ articlePayload }: any) {
                         defaultActiveKey="about"
                     >
                         <Tab className={`about-tab`} eventKey="about" title="About">
-                            <CCAboutTab />
+                            <AboutTab />
                         </Tab>
                         <Tab eventKey="tech" title="Technology">
                             <TechnologyTab 

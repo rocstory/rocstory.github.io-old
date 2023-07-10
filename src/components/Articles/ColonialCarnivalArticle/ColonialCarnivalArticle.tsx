@@ -4,7 +4,7 @@ import { useProjectConfig } from '../../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
 import CCAboutTab from './CCAboutTab';
 import "../../ArticleModal/ArticleModal.scss"
-import "../../ArticleModal/ArticleTabs.scss"
+import "../../ArticleTabs/ArticleTabs.scss"
 import "./ColonialCarnivalArticle.scss";
 import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
 import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResources';

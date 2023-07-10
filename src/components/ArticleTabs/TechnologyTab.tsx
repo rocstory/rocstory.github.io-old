@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { ETechnology } from '../../../enums/ETechnology';
-import TechnologyGallery from '../../TechnologyGallery/TechnologyGallery';
+import { ETechnology } from '../../enums/ETechnology';
+import TechnologyGallery from '../TechnologyGallery/TechnologyGallery';
 
 type TechnologyTabProps = {
     technologies: ETechnology[]
