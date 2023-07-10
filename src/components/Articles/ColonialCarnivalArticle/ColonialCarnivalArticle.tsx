@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Modal, Tab, Tabs } from 'react-bootstrap';
 import { useProjectConfig } from '../../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
-import EntryLinkTrigger from '../../ArticleModal/EntryLinkTrigger/EntryLinkTrigger';
 import CCAboutTab from './CCAboutTab';
 import "../../ArticleModal/ArticleModal.scss"
 import "../../ArticleModal/ArticleTabs.scss"
@@ -41,27 +40,9 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
 
     const techList: ETechnology[] = [
         ETechnology.CSS,
-        ETechnology.CSharp,
-        ETechnology.Cpp,
-        ETechnology.Arduino,
-        ETechnology.Facebook,
-        ETechnology.Firebase,
-        ETechnology.Fritzing,
-        ETechnology.Github,
         ETechnology.HTML,
-        ETechnology.Instagram,
         ETechnology.JavaScript,
-        ETechnology.LinkedIn,
-        ETechnology.MongoDB,
-        ETechnology.OpenSCAD,
-        ETechnology.PostgresSQL,
-        ETechnology.Python,
-        ETechnology.RaspberryPi,
-        ETechnology.React,
-        ETechnology.Twitch,
-        ETechnology.Twitter,
-        ETechnology.TypeScript,
-        ETechnology.Unity
+        ETechnology.Firebase
     ];
 
 
@@ -89,11 +70,11 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         },
         {
             "alt": "WCSU Trivia",
-            "url": "https://rocportfolio.s3.amazonaws.com/chevsescape/chevEscape_imgA.jpg"
+            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/wcsu_trivia.jpg"
         },
         {
             "alt": "Memory Match",
-            "url": "https://www.creativeuncut.com/gallery-44/art/loztotk-vertical-key-art.jpg"
+            "url": "https://rocportfolio.s3.amazonaws.com/colonialcarnival/matchmatch.jpg"
         }
     ];
 
@@ -131,12 +112,12 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
                                 technologies={techList}
                             />
                         </Tab>
-                        <Tab eventKey="collaborators" title="Collaborators">
+                        {/* <Tab eventKey="collaborators" title="Collaborators">
                             <CollabListing 
                                 collabList={collaborators}
                                 description={collabListingDescription}
                             />
-                        </Tab>
+                        </Tab> */}
                     </Tabs>
                 </div>
             </Modal.Body>
