@@ -11,12 +11,82 @@
     },
     {
         "id": "pawbytes",
-        "index": 1,
+        "index": 6,
         "name": "Paw Bytes Cafe",
+        "typeId": "web-dev",
+        "iconId": "paw",
+        "demoUrl": "https://pawbytes.netlify.app/",
+        "repoUrl": "https://github.com/rocstory/PawBytes_Webapp",
+        "caption": "A three part project that incorporates a Twitter bot, database, and website."
+    },
+    {
+        "id": "lovelyfeathers",
+        "index": 7,
+        "name": "Lovely Feathers",
+        "typeId": "web-dev",
+        "iconId": "paw",
+        "demoUrl": null,
+        "repoUrl": null,
+        "caption": "A web application that gives people the opportunitiy to spread kindness."
+    },
+    {
+        "id": "twinlande",
+        "index": 8,
+        "name": "Twinlande Super Store",
+        "typeId": "web-dev",
+        "iconId": "paw",
+        "demoUrl": "https://twinlande.netlify.app/",
+        "repoUrl": "https://github.com/rocstory/twinlande-super-store",
+        "caption": "A 3 part web app built with the Roc Labs community"
+    },
+    {
+        "id": "gitrg3dcrayon",
+        "index": 2,
+        "name": "GITRG 3D Crayon 2019-2020",
+        "typeId": "embedded-systems",
+        "iconId": "paw",
+        "demoUrl": null,
+        "repoUrl": null,
+        "caption": "An open source intelligent toy which allows someone to draw in a 3D space."
+    },
+    {
+        "id": "chevsescape",
+        "index": 4,
+        "name": "Chev's Escape",
+        "typeId": "game-dev",
+        "iconId": "paw",
+        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
+        "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
+        "caption": "An object oriented software engineering class project (2019)."
+    },
+    {
+        "id": "revealingroc",
+        "index": 3,
+        "name": "Revealing Roc",
+        "typeId": "embedded-systems",
+        "iconId": "paw",
+        "demoUrl": null,
+        "repoUrl": "https://github.com/rocstory/Arduino_RevRoc",
+        "caption": "An embedded systems class project"
+    },
+    {
+        "id": "mocap",
+        "index": 1,
+        "name": "GITRG MOCAP 2018-2019",
+        "typeId": "embedded-systems",
+        "iconId": "paw",
+        "demoUrl": null,
+        "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
+        "caption": "A cost effective motion capturing system"
+    },
+    {
+        "id": "-",
+        "index": 2,
+        "name": "GITRG 3D Crayon 2019-2020",
         "typeId": "web-dev",
         "iconId": "paw",
         "demoUrl": "https://rocstory.github.io/colonialcarnival/",
         "repoUrl": "https://github.com/rocstory/colonialcarnival",
-        "caption": "A three part project that incorporates a Twitter bot, database, and website."
+        "caption": "An open source intelligent toy which allows someone to draw in a 3D space"
     }
 ]

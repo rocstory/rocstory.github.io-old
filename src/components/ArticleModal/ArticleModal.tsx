@@ -7,6 +7,7 @@ import { ArticleContext } from '../../contexts/ArticleContext';
 import './ArticleModal.scss';
 import ColonialCarnivalArticle from '../Articles/ColonialCarnivalArticle/ColonialCarnivalArticle';
 import { EProjectId } from '../../enums/EProjectId';
+import PawBytesCafeArticle from '../Articles/PawBytesCafeArticle/PawBytesCafeArticle';
 
 
 function ArticleModal() {
@@ -34,7 +35,13 @@ function ArticleModal() {
             dialogClassName="article-modal-wrapper article-modal"
         >
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.PawBytes) && <></>}
+            {(selArticleId === EProjectId.PawBytes) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.TwinlandeSuperStore) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.LovelyFeathers) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.ChevEscape) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.RevealingRoc) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.GITRGCrayon) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.GITRGMocap) && <PawBytesCafeArticle articlePayload={selArticle} />}
             <Modal.Footer>
                 <div className={``}>
                     <Button

@@ -4,6 +4,7 @@ export enum EProjectId {
     ChevEscape = "chevescape",
     Mocap = "mocap",
     GITRGCrayon = "gitrg3dcrayon",
+    GITRGMocap = "mocap",
     RevealingRoc = "revealingroc",
     PawBytes = "pawbytes",
     LovelyFeathers = "lovelyfeathers"

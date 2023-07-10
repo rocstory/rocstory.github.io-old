@@ -5,7 +5,7 @@ export interface IProjectMetadata {
     name: string,
     typeId: string,
     iconId: string,
-    demoUrl:  string,
-    repoUrl: string,
+    demoUrl:  string | undefined | null,
+    repoUrl: string | undefined | null,
     caption: string,
 }

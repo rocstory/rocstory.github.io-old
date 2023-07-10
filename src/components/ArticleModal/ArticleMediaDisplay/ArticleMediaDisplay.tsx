@@ -5,8 +5,8 @@ import ImageGallery from '../../ImageGallery/ImageGallery';
 
 
 interface IArticleMediaDisplay {
-    videoUrl: string,
-    images: any
+    videoUrl?: string,
+    images?: any
 }
 function ArticleMediaDisplay(props: IArticleMediaDisplay) {
     const { videoUrl, images} = props
@@ -23,7 +23,6 @@ function ArticleMediaDisplay(props: IArticleMediaDisplay) {
             {
                 (images && images.length > 0) &&
                 <ImageGallery images={images} />
-                // <ImageCarousel images={images} />
             }
         </div>
     )
