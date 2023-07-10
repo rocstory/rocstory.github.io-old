@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react'
+import {  useState, useEffect } from 'react'
 import { ERSIcon } from '../enums/ERSIcon'
 import { ETechnology } from '../enums/ETechnology'
 
@@ -26,15 +26,15 @@ export const useTech = (techName: ETechnology) => {
             case ETechnology.Fritzing:
                 return 'white';
             case ETechnology.Github:
-                return '#7289da';
+                return 'white';
             case ETechnology.HTML:
                 return 'white';
             case ETechnology.Instagram:
-                return '#E1306C';
+                return 'white';
             case ETechnology.JavaScript:
                 return 'white';
             case ETechnology.LinkedIn:
-                return '#007bb5';
+                return 'white';
             case ETechnology.MongoDB:
                 return 'white';
             case ETechnology.OpenSCAD:
