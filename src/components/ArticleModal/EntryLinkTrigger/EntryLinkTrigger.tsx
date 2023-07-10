@@ -2,7 +2,7 @@ import React from 'react';
 import './EntryLinkTrigger.css';
 import { Button } from 'react-bootstrap';
 import RSIcon from '../../RSIcon/RSIcon';
-import { ERSIcon } from '../../../enums/ERSIcons';
+import { ERSIcon } from '../../../enums/ERSIcon';
 
 enum EELT_Type {
     Github = "github",

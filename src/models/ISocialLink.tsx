@@ -1,7 +1,8 @@
 import { ESocialMedia } from "../enums/ESocialMedia";
+import { ETechnology } from "../enums/ETechnology";
 
 export interface ISocialLink {
     src: string,
-    name: string,
-    type: ESocialMedia
+    name: ESocialMedia,
+    type: ETechnology
 }

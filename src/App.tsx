@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import Navigator from './components/Navigator/Navigator';
 
@@ -32,9 +32,11 @@ function App() {
           </Routes> 
         </BrowserRouter>
         <div className="footer">
-          <p>Always <span>be kind</span>.</p>
-          <p>Always <span>be honest</span>.</p>
-          <p>Always <span>be consistent</span>.</p>
+          <p>Always <span>be kind</span></p>
+          <span>|</span>
+          <p>Always <span>be honest</span></p>
+          <span>|</span>
+          <p>Always <span>be consistent</span></p>
         </div>
         {
           selArticle && 

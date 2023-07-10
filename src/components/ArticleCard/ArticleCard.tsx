@@ -6,7 +6,7 @@ import { useProjectConfig } from '../../hooks/useProjectConfig';
 import { IProjectMetadata } from '../../models/IProjectMetadata';
 import { ArticleContext } from '../../contexts/ArticleContext';
 import RSIcon from '../RSIcon/RSIcon';
-import { ERSIcon } from '../../enums/ERSIcons';
+import { ERSIcon } from '../../enums/ERSIcon';
 
 
 type ArticleCardProps = {

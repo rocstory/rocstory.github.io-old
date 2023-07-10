@@ -3,7 +3,7 @@ import "./ContactCard.scss";
 import { Image, Button, Dropdown } from "react-bootstrap";
 import useContactCard from "./useContactCard";
 import RSIcon from "../RSIcon/RSIcon";
-import { ERSIcon } from "../../enums/ERSIcons";
+import { ERSIcon } from "../../enums/ERSIcon";
 import ContactLink from "./ContactLink";
 
 export type ContactCardProps = {

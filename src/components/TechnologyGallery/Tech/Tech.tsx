@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Badge from 'react-bootstrap/Badge'
 import "./Tech.scss";
 import RSIcon from '../../RSIcon/RSIcon';
-import { ERSIcon } from '../../../enums/ERSIcons';
+import { ERSIcon } from '../../../enums/ERSIcon';
 import { ETechnology } from '../../../enums/ETechnology';
-import { useTech } from './useTech';
+import { useTech } from '../../../hooks/useTech';
+// import { useTech } from './useTech';
 
 type TechProps = {
     techName: ETechnology
@@ -19,6 +20,7 @@ function Tech(props : TechProps) {
         secondaryColor,
         iconName,
     } = useTech(techName);
+    
 
     return (
         <div

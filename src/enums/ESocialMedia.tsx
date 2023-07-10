@@ -1,6 +1,7 @@
 export enum ESocialMedia {
-    Github = "github", 
+    Github = "Github", 
     LinkedIn = "LinkedIn",
     Instagram = "Instagram",
-    Twitter = "Twitter"
+    Twitter = "Twitter",
+    Twitch = "Twitch"
 }

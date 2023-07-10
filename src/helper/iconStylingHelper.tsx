@@ -1,4 +1,4 @@
-import { ERSIcon } from "../enums/ERSIcons";
+import { ERSIcon } from "../enums/ERSIcon";
 
 const getIconClassName = (iconType : ERSIcon) => {
     switch (iconType) {

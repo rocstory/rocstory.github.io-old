@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, {  useContext, useState } from 'react';
 
-import { ERSIcon } from '../../enums/ERSIcons';
+import { ERSIcon } from '../../enums/ERSIcon';
 import { 
     faGithub, faCuttlefish, faCss3Alt,
     faHtml5, faJsSquare, faPython,

@@ -1,10 +1,10 @@
 import { useContext, useState, useEffect } from 'react'
-import { ERSIcon } from '../../../enums/ERSIcon';
-import { ETechnology } from '../../../enums/ETechnology';
+import { ERSIcon } from '../enums/ERSIcon'
+import { ETechnology } from '../enums/ETechnology'
+
 
 
 export const useTech = (techName: ETechnology) => {
-
     const [iconName, setIconName] = useState<ERSIcon>(ERSIcon.LightBulb)
     const [iconColor, setIconColor] = useState('black')
     const [secondaryColor, setSecondaryColor] = useState('white')
@@ -26,15 +26,15 @@ export const useTech = (techName: ETechnology) => {
             case ETechnology.Fritzing:
                 return 'white';
             case ETechnology.Github:
-                return 'white';
+                return '#7289da';
             case ETechnology.HTML:
                 return 'white';
             case ETechnology.Instagram:
-                return 'white';
+                return '#E1306C';
             case ETechnology.JavaScript:
                 return 'white';
             case ETechnology.LinkedIn:
-                return 'white';
+                return '#007bb5';
             case ETechnology.MongoDB:
                 return 'white';
             case ETechnology.OpenSCAD:
