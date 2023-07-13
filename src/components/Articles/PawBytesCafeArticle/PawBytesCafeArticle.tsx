@@ -10,6 +10,9 @@ import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResourc
 import { IContactCard } from '../../../models/IContactCard';
 import { ETechnology } from '../../../enums/ETechnology';
 import TechnologyTab from '../../ArticleTabs/TechnologyTab';
+import { IArticleResource } from '../../../models/IArticleResource';
+import { EArticleResourceType } from '../../../enums/EArticleResouceType';
+import { ERSIcon } from '../../../enums/ERSIcon';
 
 function PawBytesCafeArticle({ articlePayload }: any) {
 
@@ -26,7 +29,11 @@ function PawBytesCafeArticle({ articlePayload }: any) {
         ETechnology.CSS,
         ETechnology.HTML,
         ETechnology.JavaScript,
-        ETechnology.Firebase
+        ETechnology.PostgresSQL,
+        ETechnology.MongoDB,
+        ETechnology.Python,
+        ETechnology.React,
+        ETechnology.Twitter
     ];
 
 
@@ -50,6 +57,51 @@ function PawBytesCafeArticle({ articlePayload }: any) {
           }
     ];
 
+    let externalLinks = [
+        {
+            title: 'Client - Source Code',
+            src: `https://github.com/rocstory/PawBytes_WebApp`,
+            type: EArticleResourceType.Other,
+            // iconName: ERSIcon.Database,
+        },
+        {
+            title: 'Database - Source Code',
+            src: `https://github.com/rocstory/PawBytes_Database`,
+            type: EArticleResourceType.Other,
+        },
+        {
+            title: 'Paw Bot - Source Code',
+            src: `https://github.com/rocstory/PawBytes_Database`,
+            type: EArticleResourceType.Other,
+        },
+        {
+            title: 'Paw Bot - Twitter Bot',
+            src: `https://twitter.com/PawBytes`,
+            type: EArticleResourceType.Other,
+        }
+    ]
+    let resources = [] as IArticleResource[]
+
+    if (demoUrl) {
+        let demoResource : IArticleResource = {
+            title: 'Demo',
+            src: demoUrl,
+            type: EArticleResourceType.Demo,
+            iconName: ERSIcon.Play
+        }
+
+        resources.push(demoResource);
+    }
+    if (repoUrl) {
+        let repoResource : IArticleResource = {
+            title: 'Github',
+            src: repoUrl,
+            type: EArticleResourceType.Github,
+            iconName: ERSIcon.Github
+        }
+        resources.push(repoResource);
+    }
+
     const collabListingDescription = "Thank you to everyone who helped with this project!"
 
     return (
@@ -62,8 +114,7 @@ function PawBytesCafeArticle({ articlePayload }: any) {
             </Modal.Header>
             <Modal.Body>
                 <ArticleResources
-                    repoUrl={repoUrl}
-                    demoUrl={demoUrl}
+                    resources={resources}
                 />
                 <ArticleMediaDisplay
                     videoUrl={videoUrl}

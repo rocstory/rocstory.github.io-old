@@ -18,7 +18,8 @@ import {
     faQuestionCircle,
     faLeaf,
     faLaptopCode,
-    faBolt
+    faBolt,
+    faLink
  
 } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -62,6 +63,8 @@ function RSIcon(props: RSIconProps) {
                 return faYoutube;
             case ERSIcon.LinkedIn:
                 return faLinkedin;
+            case ERSIcon.Link:
+                return faLink; 
             case ERSIcon.Unity:
                 return faUnity;
             case ERSIcon.FileCode:

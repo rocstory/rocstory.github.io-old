@@ -33,7 +33,8 @@ export enum ERSIcon {
     Database = "database",
     Robot = "robot",
     Other = "other",
-    QuestionCircle = 'question-circle'
+    QuestionCircle = 'question-circle',
+    Link = 'link',
 
     
     

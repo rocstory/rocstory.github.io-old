@@ -90,8 +90,7 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
             </Modal.Header>
             <Modal.Body>
                 <ArticleResources
-                    repoUrl={repoUrl}
-                    demoUrl={demoUrl}
+                    resources={[]}
                 />
                 <ArticleMediaDisplay
                     videoUrl={videoUrl}

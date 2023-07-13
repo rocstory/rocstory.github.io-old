@@ -1,21 +1,26 @@
 import React from 'react';
-import { Modal } from 'react-bootstrap';
+import { IArticleResource } from '../../../models/IArticleResource';
 
 import "../ArticleModal.scss"
-import EntryLinkTrigger from '../EntryLinkTrigger/EntryLinkTrigger';
+import ResourceTrigger from './ResourceTrigger/ResourceTrigger';
 
-enum EELT_Type {
-    Github = "github",
-    Demo = "demo"
+
+type ArticleResourcesProps = {
+    resources: IArticleResource[]
 }
 
-function ArticleResources ({ repoUrl, demoUrl }: any) {
+function ArticleResources ( props : ArticleResourcesProps) {
 
+    const {
+        resources
+    } = props
     
-    return (
+    return  (
         <div className='elt-cntr'>
-            {repoUrl && <EntryLinkTrigger type={EELT_Type.Github} linkUrl={repoUrl} className="github-hb"/>}
-            {demoUrl && <EntryLinkTrigger type={EELT_Type.Demo} linkUrl={demoUrl} />}
+            {
+                resources && resources.length &&
+                resources.map((resource) => <ResourceTrigger resource={resource} />)
+            }
         </div>
     )
 }
