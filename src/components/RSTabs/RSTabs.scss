@@ -1,0 +1,38 @@
+$activeColor: #ECA400;
+
+.rs-tab-wrapper {
+    margin-top: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    .rs-tabs {
+
+        .nav-item {
+            color: #006992;
+        }
+        .nav-item.active {
+            color: $activeColor;
+        }
+        .nav-item:Hover {
+            color: $activeColor;
+        }
+    }
+    .tab-content {
+        height: 25em;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        color: #006992;
+    }
+
+    .tech-tab {
+
+        .tech-tab-header {
+            text-align: center;
+        }
+
+    }
+}

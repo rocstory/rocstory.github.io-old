@@ -2,17 +2,23 @@ import React, { useContext, useState } from 'react';
 import { Modal, Tab, Tabs } from 'react-bootstrap';
 import { useProjectConfig } from '../../../hooks/useProjectConfig';
 import ArticleMediaDisplay from '../../ArticleModal/ArticleMediaDisplay/ArticleMediaDisplay';
-import CCAboutTab from './CCAboutTab';
 import "../../ArticleModal/ArticleModal.scss"
-import "../../ArticleTabs/ArticleTabs.scss"
 import "./ColonialCarnivalArticle.scss";
 import ArticleTitle from '../../ArticleModal/ArticleTitle/ArticleTitle';
 import ArticleResources from '../../ArticleModal/ArticleResources/ArticleResources';
 import CollabListing from '../../CollabListing/CollabListing';
 import { EPersonId } from '../../../enums/EPersonId';
 import { IContactCard } from '../../../models/IContactCard';
-import CCTechnologyTab from './CCTechnologyTab';
 import { ETechnology } from '../../../enums/ETechnology';
+import { IRSTab } from '../../../models/IRSTab';
+import { ERSTabType } from '../../../enums/ERSTabType';
+import TechnologyTab from '../../ArticleTabs/TechnologyTab';
+import RSTabs from '../../RSTabs/RSTabs';
+import { IArticleResource } from '../../../models/IArticleResource';
+import { EArticleResourceType } from '../../../enums/EArticleResouceType';
+import { ERSIcon } from '../../../enums/ERSIcon';
+import AboutTab from '../../ArticleTabs/AboutTab';
+import { RefLinksList } from '../../RefLinksList/RefLinksList';
 
 function ColonialCarnivalArticle({ articlePayload }: any) {
 
@@ -23,20 +29,7 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
     } = articlePayload;
 
     const articleName = name
-    const collaborators = [
-        {
-            cid: EPersonId.ChrisKukk,
-            role: "Developer"
-        },
-        {
-            cid: EPersonId.MatheusAlexandre,
-            role: "Developer"
-        },
-        {
-            cid: EPersonId.EllyGriffin,
-            role: "Developer"
-        }
-    ] as IContactCard[]
+
 
     const techList: ETechnology[] = [
         ETechnology.CSS,
@@ -45,12 +38,12 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         ETechnology.Firebase
     ];
 
-
     const {
         prjType
     } = useProjectConfig({ prjMetadata: articlePayload })
 
     const videoUrl = 'https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory';
+
     const images: any = [
         {
             "alt": "Program of the Year Award 2019-2020",
@@ -78,8 +71,41 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
         }
     ];
 
-    const collabListingDescription = "Thank you to everyone who helped with this project!"
+    const articleTabs : IRSTab[] = [
+        {
+            tabType: ERSTabType.About,
+            component: <AboutTab body={<AboutTabBody />} />,
+        },
+        {
+            tabType: ERSTabType.Technology,
+            component: <TechnologyTab technologies={techList} />
+        }
+    ];
 
+    let resources = [] as IArticleResource[];
+    // IArticleResource
+
+    if (demoUrl) {
+        let demoResource : IArticleResource = {
+            title: 'Demo',
+            src: demoUrl,
+            type: EArticleResourceType.Demo,
+            iconName: ERSIcon.Play
+        }
+
+        resources.push(demoResource);
+    }
+    if (repoUrl) {
+        let repoResource : IArticleResource = {
+            title: 'Github',
+            src: repoUrl,
+            type: EArticleResourceType.Github,
+            iconName: ERSIcon.Github
+        }
+        resources.push(repoResource);
+    }
+
+    
     return (
         <>
             <Modal.Header closeButton>
@@ -90,35 +116,16 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
             </Modal.Header>
             <Modal.Body>
                 <ArticleResources
-                    resources={[]}
+                    resources={resources}
                 />
                 <ArticleMediaDisplay
                     videoUrl={videoUrl}
                     images={images}
                 />
-                <div
-                    className={`tab-wrapper`}
-                >
-                    <Tabs
-                        className={`mb-3 article-tabs`}
-                        defaultActiveKey="about"
-                    >
-                        <Tab className={`about-tab`} eventKey="about" title="About">
-                            <CCAboutTab />
-                        </Tab>
-                        <Tab eventKey="tech" title="Technology">
-                            <CCTechnologyTab 
-                                technologies={techList}
-                            />
-                        </Tab>
-                        {/* <Tab eventKey="collaborators" title="Collaborators">
-                            <CollabListing 
-                                collabList={collaborators}
-                                description={collabListingDescription}
-                            />
-                        </Tab> */}
-                    </Tabs>
-                </div>
+                <RSTabs 
+                    tabs={articleTabs}
+                    defaultActiveKey={ERSTabType.About}
+                />
             </Modal.Body>
         </>
     )
@@ -126,3 +133,40 @@ function ColonialCarnivalArticle({ articlePayload }: any) {
 
 export default ColonialCarnivalArticle;
 
+function AboutTabBody() {
+
+    return (
+        <div>
+            <div>
+                <h2>What is Colonial Carnival?</h2>
+                <p>
+                    Colonial Carnival is a web application built for the residents at Western Connecticut
+                    State University (WCSU).
+                </p>
+            </div>
+            <div>
+                <h2>What is the goal of this project?</h2>
+                <p>
+                    The goal of Colonial Carnival is to learn the fundamentals of website development.
+                    I also wanted to challenge myself by bringing a
+                    completely different type of Resident Assistant program to WCSU.
+                </p>
+            </div>
+            <div>
+                <h2>Why did I create this project?</h2>
+                <p>
+                    I created Colonial Carnival to learn HTML, CSS, and JavaScript.
+                    I also wanted to bring a new program to the residents of WCSU.
+                </p>
+            </div>
+            <div>
+                <h2>What is this project about?</h2>
+                <p>
+                    Colonial Carnival is a virtual carnival for students
+                    at WCSU to earn tickets after each game
+                    to exchange for prizes such as gift cards, stationery, and other items.
+                </p>
+            </div>
+        </div>
+    )
+}
