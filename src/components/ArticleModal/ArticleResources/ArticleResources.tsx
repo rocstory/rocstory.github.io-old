@@ -15,7 +15,7 @@ function ArticleResources ( props : ArticleResourcesProps) {
         resources
     } = props
     
-    return  (
+    return  resources && resources.length > 0 ? (
         <div className='elt-cntr'>
             {
                 resources && resources.length &&
@@ -23,6 +23,8 @@ function ArticleResources ( props : ArticleResourcesProps) {
             }
         </div>
     )
+    :
+    <></>
 }
 
 export default ArticleResources;

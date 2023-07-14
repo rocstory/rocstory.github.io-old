@@ -8,6 +8,8 @@ import './ArticleModal.scss';
 import ColonialCarnivalArticle from '../Articles/ColonialCarnivalArticle/ColonialCarnivalArticle';
 import { EProjectId } from '../../enums/EProjectId';
 import PawBytesCafeArticle from '../Articles/PawBytesCafeArticle/PawBytesCafeArticle';
+import TwinlandeSuperStoreArticle from '../Articles/TwinlandeSuperStoreArticle/TwinlandeSuperStoreArticle';
+import LovelyFeathersArticle from '../Articles/LovelyFeathersArticle/LovelyFeathersArticle';
 
 
 function ArticleModal() {
@@ -36,8 +38,8 @@ function ArticleModal() {
         >
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.PawBytes) && <PawBytesCafeArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.TwinlandeSuperStore) && <PawBytesCafeArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.LovelyFeathers) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.TwinlandeSuperStore) && <TwinlandeSuperStoreArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.LovelyFeathers) && <LovelyFeathersArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.ChevEscape) && <PawBytesCafeArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.RevealingRoc) && <PawBytesCafeArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.GITRGCrayon) && <PawBytesCafeArticle articlePayload={selArticle} />}
