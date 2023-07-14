@@ -133,28 +133,31 @@ function AboutTabBody() {
             <div>
                 <h2>What is Lovely Feathers?</h2>
                 <p>
-                    Twinlande Superstore (TSS) is a full stack web application.
+                    Lovely Feathers is a web application that gives people the opportunity to 
+                    spread kindness by passing on a kind message to someone in a unique way.
                 </p>
             </div>
+
             <div>
                 <h2>What is the goal of this project?</h2>
                 <p>
-                    The goal of Lovely Feathers was to learn more about NoSQL databases and Typescript. 
+                    The goal of this project is to learn more about React, Bootstrap, and Firebase. The other goal is to 
+                    find a creative way for people to spread a bit of kindness.
                 </p>
             </div>
 
             <div>
                 <h2>Why did I create this project?</h2>
                 <p>
-                    I created Lovely Feathers as a ---- 
+                    Lovely Feathers was created to take my mind off of the negative things that 
+                    were going on during the COVID-19 pandemic. 
+                    The constant news of police brutality, 
+                    hate crimes, and more took a toll on my mental health.
                 </p>
-            </div>
 
-            <div>
-                <h2>What is this project about?</h2>
                 <p>
-                    Twinlande Superstore is about twin sisters Dlo & Dife wanting a 
-                    website for their customers to order online from.
+                    Creating a web application that would give people the opportunity to spread positivity 
+                    by giving someone a compliment improved my mental health. 
                 </p>
             </div>
         </div>

@@ -157,30 +157,33 @@ function AboutTabBody() {
             <div>
                 <h2>What is Twinlande Superstore?</h2>
                 <p>
-                    Twinlande Superstore (TSS) is a full stack web application.
+                    Twinlande Superstore (TSS) is a full stack web application. TSS is a web application for 
+                    a fictional store run by twin sisters Dlo & Dife. 
                 </p>
             </div>
             <div>
                 <h2>What is the goal of this project?</h2>
                 <p>
-                    The goal of TSS is to build a full-stack web application from the ground up. The goal is to learn how to build the frontend, backend, and 
-                    database of a web application using Typescript, Python, and PostgresSQL respectively.
+                    The goal of this project is to have a better understanding of how 
+                    to build the frontend, backend and database of an application. 
+                    The other goal is to grow my social skills.
                 </p>
             </div>
 
             <div>
                 <h2>Why did I create this project?</h2>
                 <p>
-                    Twinlande Superstore was created to learn how to build a full stack application from the ground up with the help of a community. I wanted to have a deeper understanding of how to build the 
-                    frontend, backend, and database of an application while creating content about it. 
+                    Twinlande Superstore was created to learn how to build a full stack
+                    application from the ground up with the help of a community. 
+                    I wanted to have a deeper understanding of 
+                    how to build the frontend, backend, and database of an application 
+                    while learning how to create content. 
                 </p>
-            </div>
-
-            <div>
-                <h2>What is this project about?</h2>
                 <p>
-                    Twinlande Superstore is about twin sisters Dlo & Dife wanting a 
-                    website for their customers to order online from.
+                    I created this project to build my social skills, especially when it comes to technology! 
+                    I realized that when it comes to talking about tech, 
+                    I freeze up and stutter. {`I’m `}hoping with this project, 
+                    I can grow my confidence.
                 </p>
             </div>
         </div>
