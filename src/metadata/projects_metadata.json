@@ -12,7 +12,7 @@
     {
         "id": "pawbytes",
         "index": 6,
-        "name": "Paw Bytes Cafe",
+        "name": "Paw Bytes Café",
         "typeId": "web-dev",
         "iconId": "paw",
         "demoUrl": "https://pawbytes.netlify.app/",
@@ -37,7 +37,7 @@
         "iconId": "paw",
         "demoUrl": "https://twinlande.netlify.app/",
         "repoUrl": "https://github.com/rocstory/twinlande-super-store",
-        "caption": "A 3 part web app built with the Roc Labs community"
+        "caption": "A three part web app built with the Roc Labs community"
     },
     {
         "id": "gitrg3dcrayon",
@@ -55,7 +55,7 @@
         "name": "Chev's Escape",
         "typeId": "game-dev",
         "iconId": "paw",
-        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
+        "demoUrl": null,
         "repoUrl": "https://github.com/rocstory/Cs_ChevEscape",
         "caption": "An object oriented software engineering class project (2019)."
     },
@@ -78,15 +78,5 @@
         "demoUrl": null,
         "repoUrl": "https://github.com/ChrisIossa/RPi_MoCap",
         "caption": "A cost effective motion capturing system"
-    },
-    {
-        "id": "-",
-        "index": 2,
-        "name": "GITRG 3D Crayon 2019-2020",
-        "typeId": "web-dev",
-        "iconId": "paw",
-        "demoUrl": "https://rocstory.github.io/colonialcarnival/",
-        "repoUrl": "https://github.com/rocstory/colonialcarnival",
-        "caption": "An open source intelligent toy which allows someone to draw in a 3D space"
     }
 ]

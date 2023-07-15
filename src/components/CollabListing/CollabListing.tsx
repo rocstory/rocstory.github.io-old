@@ -22,7 +22,10 @@ function CollabListing( props : CollabListProps ) {
             <div className={`collab-heading`}>
                 <h2 className='collab-title'> Collaborators</h2>
                 {
-                    description && <p className='collab-descr'>{description}</p>
+                    description ?
+                    <p className='collab-descr'>{description}</p>
+                    :
+                    <p className='collab-descr'>Thank you to everyone who participated in this project!</p>
                 }
             </div>
             

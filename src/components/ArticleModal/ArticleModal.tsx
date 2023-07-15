@@ -10,6 +10,10 @@ import { EProjectId } from '../../enums/EProjectId';
 import PawBytesCafeArticle from '../Articles/PawBytesCafeArticle/PawBytesCafeArticle';
 import TwinlandeSuperStoreArticle from '../Articles/TwinlandeSuperStoreArticle/TwinlandeSuperStoreArticle';
 import LovelyFeathersArticle from '../Articles/LovelyFeathersArticle/LovelyFeathersArticle';
+import ChevsEscapeArticle from '../Articles/ChevsEscapeArticle/ChevsEscapeArticle';
+import RevealingRocArticle from '../Articles/RevealingRocArticle/RevealingRocArticle';
+import GITRG3DCrayonArticle from '../Articles/GITRG3DCrayonArticle/GITRG3DCrayonArticle';
+import GITRGMocapArticle from '../Articles/GITRGMocapArticle copy/GITRGMocapArticle';
 
 
 function ArticleModal() {
@@ -40,10 +44,10 @@ function ArticleModal() {
             {(selArticleId === EProjectId.PawBytes) && <PawBytesCafeArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.TwinlandeSuperStore) && <TwinlandeSuperStoreArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.LovelyFeathers) && <LovelyFeathersArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.ChevEscape) && <PawBytesCafeArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.RevealingRoc) && <PawBytesCafeArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.GITRGCrayon) && <PawBytesCafeArticle articlePayload={selArticle} />}
-            {(selArticleId === EProjectId.GITRGMocap) && <PawBytesCafeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.ChevEscape) && <ChevsEscapeArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.RevealingRoc) && <RevealingRocArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.GITRGCrayon) && <GITRG3DCrayonArticle articlePayload={selArticle} />}
+            {(selArticleId === EProjectId.GITRGMocap) && <GITRGMocapArticle articlePayload={selArticle} />}
             <Modal.Footer>
                 <div className={``}>
                     <Button

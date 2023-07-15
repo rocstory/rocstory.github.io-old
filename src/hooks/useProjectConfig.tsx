@@ -50,6 +50,8 @@ export const useProjectConfig = ({ prjMetadata }: ProjectConfigProp) => {
                 return "Web Development";
             case EProjectTypeId.EmbeddedSystems:
                 return "Embedded Systems";
+            case EProjectTypeId.GameDev:
+                return "Game Development"
             default:
                 return "Other";
         }

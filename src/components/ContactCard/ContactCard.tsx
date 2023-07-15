@@ -16,7 +16,7 @@ function ContactCard(props: ContactCardProps) {
         contactId,
         role
     } = props
-
+    
     const {
         person,
         imgUrl,
@@ -43,31 +43,34 @@ function ContactCard(props: ContactCardProps) {
                     <p className="cc-role cc-details">{role}</p>
                 </div>
             </div>
-            <div className={`dropdown-wrapper`} >
-                <Dropdown
-                    className={`cc-dropdown-toggle`}
-                >
-                    <Dropdown.Toggle
-                        className={`dropdown-trigger`}
-                        variant={' '}
-                        bsPrefix={' '}
-                        as="button"
+            {
+                person.reflinks && person.reflinks.length > 0 &&
+                <div className={`dropdown-wrapper`} >
+                    <Dropdown
+                        className={`cc-dropdown-toggle`}
                     >
-                        <RSIcon iconName={ERSIcon.EllipsisH}/>
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        {
-                            person.reflinks.map((link: any) => 
-                                <ContactLink
-                                    name={link.name}
-                                    type={link.type}
-                                    url={link.url}
-                                />
-                            )
-                        }
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
+                        <Dropdown.Toggle
+                            className={`dropdown-trigger`}
+                            variant={' '}
+                            bsPrefix={' '}
+                            as="button"
+                        >
+                            <RSIcon iconName={ERSIcon.EllipsisH}/>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                            {
+                                person.reflinks.map((link: any) => 
+                                    <ContactLink
+                                        name={link.name}
+                                        type={link.type}
+                                        url={link.url}
+                                    />
+                                )
+                            }
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+            }
         </div>
     )
 };

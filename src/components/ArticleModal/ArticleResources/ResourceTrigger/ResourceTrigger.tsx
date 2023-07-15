@@ -34,7 +34,7 @@ function ResourceTrigger(props : ResourceTriggerProps) {
             case EArticleResourceType.Github:
                 return 'rt-github' //{backgroundColor: '#383838', color: 'white'};
             default:
-                return '' // {backgroundColor: 'white'};;
+                return 'rt-standard' // {backgroundColor: 'white'};;
         }
     }
 

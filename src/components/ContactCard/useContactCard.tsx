@@ -53,12 +53,15 @@ function useContactCard(contactId : string) {
 
     useEffect(() => {
         async function getPerson() {
+            
             const dbPerson = dbController.getPerson(contactId);
-            const imgsrc = dbPerson.imgurl ? dbPerson.imgurl : getDefaultImg();
-            const personName = util.modifyName(dbPerson.name);
-            setPerson(dbPerson);
-            setImgUrl(imgsrc);
-            setName(personName);
+            if (dbPerson) {
+                const imgsrc = dbPerson.imgurl ? dbPerson.imgurl : getDefaultImg();
+                const personName = util.modifyName(dbPerson.name);
+                setPerson(dbPerson);
+                setImgUrl(imgsrc);
+                setName(personName);
+            }
         }
         getPerson();
     }, [])

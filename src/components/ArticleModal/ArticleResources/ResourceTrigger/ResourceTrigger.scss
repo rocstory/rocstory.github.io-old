@@ -1,3 +1,4 @@
+@use "../../../../scss/utilities.scss" as util;
 // .resource-trigger {
 //     border: 2px solid red !important;
 // }
@@ -14,5 +15,15 @@
 
 .rt-demo, .rt-demo:hover {
     background-color: #3cb043;
+    color: white;
+}
+
+.rt-standard {
+    background-color: #383838;
+    color: white;
+}
+
+.rt-standard:hover {
+    background-color: util.$active-color;
     color: white;
 }
