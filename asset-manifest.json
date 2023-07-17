@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.e8cf2a16.css",
-    "main.js": "/static/js/main.f59fb4bc.js",
+    "main.css": "/static/css/main.78e7d954.css",
+    "main.js": "/static/js/main.b308cdfa.js",
+    "static/media/website-bg-compressed.jpg": "/static/media/website-bg-compressed.1676b5f1ca71f5dd417d.jpg",
+    "static/media/chev-escape-thumbnail.jpg": "/static/media/chev-escape-thumbnail.3d36c63a5baceb8f9e92.jpg",
+    "static/media/colonial-carnival-thmbnl.jpg": "/static/media/colonial-carnival-thmbnl.bfb144c2df9d3e45eb26.jpg",
+    "static/media/default-thumbnail_compressed.jpg": "/static/media/default-thumbnail_compressed.bf3a32781e0a8fc4e719.jpg",
+    "static/media/pawbytes--cafe-thmbnl.jpg": "/static/media/pawbytes--cafe-thmbnl.2dd4987132a2c99d4b81.jpg",
+    "static/media/twinlande-thumbnail_compressed.jpg": "/static/media/twinlande-thumbnail_compressed.d9be9416c2bf03860e1d.jpg",
+    "static/media/rs-icon-compressed.jpg": "/static/media/rs-icon-compressed.5b8965254bae34bdafe7.jpg",
     "static/media/dpi1.png": "/static/media/dpi1.ddda5eb90a9206b05c88.png",
     "static/media/dpi2.png": "/static/media/dpi2.b23ed4fa355b6d56b06c.png",
     "static/media/dpi3.png": "/static/media/dpi3.3852a45022c7d7735df0.png",
     "static/media/dpi4.png": "/static/media/dpi4.d369bdc6de1854211f32.png",
     "index.html": "/index.html",
-    "main.e8cf2a16.css.map": "/static/css/main.e8cf2a16.css.map",
-    "main.f59fb4bc.js.map": "/static/js/main.f59fb4bc.js.map"
+    "main.78e7d954.css.map": "/static/css/main.78e7d954.css.map",
+    "main.b308cdfa.js.map": "/static/js/main.b308cdfa.js.map"
   },
   "entrypoints": [
-    "static/css/main.e8cf2a16.css",
-    "static/js/main.f59fb4bc.js"
+    "static/css/main.78e7d954.css",
+    "static/js/main.b308cdfa.js"
   ]
 }
