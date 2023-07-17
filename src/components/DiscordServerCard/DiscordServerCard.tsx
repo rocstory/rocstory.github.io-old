@@ -1,22 +1,42 @@
-import React from 'react'
-import { Card, Button} from 'react-bootstrap'
+import React, { useContext } from 'react'
+import { Card, Button, Image} from 'react-bootstrap'
+import { ArticleContext } from '../../contexts/ArticleContext'
+import { EProjectId } from '../../enums/EProjectId'
+import { useImageRetriever } from '../../hooks/useImageRetriever'
+import { IArticleMetadata } from '../../models/IArticleMetadata'
+import roclabsMetadata from "../../metadata/roclabs_metadata.json"
 
 import './DiscordServerCard.scss'
 
-import serverLogoIcon from '../../assets/rsicon_full.png'
 
 const DiscordServerCard = () => {
 
-    const discordInviteUrl = "https://discord.gg/SkVZeKXk6H"
+    const discordInviteUrl = roclabsMetadata.serverInviteUrl; 
+    const {serverLogoIcon} = useImageRetriever(); 
+
+    const discordArticleMD : IArticleMetadata = {
+        id: EProjectId.RocLabs,
+        name: 'Roc Labs',
+        index: 0,
+    }
+
+    const {
+        updateSelArticle
+    } = useContext(ArticleContext)
+
+    const handleReadMoreClick = () => {
+
+        updateSelArticle(discordArticleMD)
+    }
 
     return (
         <Card
             className={'shadow dsc-container'}
             style={{ width: '18rem' }}
         >
-            <Card.Img 
+            <Image 
                 className={`dsc-img`}
-                variant="top" 
+                roundedCircle
                 src={serverLogoIcon} 
             />
             <Card.Body>
@@ -29,7 +49,10 @@ const DiscordServerCard = () => {
                         target="_blank"
                         rel="noreferrer noopener"
                     >Join Server</Button>
-                    <Button className={`dsc-btn read-more shadow`}>Read More</Button>
+                    <Button 
+                        className={`dsc-btn read-more shadow`}
+                        onClick={handleReadMoreClick}
+                    >Read More</Button>
                 </div>
                
             </Card.Body>

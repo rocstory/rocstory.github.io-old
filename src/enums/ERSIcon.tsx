@@ -19,6 +19,7 @@ export enum ERSIcon {
     MongoDB = 'leaf',
     OpenSCAD = 'file-code',
     React = 'react',
+    Discord = 'discord',
     
 
     // fas - solid

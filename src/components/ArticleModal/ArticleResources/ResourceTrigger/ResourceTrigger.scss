@@ -27,3 +27,13 @@
     background-color: util.$active-color;
     color: white;
 }
+
+.rt-discord {
+    background-color: util.$discord-color;
+    color: white;
+}
+
+.rt-discord:hover {
+    background-color: util.$rs-black;
+    color: white;
+}

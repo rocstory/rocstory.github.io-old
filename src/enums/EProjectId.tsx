@@ -7,5 +7,6 @@ export enum EProjectId {
     GITRGMocap = "mocap",
     RevealingRoc = "revealingroc",
     PawBytes = "pawbytes",
-    LovelyFeathers = "lovelyfeathers"
+    LovelyFeathers = "lovelyfeathers",
+    RocLabs = "roclabs"
 }

@@ -13,10 +13,15 @@ function ArticleTitle ({ entryName, categoryName }: any) {
             <span className="title">
                 {entryName}
             </span>
-            <span className='divider'>|</span>
-            <span className="entry-type">
-                {categoryName}
-            </span>
+            {
+                categoryName && <span className='divider'>|</span>
+            }
+            {
+                categoryName &&
+                <span className="entry-type">
+                    {categoryName}
+                </span>
+            }
         </Modal.Title>
     )
 }

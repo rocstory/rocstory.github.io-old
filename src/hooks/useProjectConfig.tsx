@@ -43,6 +43,9 @@ export const useProjectConfig = ({ prjMetadata }: ProjectConfigProp) => {
     }
 
     const getProjectType = () => {
+        if (!typeId) {
+            return undefined;
+        }
         
         switch (typeId) {
 

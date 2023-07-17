@@ -33,6 +33,8 @@ function ResourceTrigger(props : ResourceTriggerProps) {
                 return 'rt-demo' //{backgroundColor: '#3cb043', color: 'white'}
             case EArticleResourceType.Github:
                 return 'rt-github' //{backgroundColor: '#383838', color: 'white'};
+            case EArticleResourceType.Discord:
+                return 'rt-discord';
             default:
                 return 'rt-standard' // {backgroundColor: 'white'};;
         }

@@ -8,7 +8,7 @@ import twinlandeThumbnail from "../assets/thumbnails/twinlande-thumbnail_compres
 import chevEscapeThumbnail from  "../assets/thumbnails/chev-escape-thumbnail.jpg";
 import colonialCarnivalThumbnail from "../assets/thumbnails/colonial-carnival-thmbnl.jpg";
 import pawbytesCafeThumbnail from "../assets/thumbnails/pawbytes--cafe-thmbnl.jpg";
-
+import serverLogoIcon from "../assets/rs-icon-compressed.jpg";
 
 
 export const useImageRetriever = () => {
@@ -18,6 +18,7 @@ export const useImageRetriever = () => {
     twinlandeThumbnail,
     chevEscapeThumbnail,
     colonialCarnivalThumbnail,
-    pawbytesCafeThumbnail
+    pawbytesCafeThumbnail,
+    serverLogoIcon
   }
 }

@@ -8,7 +8,7 @@ import {
     faHtml5, faJsSquare, faPython,
     faRaspberryPi, faTwitter, faTwitch,
     faInstagram, faFacebook, faYoutube,
-    faLinkedin, faGithubAlt, faUnity, faReact,
+    faLinkedin, faGithubAlt, faUnity, faReact, faDiscord,
 
 } from '@fortawesome/free-brands-svg-icons';
 import { 
@@ -93,6 +93,8 @@ function RSIcon(props: RSIconProps) {
                 return faBolt
             case ERSIcon.Other:
                 return faLightbulb
+            case ERSIcon.Discord:
+                return faDiscord
             case ERSIcon.QuestionCircle:
                 return faQuestionCircle;
             default:

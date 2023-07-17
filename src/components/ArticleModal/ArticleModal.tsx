@@ -14,6 +14,7 @@ import ChevsEscapeArticle from '../Articles/ChevsEscapeArticle/ChevsEscapeArticl
 import RevealingRocArticle from '../Articles/RevealingRocArticle/RevealingRocArticle';
 import GITRG3DCrayonArticle from '../Articles/GITRG3DCrayonArticle/GITRG3DCrayonArticle';
 import GITRGMocapArticle from '../Articles/GITRGMocapArticle copy/GITRGMocapArticle';
+import RocLabsArticle from '../Articles/RocLabsArticle.tsx/RocLabsArticle';
 
 
 function ArticleModal() {
@@ -40,6 +41,7 @@ function ArticleModal() {
             onHide={handleHideModal}
             dialogClassName="article-modal-wrapper article-modal"
         >
+            {(selArticleId === EProjectId.RocLabs) && <RocLabsArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.ColonialCarnival) && <ColonialCarnivalArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.PawBytes) && <PawBytesCafeArticle articlePayload={selArticle} />}
             {(selArticleId === EProjectId.TwinlandeSuperStore) && <TwinlandeSuperStoreArticle articlePayload={selArticle} />}
