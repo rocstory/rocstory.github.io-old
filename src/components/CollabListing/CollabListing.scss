@@ -1,0 +1,39 @@
+.collab-cntr
+{
+    // border: 2px solid red;
+    margin: auto;
+    width: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .collab-heading {
+        margin-bottom: 1em;
+        // position: sticky;
+        h2, .collab-descr {
+            text-align: center;
+        }
+    }
+
+    .cl-cntr {
+        display: grid;
+        grid-template-columns: repeat(2, 23em);
+        gap: 0.8em 1em;
+        justify-content: center;
+    }
+    
+
+}
+    
+
+
+@media screen and (max-width: 900px) {
+    .collab-cntr {
+        .cl-cntr
+        {
+            grid-template-columns: repeat(1, 23em);
+            // padding: auto;
+        }
+    }
+}

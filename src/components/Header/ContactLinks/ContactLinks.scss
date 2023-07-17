@@ -1,0 +1,50 @@
+
+/* Contact Links */
+
+.contact-container
+{
+    display: flex;
+    margin-top: 1em;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: none;
+}
+    .resume-btn
+    {
+        border: 2px solid black !important;
+        background-color: whitesmoke !important;
+        color: black !important;
+        border-radius: 6%;
+        width: 6em;
+        height: 3em;
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+        .resume-btn:hover
+        {
+            background-color: #ffc125;
+            cursor: pointer;
+        }
+
+.social-media-container
+{
+    padding: 20px 0;
+    margin-left: 0.3em;
+    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+@media only screen and (max-width: 425px) 
+{
+    .social-media-container
+    {
+        margin-left: 0em;
+    } 
+    
+}

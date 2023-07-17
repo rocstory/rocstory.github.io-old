@@ -1,0 +1,44 @@
+@use '../../scss/utilities.scss' as util;
+
+$img-size: 8em;
+
+.dsc-container {
+    border: 0.5px solid util.$content-outline;
+    justify-content: center;
+    background-color: #EDF2F4;
+
+    padding-top: 10px;
+
+    .dsc-img {
+        // border: 2px solid red;
+        margin: auto;
+        width: $img-size;
+        height: $img-size;
+    }
+    
+
+    .dsc-title {
+        font-weight: bold;
+        text-transform: capitalize;
+        overflow: hidden;
+    }
+
+    .dsc-btn-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dsc-btn {
+        // border: 1px solid util.$content-outline;
+        background-color: #EDF2F4;
+        // font-weight: bolder;
+    }
+
+    .dsc-btn.join-server {
+        background-color: util.$discord-color;
+        color: util.$light-font-color;
+    }
+    .dsc-btn.read-more {
+        background-color: #EDF2F4;
+        color: util.$dark-font-color;
+    }
+}

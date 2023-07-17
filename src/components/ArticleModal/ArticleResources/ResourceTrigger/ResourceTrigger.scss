@@ -1,0 +1,39 @@
+@use "../../../../scss/utilities.scss" as util;
+// .resource-trigger {
+//     border: 2px solid red !important;
+// }
+
+.rt-github, .rt-github:hover {
+    background-color: #383838;
+    color: white;
+}
+
+.rt-github:hover {
+    background-color: #7289da;
+}
+
+
+.rt-demo, .rt-demo:hover {
+    background-color: #3cb043;
+    color: white;
+}
+
+.rt-standard {
+    background-color: #383838;
+    color: white;
+}
+
+.rt-standard:hover {
+    background-color: util.$active-color;
+    color: white;
+}
+
+.rt-discord {
+    background-color: util.$discord-color;
+    color: white;
+}
+
+.rt-discord:hover {
+    background-color: util.$rs-black;
+    color: white;
+}

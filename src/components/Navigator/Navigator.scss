@@ -1,0 +1,63 @@
+@use "../../scss/utilities.scss" as util;
+
+.main-nav {
+    background-color: #006992;
+    z-index: 70;
+
+    // .navbar-toggler {
+    //     color: #EFF1ED !important;
+    //     background-color: #EFF1ED;
+    //     // 3292b7
+    // }
+
+    .rs-brand { 
+        color: #EFF1ED !important;
+        // border-right: 2px solid #EFF1ED !important;
+    }
+
+    .nav-item {
+        // border: 2px solid red;
+        color: #EFF1ED !important;
+        text-transform: capitalize;
+    }
+
+    .nav-item.active {
+        color: util.$active-color !important;
+    }
+}
+
+// .main-nav {
+//     background-color: #006992; //#33658A;
+//     color: #EDF2F4;
+
+//     .nav-item {
+//         margin: 0 20px 0;   
+//         font-weight: bold;
+//         text-transform: capitalize;
+//         font-size: 1.2em;
+//         cursor: pointer;
+//     }
+    
+//     .nav-item.active {
+//         color: util.$active-color;
+//     }
+// }
+
+// .nav-cntr
+// {
+//     /* border: 2px solid red !important; */
+//     margin-bottom: 1em !important;
+// }
+// .nav-cntr > a {
+//     /* border: 2px solid blue; */
+//     text-transform: capitalize;
+//     font-size: 1.5em;
+//     color: black;
+// }
+
+// .nav-cntr .selected {
+//     color: #56C8ED;
+//     /* text-decoration: underline;
+//     text-decoration-thickness: 4px; */
+//     border-bottom: 2px solid #56C8ED;
+// }

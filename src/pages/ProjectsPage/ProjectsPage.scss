@@ -1,0 +1,15 @@
+.projects-page
+{
+    // border: 2px solid red;
+    padding: 8px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.15em;
+    justify-content: center;
+}
+
+@media screen and (max-width: 425px) {
+    
+}

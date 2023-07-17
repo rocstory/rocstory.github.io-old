@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import './fontawesome';
-import { PortfolioContextProvider } from './contexts/PortfolioContext';
+import { PageProvider } from './contexts/PageContext';
+import { ArticleProvider } from './contexts/ArticleContext';
+
 
 ReactDOM.render(
-  <PortfolioContextProvider>
     <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </PortfolioContextProvider>,
+      <PageProvider>
+        <ArticleProvider>
+          <App />
+        </ArticleProvider>
+      </PageProvider>
+    </React.StrictMode>,
   document.getElementById('root')
 );
