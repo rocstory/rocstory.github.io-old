@@ -1,13 +1,13 @@
 import React, { useContext }  from 'react';
 import { Nav, Navbar, NavDropdown, Container } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
 
 import { EPortfolioPages, PageContext } from '../../contexts/PageContext';
 import "./Navigator.scss"
 
 const Navigator = () => {
-    const location = useLocation();
-    let curPage = location && location.pathname && location.pathname.split(/\//g)[1]
+    const location = '' //useLocation();
+    const {selPage, changeSelPage} = useContext(PageContext); 
+    let curPage = selPage //location && location && location.split(/\//g)[1]
     const PortfolioPages = Object.values(EPortfolioPages);
 
     const isPageSelected = (page: any) => {
@@ -25,10 +25,14 @@ const Navigator = () => {
 
         return false;
     }
+
+    const handleNavLinkClick = (page: EPortfolioPages) => {
+        changeSelPage(page); 
+    }
     return (
         <Navbar expand="lg" className="main-nav" variant="dark">
             <Container>
-                <Navbar.Brand href={`/${EPortfolioPages.Home}`} className={`rs-brand`} >Rocstory</Navbar.Brand>
+                <Navbar.Brand className={`rs-brand`} onClick={() => handleNavLinkClick(EPortfolioPages.Home)} >Rocstory</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto nav-items">
@@ -37,8 +41,9 @@ const Navigator = () => {
                             const isSelected = isPageSelected(page)
                             return (
                                 <Nav.Link 
-                                    href={`/${page}`}
+                                    // href={`/${page}`}
                                     className={`nav-item ${isSelected ? 'active' : ''}`}
+                                    onClick={() => handleNavLinkClick(page)}
                                 >
                                     {page}
                                 </Nav.Link>

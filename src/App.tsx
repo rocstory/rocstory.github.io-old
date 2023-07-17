@@ -20,17 +20,16 @@ function App() {
   const {selArticle} = useContext(ArticleContext);
   return (
       <div className="App">
-        <BrowserRouter>
           <Navigator />
           <Header />
           <ContactLinks />
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path={`/`} element={<HomePage />} />
-            <Route path={`/${EPortfolioPages.Home}`} element={<HomePage />} />
-            <Route path={`/${EPortfolioPages.Projects}`} element={<ProjectsPage />} />
-          </Routes> 
-        </BrowserRouter>
+          {
+            (selPage === EPortfolioPages.Home) && <HomePage />
+          }
+          {
+            (selPage === EPortfolioPages.Projects) && <ProjectsPage />
+          }
+        {/* </BrowserRouter> */}
         <div className="footer">
           <p>Always <span>be kind</span></p>
           <span>|</span>
