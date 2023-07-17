@@ -12,7 +12,6 @@ import ArticleModal from './components/ArticleModal/ArticleModal';
 import { ArticleContext} from './contexts/ArticleContext';
 import HomePage from './pages/Home/HomePage';
 import ContactLinks from './components/Header/ContactLinks/ContactLinks';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   // console.log("SelPage:", selPage);
