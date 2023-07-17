@@ -145,8 +145,8 @@ function AboutTabBody() {
                     Western Connecticut State University (WCSU).
                 </p>
                 <p>
-                    Colonial Carnival is a virtual carnival for students 
-                    at WCSU to earn tickets after each game to exchange 
+                    This project is a virtual carnival for students 
+                    at WCSU to earn marbles (tickets) after each game to exchange 
                     for prizes such as gift cards, stationery, and 
                     other items.
                 </p>
@@ -165,6 +165,10 @@ function AboutTabBody() {
                 <p>
                     I created Colonial Carnival to learn HTML, CSS, and JavaScript. 
                     I also wanted to bring a new program to the residents of WCSU.
+                </p>
+                <p>
+                    I couldn't fit an intro course to web development into my academic schedule
+                    so I decided to learn it on my own over my winter vacation.
                 </p>
             </div>
         </div>

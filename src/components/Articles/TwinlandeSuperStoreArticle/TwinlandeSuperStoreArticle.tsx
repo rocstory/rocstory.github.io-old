@@ -157,7 +157,7 @@ function AboutTabBody() {
             <div>
                 <h2>What is Twinlande Superstore?</h2>
                 <p>
-                    Twinlande Superstore (TSS) is a full stack web application. TSS is a web application for 
+                    Twinlande Superstore (TSS) is a full stack web application. This is an application for 
                     a fictional store run by twin sisters Dlo & Dife. 
                 </p>
             </div>
@@ -173,7 +173,7 @@ function AboutTabBody() {
             <div>
                 <h2>Why did I create this project?</h2>
                 <p>
-                    Twinlande Superstore was created to learn how to build a full stack
+                    TSS was created to learn how to build a full stack
                     application from the ground up with the help of a community. 
                     I wanted to have a deeper understanding of 
                     how to build the frontend, backend, and database of an application 
@@ -182,7 +182,7 @@ function AboutTabBody() {
                 <p>
                     I created this project to build my social skills, especially when it comes to technology! 
                     I realized that when it comes to talking about tech, 
-                    I freeze up and stutter. {`I’m `}hoping with this project, 
+                    I freeze up and stutter! {`I’m `}hoping with this project, 
                     I can grow my confidence.
                 </p>
             </div>

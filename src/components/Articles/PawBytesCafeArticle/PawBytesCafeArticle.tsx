@@ -165,7 +165,7 @@ function AboutTabBody() {
                     using React (JavaScript), MongoDB, and a Twitter Bot.  
                 </p>
                 <p>
-                    Paw Bytes Café is about a café for students and other people who are 
+                    This project is about a café for students and other people who are 
                     looking for a place to relax with cats and dogs.
                 </p>
             </div>
@@ -186,13 +186,14 @@ function AboutTabBody() {
                     struggling with managing my mental health, school, jobs, and 
                     my family. With so much going on, especially 
                     with family, I was having a hard time keeping up with the material.
+                    
                 </p>
                 <p>
                     I had to decide between prioritizing my mental 
                     health or my grades. In hindsight, 
                     choosing my mental health is 
                     the obvious choice but that meant risking my scholarships, 
-                    my status as a Kathwari Honors student, and even my status as a student overall. 
+                    my status as a Kathwari Honors student, and even my status as a college student overall. 
                     After deciding to prioritize my mental health, I made a promise to myself to 
                     relearn the material when I have the time.
                 </p>

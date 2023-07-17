@@ -165,7 +165,7 @@ function AboutTabBody() {
                 </p>
                 
                 <p>
-                    Chev’s Escape is about our professor, 
+                    This project is about our professor, 
                     Gancho Ganchev who has to solve a set 
                     of puzzles to escape a building.
                 </p>

@@ -59,7 +59,7 @@ function GITRG3DCrayonArticle({ articlePayload }: any) {
     const collabList = [
         {
             cid: EPersonId.WilliamJoel,
-            role: "Professor"
+            role: "Faculty Advisor"
         }
     ] as IContactCard[]
 
