@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.78e7d954.css",
-    "main.js": "/static/js/main.b308cdfa.js",
+    "main.css": "/static/css/main.fde78815.css",
+    "main.js": "/static/js/main.83977480.js",
     "static/media/website-bg-compressed.jpg": "/static/media/website-bg-compressed.1676b5f1ca71f5dd417d.jpg",
     "static/media/chev-escape-thumbnail.jpg": "/static/media/chev-escape-thumbnail.3d36c63a5baceb8f9e92.jpg",
     "static/media/colonial-carnival-thmbnl.jpg": "/static/media/colonial-carnival-thmbnl.bfb144c2df9d3e45eb26.jpg",
@@ -14,11 +14,11 @@
     "static/media/dpi3.png": "/static/media/dpi3.3852a45022c7d7735df0.png",
     "static/media/dpi4.png": "/static/media/dpi4.d369bdc6de1854211f32.png",
     "index.html": "/index.html",
-    "main.78e7d954.css.map": "/static/css/main.78e7d954.css.map",
-    "main.b308cdfa.js.map": "/static/js/main.b308cdfa.js.map"
+    "main.fde78815.css.map": "/static/css/main.fde78815.css.map",
+    "main.83977480.js.map": "/static/js/main.83977480.js.map"
   },
   "entrypoints": [
-    "static/css/main.78e7d954.css",
-    "static/js/main.b308cdfa.js"
+    "static/css/main.fde78815.css",
+    "static/js/main.83977480.js"
   ]
 }
