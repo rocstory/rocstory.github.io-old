@@ -40,7 +40,7 @@ function ArticleCard({articleData}: ArticleCardProps ) {
     return (
         <Card className='entry-card-container' >
             <Card.Img variant="top" src={thumbnail} />
-            <Card.Body>
+            <Card.Body >
                 <Card.Title
                     className="ec-title-container"
                 >
@@ -52,6 +52,8 @@ function ArticleCard({articleData}: ArticleCardProps ) {
                 >
                     {caption}
                 </Card.Text>
+            </Card.Body>
+            <Card.Footer>
                 {
                     demoUrl &&
                     <Button 
@@ -73,8 +75,7 @@ function ArticleCard({articleData}: ArticleCardProps ) {
                 >
                     Read More
                 </Button>
-
-            </Card.Body>
+            </Card.Footer>
         </Card>
     )
 }

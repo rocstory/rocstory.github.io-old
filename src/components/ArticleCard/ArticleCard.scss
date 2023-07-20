@@ -2,7 +2,16 @@
 
 .entry-card-container {
     width: 25em;
-    // height: 20em;
+    height: 20em;
+
+    .card-bdoy, .card-footer {
+        background-color: white;
+    }
+
+    .card-footer {
+        border-top: 0;
+        padding-top: 0;
+    }
     
     .btn:hover {
         background-color: util.$btn-hover-color;
