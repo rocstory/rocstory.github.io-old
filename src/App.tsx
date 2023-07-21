@@ -31,9 +31,9 @@ function App() {
         {/* </BrowserRouter> */}
         <div className="footer">
           <p>Always <span>be kind</span></p>
-          <span>|</span>
-          <p>Always <span>be honest</span></p>
-          <span>|</span>
+          {/* <span>|</span> */}
+          <p className='mid-text'>Always <span>be honest</span></p>
+          {/* <span>|</span> */}
           <p>Always <span>be consistent</span></p>
         </div>
         {

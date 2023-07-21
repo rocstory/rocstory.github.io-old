@@ -20,6 +20,7 @@ export enum ERSIcon {
     OpenSCAD = 'file-code',
     React = 'react',
     Discord = 'discord',
+    Spotify = 'spotify', 
     
 
     // fas - solid
@@ -36,6 +37,8 @@ export enum ERSIcon {
     Other = "other",
     QuestionCircle = 'question-circle',
     Link = 'link',
+
+    Seedling = "seedling",
 
     
     

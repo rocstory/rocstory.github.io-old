@@ -8,7 +8,7 @@ import {
     faHtml5, faJsSquare, faPython,
     faRaspberryPi, faTwitter, faTwitch,
     faInstagram, faFacebook, faYoutube,
-    faLinkedin, faGithubAlt, faUnity, faReact, faDiscord,
+    faLinkedin, faGithubAlt, faUnity, faReact, faDiscord, faSpotify,
 
 } from '@fortawesome/free-brands-svg-icons';
 import { 
@@ -19,7 +19,8 @@ import {
     faLeaf,
     faLaptopCode,
     faBolt,
-    faLink
+    faLink,
+    faSeedling
  
 } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -95,6 +96,10 @@ function RSIcon(props: RSIconProps) {
                 return faLightbulb
             case ERSIcon.Discord:
                 return faDiscord
+            case ERSIcon.Spotify:
+                return faSpotify
+            case ERSIcon.Seedling:
+                return faSeedling
             case ERSIcon.QuestionCircle:
                 return faQuestionCircle;
             default:

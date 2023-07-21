@@ -3,17 +3,25 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import "./LinkButton.scss";
 import RSIcon from '../RSIcon/RSIcon';
+import { ITreeLink } from '../../models/TreeLink';
+import { ERSIcon } from '../../enums/ERSIcon';
 
 interface LinkButtonProps {
-  link: any
+  link: ITreeLink
 }
 
 function LinkButton({ link } : LinkButtonProps) {
-  const { label, url, icon, color } = link
-  const iconType = icon.type;
+  const { 
+    label,
+    url,
+    iconName,
+    linkColor
+  } = link
 
-  const bgColor = { backgroundColor: color, border: color };
+  
 
+  const bgColor = { backgroundColor: linkColor ?? 'gray'};
+  const rsIconName = iconName ?? ERSIcon.Link
   return (
     <Button
       className="link-button shadow"
@@ -26,7 +34,7 @@ function LinkButton({ link } : LinkButtonProps) {
       <span
         className={'link-icon float-left'}
       >
-        <RSIcon iconName={iconType} />
+        <RSIcon iconName={rsIconName} />
       </span>
       <div
         className="link-label-container"
