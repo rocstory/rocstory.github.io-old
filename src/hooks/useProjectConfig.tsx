@@ -20,7 +20,10 @@ export const useProjectConfig = ({ prjMetadata }: ProjectConfigProp) => {
         projectDefaultThumbnail,
         chevEscapeThumbnail,
         pawbytesCafeThumbnail,
-        colonialCarnivalThumbnail
+        colonialCarnivalThumbnail,
+        gitrg3DCrayonThumbnail,
+        mocapThumbnail,
+        revealingRocThumbnail
     } = useImageRetriever()
 
     const [thumbnail, setThumbnail] = useState(undefined);
@@ -36,7 +39,13 @@ export const useProjectConfig = ({ prjMetadata }: ProjectConfigProp) => {
             case EProjectId.PawBytes:
                 return pawbytesCafeThumbnail;
             case EProjectId.ColonialCarnival:
-                return colonialCarnivalThumbnail
+                return colonialCarnivalThumbnail;
+            case EProjectId.RevealingRoc:
+                return revealingRocThumbnail;
+            case EProjectId.GITRGCrayon:
+                return gitrg3DCrayonThumbnail;
+            case EProjectId.GITRGMocap:
+                return mocapThumbnail;
             default:
                 return projectDefaultThumbnail;
         }
