@@ -1,13 +1,5 @@
 @use '../../scss/utilities.scss' as util;
 
-// .social-container
-// {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     text-decoration: none !important;
-// }
-
 .social-btn
 {
     border: none !important;
@@ -25,7 +17,7 @@
     span {
         // color: #f8f8f8;
         color: util.$light-font-color;
-        font-size: 1.1em;
+        font-size: 1.5em;
     }
 
     .social-btn-name {
@@ -40,11 +32,11 @@
         flex-direction: column;
         gap: 0;
         .social-btn-icon {
-            font-size: 1.4em;
+            // font-size: 1.4em;
         }
 
-        .social-btn-name {
-            font-size: 0.4em;
-        }
+        // .social-btn-name {
+        //     font-size: 0.4em;
+        // }
     }
 }

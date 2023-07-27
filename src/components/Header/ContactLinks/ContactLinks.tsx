@@ -8,8 +8,7 @@ import { ETechnology } from '../../../enums/ETechnology';
 var dStore = require("../../../dataStore/dataStore");
 
 
-function ContactLinks()
-{
+function ContactLinks() {
     // const [socialLinks, setSocialLinks] = useState<ISocialLink[]>([])
 
     const socialLinks = [
@@ -30,11 +29,11 @@ function ContactLinks()
             type: ETechnology.Instagram
 
         },
-        {
-            name: ESocialMedia.Twitch,
-            src: "https://www.twitch.tv/malikmoments",
-            type: ETechnology.Twitch
-        },
+        // {
+        //     name: ESocialMedia.Twitch,
+        //     src: "https://www.twitch.tv/malikmoments",
+        //     type: ETechnology.Twitch
+        // },
         {
             name: ESocialMedia.Twitter,
             src: "https://twitter.com/rocstory",
@@ -43,23 +42,14 @@ function ContactLinks()
         }
     ]
 
-    // useEffect(() => {
-    //     async function getContactLinks() {
-    //         const contactLinks = dStore.getSocialLinks();
-    //         setSocialLinks(contactLinks);
-    //     }
-
-    //     getContactLinks()
-    // }, [])
-
     return (
         <Bounce top>
             <div className="social-media-container" >
                 {
-                    socialLinks.map(link => 
-                        <SocialMediaButton 
-                            link={link} 
-                            key={link.name}
+                    socialLinks.map(link =>
+                        <SocialMediaButton
+                            link={link}
+                            key={`social-media-btn-${link.name}`}
                         />)
                 }
             </div>
