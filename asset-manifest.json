@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.fde78815.css",
-    "main.js": "/static/js/main.83977480.js",
+    "main.css": "/static/css/main.9390596f.css",
+    "main.js": "/static/js/main.35b08f9b.js",
     "static/media/website-bg-compressed.jpg": "/static/media/website-bg-compressed.1676b5f1ca71f5dd417d.jpg",
-    "static/media/chev-escape-thumbnail.jpg": "/static/media/chev-escape-thumbnail.3d36c63a5baceb8f9e92.jpg",
-    "static/media/colonial-carnival-thmbnl.jpg": "/static/media/colonial-carnival-thmbnl.bfb144c2df9d3e45eb26.jpg",
-    "static/media/default-thumbnail_compressed.jpg": "/static/media/default-thumbnail_compressed.bf3a32781e0a8fc4e719.jpg",
-    "static/media/pawbytes--cafe-thmbnl.jpg": "/static/media/pawbytes--cafe-thmbnl.2dd4987132a2c99d4b81.jpg",
-    "static/media/twinlande-thumbnail_compressed.jpg": "/static/media/twinlande-thumbnail_compressed.d9be9416c2bf03860e1d.jpg",
+    "static/media/colonial-carnival-thmbnl.jpg": "/static/media/colonial-carnival-thmbnl.1d8289b017f9e5e7a42f.jpg",
+    "static/media/gitrg-3d-crayon-compressed.jpg": "/static/media/gitrg-3d-crayon-compressed.51f1960620fc7e72d84c.jpg",
+    "static/media/pawbytes--cafe-thmbnl.jpg": "/static/media/pawbytes--cafe-thmbnl.b7e8db51ece2f82fc2a7.jpg",
+    "static/media/revealing-roc-thumbnail.jpg": "/static/media/revealing-roc-thumbnail.2753993df285eed18548.jpg",
+    "static/media/twinlande-thumbnail_compressed.jpg": "/static/media/twinlande-thumbnail_compressed.63530422f41796d60d21.jpg",
+    "static/media/chev-escape-thumbnail.jpg": "/static/media/chev-escape-thumbnail.74f0d4e5c9958d700641.jpg",
+    "static/media/mocap-thumbnail.jpg": "/static/media/mocap-thumbnail.b36402d399eb14d12b16.jpg",
     "static/media/rs-icon-compressed.jpg": "/static/media/rs-icon-compressed.5b8965254bae34bdafe7.jpg",
     "static/media/dpi1.png": "/static/media/dpi1.ddda5eb90a9206b05c88.png",
     "static/media/dpi2.png": "/static/media/dpi2.b23ed4fa355b6d56b06c.png",
     "static/media/dpi3.png": "/static/media/dpi3.3852a45022c7d7735df0.png",
+    "static/media/default-thumbnail_compressed.jpg": "/static/media/default-thumbnail_compressed.a77be5550635853c0f01.jpg",
     "static/media/dpi4.png": "/static/media/dpi4.d369bdc6de1854211f32.png",
     "index.html": "/index.html",
-    "main.fde78815.css.map": "/static/css/main.fde78815.css.map",
-    "main.83977480.js.map": "/static/js/main.83977480.js.map"
+    "main.9390596f.css.map": "/static/css/main.9390596f.css.map",
+    "main.35b08f9b.js.map": "/static/js/main.35b08f9b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fde78815.css",
-    "static/js/main.83977480.js"
+    "static/css/main.9390596f.css",
+    "static/js/main.35b08f9b.js"
   ]
 }
