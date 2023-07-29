@@ -1,7 +1,5 @@
 import React, {  useContext, useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import EntryLinkTrigger from './EntryLinkTrigger/EntryLinkTrigger';
-
 import { ArticleContext } from '../../contexts/ArticleContext';
 
 import './ArticleModal.scss';
@@ -15,6 +13,7 @@ import RevealingRocArticle from '../Articles/RevealingRocArticle/RevealingRocArt
 import GITRG3DCrayonArticle from '../Articles/GITRG3DCrayonArticle/GITRG3DCrayonArticle';
 import GITRGMocapArticle from '../Articles/GITRGMocapArticle copy/GITRGMocapArticle';
 import RocLabsArticle from '../Articles/RocLabsArticle.tsx/RocLabsArticle';
+import RSButton from '../RSButton/RSButton';
 
 
 function ArticleModal() {
@@ -52,14 +51,15 @@ function ArticleModal() {
             {(selArticleId === EProjectId.GITRGMocap) && <GITRGMocapArticle articlePayload={selArticle} />}
             <Modal.Footer>
                 <div className={``}>
-                    <Button
+                    
+                    <RSButton
                         className={'rs-close'}
                         as={"button"}
                         variant={' '}
                         onClick={handleHideModal}
                     >
                         Close
-                    </Button>
+                    </RSButton>
                 </div>
             </Modal.Footer>
         </Modal>

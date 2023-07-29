@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Card, Button, Image} from 'react-bootstrap'
+import { Card, Image} from 'react-bootstrap'
 import { ArticleContext } from '../../contexts/ArticleContext'
 import { EProjectId } from '../../enums/EProjectId'
 import { useImageRetriever } from '../../hooks/useImageRetriever'
@@ -7,6 +7,7 @@ import { IArticleMetadata } from '../../models/IArticleMetadata'
 import roclabsMetadata from "../../metadata/roclabs_metadata.json"
 
 import './DiscordServerCard.scss'
+import RSButton from '../RSButton/RSButton'
 
 
 const DiscordServerCard = () => {
@@ -42,17 +43,20 @@ const DiscordServerCard = () => {
             <Card.Body>
                 <Card.Title className="text-center dsc-title">Roc Labs</Card.Title>
                 <div className={'dsc-btn-container'}>
-                    <Button 
-                        as={'a'} 
+                    <RSButton
+                        as='a'
                         className={`dsc-btn join-server shadow`}
                         href={discordInviteUrl}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >Join Server</Button>
-                    <Button 
+                        hasTarget
+                    >
+                        Join Server
+                    </RSButton>
+                    <RSButton 
                         className={`dsc-btn read-more shadow`}
                         onClick={handleReadMoreClick}
-                    >Read More</Button>
+                    >
+                        Read More
+                    </RSButton>
                 </div>
                
             </Card.Body>

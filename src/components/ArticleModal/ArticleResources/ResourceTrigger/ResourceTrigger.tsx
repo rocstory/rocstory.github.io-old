@@ -6,6 +6,7 @@ import RSIcon from '../../../RSIcon/RSIcon';
 
 import './ResourceTrigger.scss';
 import { EArticleResourceType } from '../../../../enums/EArticleResouceType';
+import RSButton from '../../../RSButton/RSButton';
 
 
 
@@ -43,12 +44,11 @@ function ResourceTrigger(props : ResourceTriggerProps) {
     const className = getTriggerClassName();
 
     return (
-        <Button
+        
+        <RSButton
             as="a"
             href={src}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant={"-"}
+            hasTarget
             className={`resource-trigger ${className}`}
         >
             <span className="resource-icon m-0">
@@ -56,7 +56,7 @@ function ResourceTrigger(props : ResourceTriggerProps) {
             </span>
             <span className="resource-title ml-2">{title}</span>
 
-        </Button>
+        </RSButton>
     )
 }
 

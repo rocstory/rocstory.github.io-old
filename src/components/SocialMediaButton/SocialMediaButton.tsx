@@ -27,8 +27,8 @@ const SocialMediaButton = ({ link, key }: ISocialMediaButtonProps) => {
         <RSButton
             key={key}
             className={`social-btn clickable`}
-            src={src}
-            btnType='a'
+            href={src}
+            as='a'
             hasTarget
             style={isHovered ? btnHoverStyle : {}}
             overlayChildren={name}
@@ -41,23 +41,6 @@ const SocialMediaButton = ({ link, key }: ISocialMediaButtonProps) => {
             {/* <span className="social-btn-name">{name}</span> */}
         </RSButton>
     )
-    // return  (
-    //     <Button
-    //         variant={' '}
-    //         className={`social-btn clickable`}
-    //         as="a"
-    //         href={src}
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //         style={isHovered ? btnHoverStyle : {}}
-
-    //         onMouseEnter={toggleHover}
-    //         onMouseLeave={toggleHover}
-    //     >
-    //         <span className="social-btn-icon"><RSIcon iconName={iconName} /></span>
-    //         <span className="social-btn-name">{name}</span>
-    //     </Button>
-    // )
 }
 
 export default SocialMediaButton;

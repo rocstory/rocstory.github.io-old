@@ -1,12 +1,12 @@
-import React, {useState, useEffect, useContext}  from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useEffect, useContext}  from 'react';
 import "./ArticleCard.scss"
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useProjectConfig } from '../../hooks/useProjectConfig';
 import { IProjectMetadata } from '../../models/IProjectMetadata';
 import { ArticleContext } from '../../contexts/ArticleContext';
 import RSIcon from '../RSIcon/RSIcon';
 import { ERSIcon } from '../../enums/ERSIcon';
+import RSButton from '../RSButton/RSButton';
 
 
 type ArticleCardProps = {
@@ -56,25 +56,24 @@ function ArticleCard({articleData}: ArticleCardProps ) {
             <Card.Footer>
                 {
                     demoUrl &&
-                    <Button 
+                    <RSButton 
                         as="a"
                         className="demo-btn"
                         href={demoUrl}
-                        target="_blank"
-                        rel="noopeneer no referrer"
+                        hasTarget
                     >
                         <span className='demo-btn-icon'>
                             <RSIcon iconName={ERSIcon.Play} />
                         </span>
                         <span>Demo</span>
-                    </Button>
+                    </RSButton>
                 }
-                <Button
+                <RSButton
                     className="float-right read-more shadow"
                     onClick={handleSelectedEntryCard}
                 >
                     Read More
-                </Button>
+                </RSButton>
             </Card.Footer>
         </Card>
     )

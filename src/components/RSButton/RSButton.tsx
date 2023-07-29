@@ -9,12 +9,13 @@ type RSButtonProps = {
     key?: any,
     children: any,
     className?: string,
-    src?: string,
-    btnType?: string,
+    href?: string,
+    as?: string,
     hasTarget?: Boolean,
     style?: any,
     onMouseEnter?: MouseEventHandler,
     onMouseLeave?: MouseEventHandler,
+    onClick?: MouseEventHandler,
     variant?: string,
     overlayChildren?: any,
     overlayPlacement?: string,
@@ -25,12 +26,13 @@ function RSButton(props: RSButtonProps) {
         key,
         children,
         className,
-        src,
-        btnType,
+        href,
+        as,
         hasTarget,
         style,
         onMouseEnter,
         onMouseLeave,
+        onClick,
         variant,
 
         overlayChildren,
@@ -44,18 +46,19 @@ function RSButton(props: RSButtonProps) {
 
     const target = hasTarget ? '_blank' : undefined;
     const rel = hasTarget ? 'noopener noreferrer' : undefined;
-
+    
     return !overlayChildren ? (
         <Button
             variant={variant}
             className={className}
-            as={btnType as ElementType}
-            href={src}
+            as={as as ElementType}
+            href={href}
             target={target}
             rel={rel}
             style={style}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            onClick={onClick}
         >
             {
                 children
@@ -76,8 +79,8 @@ function RSButton(props: RSButtonProps) {
                         ref={ref}
                         variant={variant}
                         className={className}
-                        as={btnType as ElementType}
-                        href={src}
+                        as={as as ElementType}
+                        href={href}
                         target={target}
                         rel={rel}
                         style={style}
