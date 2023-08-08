@@ -9,7 +9,6 @@
   padding-bottom: 1em;
 
     .rs-background-cntr {
-      // border: 2px solid red;
       width: 50em;
       height: 20em;
         .rs-background {
@@ -44,10 +43,10 @@
 
     .description > * {
       margin: auto;
+      margin-left: 1em;
+      
     }
 }
-
-
 
 .profile-img {
   width: 10em;
@@ -59,7 +58,6 @@
 }
 .header-body-summary {
   margin-left: 0px;
-  text-align: center;
   overflow: hidden;
 }
 

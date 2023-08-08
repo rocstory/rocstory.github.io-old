@@ -12,9 +12,10 @@ $galleryItemSize: 12em;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0.1em 0.1em;
+        padding: 5px;
 
         .gallery-item {
-            border: 2px solid #342E37;
+            // border: 3px solid white ;//#342E37;
             width: $galleryItemSize;
             height: $galleryItemSize;
             

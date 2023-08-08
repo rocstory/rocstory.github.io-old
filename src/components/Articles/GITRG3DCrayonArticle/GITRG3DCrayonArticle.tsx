@@ -115,6 +115,8 @@ function GITRG3DCrayonArticle({ articlePayload }: any) {
                 <ArticleMediaDisplay
                     videoUrl={videoUrl}
                     images={images}
+                    articleMetadata={articlePayload}
+
                 />
                 <RSTabs 
                     tabs={articleTabs}
