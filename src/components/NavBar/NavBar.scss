@@ -1,0 +1,24 @@
+@use "../../styling/main.scss" as *;
+
+.rs-navbar {
+    background-color: $rsMainColor;
+    
+    .disabled {
+        cursor: none;
+    }
+    .disabled:hover {
+        color: $rsTextLight;
+    }
+
+    a, span {
+        color: $rsTextLight;
+    }
+
+    a {
+        font-weight: bold;
+    }
+
+    a:hover , a:focus {
+        color: $rsAccentColor;
+    }
+}
