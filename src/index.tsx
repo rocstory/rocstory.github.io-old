@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 // need line 7 for bootstrap styles to load - src: https://stackoverflow.com/questions/47354472/react-bootstrap-not-styling-my-react-components

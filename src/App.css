@@ -41,3 +41,11 @@
 .debugr {
   border: 2px solid red;
 }
+
+.debugb {
+  border: 2px solid blue;
+}
+
+.debugg {
+  border: 2px solid green;
+}
