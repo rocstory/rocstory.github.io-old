@@ -1,8 +1,9 @@
 
 $hero-height: 25em;
+$heroBackgroundImage: "../../assets/imgs/rs-test-hero4.jpg";
 .rs-hero {
     min-height: $hero-height;
-    background-image: url('../../../assets/imgs/rs-test-hero4.jpg');
+    background-image: url($heroBackgroundImage);
     background-size: contain;
 
     .rs-hero-wrapper {
@@ -12,6 +13,13 @@ $hero-height: 25em;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: center;
+    }
+    .hero-descr-wrapper {
+        display: flex;
+        justify-content: center;
+        .hero-descr {
+            margin: auto;
+        }
     }
 
     .prof-pic-wrapper  {

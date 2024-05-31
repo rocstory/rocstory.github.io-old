@@ -1,0 +1,17 @@
+@use './brandColors.scss' as brand;
+
+.rsIcon.instagram {
+    color: brand.$instagram;
+}
+
+.rsIcon.linkedin {
+    color: brand.$linkedin;
+}
+
+.rsIcon.github {
+    color: brand.$github;
+}
+
+.rsIcon.discord {
+    color: brand.$discord;
+}

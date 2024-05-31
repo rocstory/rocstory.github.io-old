@@ -4,21 +4,21 @@
     background-color: $rsMainColor;
     
     .disabled {
-        cursor: none;
+        cursor: default;
     }
     .disabled:hover {
         color: $rsTextLight;
     }
 
-    a, span {
+    a, span, a:focus {
         color: $rsTextLight;
     }
 
     a {
-        font-weight: bold;
+        font-weight: 500;
     }
 
-    a:hover , a:focus {
+    a:hover  {
         color: $rsAccentColor;
     }
 }

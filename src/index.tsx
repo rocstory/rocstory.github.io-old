@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // need line 7 for bootstrap styles to load - src: https://stackoverflow.com/questions/47354472/react-bootstrap-not-styling-my-react-components
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+import './styling/buttons.scss';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

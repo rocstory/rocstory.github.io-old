@@ -10,6 +10,7 @@ function NavBar() {
                 <Navbar.Brand className={`disabled`}>Malik Roc</Navbar.Brand>
                 <Nav className="me-auto">
                     <Nav.Link>Projects</Nav.Link>
+                    <Nav.Link>Contact Me</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>
