@@ -31,7 +31,7 @@ export const useMyContacts = () => {
         if (myLinks && myLinks.instagramUrl) {
             contacts.push({
                 name: ESocialMedia.Instagram,
-                src: myLinks.linkedinUrl,
+                src: myLinks.instagramUrl,
                 icon: undefined
             })
         }
