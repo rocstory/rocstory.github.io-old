@@ -16,9 +16,14 @@
 
     a {
         font-weight: 500;
+        text-transform: capitalize;
     }
 
     a:hover  {
+        color: $rsAccentColor;
+    }
+
+    a.rsPageTab.selected {
         color: $rsAccentColor;
     }
 }

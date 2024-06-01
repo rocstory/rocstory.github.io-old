@@ -23,8 +23,6 @@ function Hero() {
                         <IntroCard />
                         <MyContacts />
                     </div>
-
-
                 </div>
 
 
