@@ -13,7 +13,7 @@ function RSIcon({ name }: IRSIcon) {
     const { icon, iconClassName } = useRSIcon(name);
 
     return icon && (
-        <i className={`rsIcon ${iconClassName}`}>
+        <i className={`rsIcon ${iconClassName ? iconClassName : ''}`}>
             <FontAwesomeIcon icon={icon} />
         </i>
     )

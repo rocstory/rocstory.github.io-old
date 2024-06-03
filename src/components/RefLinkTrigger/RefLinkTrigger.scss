@@ -1,0 +1,26 @@
+@use '../../styling/main.scss' as main;
+
+.reflink-trigger {
+    // border: 2px solid red;
+    border-radius: 0.5em;
+    width: 5em !important;
+    height: 5em !important;
+    background-color: #ededed;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    text-decoration:  none;
+
+    i.rsIcon {
+        font-size: 35px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.6em;
+        color: main.$rsTextDark;
+    }
+    
+}

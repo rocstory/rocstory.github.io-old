@@ -24,6 +24,7 @@ function App() {
       <PageLoader
         page={selPage}
 
+
       />
     </div>
   );

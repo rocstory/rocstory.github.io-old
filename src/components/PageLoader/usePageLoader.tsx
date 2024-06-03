@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { EPages } from "../../enums/EPages";
 import ProjectsPage from "../../pages/ProjectsPage/ProjectsPage";
-import { JsxElement } from "typescript";
 import ContactMePage from "../../pages/ContactMePage/ContactMePage";
 
 

@@ -1,8 +1,8 @@
 import { ERSIcon } from "../enums/ERSIcons";
+import { ERefLinkType } from "../enums/ERefLinkType";
 import { ESocialMedia } from "../enums/ESocialMedia";
 
 export const getMyContactIconName = (name: ESocialMedia) => {
-    console.log('Icon Name:', name)
     switch (name) {
         case ESocialMedia.Github:
             return ERSIcon.Github;
@@ -12,6 +12,17 @@ export const getMyContactIconName = (name: ESocialMedia) => {
             return ERSIcon.Instagram;
         case ESocialMedia.LinkedIn:
             return ERSIcon.LinkedIn;
+        default:
+            return ERSIcon.Other;
+    }
+}
+
+export const getRefLinkIconName = (name: ERefLinkType) => {
+    switch (name) {
+        case ERefLinkType.RepoLink:
+            return ERSIcon.Github;
+        case ERefLinkType.DemoLink:
+            return ERSIcon.Play;
         default:
             return ERSIcon.Other;
     }

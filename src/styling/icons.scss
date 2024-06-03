@@ -1,4 +1,5 @@
 @use './brandColors.scss' as brand;
+@use './main.scss' as main;
 
 .rsIcon.instagram {
     color: brand.$instagram;
@@ -14,4 +15,12 @@
 
 .rsIcon.discord {
     color: brand.$discord;
+}
+
+.rsIcon.play {
+    color: #1ce783;
+}
+
+.rsIcon.basic {
+    color: main.$rsTextDark;
 }

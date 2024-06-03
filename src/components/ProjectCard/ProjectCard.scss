@@ -1,0 +1,53 @@
+$thumbnailSize: 18em;
+$descrWrapperColor: black;
+
+.rs-project {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+
+    .prj-thumbnail-wrapper {
+        width: $thumbnailSize;
+        height: $thumbnailSize;
+        border: 10px solid black;
+        border-radius: 0.2em;
+    }
+    .prj-descr-wrapper {
+        border-color: $descrWrapperColor;
+        border-style: solid;
+        border-width: 2px 2px 2px 0px;
+        margin: auto 0;
+        width: 50em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .prj-descr {
+        margin: auto 0;
+        margin-left: 0px;
+        height: 16em;
+        width: 45em;
+        padding: 10px;
+
+        h1, h2 {
+            text-transform: capitalize;
+            text-align: left;
+        }
+
+        .prj-short-descr {
+            text-align: left;
+        }
+    }
+
+    .ref-links-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 0.4em;
+        
+        > * {
+            margin: 0.6em 0;
+        }
+    }
+
+}

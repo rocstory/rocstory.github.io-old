@@ -22,7 +22,6 @@ function MyContactTrigger({ name, src, icon, brandCN }: IMyContactTrigger) {
         setIconName(icon);
     }, [])
 
-    console.log('MyContactTrigger:', name, iconName)
     return (
         <Button
             className={`mctrigger ${brandCN} `}

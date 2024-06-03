@@ -1,5 +1,5 @@
 
-import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram, faLinkedin, faGithub,
     faDiscord
@@ -13,6 +13,7 @@ function useRSIcon(name: ERSIcon) {
     const [icon, setIcon] = useState<any>(faQuestionCircle);
     const [iconClassName, setIconClassName] = useState<string | undefined>(undefined);
 
+
     const getRSIcon = () => {
         switch (name) {
             case ERSIcon.LinkedIn:
@@ -23,6 +24,8 @@ function useRSIcon(name: ERSIcon) {
                 return faInstagram
             case ERSIcon.Discord:
                 return faDiscord;
+            case ERSIcon.Play:
+                return faPlay;
             default:
                 return faQuestionCircle;
         }
@@ -38,19 +41,22 @@ function useRSIcon(name: ERSIcon) {
                 return 'instagram';
             case ERSIcon.LinkedIn:
                 return 'linkedin';
+            case ERSIcon.Play:
+                return 'play'
+            default:
+                return 'basic'
         }
     }
     useEffect(() => {
         const ico = getRSIcon();
         const iconClassName = getIconClassName();
-        // console.log('getting RSIcon:', name, ico)
         setIcon(ico);
         setIconClassName(iconClassName);
     }, [])
 
     return {
         icon,
-        iconClassName
+        iconClassName,
     }
 }
 
