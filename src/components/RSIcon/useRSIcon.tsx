@@ -1,5 +1,5 @@
 
-import { faPlay, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPlus, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram, faLinkedin, faGithub,
     faDiscord,
@@ -38,6 +38,8 @@ function useRSIcon(name: ERSIcon) {
                 return faJs;
             case ERSIcon.React:
                 return faReact;
+            case ERSIcon.Plus:
+                return faPlus;
             default:
                 return faQuestionCircle;
         }

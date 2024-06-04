@@ -4,7 +4,7 @@ import "./IntroCard.scss";
 function IntroCard() {
     return (
         <div
-            className='intro-card'
+            className='intro-card shadow'
         >
             <h2 className=" my-name">Malik Roc</h2>
             <div className="intro-paragraph">

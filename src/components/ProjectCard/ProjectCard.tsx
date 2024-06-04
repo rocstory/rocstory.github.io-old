@@ -7,6 +7,7 @@ import "./ProjectCard.scss";
 import RefLinkTrigger from "../RefLinkTrigger/RefLinkTrigger";
 import { ETag } from "../../enums/ETag";
 import Tag from "../Tag/Tag";
+import ShowMoreTagsTrigger from "../Tag/ShowMoreTagsTrigger";
 
 interface IProjectCard {
     name: EProject
@@ -27,6 +28,9 @@ function ProjectCard(props: IProjectCard) {
         refLinks,
         formatProjectType
     } = useProject(name);
+
+    const MAX_TAGS_TO_DISPLAY = 3;
+    const displayShowMoreTag = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
 
     return (
         <div
@@ -64,6 +68,12 @@ function ProjectCard(props: IProjectCard) {
                                     name={tag}
                                 />
                             )
+                        }
+                        {
+                            displayShowMoreTag &&
+                            <ShowMoreTagsTrigger
+                                tags={tags}
+                            />
                         }
                     </div>
                 </div>

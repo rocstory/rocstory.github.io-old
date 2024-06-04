@@ -25,3 +25,11 @@ $tagTextSize: 0.8em;
 .rs-tag:hover {
     cursor: default;
 }
+
+.rs-tag.show-more {
+    cursor: pointer;
+    
+    i {
+        margin-right: 0;
+    }
+}

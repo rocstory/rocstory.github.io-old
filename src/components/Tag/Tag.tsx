@@ -21,9 +21,7 @@ function Tag(props: ITagCmpt) {
         >
             {
                 iconName &&
-                <i>
-                    <RSIcon name={iconName} />
-                </i>
+                <RSIcon name={iconName} />
             }
             {
                 label &&

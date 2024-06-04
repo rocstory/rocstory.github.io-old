@@ -14,6 +14,6 @@ export enum ERSIcon {
     // Solids
     Play = "play",
     Other = "other",
-
+    Plus = "plus",
 
 }

@@ -1,0 +1,17 @@
+.popover-tags-list {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 5px;
+
+    >li:not(:first-child) {
+        border-top: 1px solid #D3D3D3;
+    }
+    
+}
+
+.tagpop-card {
+    padding: 5px;
+    >:first-child {
+        margin-right: 5px;
+    }
+}
