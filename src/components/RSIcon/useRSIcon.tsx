@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import { ERSIcon } from "../../enums/ERSIcons";
+import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
 
 
 
@@ -41,9 +42,10 @@ function useRSIcon(name: ERSIcon) {
             case ERSIcon.Plus:
                 return faPlus;
             default:
-                return faQuestionCircle;
+                return faLightbulb;
         }
     }
+
     // icon classnames must correspond with the classnames in icons.scss
     const getIconClassName = () => {
         switch (name) {

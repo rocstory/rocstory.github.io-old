@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { IRefLink } from "../../interfaces/IRefLink";
 import { useEffect, useState } from "react";
-import { getRefLinkIconName } from "../../helpers/rsIconHelper";
+import { getIconName, getRefLinkIconName } from "../../helpers/rsIconHelper";
 import { ERSIcon } from "../../enums/ERSIcons";
 import RSIcon from "../RSIcon/RSIcon";
 import "./RefLinkTrigger.scss";
@@ -30,7 +30,7 @@ function RefLinkTrigger(props: IRefLink) {
     }
 
     useEffect(() => {
-        const icon = getRefLinkIconName(type);
+        const icon = getIconName(type);
         const fmLabel = getFormattedLabel();
         setIconName(icon);
         setFormattedLabel(fmLabel);
@@ -38,7 +38,7 @@ function RefLinkTrigger(props: IRefLink) {
 
 
     return (
-        <div className={'reflink-trigger-wrapper'}>
+        <div className={'reflink-trigger-wrapper de'}>
             <Button
                 className={`reflink-trigger shadow`}
                 bsPrefix={'rsbtn'}
@@ -50,12 +50,9 @@ function RefLinkTrigger(props: IRefLink) {
                 {iconName && <RSIcon name={iconName} />}
 
             </Button>
-            <p>
+            <p className="debu">
                 {
-                    label ?
-                        label
-                        :
-                        formattedLabel
+                    formattedLabel
                 }
             </p>
         </div>
