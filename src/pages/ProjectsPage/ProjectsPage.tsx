@@ -13,11 +13,11 @@ function ProjectsPage() {
 
     return (
         <Container
-            className='project-page page debugr'
+            className='project-page page'
             fluid
         >
             <div
-                className={`project-list debugb`}
+                className={`project-list`}
             >
                 {
                     visibleProjects.map((projectName) =>
