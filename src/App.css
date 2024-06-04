@@ -38,6 +38,11 @@
   }
 }
 
+.scrollable {
+  scrollbar-width: thin;
+  /* scrollbar-width: ; */
+}
+
 .debugr {
   border: 2px solid red;
 }

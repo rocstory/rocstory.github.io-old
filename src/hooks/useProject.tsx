@@ -9,8 +9,6 @@ import { ERefLinkType } from "../enums/ERefLinkType";
 import prjConfig from "../config/projectConfig";
 import { ETag } from "../enums/ETag";
 
-const SAMPLE_TEXT = "This project leverages React and TypeScript to craft modern, scalable web applications with a focus on reliability and developer efficiency. By harnessing React's component-based architecture and TypeScript's static typing, it ensures robustness and maintainability in the codebase."
-
 interface IProjectObj {
     title: string,
     type: EProjectType,
@@ -24,8 +22,8 @@ interface IProjectObj {
 function useProject(name: EProject) {
     const [title, setTitle] = useState<string>('');
     const [type, setType] = useState<EProjectType>(EProjectType.WebDevelopment);
-    const [shortDescr, setShortDescr] = useState<string>(SAMPLE_TEXT);
-    const [tags, setTags] = useState<any>(['a', 'b', 'c', 'd']);
+    const [shortDescr, setShortDescr] = useState<string>('');
+    const [tags, setTags] = useState<ETag[]>([]);
     const [thumbnail, setThumbnail] = useState<string>(DefaultThumbnail);
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
 
@@ -37,6 +35,11 @@ function useProject(name: EProject) {
             default:
                 return '';
         }
+    }
+
+    const sanitizeTagCollection = (tags: ETag[]) => {
+        const uniqueTags = new Set(tags);
+        return Array.from(uniqueTags);
     }
 
 
@@ -59,6 +62,7 @@ function useProject(name: EProject) {
 
         return prjRefLinks;
     }
+
 
     // to sanitize incoming data 
 
@@ -97,8 +101,6 @@ function useProject(name: EProject) {
                 prj.thumbnail = DefaultThumbnail;
                 prj.refLinks = [];
                 break;
-
-
         }
 
         return prj;
@@ -106,11 +108,12 @@ function useProject(name: EProject) {
 
     useEffect(() => {
         const prj = createProjectObj();
+        const uniqueTags = sanitizeTagCollection(prj.tags);
 
         setTitle(prj.title);
         setType(prj.type);
         setShortDescr(prj.shortDescr);
-        setTags(prj.tags);
+        setTags(uniqueTags);
         setThumbnail(prj.thumbnail);
         setRefLinks([...prj.refLinks]);
 

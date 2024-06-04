@@ -30,8 +30,10 @@ function ProjectCard(props: IProjectCard) {
     } = useProject(name);
 
     const MAX_TAGS_TO_DISPLAY = 3;
-    const displayShowMoreTag = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
+    const displayableTags = tags && tags.slice(0, MAX_TAGS_TO_DISPLAY);
 
+    const hasMoreTags = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
+    const popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
     return (
         <div
             className='rs-project'
@@ -62,7 +64,7 @@ function ProjectCard(props: IProjectCard) {
                         className={`tag-container`}
                     >
                         {
-                            tags.map((tag: ETag) =>
+                            displayableTags.map((tag: ETag) =>
                                 <Tag
                                     key={`${name}-${tag}`}
                                     name={tag}
@@ -70,9 +72,9 @@ function ProjectCard(props: IProjectCard) {
                             )
                         }
                         {
-                            displayShowMoreTag &&
+                            hasMoreTags && popoverTags.length > 0 &&
                             <ShowMoreTagsTrigger
-                                tags={tags}
+                                tags={popoverTags}
                             />
                         }
                     </div>

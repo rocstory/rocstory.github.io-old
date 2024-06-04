@@ -20,6 +20,8 @@ function useTag(name: ETag) {
                 return 'JavaScript';
             case ETag.React:
                 return 'React';
+            case ETag.Github:
+                return 'Github';
             default:
                 return '';
         }

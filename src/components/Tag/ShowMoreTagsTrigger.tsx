@@ -20,7 +20,7 @@ function ShowMoreTagsTrigger(props: ITagCmpt) {
         <Popover id="popover-basic">
             {/* <Popover.Header as="h3">Popover right</Popover.Header> */}
             <Popover.Body>
-                <ul className={`popover-tags-list`}>
+                <ul className={`popover-tags-list scrollable`}>
                     {
                         tags.map(tag =>
                             <TagPopoverCard key={`popover-tag-${tag}`} name={tag} />

@@ -30,7 +30,18 @@ export default {
         type: EProjectType.WebDevelopment,
         shortDescr: "This is a test project with a really long string that repeats itself. This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.",
         tags: [
-            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React
+            ETag.Html,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React,
+            ETag.Html
         ],
         refLinks: [
             {
