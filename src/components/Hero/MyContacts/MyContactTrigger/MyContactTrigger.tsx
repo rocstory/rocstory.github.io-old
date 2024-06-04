@@ -5,7 +5,7 @@ import { IMyContact } from '../../../../interfaces/IMyContact';
 import RSIcon from '../../../RSIcon/RSIcon';
 import { ERSIcon } from '../../../../enums/ERSIcons';
 import { useEffect, useState } from 'react';
-import { getMyContactIconName } from '../../../../helpers/rsIconHelper';
+import { getIconName } from '../../../../helpers/rsIconHelper';
 
 export interface IMyContactTrigger extends IMyContact {
     icon?: string
@@ -18,7 +18,7 @@ function MyContactTrigger({ name, src, icon, brandCN }: IMyContactTrigger) {
 
 
     useEffect(() => {
-        const icon = getMyContactIconName(name);
+        const icon = getIconName(name);
         setIconName(icon);
     }, [])
 

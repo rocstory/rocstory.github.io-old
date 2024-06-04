@@ -14,11 +14,8 @@ function ShowMoreTagsTrigger(props: ITagCmpt) {
     const {
         tags
     } = props
-
-    // const { label, iconName, tagClassName } = useTag(name);
     const popover = (
         <Popover id="popover-basic">
-            {/* <Popover.Header as="h3">Popover right</Popover.Header> */}
             <Popover.Body>
                 <ul className={`popover-tags-list scrollable`}>
                     {

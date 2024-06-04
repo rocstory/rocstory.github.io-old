@@ -1,7 +1,7 @@
 import { Button } from "react-bootstrap";
 import { IRefLink } from "../../interfaces/IRefLink";
 import { useEffect, useState } from "react";
-import { getIconName, getRefLinkIconName } from "../../helpers/rsIconHelper";
+import { getIconName } from "../../helpers/rsIconHelper";
 import { ERSIcon } from "../../enums/ERSIcons";
 import RSIcon from "../RSIcon/RSIcon";
 import "./RefLinkTrigger.scss";
