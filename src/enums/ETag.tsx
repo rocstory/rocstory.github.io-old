@@ -1,6 +1,7 @@
 export enum ETag {
-    css = "css",
-    html = "html",
-    javascript = "javascript",
-    react = "react"
+    Css = "css",
+    Html = "html",
+    Javascript = "javascript",
+    React = "react",
+    Github = "github"
 }

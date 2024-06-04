@@ -2,7 +2,11 @@
 import { faPlay, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram, faLinkedin, faGithub,
-    faDiscord
+    faDiscord,
+    faCss3,
+    faHtml5,
+    faJs,
+    faReact
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import { ERSIcon } from "../../enums/ERSIcons";
@@ -26,6 +30,14 @@ function useRSIcon(name: ERSIcon) {
                 return faDiscord;
             case ERSIcon.Play:
                 return faPlay;
+            case ERSIcon.CSS:
+                return faCss3;
+            case ERSIcon.HTML:
+                return faHtml5;
+            case ERSIcon.Javascript:
+                return faJs;
+            case ERSIcon.React:
+                return faReact;
             default:
                 return faQuestionCircle;
         }
@@ -41,10 +53,19 @@ function useRSIcon(name: ERSIcon) {
                 return 'instagram';
             case ERSIcon.LinkedIn:
                 return 'linkedin';
+
             case ERSIcon.Play:
-                return 'play'
+                return 'play';
+            case ERSIcon.CSS:
+                return 'css';
+            case ERSIcon.HTML:
+                return 'html';
+            case ERSIcon.Javascript:
+                return 'javascript';
+            case ERSIcon.React:
+                return 'react';
             default:
-                return 'basic'
+                return 'basic';
         }
     }
     useEffect(() => {

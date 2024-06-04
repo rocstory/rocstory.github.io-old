@@ -8,10 +8,10 @@ export default {
         type: EProjectType.WebDevelopment,
         shortDescr: "This project leverages React and TypeScript to craft modern, scalable web applications with a focus on reliability and developer efficiency. By harnessing React's component-based architecture and TypeScript's static typing, it ensures robustness and maintainability in the codebase.",
         tags: [
-            ETag.css,
-            ETag.html,
-            ETag.javascript,
-            ETag.react
+            ETag.Css,
+            ETag.Html,
+            ETag.Javascript,
+            ETag.React
         ],
         refLinks: [
             {

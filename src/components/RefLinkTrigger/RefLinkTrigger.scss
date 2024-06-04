@@ -1,11 +1,14 @@
 @use '../../styling/main.scss' as main;
+@use '../../styling/brandColors.scss' as brand;
+
+$triggerSize: 3em;
 
 .reflink-trigger {
-    // border: 2px solid red;
+    // border: 0.5px solid black;
     border-radius: 0.5em;
-    width: 5em !important;
-    height: 5em !important;
-    background-color: #ededed;
+    width: $triggerSize !important;
+    height: $triggerSize !important;
+    background-color: main.$rsBlack;
     
     display: flex;
     justify-content: center;
@@ -14,13 +17,24 @@
     text-decoration:  none;
 
     i.rsIcon {
-        font-size: 35px;
+        font-size: 29px;
+        color: main.$rsWhite;
     }
+}
 
+.reflink-trigger-wrapper {
     p {
         margin: 0;
-        font-size: 0.6em;
+        font-size: 0.8em;
         color: main.$rsTextDark;
+        text-transform: capitalize;
     }
-    
+}
+
+.reflink-trigger:hover {
+    background-color: main.$rsWhite;
+    i {
+        color: main.$rsAccentColor;
+    }
+
 }

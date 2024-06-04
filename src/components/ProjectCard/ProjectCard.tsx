@@ -5,6 +5,8 @@ import { IProject } from "../../interfaces/IProject";
 import useProject from "../../hooks/useProject";
 import "./ProjectCard.scss";
 import RefLinkTrigger from "../RefLinkTrigger/RefLinkTrigger";
+import { ETag } from "../../enums/ETag";
+import Tag from "../Tag/Tag";
 
 interface IProjectCard {
     name: EProject
@@ -39,7 +41,7 @@ function ProjectCard(props: IProjectCard) {
             </div>
 
             <div
-                className={`prj-descr-wrapper`}
+                className={`prj-descr-wrapper shadow`}
             >
                 <div
                     className={`prj-descr`}
@@ -52,9 +54,16 @@ function ProjectCard(props: IProjectCard) {
                         {shortDescr}
                     </div>
                     <div
-                        className={``}
+                        className={`tag-container`}
                     >
-                        Tags here
+                        {
+                            tags.map((tag: ETag) =>
+                                <Tag
+                                    key={`${name}-${tag}`}
+                                    name={tag}
+                                />
+                            )
+                        }
                     </div>
                 </div>
 

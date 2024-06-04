@@ -1,0 +1,18 @@
+@use '../../styling/main.scss' as main;
+
+.rs-tag {
+    padding: 4px 12px;
+    text-transform: capitalize;
+    background-color: main.$rsBlack; //#e9e5e5;
+    color: main.$rsTextLight;
+    border-radius: 0.5em;
+    
+    i {
+        margin-right: 2px;
+        color: main.$rsTextLight !important;
+    }
+}
+
+.rs-tag:hover {
+    cursor: default;
+}

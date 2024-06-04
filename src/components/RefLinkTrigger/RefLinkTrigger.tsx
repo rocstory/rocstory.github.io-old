@@ -38,15 +38,18 @@ function RefLinkTrigger(props: IRefLink) {
 
 
     return (
-        <Button
-            className={`reflink-trigger shadow`}
-            bsPrefix={'rsbtn'}
-            variant={' '}
-            href={src}
-            target={'_blank'}
-            rel={'noopener noreferrer'}
-        >
-            {iconName && <RSIcon name={iconName} />}
+        <div className={'reflink-trigger-wrapper'}>
+            <Button
+                className={`reflink-trigger shadow`}
+                bsPrefix={'rsbtn'}
+                variant={' '}
+                href={src}
+                target={'_blank'}
+                rel={'noopener noreferrer'}
+            >
+                {iconName && <RSIcon name={iconName} />}
+
+            </Button>
             <p>
                 {
                     label ?
@@ -55,7 +58,8 @@ function RefLinkTrigger(props: IRefLink) {
                         formattedLabel
                 }
             </p>
-        </Button>
+        </div>
+
     )
 }
 

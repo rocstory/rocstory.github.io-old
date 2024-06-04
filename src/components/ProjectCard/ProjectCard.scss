@@ -1,5 +1,7 @@
+@use '../../styling/main.scss' as main;
+
 $thumbnailSize: 18em;
-$descrWrapperColor: black;
+$descrWrapperColor: main.$rsBlack;
 
 .rs-project {
     display: flex;
@@ -9,7 +11,7 @@ $descrWrapperColor: black;
     .prj-thumbnail-wrapper {
         width: $thumbnailSize;
         height: $thumbnailSize;
-        border: 10px solid black;
+        border: 10px solid main.$rsBlack;
         border-radius: 0.2em;
     }
     .prj-descr-wrapper {
@@ -20,6 +22,8 @@ $descrWrapperColor: black;
         width: 50em;
         display: flex;
         flex-direction: row;
+        border-radius: 0 0.3em 0.3em 0;
+        border-left: none;
     }
 
     .prj-descr {
@@ -28,14 +32,27 @@ $descrWrapperColor: black;
         height: 16em;
         width: 45em;
         padding: 10px;
+        color: main.$rsTextDark;
 
         h1, h2 {
+            // color: main.$rsTextDark;
             text-transform: capitalize;
             text-align: left;
         }
 
         .prj-short-descr {
             text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+            > * {
+                margin-right: 10px;
+            }
         }
     }
 
@@ -45,8 +62,13 @@ $descrWrapperColor: black;
         flex-wrap: nowrap;
         margin: 0 0.4em;
         
+        > :first-child {
+            margin-top: 1em;
+        }
+
         > * {
-            margin: 0.6em 0;
+            // margin: 0.5em 0;
+            margin-bottom: 0.5em;
         }
     }
 
