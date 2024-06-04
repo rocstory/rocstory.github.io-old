@@ -17,6 +17,10 @@ $descrWrapperSize: 38em;
         height: $thumbnailSize;
         border: 6px solid main.$rsBlack;
         border-radius: 0.2em;
+        img {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .prj-descr-wrapper {
