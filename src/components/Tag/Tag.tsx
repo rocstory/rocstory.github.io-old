@@ -25,7 +25,12 @@ function Tag(props: ITagCmpt) {
                     <RSIcon name={iconName} />
                 </i>
             }
-            {label}
+            {
+                label &&
+                <p>
+                    {label}
+                </p>
+            }
         </div>
 
     )

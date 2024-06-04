@@ -1,6 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import { EProject } from '../../enums/EProject';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import "./ProjectPage.scss";
+import "../page.scss";
 
 function ProjectsPage() {
 
@@ -11,17 +13,22 @@ function ProjectsPage() {
 
     return (
         <Container
-            // className='rs-hero'
+            className='project-page page debugr'
             fluid
         >
-            {
-                visibleProjects.map((projectName) =>
-                    <ProjectCard
-                        key={`prj-${projectName}`}
-                        name={projectName}
-                    />
-                )
-            }
+            <div
+                className={`project-list debugb`}
+            >
+                {
+                    visibleProjects.map((projectName) =>
+                        <ProjectCard
+                            key={`prj-${projectName}`}
+                            name={projectName}
+                        />
+                    )
+                }
+            </div>
+
         </Container>
     )
 }

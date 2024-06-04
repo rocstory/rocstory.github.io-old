@@ -1,7 +1,9 @@
 @use '../../styling/main.scss' as main;
 @use '../../styling/brandColors.scss' as brand;
 
-$triggerSize: 3em;
+$triggerSize: 2em;
+$iconSize: 1.2em;
+$triggerLabelFontSize: 0.6em;
 
 .reflink-trigger {
     // border: 0.5px solid black;
@@ -17,7 +19,7 @@ $triggerSize: 3em;
     text-decoration:  none;
 
     i.rsIcon {
-        font-size: 29px;
+        font-size: $iconSize;
         color: main.$rsWhite;
     }
 }
@@ -25,7 +27,7 @@ $triggerSize: 3em;
 .reflink-trigger-wrapper {
     p {
         margin: 0;
-        font-size: 0.8em;
+        font-size: $triggerLabelFontSize;
         color: main.$rsTextDark;
         text-transform: capitalize;
     }

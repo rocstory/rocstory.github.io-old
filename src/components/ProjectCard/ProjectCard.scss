@@ -1,7 +1,11 @@
 @use '../../styling/main.scss' as main;
 
-$thumbnailSize: 18em;
-$descrWrapperColor: main.$rsBlack;
+$thumbnailSize: 12em;
+$titleSize: 1.4rem;
+$typeSize: 0.9rem;
+$descrFontSize: 12px;
+$descrWrapperColor: #636363; //main.$rsBlack;
+$descrWrapperSize: 38em;
 
 .rs-project {
     display: flex;
@@ -11,15 +15,16 @@ $descrWrapperColor: main.$rsBlack;
     .prj-thumbnail-wrapper {
         width: $thumbnailSize;
         height: $thumbnailSize;
-        border: 10px solid main.$rsBlack;
+        border: 6px solid main.$rsBlack;
         border-radius: 0.2em;
     }
+
     .prj-descr-wrapper {
         border-color: $descrWrapperColor;
         border-style: solid;
         border-width: 2px 2px 2px 0px;
         margin: auto 0;
-        width: 50em;
+        width: $descrWrapperSize;
         display: flex;
         flex-direction: row;
         border-radius: 0 0.3em 0.3em 0;
@@ -27,25 +32,40 @@ $descrWrapperColor: main.$rsBlack;
     }
 
     .prj-descr {
+        // border: 2px solid red;
         margin: auto 0;
         margin-left: 0px;
-        height: 16em;
-        width: 45em;
-        padding: 10px;
+        height: calc($thumbnailSize - ($thumbnailSize * .10));
+        width: 35em;
+        padding: 0 10px;
         color: main.$rsTextDark;
 
+        display: flex;
+        flex-direction: column;
+        
         h1, h2 {
             // color: main.$rsTextDark;
             text-transform: capitalize;
             text-align: left;
         }
 
+        h1 {
+            margin-top: 10px;
+            font-size: $titleSize;
+        }
+        
+        h2 {
+            font-size: $typeSize;
+        }
+
         .prj-short-descr {
             text-align: left;
             margin-bottom: 5px;
+            font-size: $descrFontSize;
         }
 
         .tag-container {
+            margin: auto 0;
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
@@ -72,4 +92,8 @@ $descrWrapperColor: main.$rsBlack;
         }
     }
 
+}
+
+.rs-project:hover {
+    cursor: pointer;
 }

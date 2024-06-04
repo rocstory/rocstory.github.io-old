@@ -24,7 +24,8 @@ function ProjectCard(props: IProjectCard) {
         shortDescr,
         tags,
         thumbnail,
-        refLinks
+        refLinks,
+        formatProjectType
     } = useProject(name);
 
     return (
@@ -47,7 +48,7 @@ function ProjectCard(props: IProjectCard) {
                     className={`prj-descr`}
                 >
                     <h1>{title}</h1>
-                    <h2>{type}</h2>
+                    <h2>{formatProjectType(type)}</h2>
                     <div
                         className={`prj-short-descr`}
                     >

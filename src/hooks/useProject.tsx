@@ -40,6 +40,15 @@ function useProject(name: EProject) {
 
     }
 
+    const formatProjectType = (prjType: EProjectType) => {
+        switch (prjType) {
+            case EProjectType.WebDevelopment:
+                return 'Web Development';
+            default:
+                return '';
+        }
+    }
+
     const getShortDescr = () => {
         switch (name) {
             case EProject.TwinlandeSuperStore:
@@ -118,7 +127,8 @@ function useProject(name: EProject) {
         shortDescr,
         tags,
         thumbnail,
-        refLinks
+        refLinks,
+        formatProjectType
     }
 }
 

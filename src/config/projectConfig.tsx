@@ -6,7 +6,7 @@ export default {
     twinlandeSuperstore: {
         title: "twinlande superstore",
         type: EProjectType.WebDevelopment,
-        shortDescr: "This project leverages React and TypeScript to craft modern, scalable web applications with a focus on reliability and developer efficiency. By harnessing React's component-based architecture and TypeScript's static typing, it ensures robustness and maintainability in the codebase.",
+        shortDescr: "This project leverages React and TypeScript to craft modern, scalable web applications with a focus on reliability and developer efficiency.",
         tags: [
             ETag.Css,
             ETag.Html,
