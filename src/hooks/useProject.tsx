@@ -7,84 +7,43 @@ import { EProjectType } from "../enums/EProjectType";
 import { IRefLink } from "../interfaces/IRefLink";
 import { ERefLinkType } from "../enums/ERefLinkType";
 import prjConfig from "../config/projectConfig";
+import { ETag } from "../enums/ETag";
 
 const SAMPLE_TEXT = "This project leverages React and TypeScript to craft modern, scalable web applications with a focus on reliability and developer efficiency. By harnessing React's component-based architecture and TypeScript's static typing, it ensures robustness and maintainability in the codebase."
 
+interface IProjectObj {
+    title: string,
+    type: EProjectType,
+    shortDescr: string,
+    tags: ETag[],
+    thumbnail: string,
+    refLinks: IRefLink[],
+}
+
+
 function useProject(name: EProject) {
-    const [title, setTitle] = useState<string>('Test Project');
+    const [title, setTitle] = useState<string>('');
     const [type, setType] = useState<EProjectType>(EProjectType.WebDevelopment);
     const [shortDescr, setShortDescr] = useState<string>(SAMPLE_TEXT);
     const [tags, setTags] = useState<any>(['a', 'b', 'c', 'd']);
     const [thumbnail, setThumbnail] = useState<string>(DefaultThumbnail);
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
 
-    const getTitle = () => {
-        let formattedTitle = String(name);
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                formattedTitle = prjConfig.twinlandeSuperstore.title;
-                break;
-
-        }
-        return formattedTitle;
-    }
-
-    const getType = () => {
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                return prjConfig.twinlandeSuperstore.type;
-            default:
-                return EProjectType.WebDevelopment
-
-        }
-
-    }
-
     const formatProjectType = (prjType: EProjectType) => {
         switch (prjType) {
             case EProjectType.WebDevelopment:
                 return 'Web Development';
+
             default:
                 return '';
         }
     }
 
-    const getShortDescr = () => {
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                return prjConfig && prjConfig.twinlandeSuperstore && prjConfig.twinlandeSuperstore.shortDescr;
-            default:
-                return '';
-        }
-    }
 
-    const getTags = () => {
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                return prjConfig.twinlandeSuperstore.tags;
-            default:
-                return [];
 
-        }
-    }
-
-    const getThumbnail = () => {
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                return DefaultThumbnail;
-            default:
-                return DefaultThumbnail;
-        }
-    }
-
-    const getRefLinks = () => {
-        let configRefLinks: any = [];
+    const getPrjRefLinks = (configRefLinks: any[]) => {
+        // let configRefLinks: any = refLinks;
         let prjRefLinks: IRefLink[] = [];
-        switch (name) {
-            case EProject.TwinlandeSuperStore:
-                configRefLinks = prjConfig.twinlandeSuperstore.refLinks;
-                break;
-        }
 
         if (configRefLinks && configRefLinks.length > 0) {
             configRefLinks.map((link: any) => {
@@ -99,23 +58,61 @@ function useProject(name: EProject) {
         }
 
         return prjRefLinks;
+    }
 
+    // to sanitize incoming data 
+
+    const createProjectObj = () => {
+        let prj: IProjectObj = {
+            title: '',
+            type: EProjectType.WebDevelopment,
+            shortDescr: '',
+            tags: [],
+            thumbnail: DefaultThumbnail,
+            refLinks: []
+        };
+
+        switch (name) {
+            case EProject.TwinlandeSuperStore:
+                prj.title = prjConfig.twinlandeSuperstore.title;
+                prj.type = prjConfig.twinlandeSuperstore.type;
+                prj.shortDescr = prjConfig.twinlandeSuperstore.shortDescr;
+                prj.tags = prjConfig.twinlandeSuperstore.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.twinlandeSuperstore.refLinks);
+                break;
+            case EProject.TestProject:
+                prj.title = prjConfig.testProject.title;
+                prj.type = prjConfig.testProject.type;
+                prj.shortDescr = prjConfig.testProject.shortDescr;
+                prj.tags = prjConfig.testProject.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.testProject.refLinks);
+                break;
+            default:
+                prj.title = 'Undefined Project';
+                prj.type = EProjectType.Unknown;
+                prj.shortDescr = '';
+                prj.tags = [];
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = [];
+                break;
+
+
+        }
+
+        return prj;
     }
 
     useEffect(() => {
-        const prjTitle = getTitle();
-        const prjType = getType();
-        const prjShortDescr = getShortDescr();
-        const prjTags = getTags();
-        const prjThumbnail = getThumbnail();
-        const referenceLinks = getRefLinks();
+        const prj = createProjectObj();
 
-        setTitle(prjTitle);
-        setType(prjType);
-        setShortDescr(prjShortDescr);
-        setTags(prjTags);
-        setThumbnail(prjThumbnail);
-        setRefLinks([...referenceLinks]);
+        setTitle(prj.title);
+        setType(prj.type);
+        setShortDescr(prj.shortDescr);
+        setTags(prj.tags);
+        setThumbnail(prj.thumbnail);
+        setRefLinks([...prj.refLinks]);
 
     }, [])
 

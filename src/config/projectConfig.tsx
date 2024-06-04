@@ -24,5 +24,28 @@ export default {
             }
         ]
 
+    },
+    testProject: {
+        title: "test project",
+        type: EProjectType.WebDevelopment,
+        shortDescr: "This is a test project with a really long string that repeats itself. This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.This is a test project with a really long string that repeats itself.",
+        tags: [
+            ETag.Css, ETag.Css, ETag.Github, ETag.Javascript, ETag.React
+        ],
+        refLinks: [
+            {
+                src: '.',
+                type: ERefLinkType.RepoLink,
+            },
+            {
+                src: ".",
+                type: ERefLinkType.DemoLink,
+            },
+            {
+                src: '.',
+                type: ERefLinkType.OtherLink,
+                label: 'TEST Link'
+            }
+        ]
     }
 }

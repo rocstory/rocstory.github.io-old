@@ -1,3 +1,4 @@
 export enum EProjectType {
-    WebDevelopment = "web-development"
+    WebDevelopment = "web-development",
+    Unknown = "unknown",
 }
