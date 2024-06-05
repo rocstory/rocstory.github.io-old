@@ -10,6 +10,18 @@ export enum ERSIcon {
     HTML = "html",
     Javascript = "javascript",
     React = "react",
+    Firebase = "firebase",
+    Arduino = "arduino",
+    CSharp = "csharp",
+    Cpp = "cpp",
+    Fritzing = "fritzing",
+    MongoDB = "mongodb",
+    OpenSCAD = "openscad",
+    PostgreSQL = "postgreSQL",
+    Python = "python",
+    RaspberryPi = "raspberry-pi",
+    Twitter = "twitter",
+    TypeScript = "typescript",
 
     // Solids
     Play = "play",

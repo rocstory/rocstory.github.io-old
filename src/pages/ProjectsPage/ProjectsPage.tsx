@@ -8,6 +8,13 @@ function ProjectsPage() {
 
     const visibleProjects = [
         EProject.TwinlandeSuperStore,
+        EProject.ColonialCarnival,
+        EProject.ChevEscape,
+        EProject.RevealingRoc,
+        EProject.CrayonGITRG,
+        EProject.MocapGITRG,
+        EProject.PawBytesCafe,
+        EProject.LovelyFeathers,
         EProject.TestProject
     ]
 

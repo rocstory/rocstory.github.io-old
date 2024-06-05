@@ -3,52 +3,101 @@ import { ETag } from "../../enums/ETag";
 import './Tag.scss';
 import { getIconName } from "../../helpers/rsIconHelper";
 import { ERSIcon } from "../../enums/ERSIcons";
+import { icon } from "@fortawesome/fontawesome-svg-core";
 
-
+interface ITagObj {
+    label: string,
+    className: string,
+}
 function useTag(name: ETag) {
     const [label, setLabel] = useState<string>('');
     const [iconName, setIconName] = useState<ERSIcon>();
     const [tagClassName, setTagClassName] = useState<string>();
 
-    const getTagLabel = () => {
+    const createTagObj = () => {
+        let tagObj: ITagObj = {
+            label: '',
+            className: '',
+        }
         switch (name) {
             case ETag.Css:
-                return 'CSS';
+                tagObj.label = 'CSS';
+                tagObj.className = 'css';
+                break;
             case ETag.Html:
-                return 'HTML';
+                tagObj.label = 'HTML';
+                tagObj.className = 'html';
+                break;
             case ETag.Javascript:
-                return 'JavaScript';
+                tagObj.label = 'JavaScript';
+                tagObj.className = 'javascript';
+                break;
             case ETag.React:
-                return 'React';
+                tagObj.label = 'React';
+                tagObj.className = 'react';
+                break;
             case ETag.Github:
-                return 'Github';
-            default:
-                return '';
+                tagObj.label = 'Github';
+                tagObj.className = 'github';
+                break;
+            case ETag.Arduino:
+                tagObj.label = 'Arduino';
+                tagObj.className = 'arduino';
+                break;
+            case ETag.CSharp:
+                tagObj.label = 'C#';
+                tagObj.className = 'csharp';
+                break;
+            case ETag.Cpp:
+                tagObj.label = 'C++';
+                tagObj.className = "cpp"
+                break;
+            case ETag.Firebase:
+                tagObj.label = "Firebase";
+                tagObj.className = "firebase";
+                break;
+            case ETag.Fritzing:
+                tagObj.label = "Fritzing";
+                tagObj.className = "fritzing";
+                break;
+            case ETag.MongoDB:
+                tagObj.label = "MongoDB";
+                tagObj.className = "mongodb";
+                break;
+            case ETag.OpenSCAD:
+                tagObj.label = "OpenSCAD";
+                tagObj.className = "openscad";
+                break;
+            case ETag.PostgreSQL:
+                tagObj.label = "PostgreSQL";
+                tagObj.className = "postgresql";
+                break;
+            case ETag.Python:
+                tagObj.label = "Python";
+                tagObj.className = "python";
+                break;
+            case ETag.RaspberryPi:
+                tagObj.label = "Raspberry Pi";
+                tagObj.className = "raspberrypi";
+                break;
+            case ETag.Twitter:
+                tagObj.label = "Twitter";
+                tagObj.className = "twitter";
+                break;
+            case ETag.TypeScript:
+                tagObj.label = "typesscript";
+                tagObj.className = "typescript";
+                break;
         }
-    }
-
-    const getTagClassName = () => {
-        switch (name) {
-            case ETag.Css:
-                return 'css';
-            case ETag.Html:
-                return 'css';
-            case ETag.Javascript:
-                return 'javascript';
-            case ETag.React:
-                return 'react';
-            default:
-                return '';
-        }
+        return tagObj;
     }
 
     useEffect(() => {
-        const lbl = getTagLabel();
         const icoName = getIconName(name);
-        const className = getTagClassName();
-        setLabel(lbl);
+        const tagObj = createTagObj();
+        setLabel(tagObj.label);
         setIconName(icoName);
-        setTagClassName(className);
+        setTagClassName(tagObj.className);
 
     }, [])
 

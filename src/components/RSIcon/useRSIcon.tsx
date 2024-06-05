@@ -1,18 +1,26 @@
 
-import { faPlay, faPlus, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBoltLightning, faDatabase, faFireFlameCurved, faLaptopCode, faLeaf, faPlay, faPlus, faQuestionCircle, faRobot } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram, faLinkedin, faGithub,
     faDiscord,
     faCss3,
     faHtml5,
     faJs,
-    faReact
+    faReact,
+    faCuttlefish,
+    faPython,
+    faRaspberryPi,
+    faTwitter
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useState } from "react";
 import { ERSIcon } from "../../enums/ERSIcons";
-import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
+import { faFileCode, faLightbulb } from "@fortawesome/free-regular-svg-icons";
 
 
+interface IRSIconObj {
+    icon: any,
+    className: string
+}
 
 function useRSIcon(name: ERSIcon) {
     const [icon, setIcon] = useState<any>(faQuestionCircle);
@@ -20,63 +28,112 @@ function useRSIcon(name: ERSIcon) {
 
 
     const getRSIcon = () => {
+
+        let iconObj: IRSIconObj = {
+            icon: undefined,
+            className: '',
+        }
+
         switch (name) {
             case ERSIcon.LinkedIn:
-                return faLinkedin
+                iconObj.icon = faLinkedin
+                iconObj.className = 'linkedin';
+                break;
             case ERSIcon.Github:
-                return faGithub
+                iconObj.icon = faGithub
+                iconObj.className = 'github';
+                break;
             case ERSIcon.Instagram:
-                return faInstagram
+                iconObj.icon = faInstagram
+                iconObj.className = 'instagram';
+                break;
             case ERSIcon.Discord:
-                return faDiscord;
+                iconObj.icon = faDiscord;
+                iconObj.className = 'discord';
+                break;
             case ERSIcon.Play:
-                return faPlay;
+                iconObj.icon = faPlay;
+                iconObj.className = 'play';
+                break;
             case ERSIcon.CSS:
-                return faCss3;
+                iconObj.icon = faCss3;
+                iconObj.className = 'css';
+                break;
             case ERSIcon.HTML:
-                return faHtml5;
+                iconObj.icon = faHtml5;
+                iconObj.className = 'html';
+                break;
             case ERSIcon.Javascript:
-                return faJs;
+                iconObj.icon = faJs;
+                iconObj.className = 'javascript';
+                break;
             case ERSIcon.React:
-                return faReact;
+                iconObj.icon = faReact;
+                iconObj.className = 'react';
+                break;
             case ERSIcon.Plus:
-                return faPlus;
+                iconObj.icon = faPlus;
+                iconObj.className = 'plus';
+                break;
+            case ERSIcon.Firebase:
+                iconObj.icon = faFireFlameCurved
+                iconObj.className = 'firebase';
+                break;
+            case ERSIcon.Arduino:
+                iconObj.icon = faRobot;
+                iconObj.className = 'arduino';
+                break;
+            case ERSIcon.CSharp:
+            case ERSIcon.Cpp:
+                iconObj.icon = faCuttlefish;
+                iconObj.className = 'cpp';
+                break;
+            case ERSIcon.Fritzing:
+                iconObj.icon = faBoltLightning;
+                iconObj.className = 'fritzing';
+                break;
+            case ERSIcon.MongoDB:
+                iconObj.icon = faLeaf;
+                iconObj.className = 'mongodb';
+                break;
+            case ERSIcon.OpenSCAD:
+                iconObj.icon = faFileCode;
+                iconObj.className = 'openscad';
+                break;
+            case ERSIcon.PostgreSQL:
+                iconObj.icon = faDatabase;
+                iconObj.className = 'postgresql';
+                break;
+            case ERSIcon.Python:
+                iconObj.icon = faPython;
+                iconObj.className = 'python';
+                break;
+            case ERSIcon.RaspberryPi:
+                iconObj.icon = faRaspberryPi;
+                iconObj.className = 'raspberrypi';
+                break;
+            case ERSIcon.Twitter:
+                iconObj.icon = faTwitter;
+                iconObj.className = 'twitter';
+                break;
+            case ERSIcon.TypeScript:
+                iconObj.icon = faLaptopCode;
+                iconObj.className = 'typescript';
+                break;
             default:
-                return faLightbulb;
+                iconObj.icon = faLightbulb;
+                iconObj.className = 'bs-icon';
         }
+
+        return iconObj;
     }
 
     // icon classnames must correspond with the classnames in icons.scss
-    const getIconClassName = () => {
-        switch (name) {
-            case ERSIcon.Github:
-                return 'github';
-            case ERSIcon.Discord:
-                return 'discord';
-            case ERSIcon.Instagram:
-                return 'instagram';
-            case ERSIcon.LinkedIn:
-                return 'linkedin';
 
-            case ERSIcon.Play:
-                return 'play';
-            case ERSIcon.CSS:
-                return 'css';
-            case ERSIcon.HTML:
-                return 'html';
-            case ERSIcon.Javascript:
-                return 'javascript';
-            case ERSIcon.React:
-                return 'react';
-            default:
-                return 'basic';
-        }
-    }
     useEffect(() => {
         const ico = getRSIcon();
-        const iconClassName = getIconClassName();
-        setIcon(ico);
-        setIconClassName(iconClassName);
+        setIcon(ico.icon);
+        setIconClassName(ico.className);
     }, [])
 
     return {

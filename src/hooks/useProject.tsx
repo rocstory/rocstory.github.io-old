@@ -31,9 +31,14 @@ function useProject(name: EProject) {
         switch (prjType) {
             case EProjectType.WebDevelopment:
                 return 'Web Development';
-
-            default:
+            case EProjectType.EmbeddedSystems:
+                return 'Embedded Systems';
+            case EProjectType.GameDevelopment:
+                return 'Game Development';
+            case EProjectType.Unknown:
                 return '';
+            default:
+                return String(prjType);
         }
     }
 
@@ -77,6 +82,62 @@ function useProject(name: EProject) {
         };
 
         switch (name) {
+            case EProject.PawBytesCafe:
+                prj.title = prjConfig.crayonGitrg.title;
+                prj.type = prjConfig.crayonGitrg.type;
+                prj.shortDescr = prjConfig.crayonGitrg.shortDescr;
+                prj.tags = prjConfig.crayonGitrg.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.pawBytesCafe.refLinks);
+                break;
+            case EProject.LovelyFeathers:
+                prj.title = prjConfig.lovelyFeathers.title;
+                prj.type = prjConfig.lovelyFeathers.type;
+                prj.shortDescr = prjConfig.lovelyFeathers.shortDescr;
+                prj.tags = prjConfig.lovelyFeathers.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.lovelyFeathers.refLinks);
+                break;
+            case EProject.MocapGITRG:
+                prj.title = prjConfig.mocapGitrg.title;
+                prj.type = prjConfig.mocapGitrg.type;
+                prj.shortDescr = prjConfig.mocapGitrg.shortDescr;
+                prj.tags = prjConfig.mocapGitrg.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.mocapGitrg.refLinks);
+                break;
+            case EProject.CrayonGITRG:
+                prj.title = prjConfig.crayonGitrg.title;
+                prj.type = prjConfig.crayonGitrg.type;
+                prj.shortDescr = prjConfig.crayonGitrg.shortDescr;
+                prj.tags = prjConfig.crayonGitrg.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.crayonGitrg.refLinks);
+                break;
+            case EProject.RevealingRoc:
+                prj.title = prjConfig.revealingRoc.title;
+                prj.type = prjConfig.revealingRoc.type;
+                prj.shortDescr = prjConfig.revealingRoc.shortDescr;
+                prj.tags = prjConfig.revealingRoc.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.revealingRoc.refLinks);
+                break;
+            case EProject.ChevEscape:
+                prj.title = prjConfig.chevEscape.title;
+                prj.type = prjConfig.chevEscape.type;
+                prj.shortDescr = prjConfig.chevEscape.shortDescr;
+                prj.tags = prjConfig.chevEscape.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.chevEscape.refLinks);
+                break;
+            case EProject.ColonialCarnival:
+                prj.title = prjConfig.colonialCarnival.title;
+                prj.type = prjConfig.colonialCarnival.type;
+                prj.shortDescr = prjConfig.colonialCarnival.shortDescr;
+                prj.tags = prjConfig.colonialCarnival.tags;
+                prj.thumbnail = DefaultThumbnail;
+                prj.refLinks = getPrjRefLinks(prjConfig.colonialCarnival.refLinks);
+                break;
             case EProject.TwinlandeSuperStore:
                 prj.title = prjConfig.twinlandeSuperstore.title;
                 prj.type = prjConfig.twinlandeSuperstore.type;

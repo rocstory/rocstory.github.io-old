@@ -33,7 +33,7 @@ function ProjectCard(props: IProjectCard) {
     const displayableTags = tags && tags.slice(0, MAX_TAGS_TO_DISPLAY);
 
     const hasMoreTags = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
-    const popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
+    const popoverTags = tags // tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
     return (
         <div
             className='rs-project'
