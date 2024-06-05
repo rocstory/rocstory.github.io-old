@@ -9,6 +9,8 @@
     >li:not(:first-child) {
         border-top: 1px solid #D3D3D3;
     }
+
+    
     
 }
 
@@ -18,4 +20,5 @@
     >:first-child {
         margin-right: 5px;
     }
+    text-transform: capitalize;
 }

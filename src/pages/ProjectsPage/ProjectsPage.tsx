@@ -6,16 +6,17 @@ import "../page.scss";
 
 function ProjectsPage() {
 
-    const visibleProjects = [
-        EProject.TwinlandeSuperStore,
-        EProject.ColonialCarnival,
+    const visibleProjects: EProject[] = [
+        EProject.TestProject,
         EProject.ChevEscape,
-        EProject.RevealingRoc,
+        EProject.ColonialCarnival,
         EProject.CrayonGITRG,
+        EProject.LovelyFeathers,
         EProject.MocapGITRG,
         EProject.PawBytesCafe,
-        EProject.LovelyFeathers,
-        EProject.TestProject
+        EProject.RevealingRoc,
+        EProject.RevealingRoc,
+        EProject.TwinlandeSuperStore,
     ]
 
     return (
