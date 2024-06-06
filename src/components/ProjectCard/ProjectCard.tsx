@@ -8,15 +8,18 @@ import RefLinkTrigger from "../RefLinkTrigger/RefLinkTrigger";
 import { ETag } from "../../enums/ETag";
 import Tag from "../Tag/Tag";
 import ShowMoreTagsTrigger from "../Tag/ShowMoreTagsTrigger";
+import { EPages } from "../../enums/EPages";
 
 interface IProjectCard {
-    name: EProject
+    name: EProject,
+    handleSelPage: any
 
 }
 
 function ProjectCard(props: IProjectCard) {
     const {
-        name
+        name,
+        handleSelPage
     } = props
 
     const {
@@ -29,14 +32,19 @@ function ProjectCard(props: IProjectCard) {
         formatProjectType
     } = useProject(name);
 
+    const handleProjectClick = () => {
+        handleSelPage(EPages.ProjectDisplay, name);
+    }
+
     const MAX_TAGS_TO_DISPLAY = 3;
     const displayableTags = tags && tags.slice(0, MAX_TAGS_TO_DISPLAY);
 
     const hasMoreTags = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
-    const popoverTags = tags // tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
+    const popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
     return (
         <div
             className='rs-project'
+            onClick={handleProjectClick}
         >
             <div
                 className={`prj-thumbnail-wrapper shadow`}

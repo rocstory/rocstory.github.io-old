@@ -4,7 +4,14 @@ import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import "./ProjectPage.scss";
 import "../page.scss";
 
-function ProjectsPage() {
+
+interface IProjectsPage {
+    handleSelPage: Function
+}
+function ProjectsPage(props: IProjectsPage) {
+    const {
+        handleSelPage
+    } = props
 
     const visibleProjects: EProject[] = [
         EProject.TestProject,
@@ -32,6 +39,7 @@ function ProjectsPage() {
                         <ProjectCard
                             key={`prj-${projectName}`}
                             name={projectName}
+                            handleSelPage={handleSelPage}
                         />
                     )
                 }
