@@ -6,12 +6,16 @@ import reportWebVitals from './reportWebVitals';
 // need line 7 for bootstrap styles to load - src: https://stackoverflow.com/questions/47354472/react-bootstrap-not-styling-my-react-components
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './styling/buttons.scss';
+import PortfolioProvider from './context/PortfolioContext';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <PortfolioProvider >
+      <App />
+    </PortfolioProvider>
+
   </React.StrictMode>
 );
 

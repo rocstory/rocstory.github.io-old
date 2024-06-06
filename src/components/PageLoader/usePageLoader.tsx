@@ -6,18 +6,18 @@ import ProjectDisplayPage from "../../pages/ProjectDisplayPage/ProjectDisplayPag
 import { EProject } from "../../enums/EProject";
 
 
-function usePageLoader(pageName: EPages, handleSelPage: Function, selContent: EProject) {
+function usePageLoader(pageName: EPages) {
     const [PageComponent, setPageComponent] = useState<any>(undefined)
 
     const getPageToLoad = () => {
 
         switch (pageName) {
             case EPages.Projects:
-                return <ProjectsPage handleSelPage={handleSelPage} />
+                return <ProjectsPage />
             case EPages.ContactMe:
                 return <ContactMePage />  // contact page
             case EPages.ProjectDisplay:
-                return <ProjectDisplayPage name={selContent} />
+                return <ProjectDisplayPage />
             default:
                 return <div> Page Not Found </div>// page not found page
         }

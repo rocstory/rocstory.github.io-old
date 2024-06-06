@@ -19,7 +19,7 @@ interface IProjectObj {
 }
 
 
-function useProject(name: EProject) {
+function useProject(name: EProject | undefined) {
     const [title, setTitle] = useState<string>('');
     const [type, setType] = useState<EProjectType>(EProjectType.WebDevelopment);
     const [shortDescr, setShortDescr] = useState<string>('');

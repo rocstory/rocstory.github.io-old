@@ -3,16 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './NavBar.scss';
 import { EPages } from '../../enums/EPages';
+import { useContext } from 'react';
+import { PortfolioContext, PortfolioContextType } from '../../context/PortfolioContext';
 
-interface INavBar {
-    selPage: EPages,
-    handleSelPage: Function
-}
-function NavBar(props: INavBar) {
-    const {
-        selPage,
-        handleSelPage
-    } = props;
+function NavBar() {
+    const { selPage, handleSelPage } = useContext(PortfolioContext) as PortfolioContextType;
 
     const handleTabClick = (tabName: EPages) => {
         handleSelPage(tabName);

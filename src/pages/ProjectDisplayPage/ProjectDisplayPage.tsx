@@ -3,15 +3,12 @@ import { EProject } from '../../enums/EProject';
 import "../page.scss";
 import useProject from '../../hooks/useProject';
 import "./ProjectDisplayPage.scss";
+import { PortfolioContext, PortfolioContextType } from '../../context/PortfolioContext';
+import { useContext } from 'react';
 
-interface IProjectDisplayPage {
-    name: EProject,
-}
-function ProjectDisplayPage(props: IProjectDisplayPage) {
-    const {
-        name
-    } = props
 
+function ProjectDisplayPage() {
+    const { selProject } = useContext(PortfolioContext) as PortfolioContextType;
     const {
         title,
         type,
@@ -20,7 +17,7 @@ function ProjectDisplayPage(props: IProjectDisplayPage) {
         thumbnail,
         refLinks,
         formatProjectType
-    } = useProject(name);
+    } = useProject(selProject);
 
     return (
         <Container
@@ -51,7 +48,6 @@ function ProjectDisplayPage(props: IProjectDisplayPage) {
                 display body
 
             </div>
-            {name}
 
         </Container>
     )

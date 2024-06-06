@@ -9,17 +9,18 @@ import { ETag } from "../../enums/ETag";
 import Tag from "../Tag/Tag";
 import ShowMoreTagsTrigger from "../Tag/ShowMoreTagsTrigger";
 import { EPages } from "../../enums/EPages";
+import { useContext } from "react";
+import { PortfolioContext, PortfolioContextType } from "../../context/PortfolioContext";
 
 interface IProjectCard {
     name: EProject,
-    handleSelPage: any
 
 }
 
 function ProjectCard(props: IProjectCard) {
+    const { selProject, handleSelProject, handleSelPage } = useContext(PortfolioContext) as PortfolioContextType;
     const {
-        name,
-        handleSelPage
+        name
     } = props
 
     const {
@@ -33,7 +34,8 @@ function ProjectCard(props: IProjectCard) {
     } = useProject(name);
 
     const handleProjectClick = () => {
-        handleSelPage(EPages.ProjectDisplay, name);
+        handleSelProject(name);
+        handleSelPage(EPages.ProjectDisplay);
     }
 
     const MAX_TAGS_TO_DISPLAY = 3;

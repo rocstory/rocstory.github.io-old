@@ -3,16 +3,13 @@ import { EPages } from '../../enums/EPages';
 import usePageLoader from './usePageLoader';
 import './PageLoader.scss';
 import { EProject } from '../../enums/EProject';
+import { useContext } from 'react';
+import { PortfolioContext, PortfolioContextType } from '../../context/PortfolioContext';
 
-interface IPageLoader {
-    page: EPages;
-    handleSelPage: Function;
-    selContent: EProject;
-}
+function PageLoader() {
 
-function PageLoader({ page, handleSelPage, selContent }: IPageLoader) {
-
-    const { PageComponent } = usePageLoader(page, handleSelPage, selContent);
+    const { selPage, handleSelPage } = useContext(PortfolioContext) as PortfolioContextType;
+    const { PageComponent } = usePageLoader(selPage);
     return (
         <Container
             className='page-loader'
