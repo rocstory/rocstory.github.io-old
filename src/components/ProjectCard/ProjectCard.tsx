@@ -46,10 +46,11 @@ function ProjectCard(props: IProjectCard) {
     return (
         <div
             className='rs-project'
-            onClick={handleProjectClick}
+
         >
             <div
                 className={`prj-thumbnail-wrapper shadow`}
+                onClick={handleProjectClick}
             >
                 <Image
                     src={thumbnail}
@@ -67,6 +68,7 @@ function ProjectCard(props: IProjectCard) {
                     <h2>{formatProjectType(type)}</h2>
                     <div
                         className={`prj-short-descr`}
+                        onClick={handleProjectClick}
                     >
                         {shortDescr}
                     </div>

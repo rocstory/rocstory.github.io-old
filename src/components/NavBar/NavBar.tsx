@@ -32,7 +32,12 @@ function NavBar() {
     return (
         <Navbar sticky={`top`} className={`rs-navbar`} >
             <Container>
-                <Navbar.Brand className={`disabled`}>Malik Roc</Navbar.Brand>
+                <Navbar.Brand
+                    className={`disabled`}
+                    onClick={() => handleTabClick(EPages.Projects)}
+                >
+                    Roc
+                </Navbar.Brand>
                 <Nav className="me-auto">
                     {
                         visiblePage.map(pageName =>
