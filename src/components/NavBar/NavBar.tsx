@@ -30,7 +30,7 @@ function NavBar() {
 
     const visiblePage = [EPages.Projects, EPages.ContactMe]
     return (
-        <Navbar sticky={`top`} className={`rs-navbar`} >
+        <Navbar sticky={`top`} className={`rs-navbar shadow`} >
             <Container>
                 <Navbar.Brand
                     className={`disabled`}

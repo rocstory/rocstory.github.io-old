@@ -53,5 +53,25 @@
         top: calc(main.$rsNavbarHeight);
     }
 
+    .display-body {
+
+        .display-start-date {
+            display: flex;
+            flex-direction: left;
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+            p {
+                margin: 0 0 0 12px;
+            }
+        }
+
+        .media-display-wrapper {
+            width: 90em;
+            height: 30em;
+            margin: auto;
+        }
+    }
+
 
 }

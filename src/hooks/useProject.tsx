@@ -15,6 +15,7 @@ interface IProjectObj {
     shortDescr: string,
     tags: ETag[],
     thumbnail: string,
+    featuredImg: string,
     refLinks: IRefLink[],
 }
 
@@ -24,7 +25,8 @@ function useProject(name: EProject | undefined) {
     const [type, setType] = useState<EProjectType>(EProjectType.WebDevelopment);
     const [shortDescr, setShortDescr] = useState<string>('');
     const [tags, setTags] = useState<ETag[]>([]);
-    const [thumbnail, setThumbnail] = useState<string>(DefaultThumbnail);
+    const [thumbnail, setThumbnail] = useState<string>();
+    const [featuredImage, setFeaturedImg] = useState<string>();
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
 
     const formatProjectType = (prjType: EProjectType) => {
@@ -78,6 +80,7 @@ function useProject(name: EProject | undefined) {
             shortDescr: '',
             tags: [],
             thumbnail: DefaultThumbnail,
+            featuredImg: DefaultThumbnail,
             refLinks: []
         };
 
@@ -176,6 +179,7 @@ function useProject(name: EProject | undefined) {
         setShortDescr(prj.shortDescr);
         setTags(uniqueTags);
         setThumbnail(prj.thumbnail);
+        setFeaturedImg(prj.featuredImg);
         setRefLinks([...prj.refLinks]);
 
     }, [])
@@ -188,6 +192,7 @@ function useProject(name: EProject | undefined) {
         shortDescr,
         tags,
         thumbnail,
+        featuredImage,
         refLinks,
         formatProjectType
     }
