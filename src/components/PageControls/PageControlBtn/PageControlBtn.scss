@@ -3,19 +3,14 @@
 $triggerSize: 2em;
 
 .pg-cntrl-btn-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
     .pg-cntrl-btn {
         border: none;
         color: main.$rsMainColor;
         background-color: transparent;
-        border-radius: 0.5em;
-        // // padding: 5px 10px;
-        // width: $triggerSize;
-        // height: $triggerSize;
-        font-size: $triggerSize
+        border-radius: 0.2em;
+        font-size: $triggerSize;
     
     }
-    // p {
-    //     font-size: 0.8em;
-    //     margin: 0;
-    // }
 }

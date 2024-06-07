@@ -30,7 +30,7 @@ function ProjectDisplayPage() {
             fluid
         >
             <div
-                className={'display-header shadow'}
+                className={'display-header sticky-header shadow'}
             >
                 <PageControls displayBackBtn />
 

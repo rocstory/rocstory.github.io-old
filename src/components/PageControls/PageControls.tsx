@@ -1,14 +1,11 @@
-import Container from 'react-bootstrap/Container';
-import { EProject } from '../../enums/EProject';
-import useProject from '../../hooks/useProject';
+
 import { PortfolioContext, PortfolioContextType } from '../../context/PortfolioContext';
 import { useContext } from 'react';
-import { Button } from 'react-bootstrap';
 import { ERSIcon } from '../../enums/ERSIcons';
-import RSIcon from '../RSIcon/RSIcon';
 
 import './PageControls.scss';
 import PageControlBtn from './PageControlBtn/PageControlBtn';
+import { EPages } from '../../enums/EPages';
 
 
 type PageControlsType = {
@@ -17,12 +14,15 @@ type PageControlsType = {
 }
 
 function PageControls(props: PageControlsType) {
-    const { selProject, handleSelPage } = useContext(PortfolioContext) as PortfolioContextType;
+    const { handleSelPage, selPage } = useContext(PortfolioContext) as PortfolioContextType;
 
     const { displayBackBtn } = props
 
     const handleBackBtnTrigger = () => {
-        console.log('handling back button', typeof (selProject));
+        switch (selPage) {
+            case EPages.ProjectDisplay:
+                handleSelPage(EPages.Projects)
+        }
     }
 
 
