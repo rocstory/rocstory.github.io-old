@@ -19,7 +19,6 @@ const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     }
 
     const handleSelPage = (page: EPages) => {
-        console.log('Moving to:', page);
         setSelPage(page);
     }
 

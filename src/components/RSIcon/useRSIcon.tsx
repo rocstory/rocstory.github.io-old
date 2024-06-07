@@ -1,5 +1,5 @@
 
-import { faBoltLightning, faDatabase, faFireFlameCurved, faLaptopCode, faLeaf, faPlay, faPlus, faQuestionCircle, faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faBoltLightning, faChevronLeft, faDatabase, faFireFlameCurved, faLaptopCode, faLeaf, faPlay, faPlus, faQuestionCircle, faRobot } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram, faLinkedin, faGithub,
     faDiscord,
@@ -119,6 +119,10 @@ function useRSIcon(name: ERSIcon) {
             case ERSIcon.TypeScript:
                 iconObj.icon = faLaptopCode;
                 iconObj.className = 'typescript';
+                break;
+            case ERSIcon.ChevronLeft:
+                iconObj.icon = faChevronLeft;
+                iconObj.className = 'chevron-left';
                 break;
             default:
                 iconObj.icon = faLightbulb;

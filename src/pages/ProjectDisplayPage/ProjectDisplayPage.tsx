@@ -5,6 +5,9 @@ import useProject from '../../hooks/useProject';
 import "./ProjectDisplayPage.scss";
 import { PortfolioContext, PortfolioContextType } from '../../context/PortfolioContext';
 import { useContext } from 'react';
+import { EProjectType } from '../../enums/EProjectType';
+import RefLinkTrigger from '../../components/RefLinkTrigger/RefLinkTrigger';
+import PageControls from '../../components/PageControls/PageControls';
 
 
 function ProjectDisplayPage() {
@@ -19,26 +22,33 @@ function ProjectDisplayPage() {
         formatProjectType
     } = useProject(selProject);
 
+    const hasProjectType = type !== EProjectType.Unknown;
+
     return (
         <Container
-            className='pd-page display-page debugr'
+            className='pd-page display-page'
             fluid
         >
             <div
-                className={'display-header debugb'}
+                className={'display-header shadow'}
             >
-                <div className={`page-controls debugg`}>
-                    page controls
-                </div>
-                <div className={`display-title debugg`}>
-                    <h1>{title}</h1>
+                <PageControls displayBackBtn />
 
-                    <h2>{formatProjectType(type)}</h2>
+                <div className={`display-title`}>
+                    <p className={`title ${hasProjectType ? 'with-type' : ''}`}>{title}</p>
+                    {hasProjectType && <p className='type'>{formatProjectType(type)}</p>}
                 </div>
-                <div
-                    className='display-ref-links'
-                >
-                    ref links
+
+                <div className='display-ref-links'>
+                    {
+                        refLinks.map((refLink) =>
+                            <RefLinkTrigger
+                                src={refLink.src}
+                                type={refLink.type}
+                                label={refLink.label}
+                            />
+                        )
+                    }
                 </div>
 
             </div>

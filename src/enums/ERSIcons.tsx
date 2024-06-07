@@ -23,9 +23,11 @@ export enum ERSIcon {
     Twitter = "twitter",
     TypeScript = "typescript",
 
+
     // Solids
     Play = "play",
     Other = "other",
     Plus = "plus",
+    ChevronLeft = "chevron-left"
 
 }
