@@ -67,9 +67,11 @@
         }
 
         .media-display-wrapper {
-            width: 90em;
+            width: fit-content; //90em;
             height: 30em;
             margin: auto;
+            overflow: hidden;
+            margin-bottom: 1em;
         }
     }
 
