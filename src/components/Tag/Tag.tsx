@@ -18,7 +18,7 @@ function Tag(props: ITagCmpt) {
 
     return (
         <div
-            className={`rs-tag shadow ${tagClassName}`}
+            className={`rs-tag shadow ${withColor ? tagClassName : ''}`}
         >
             {
                 iconName &&

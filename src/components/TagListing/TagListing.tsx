@@ -18,7 +18,7 @@ function TagListing(props: TagListingType) {
     return (
         <div className={`tag-listing`}>
             {
-                tags.map(tag => <Tag name={tag} />)
+                tags.map(tag => <Tag name={tag} withColor />)
             }
 
         </div>
