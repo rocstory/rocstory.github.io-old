@@ -1,0 +1,72 @@
+import { EInfoCardType } from "../../enums/EInfoCardType"
+import InfoCard from "../InfoCard/InfoCard"
+import "./ProjectInfo.scss";
+
+
+export const AboutColonialCarnival = () => {
+
+
+
+    return (
+        <InfoCard
+            type={EInfoCardType.About}
+        >
+            <div className={`about-section`}>
+                <p>
+                    Colonial Carnival is a web application that uses HTML, CSS, JavaScript, and Firebase.
+                    This application was developed for the residents at Western Connecticut State University.
+                    It is also my very first personal project!
+                </p>
+                <div>
+                    <p>
+                        The project is a virtual carnival for students at WCSU to earn marbles (tickets) for each game to exchange for
+                        prizes such as: gift cards, stationary, and other items.
+                    </p>
+                    <ul>
+                        <li>Gift cards</li>
+                        <li>Stationary items</li>
+                        <li>Etc...</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p>
+                        I wanted to take on two challenges. The first one is building something from the ground up
+                        on my own. The second challenge was to bring something unique to my resiednts.
+                    </p>
+                    <ol>
+                        <li>Building something from the ground up on my own.</li>
+                        <li>To bring something unique to my resiednts.</li>
+                    </ol>
+                    <p>
+                        This was my personal capstone project!
+                    </p>
+                </div>
+
+
+
+            </div>
+        </InfoCard>
+    )
+}
+
+export const HighlightsColonialCarnival = () => {
+
+    return (
+        <InfoCard
+            type={EInfoCardType.Highlights}
+            isRightAligned
+        >
+            <div className={`highlights-section`}>
+                <p>
+                    Here are some of my project highlights.
+                </p>
+                <ul>
+                    <li>Awarded 'Program Of The Year'</li>
+                </ul>
+            </div>
+        </InfoCard>
+
+    )
+}
+

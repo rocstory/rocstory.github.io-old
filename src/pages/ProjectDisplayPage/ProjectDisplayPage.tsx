@@ -9,6 +9,8 @@ import { EProjectType } from '../../enums/EProjectType';
 import RefLinkTrigger from '../../components/RefLinkTrigger/RefLinkTrigger';
 import PageControls from '../../components/PageControls/PageControls';
 import MediaDisplay from '../../components/MediaDisplay/MediaDisplay';
+import TagListing from '../../components/TagListing/TagListing';
+import { ETagGroup } from '../../enums/ETagGroup';
 
 
 function ProjectDisplayPage() {
@@ -21,6 +23,9 @@ function ProjectDisplayPage() {
         thumbnail,
         featuredImage,
         refLinks,
+        aboutInfo,
+        highlightsInfo,
+        extraInfoCards,
         formatProjectType
     } = useProject(selProject);
 
@@ -55,7 +60,7 @@ function ProjectDisplayPage() {
 
             </div>
             <div
-                className={`display-body debugr`}
+                className={`display-body `}
             >
                 <div
                     className='display-start-date'
@@ -70,9 +75,21 @@ function ProjectDisplayPage() {
                         <MediaDisplay
                             featuredImage={featuredImage}
                         />
-
                     </div>
                 }
+                <div className={`tag-listing-wrapper`}>
+                    <TagListing
+                        tags={tags}
+                        groupBy={ETagGroup.Technologies}
+                    />
+                </div>
+
+                <div
+                    className={`info-card-container`}
+                >
+                    {aboutInfo && aboutInfo}
+                    {highlightsInfo && highlightsInfo}
+                </div>
 
 
             </div>

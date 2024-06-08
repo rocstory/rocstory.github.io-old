@@ -1,13 +1,16 @@
 import { Image } from "react-bootstrap";
 import { EProject } from "../enums/EProject";
-import { DefaultThumbnail, HeroImg } from "../helpers/imageHelper";
+import { ColonialCarnivalFeaturedImg, DefaultThumbnail, HeroImg } from "../helpers/imageHelper";
 import { IProject } from "../interfaces/IProject";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { EProjectType } from "../enums/EProjectType";
 import { IRefLink } from "../interfaces/IRefLink";
 import { ERefLinkType } from "../enums/ERefLinkType";
 import prjConfig from "../config/projectConfig";
 import { ETag } from "../enums/ETag";
+import { EInfoCardType } from "../enums/EInfoCardType";
+import { AboutTestProject, HighlightsTestProject } from "../components/ProjectInfo/TestProjectInfo";
+import { AboutColonialCarnival, HighlightsColonialCarnival } from "../components/ProjectInfo/ColonialCarnivalInfo";
 
 interface IProjectObj {
     title: string,
@@ -17,8 +20,18 @@ interface IProjectObj {
     thumbnail: string,
     featuredImg: string,
     refLinks: IRefLink[],
+    aboutInfo?: React.ReactNode,
+    highlightsInfo?: React.ReactNode,
+
+    extraInfoCards?: React.ReactNode[],
+
 }
 
+interface IInfoCard {
+    type: EInfoCardType,
+    label?: string,
+    component?: React.ReactNode
+}
 
 function useProject(name: EProject | undefined) {
     const [title, setTitle] = useState<string>('');
@@ -28,6 +41,10 @@ function useProject(name: EProject | undefined) {
     const [thumbnail, setThumbnail] = useState<string>();
     const [featuredImage, setFeaturedImg] = useState<string>();
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
+
+    const [aboutInfo, setAboutInfo] = useState<React.ReactNode>();
+    const [highlightsInfo, setHighlightsInfo] = useState<React.ReactNode>();
+    const [extraInfoCards, setExtraInfoCards] = useState<React.ReactNode[]>();
 
     const formatProjectType = (prjType: EProjectType) => {
         switch (prjType) {
@@ -70,6 +87,34 @@ function useProject(name: EProject | undefined) {
         return prjRefLinks;
     }
 
+    const getPrjInfoCardObjs = () => {
+        let abtInfo = undefined;
+
+        let hlInfo = undefined;
+
+        let otherInfo: React.ReactNode[] = [];
+
+        switch (name) {
+            case EProject.TestProject:
+                abtInfo = <AboutTestProject />
+                hlInfo = <HighlightsTestProject />
+                break;
+
+            case EProject.ColonialCarnival:
+                abtInfo = <AboutColonialCarnival />
+                hlInfo = <HighlightsColonialCarnival />
+                break;
+
+        }
+
+        return {
+            abtInfo,
+            hlInfo,
+            otherInfo
+        }
+
+    }
+
 
     // to sanitize incoming data 
 
@@ -81,7 +126,10 @@ function useProject(name: EProject | undefined) {
             tags: [],
             thumbnail: DefaultThumbnail,
             featuredImg: DefaultThumbnail,
-            refLinks: []
+            refLinks: [],
+            aboutInfo: undefined,
+            highlightsInfo: undefined,
+            extraInfoCards: [],
         };
 
         switch (name) {
@@ -140,6 +188,7 @@ function useProject(name: EProject | undefined) {
                 prj.tags = prjConfig.colonialCarnival.tags;
                 prj.thumbnail = DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.colonialCarnival.refLinks);
+                prj.featuredImg = ColonialCarnivalFeaturedImg;
                 break;
             case EProject.TwinlandeSuperStore:
                 prj.title = prjConfig.twinlandeSuperstore.title;
@@ -167,6 +216,11 @@ function useProject(name: EProject | undefined) {
                 break;
         }
 
+        const { abtInfo, hlInfo, otherInfo } = getPrjInfoCardObjs();
+        prj.aboutInfo = abtInfo;
+        prj.highlightsInfo = hlInfo;
+        prj.extraInfoCards = otherInfo;
+
         return prj;
     }
 
@@ -181,6 +235,9 @@ function useProject(name: EProject | undefined) {
         setThumbnail(prj.thumbnail);
         setFeaturedImg(prj.featuredImg);
         setRefLinks([...prj.refLinks]);
+        setAboutInfo(prj.aboutInfo);
+        setHighlightsInfo(prj.highlightsInfo);
+        setExtraInfoCards(prj.extraInfoCards);
 
     }, [])
 
@@ -194,6 +251,9 @@ function useProject(name: EProject | undefined) {
         thumbnail,
         featuredImage,
         refLinks,
+        aboutInfo,
+        highlightsInfo,
+        extraInfoCards,
         formatProjectType
     }
 }

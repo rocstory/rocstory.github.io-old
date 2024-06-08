@@ -5,11 +5,12 @@ import './Tag.scss';
 import useTag from "./useTag";
 
 interface ITagCmpt {
-    name: ETag
+    name: ETag,
+    withColor?: Boolean,
 }
 function Tag(props: ITagCmpt) {
     const {
-        name
+        name, withColor
     } = props
 
     const { label, iconName, tagClassName } = useTag(name);
