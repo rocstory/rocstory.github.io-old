@@ -24,6 +24,7 @@ interface IProjectObj {
     highlightsInfo?: React.ReactNode,
 
     extraInfoCards?: React.ReactNode[],
+    collaborators?: [];
 
 }
 
