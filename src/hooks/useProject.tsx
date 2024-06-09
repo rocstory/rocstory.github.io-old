@@ -27,11 +27,7 @@ interface IProjectObj {
 
 }
 
-interface IInfoCard {
-    type: EInfoCardType,
-    label?: string,
-    component?: React.ReactNode
-}
+
 
 function useProject(name: EProject | undefined) {
     const [title, setTitle] = useState<string>('');
