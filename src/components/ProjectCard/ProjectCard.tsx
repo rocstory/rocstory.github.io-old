@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import { EProject } from "../../enums/EProject";
-import { DefaultThumbnail, HeroImg } from "../../helpers/imageHelper";
+// import { DefaultThumbnail, HeroImg } from "../../helpers/imageHelper";
 import { IProject } from "../../interfaces/IProject";
 import useProject from "../../hooks/useProject";
 import "./ProjectCard.scss";
@@ -11,6 +11,7 @@ import ShowMoreTagsTrigger from "../Tag/ShowMoreTagsTrigger";
 import { EPages } from "../../enums/EPages";
 import { useContext } from "react";
 import { PortfolioContext, PortfolioContextType } from "../../context/PortfolioContext";
+import { sortTagsAlphabetically } from "../../helpers/tagHelper";
 
 interface IProjectCard {
     name: EProject,
@@ -39,10 +40,12 @@ function ProjectCard(props: IProjectCard) {
     }
 
     const MAX_TAGS_TO_DISPLAY = 3;
-    const displayableTags = tags && tags.slice(0, MAX_TAGS_TO_DISPLAY);
+    let displayableTags = tags && tags.slice(0, MAX_TAGS_TO_DISPLAY);
+    displayableTags = sortTagsAlphabetically(displayableTags);
 
     const hasMoreTags = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
-    const popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY - 1, tags.length - 1) : [];
+    let popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY, tags.length - 1) : [];
+    popoverTags = sortTagsAlphabetically(popoverTags);
     return (
         <div
             className='rs-project'

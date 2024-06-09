@@ -1,11 +1,13 @@
 .project-page {
-
-    .project-list {
+    .project-list-wrapper {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding-top: 10px; 
+        justify-content: center;
+    }
+    .project-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        gap: 20px;
     }
 
 }

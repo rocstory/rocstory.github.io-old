@@ -1,6 +1,6 @@
 import { Image } from "react-bootstrap";
 import { EProject } from "../enums/EProject";
-import { ColonialCarnivalFeaturedImg, DefaultThumbnail, HeroImg } from "../helpers/imageHelper";
+import { ChevsEscapeFI, ChevsEscapeTN, ColonialCarnivalFI, ColonialCarnivalFeaturedImg, ColonialCarnivalTN, CrayonGITRGFI, CrayonGITRGTN, DefaultFI, DefaultTN, HeroImg, MocapFI, MocapTN, PawbytesCafeFI, PawbytesCafeTN, RevRocTN, RevealingRocFI, TwinlandeSSFI, TwinlandeSSTN } from "../helpers/imageHelper";
 import { IProject } from "../interfaces/IProject";
 import React, { useEffect, useState } from "react";
 import { EProjectType } from "../enums/EProjectType";
@@ -124,8 +124,8 @@ function useProject(name: EProject | undefined) {
             type: EProjectType.WebDevelopment,
             shortDescr: '',
             tags: [],
-            thumbnail: DefaultThumbnail,
-            featuredImg: DefaultThumbnail,
+            thumbnail: DefaultTN,
+            featuredImg: DefaultFI,
             refLinks: [],
             aboutInfo: undefined,
             highlightsInfo: undefined,
@@ -138,55 +138,61 @@ function useProject(name: EProject | undefined) {
                 prj.type = prjConfig.crayonGitrg.type;
                 prj.shortDescr = prjConfig.crayonGitrg.shortDescr;
                 prj.tags = prjConfig.crayonGitrg.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = PawbytesCafeTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.pawBytesCafe.refLinks);
+                prj.featuredImg = PawbytesCafeFI;
                 break;
             case EProject.LovelyFeathers:
                 prj.title = prjConfig.lovelyFeathers.title;
                 prj.type = prjConfig.lovelyFeathers.type;
                 prj.shortDescr = prjConfig.lovelyFeathers.shortDescr;
                 prj.tags = prjConfig.lovelyFeathers.tags;
-                prj.thumbnail = DefaultThumbnail;
+                // prj.thumbnail = DefaultTN;//DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.lovelyFeathers.refLinks);
+                // prj.featuredImg = DefaultFI
                 break;
             case EProject.MocapGITRG:
                 prj.title = prjConfig.mocapGitrg.title;
                 prj.type = prjConfig.mocapGitrg.type;
                 prj.shortDescr = prjConfig.mocapGitrg.shortDescr;
                 prj.tags = prjConfig.mocapGitrg.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = MocapTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.mocapGitrg.refLinks);
+                prj.featuredImg = MocapFI;
                 break;
             case EProject.CrayonGITRG:
                 prj.title = prjConfig.crayonGitrg.title;
                 prj.type = prjConfig.crayonGitrg.type;
                 prj.shortDescr = prjConfig.crayonGitrg.shortDescr;
                 prj.tags = prjConfig.crayonGitrg.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = CrayonGITRGTN //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.crayonGitrg.refLinks);
+                prj.featuredImg = CrayonGITRGFI;
                 break;
             case EProject.RevealingRoc:
                 prj.title = prjConfig.revealingRoc.title;
                 prj.type = prjConfig.revealingRoc.type;
                 prj.shortDescr = prjConfig.revealingRoc.shortDescr;
                 prj.tags = prjConfig.revealingRoc.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = RevRocTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.revealingRoc.refLinks);
+                prj.featuredImg = RevealingRocFI;
                 break;
             case EProject.ChevEscape:
                 prj.title = prjConfig.chevEscape.title;
                 prj.type = prjConfig.chevEscape.type;
                 prj.shortDescr = prjConfig.chevEscape.shortDescr;
                 prj.tags = prjConfig.chevEscape.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = ChevsEscapeTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.chevEscape.refLinks);
+                prj.featuredImg = ChevsEscapeFI;
                 break;
             case EProject.ColonialCarnival:
                 prj.title = prjConfig.colonialCarnival.title;
                 prj.type = prjConfig.colonialCarnival.type;
                 prj.shortDescr = prjConfig.colonialCarnival.shortDescr;
                 prj.tags = prjConfig.colonialCarnival.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = ColonialCarnivalTN; // DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.colonialCarnival.refLinks);
                 prj.featuredImg = ColonialCarnivalFeaturedImg;
                 break;
@@ -195,15 +201,16 @@ function useProject(name: EProject | undefined) {
                 prj.type = prjConfig.twinlandeSuperstore.type;
                 prj.shortDescr = prjConfig.twinlandeSuperstore.shortDescr;
                 prj.tags = prjConfig.twinlandeSuperstore.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = TwinlandeSSTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.twinlandeSuperstore.refLinks);
+                prj.featuredImg = TwinlandeSSFI;
                 break;
             case EProject.TestProject:
                 prj.title = prjConfig.testProject.title;
                 prj.type = prjConfig.testProject.type;
                 prj.shortDescr = prjConfig.testProject.shortDescr;
                 prj.tags = prjConfig.testProject.tags;
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = DefaultTN;
                 prj.refLinks = getPrjRefLinks(prjConfig.testProject.refLinks);
                 break;
             default:
@@ -211,7 +218,7 @@ function useProject(name: EProject | undefined) {
                 prj.type = EProjectType.Unknown;
                 prj.shortDescr = '';
                 prj.tags = [];
-                prj.thumbnail = DefaultThumbnail;
+                prj.thumbnail = DefaultFI;
                 prj.refLinks = [];
                 break;
         }

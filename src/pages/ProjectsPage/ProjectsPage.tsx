@@ -9,7 +9,7 @@ import "../page.scss";
 function ProjectsPage() {
 
     const visibleProjects: EProject[] = [
-        EProject.TestProject,
+        // EProject.TestProject, 
         EProject.ChevEscape,
         EProject.ColonialCarnival,
         EProject.CrayonGITRG,
@@ -26,17 +26,17 @@ function ProjectsPage() {
             className='project-page page'
             fluid
         >
-            <div
-                className={`project-list`}
-            >
-                {
-                    visibleProjects.map((projectName) =>
-                        <ProjectCard
-                            key={`prj-${projectName}`}
-                            name={projectName}
-                        />
-                    )
-                }
+            <div className={`project-list-wrapper`}>
+                <div className={`project-list`} >
+                    {
+                        visibleProjects.map((projectName) =>
+                            <ProjectCard
+                                key={`prj-${projectName}`}
+                                name={projectName}
+                            />
+                        )
+                    }
+                </div>
             </div>
 
         </Container>
