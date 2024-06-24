@@ -1,3 +1,4 @@
+import { Image } from "react-bootstrap";
 import { EInfoCardType } from "../../enums/EInfoCardType"
 import InfoCard from "../InfoCard/InfoCard"
 import "./ProjectInfo.scss";
@@ -31,16 +32,12 @@ export const AboutColonialCarnival = () => {
 
                 <div>
                     <p>
-                        I wanted to take on two challenges. The first one is building something from the ground up
-                        on my own. The second challenge was to bring something unique to my resiednts.
+                        I wanted to take on two challenges:
                     </p>
                     <ol>
                         <li>Building something from the ground up on my own.</li>
                         <li>To bring something unique to my resiednts.</li>
                     </ol>
-                    <p>
-                        This was my personal capstone project!
-                    </p>
                 </div>
 
 
@@ -51,6 +48,8 @@ export const AboutColonialCarnival = () => {
 }
 
 export const HighlightsColonialCarnival = () => {
+
+    const programOfTheYearImgUrl = 'https://rocportfolio.s3.amazonaws.com/colonialcarnival/program_award.jpg'
 
     return (
         <InfoCard
@@ -63,8 +62,13 @@ export const HighlightsColonialCarnival = () => {
                 </p>
                 <ul>
                     <li>Awarded 'Program Of The Year'</li>
-                    <li>First personal project</li>
+                    <li>First ever personal project</li>
                 </ul>
+                <div className={`info-card-imgs`}>
+                    <div className={`img-wrapper shadow`}>
+                        <Image src={programOfTheYearImgUrl} />
+                    </div>
+                </div>
             </div>
         </InfoCard>
 
