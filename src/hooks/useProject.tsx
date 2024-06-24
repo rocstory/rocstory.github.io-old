@@ -19,6 +19,7 @@ interface IProjectObj {
     tags: ETag[],
     thumbnail: string,
     featuredImg: string,
+    videoSrc?: string,
     refLinks: IRefLink[],
     aboutInfo?: React.ReactNode,
     highlightsInfo?: React.ReactNode,
@@ -37,6 +38,7 @@ function useProject(name: EProject | undefined) {
     const [tags, setTags] = useState<ETag[]>([]);
     const [thumbnail, setThumbnail] = useState<string>();
     const [featuredImage, setFeaturedImg] = useState<string>();
+    const [videoSrc, setVideoSrc] = useState<string>();
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
 
     const [aboutInfo, setAboutInfo] = useState<React.ReactNode>();
@@ -123,6 +125,7 @@ function useProject(name: EProject | undefined) {
             tags: [],
             thumbnail: DefaultTN,
             featuredImg: DefaultFI,
+            videoSrc: undefined,
             refLinks: [],
             aboutInfo: undefined,
             highlightsInfo: undefined,
@@ -191,6 +194,7 @@ function useProject(name: EProject | undefined) {
                 prj.tags = prjConfig.colonialCarnival.tags;
                 prj.thumbnail = ColonialCarnivalTN; // DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.colonialCarnival.refLinks);
+                prj.videoSrc = "https://www.youtube.com/watch?v=Pz41maOFJ94&ab_channel=rocstory";
                 prj.featuredImg = ColonialCarnivalFeaturedImg;
                 break;
             case EProject.TwinlandeSuperStore:
@@ -238,6 +242,7 @@ function useProject(name: EProject | undefined) {
         setTags(uniqueTags);
         setThumbnail(prj.thumbnail);
         setFeaturedImg(prj.featuredImg);
+        setVideoSrc(prj.videoSrc);
         setRefLinks([...prj.refLinks]);
         setAboutInfo(prj.aboutInfo);
         setHighlightsInfo(prj.highlightsInfo);
@@ -254,6 +259,7 @@ function useProject(name: EProject | undefined) {
         tags,
         thumbnail,
         featuredImage,
+        videoSrc,
         refLinks,
         aboutInfo,
         highlightsInfo,

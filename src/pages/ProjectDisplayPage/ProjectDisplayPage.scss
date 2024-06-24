@@ -51,6 +51,7 @@
         position: -webkit-sticky;
         position: sticky;
         top: calc(main.$rsNavbarHeight);
+        z-index: 90000;
     }
 
     .display-body {
@@ -72,8 +73,8 @@
         }
 
         .media-display-wrapper {
-            width: fit-content; //90em;
-            height: 30em;
+            width: 60em;
+            // height: 30em;
             margin: auto;
             overflow: hidden;
             margin-bottom: 1em;

@@ -22,6 +22,7 @@ function ProjectDisplayPage() {
         tags,
         thumbnail,
         featuredImage,
+        videoSrc,
         refLinks,
         aboutInfo,
         highlightsInfo,
@@ -74,6 +75,7 @@ function ProjectDisplayPage() {
                     >
                         <MediaDisplay
                             featuredImage={featuredImage}
+                            videoSrc={videoSrc}
                         />
                     </div>
                 }
