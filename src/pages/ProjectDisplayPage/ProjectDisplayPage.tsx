@@ -86,6 +86,7 @@ function ProjectDisplayPage() {
                     />
                 </div>
 
+
                 <div
                     className={`info-card-container`}
                 >

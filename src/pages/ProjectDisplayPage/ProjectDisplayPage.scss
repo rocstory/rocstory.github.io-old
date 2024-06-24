@@ -1,5 +1,6 @@
 @use '../../styling/main.scss' as main;
 
+$mediaDisplayWidth: 60em;
 .display-page {
     padding: 0 !important;
     
@@ -68,12 +69,13 @@
         }
 
         .tag-listing-wrapper {
+            // border: 2px solid red;
             margin: auto;
-            width: fit-content;
+            width: $mediaDisplayWidth; // align with the media thats displayed
         }
 
         .media-display-wrapper {
-            width: 60em;
+            width: $mediaDisplayWidth;
             margin: auto;
             overflow: hidden;
             margin-bottom: 1em;
