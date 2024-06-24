@@ -85,7 +85,7 @@ function useTag(name: ETag) {
                 tagObj.className = "twitter";
                 break;
             case ETag.TypeScript:
-                tagObj.label = "typesscript";
+                tagObj.label = "typeScript";
                 tagObj.className = "typescript";
                 break;
         }

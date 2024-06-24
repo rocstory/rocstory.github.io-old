@@ -11,6 +11,7 @@ $tagTextSize: 0.8em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    text-wrap: nowrap;
     font-size: $tagTextSize;
     
     i {
@@ -94,4 +95,8 @@ $tagTextSize: 0.8em;
 
 .rs-tag.typescript {
     background-color: brand.$typescript;
+}
+
+.rs-tag.react {
+    background-color: brand.$react;
 }

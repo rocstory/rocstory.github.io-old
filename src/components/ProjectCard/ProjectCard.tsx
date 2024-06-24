@@ -46,10 +46,10 @@ function ProjectCard(props: IProjectCard) {
     const hasMoreTags = tags && (tags.length > MAX_TAGS_TO_DISPLAY);
     let popoverTags = tags && hasMoreTags ? tags.slice(MAX_TAGS_TO_DISPLAY, tags.length - 1) : [];
     popoverTags = sortTagsAlphabetically(popoverTags);
+
     return (
         <div
             className='rs-project'
-
         >
             <div
                 className={`prj-thumbnail-wrapper shadow`}
