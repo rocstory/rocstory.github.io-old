@@ -11,6 +11,9 @@ import { ETag } from "../enums/ETag";
 import { EInfoCardType } from "../enums/EInfoCardType";
 import { AboutTestProject, HighlightsTestProject } from "../components/ProjectInfo/TestProjectInfo";
 import { AboutColonialCarnival, HighlightsColonialCarnival } from "../components/ProjectInfo/ColonialCarnivalInfo";
+import { AboutChevsEscape, HighlightsChevsEscape } from "../components/ProjectInfo/ChevsEscapeInfo";
+import { ICollaborator } from "../interfaces/ICollaborator";
+import { EPerson } from "../enums/EPerson";
 
 interface IProjectObj {
     title: string,
@@ -40,6 +43,7 @@ function useProject(name: EProject | undefined) {
     const [featuredImage, setFeaturedImg] = useState<string>();
     const [videoSrc, setVideoSrc] = useState<string>();
     const [refLinks, setRefLinks] = useState<IRefLink[]>([]);
+    const [collaborators, setCollaborators] = useState<any[]>();
 
     const [aboutInfo, setAboutInfo] = useState<React.ReactNode>();
     const [highlightsInfo, setHighlightsInfo] = useState<React.ReactNode>();
@@ -104,6 +108,10 @@ function useProject(name: EProject | undefined) {
                 hlInfo = <HighlightsColonialCarnival />
                 break;
 
+            case EProject.ChevEscape:
+                abtInfo = <AboutChevsEscape />
+                hlInfo = <HighlightsChevsEscape />
+                break;
         }
 
         return {
@@ -215,7 +223,7 @@ function useProject(name: EProject | undefined) {
                 prj.refLinks = getPrjRefLinks(prjConfig.testProject.refLinks);
                 break;
             default:
-                prj.title = 'Undefined Project';
+                prj.title = 'Unknown Project';
                 prj.type = EProjectType.Unknown;
                 prj.shortDescr = '';
                 prj.tags = [];
@@ -232,9 +240,45 @@ function useProject(name: EProject | undefined) {
         return prj;
     }
 
+    const getCollaborators = () => {
+        let collabs: ICollaborator[] = [];
+
+        try {
+
+            switch (name) {
+                case EProject.ChevEscape:
+                    collabs = createCollaboratorObjs(prjConfig.chevEscape.collaborators);
+                    break;
+            }
+
+            return collabs
+        }
+        catch (error) {
+            console.error(error);
+            console.error('Please contact the developer!')
+            return collabs;
+        }
+    }
+
+    const createCollaboratorObjs = (prjCollabs: any[]): ICollaborator[] => {
+        if (prjCollabs) {
+
+            return prjCollabs.map(collab => {
+                return {
+                    personId: collab.personId,
+                    role: collab.role
+                }
+            })
+        }
+        else {
+            return []
+        }
+    }
+
     useEffect(() => {
         const prj = createProjectObj();
         const uniqueTags = sanitizeTagCollection(prj.tags);
+        const collabs = getCollaborators();
 
         setTitle(prj.title);
         setType(prj.type);
@@ -247,6 +291,7 @@ function useProject(name: EProject | undefined) {
         setAboutInfo(prj.aboutInfo);
         setHighlightsInfo(prj.highlightsInfo);
         setExtraInfoCards(prj.extraInfoCards);
+        setCollaborators(collabs);
 
     }, [])
 
@@ -264,6 +309,7 @@ function useProject(name: EProject | undefined) {
         aboutInfo,
         highlightsInfo,
         extraInfoCards,
+        collaborators,
         formatProjectType
     }
 }

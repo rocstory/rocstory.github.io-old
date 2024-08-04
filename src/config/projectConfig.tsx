@@ -1,3 +1,5 @@
+import { EPerson } from "../enums/EPerson";
+import { EProjectRole } from "../enums/EProjectRole";
 import { EProjectType } from "../enums/EProjectType";
 import { ERefLinkType } from "../enums/ERefLinkType";
 import { ETag } from "../enums/ETag";
@@ -59,6 +61,24 @@ export default {
                 type: ERefLinkType.RepoLink,
             },
         ],
+        collaborators: [
+            {
+                personId: EPerson.CoryPineau,
+                role: EProjectRole.Developer,
+            },
+            {
+                personId: EPerson.MatheusAlexandre,
+                role: EProjectRole.Developer,
+            },
+            {
+                personId: EPerson.StephenAlpuche,
+                role: EProjectRole.Developer,
+            },
+            {
+                personId: EPerson.KrishanSingh,
+                role: EProjectRole.Developer,
+            }
+        ]
     },
     revealingRoc: {
         title: "revealing roc",

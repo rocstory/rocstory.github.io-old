@@ -11,6 +11,8 @@ import PageControls from '../../components/PageControls/PageControls';
 import MediaDisplay from '../../components/MediaDisplay/MediaDisplay';
 import TagListing from '../../components/TagListing/TagListing';
 import { ETagGroup } from '../../enums/ETagGroup';
+import ContactCard from '../../components/ContactCard/ContactCard';
+import { ICollaborator } from '../../interfaces/ICollaborator';
 
 
 function ProjectDisplayPage() {
@@ -26,6 +28,7 @@ function ProjectDisplayPage() {
         refLinks,
         aboutInfo,
         highlightsInfo,
+        collaborators,
         extraInfoCards,
         formatProjectType
     } = useProject(selProject);
@@ -93,6 +96,25 @@ function ProjectDisplayPage() {
                     {aboutInfo && aboutInfo}
                     {highlightsInfo && highlightsInfo}
                 </div>
+
+                {
+                    collaborators && collaborators.length > 0 &&
+                    <div
+                        className={`collabs-wrapper`}
+                    >
+                        {
+                            collaborators.map((collab: ICollaborator) =>
+                                <ContactCard
+                                    key={`contact-${collab.personId}`}
+                                    personId={collab.personId}
+                                    role={collab.role}
+                                />
+                            )
+                        }
+
+                    </div>
+
+                }
 
 
             </div>
