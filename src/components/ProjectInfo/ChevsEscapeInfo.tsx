@@ -28,7 +28,7 @@ export const AboutChevsEscape = () => {
                 </div>
 
                 <div>
-                    <h2>Game lore </h2>
+                    <h2>Game Lore</h2>
                     <p>
                         The game is about the professor Dr. Gancho Ganchev who is stuck inside of a building.
                         The only way he is able to escape is by solving 4 puzzles in different rooms.
