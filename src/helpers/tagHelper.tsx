@@ -46,6 +46,5 @@ export const getAllProgramLanguageTags = (tags: ETag[]) => {
 
 export const sortTagsAlphabetically = (tags: ETag[]) => {
     const tagArr = tags.sort()
-    console.log('Tags:', tagArr);
     return tagArr;
 }

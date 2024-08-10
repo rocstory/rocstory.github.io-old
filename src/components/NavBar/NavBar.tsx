@@ -28,7 +28,10 @@ function NavBar() {
         }
     }
 
-    const visiblePage = [EPages.Projects, EPages.ContactMe]
+    const visiblePage = [
+        EPages.Projects,
+        // EPages.ContactMe
+    ]
     return (
         <Navbar sticky={`top`} className={`rs-navbar shadow`} >
             <Container>

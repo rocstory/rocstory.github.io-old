@@ -9,7 +9,7 @@ import { EProject } from './enums/EProject';
 import { PortfolioContext, PortfolioContextType } from './context/PortfolioContext';
 
 function App() {
-  const { selProject, selPage } = useContext(PortfolioContext) as PortfolioContextType;
+  const { selPage } = useContext(PortfolioContext) as PortfolioContextType;
 
 
   const hideHero = [EPages.ProjectDisplay].includes(selPage);

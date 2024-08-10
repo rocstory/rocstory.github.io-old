@@ -5,7 +5,7 @@ $titleSize: 1.4rem;
 $typeSize: 0.9rem;
 $descrFontSize: 12px;
 $descrWrapperColor: #636363; //main.$rsBlack;
-$descrWrapperSize: 38em;
+$descrWrapperSize: 30em;
 
 .rs-project {
     display: flex;
@@ -40,7 +40,7 @@ $descrWrapperSize: 38em;
         margin: auto 0;
         margin-left: 0px;
         height: calc($thumbnailSize - ($thumbnailSize * .10));
-        width: 35em;
+        width: 30em;
         padding: 0 10px;
         color: main.$rsTextDark;
 
@@ -104,4 +104,38 @@ $descrWrapperSize: 38em;
 
 .rs-project:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+    .rs-project {
+    
+        .prj-thumbnail-wrapper {
+            width: 8em;
+            height: 8em; //calc($thumbnailSize - 40%);
+        }
+    
+        .prj-descr-wrapper {
+            
+            width: 15em; //$descrWrapperSize;
+        }
+    
+        .prj-descr {
+            // display: none;
+            height: calc($thumbnailSize - ($thumbnailSize * .45));
+            
+            h1 {
+                margin-top: 10px;
+                font-size: $titleSize;
+            }
+            
+            h2 {
+                font-size: $typeSize;
+            }
+    
+            .prj-short-descr {
+                display: none;
+            }
+        }
+    
+    }
 }

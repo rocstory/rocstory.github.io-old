@@ -1,6 +1,7 @@
 
 $hero-height: 25em;
 $heroBackgroundImage: "../../assets/imgs/rs-test-hero4.jpg";
+
 .rs-hero {
     min-height: $hero-height;
     background-image: url($heroBackgroundImage);
@@ -27,6 +28,28 @@ $heroBackgroundImage: "../../assets/imgs/rs-test-hero4.jpg";
         img {
             width: 100%;
             height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    // .intro-card {
+    //     width: 20em;
+    //     min-height: 10em;
+    // }
+    .rs-hero {
+        min-height: 33em;
+        .rs-hero-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .prof-pic-wrapper {
+                margin: auto;
+                width: 15em;
+                height: 15em;
+                margin-top: 10em;
+                margin-bottom: 1.2em;
+            }
         }
     }
 }
