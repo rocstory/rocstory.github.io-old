@@ -66,12 +66,13 @@ function ProjectCard(props: IProjectCard) {
             >
                 <div
                     className={`prj-descr`}
+                    onClick={handleProjectClick}
                 >
                     <h1>{title}</h1>
                     <h2>{formatProjectType(type)}</h2>
                     <div
                         className={`prj-short-descr`}
-                        onClick={handleProjectClick}
+                    // onClick={handleProjectClick}
                     >
                         {shortDescr}
                     </div>
