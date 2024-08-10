@@ -17,7 +17,6 @@ function ProjectsPage() {
         EProject.MocapGITRG,
         EProject.PawBytesCafe,
         EProject.RevealingRoc,
-        EProject.RevealingRoc,
         EProject.TwinlandeSuperStore,
     ]
 

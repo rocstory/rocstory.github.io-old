@@ -14,6 +14,10 @@ import { AboutColonialCarnival, HighlightsColonialCarnival } from "../components
 import { AboutChevsEscape, HighlightsChevsEscape } from "../components/ProjectInfo/ChevsEscapeInfo";
 import { ICollaborator } from "../interfaces/ICollaborator";
 import { EPerson } from "../enums/EPerson";
+import { AboutCrayoGITRG, HighlightsCrayonGITRG } from "../components/ProjectInfo/CrayonGITRG";
+import { AboutLovelyFeathers, HighlightsLovelyFeathers } from "../components/ProjectInfo/LovelyFeathersInfo";
+import { AboutMocapGITRG } from "../components/ProjectInfo/MocapGITRGInfo";
+import { AboutPawBytes } from "../components/ProjectInfo/PawBytesInfo";
 
 interface IProjectObj {
     title: string,
@@ -112,6 +116,22 @@ function useProject(name: EProject | undefined) {
                 abtInfo = <AboutChevsEscape />
                 hlInfo = <HighlightsChevsEscape />
                 break;
+            case EProject.CrayonGITRG:
+                abtInfo = <AboutCrayoGITRG />
+                // hlInfo = <HighlightsCrayonGITRG />
+                break;
+            case EProject.LovelyFeathers:
+                abtInfo = <AboutLovelyFeathers />
+                // hlInfo = <HighlightsLovelyFeathers />
+                break;
+            case EProject.MocapGITRG:
+                abtInfo = <AboutMocapGITRG />
+                break;
+            case EProject.PawBytesCafe:
+                abtInfo = <AboutPawBytes />
+                break;
+
+
         }
 
         return {
@@ -142,10 +162,10 @@ function useProject(name: EProject | undefined) {
 
         switch (name) {
             case EProject.PawBytesCafe:
-                prj.title = prjConfig.crayonGitrg.title;
-                prj.type = prjConfig.crayonGitrg.type;
-                prj.shortDescr = prjConfig.crayonGitrg.shortDescr;
-                prj.tags = prjConfig.crayonGitrg.tags;
+                prj.title = prjConfig.pawBytesCafe.title;
+                prj.type = prjConfig.pawBytesCafe.type;
+                prj.shortDescr = prjConfig.pawBytesCafe.shortDescr;
+                prj.tags = prjConfig.pawBytesCafe.tags;
                 prj.thumbnail = PawbytesCafeTN; //DefaultThumbnail;
                 prj.refLinks = getPrjRefLinks(prjConfig.pawBytesCafe.refLinks);
                 prj.featuredImg = PawbytesCafeFI;
@@ -222,6 +242,7 @@ function useProject(name: EProject | undefined) {
                 prj.thumbnail = DefaultTN;
                 prj.refLinks = getPrjRefLinks(prjConfig.testProject.refLinks);
                 break;
+
             default:
                 prj.title = 'Unknown Project';
                 prj.type = EProjectType.Unknown;

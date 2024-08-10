@@ -28,6 +28,7 @@ export enum ERSIcon {
     Play = "play",
     Other = "other",
     Plus = "plus",
-    ChevronLeft = "chevron-left"
+    ChevronLeft = "chevron-left",
+    Link = "link",
 
 }
