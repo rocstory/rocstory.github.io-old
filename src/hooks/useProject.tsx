@@ -18,6 +18,8 @@ import { AboutCrayoGITRG, HighlightsCrayonGITRG } from "../components/ProjectInf
 import { AboutLovelyFeathers, HighlightsLovelyFeathers } from "../components/ProjectInfo/LovelyFeathersInfo";
 import { AboutMocapGITRG } from "../components/ProjectInfo/MocapGITRGInfo";
 import { AboutPawBytes } from "../components/ProjectInfo/PawBytesInfo";
+import { AboutTwinlandeSuperstore } from "../components/ProjectInfo/TwinlandeSuperStoreInfo";
+import { AboutRevealingRoc } from "../components/ProjectInfo/RevealingRoc";
 
 interface IProjectObj {
     title: string,
@@ -130,8 +132,12 @@ function useProject(name: EProject | undefined) {
             case EProject.PawBytesCafe:
                 abtInfo = <AboutPawBytes />
                 break;
-
-
+            case EProject.TwinlandeSuperStore:
+                abtInfo = <AboutTwinlandeSuperstore />
+                break;
+            case EProject.RevealingRoc:
+                abtInfo = <AboutRevealingRoc />
+                break;
         }
 
         return {
