@@ -10,7 +10,7 @@ import DefaultFI from "../assets/imgs/featureImgs/default-fi.jpg";
 import CrayonGITRGFI from "../assets/imgs/featureImgs/gitrg-3d-crayon-fi.jpg";
 import MocapFI from "../assets/imgs/featureImgs/mocap-thumbnail-fi.jpg";
 import PawbytesCafeFI from "../assets/imgs/featureImgs/pawbytes-cafe-fi.jpg";
-import RevealingRocFI from "../assets/imgs/featureImgs/chev-escape-fi.jpg";
+import RevealingRocFI from "../assets/imgs/featureImgs/revealing-roc-fi.jpg";
 import TwinlandeSSFI from "../assets/imgs/featureImgs/twinlande-thumbnail-fi.jpg";
 
 // thumbnails

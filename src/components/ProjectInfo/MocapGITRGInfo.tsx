@@ -14,8 +14,8 @@ export const AboutMocapGITRG = () => {
         >
             <div className={`about-section`}>
                 <p>
-                    An open-source intelligent toy which allows a child to draw in a
-                    3D space and have the image appear on the screen.
+                    The goal of this project is to design a cost-effective motion capture system using "off the shelf" components and custom designed software. The project currently uses Raspberry Pi 3 computers for development but is targeting Raspberry Pi Zeroes for deployment.
+                    The system also uses NoIR cameras for computer vision purposes The software is written in Python and utilizes the OpenCV computer vision library.
                 </p>
             </div>
         </InfoCard>

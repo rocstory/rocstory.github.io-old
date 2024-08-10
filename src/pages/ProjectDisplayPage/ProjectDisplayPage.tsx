@@ -66,11 +66,11 @@ function ProjectDisplayPage() {
             <div
                 className={`display-body `}
             >
-                <div
+                {/* <div
                     className='display-start-date'
                 >
                     <p> Date Started: April 25th, 2024</p>
-                </div>
+                </div> */}
                 {
                     featuredImage &&
                     <div
