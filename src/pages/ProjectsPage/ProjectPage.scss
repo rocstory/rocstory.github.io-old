@@ -1,0 +1,24 @@
+.project-page {
+    .project-list-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .project-list {
+        // display: flex;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .project-page {
+        .project-list {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

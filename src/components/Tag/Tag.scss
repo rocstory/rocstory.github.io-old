@@ -1,0 +1,102 @@
+@use '../../styling/main.scss' as main;
+@use '../../styling/brandColors.scss' as brand;
+$tagTextSize: 0.8em;
+
+.rs-tag {
+    padding: 4px 12px;
+    text-transform: capitalize;
+    background-color: main.$rsBlack; //#e9e5e5;
+    color: main.$rsTextLight;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    font-size: $tagTextSize;
+    
+    i {
+        margin-right: 5px;
+        color: main.$rsTextLight !important;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.rs-tag:hover {
+    cursor: default;
+}
+
+.rs-tag.show-more {
+    cursor: pointer;
+    
+    i {
+        margin-right: 0;
+    }
+}
+
+// special handling
+
+.rs-tag.css {
+    background-color: brand.$css;
+}
+
+.rs-tag.html {
+    background-color: brand.$html;
+}
+
+.rs-tag.arduino {
+    background-color: brand.$arduino;
+}
+
+.rs-tag.csharp {
+    background-color: brand.$cSharp;
+}
+
+.rs-tag.cpp {
+    background-color: brand.$cpp;
+}
+
+.rs-tag.firebase {
+    background-color: brand.$firebase;
+}
+
+.rs-tag.fritzing {
+    background-color: brand.$fritzing;
+}
+
+.rs-tag.github {
+    background-color: brand.$github;
+}
+
+.rs-tag.javascript {
+    background-color: brand.$javascript;
+}
+
+.rs-tag.mongodb {
+    background-color: brand.$mongoDB;
+}
+
+.rs-tag.postgresql {
+    background-color: brand.$postgreSQL;
+}
+
+.rs-tag.python {
+    background-color: brand.$python;
+}
+
+.rs-tag.raspberrypi {
+    background-color: brand.$raspberryPi;
+}
+
+.rs-tag.twitter {
+    background-color: brand.$twitter;
+}
+
+.rs-tag.typescript {
+    background-color: brand.$typescript;
+}
+
+.rs-tag.react {
+    background-color: brand.$react;
+}

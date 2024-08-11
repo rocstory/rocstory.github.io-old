@@ -1,0 +1,15 @@
+@use '../../../../styling/main.scss' as main;
+
+.mctrigger {
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    border: 1px solid gray;
+    color: main.$rsTextDark;
+    text-decoration: none;
+
+    border-radius: 0.3em;
+    .rsIcon {
+        padding-right: 5px;
+    }
+}

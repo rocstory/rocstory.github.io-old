@@ -1,0 +1,31 @@
+.about-section {
+    padding-right: 15px;
+}
+
+.highlights-section {
+    padding: 5px;
+}
+
+.info-card-imgs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+
+    .img-wrapper {
+        width: 50em;
+        margin: auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .info-card-imgs {
+        .img-wrapper {
+            width: 70vw;
+        }
+    }
+}
