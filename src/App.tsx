@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import logo from './logo.svg';
+// import logo from '../src/assets/imgs/rsicon2.ico';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import Hero from './components/Hero/Hero';
