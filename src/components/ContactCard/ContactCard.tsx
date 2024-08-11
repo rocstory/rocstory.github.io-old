@@ -1,78 +1,27 @@
-import React from "react";
-import "./ContactCard.scss";
-import { Image, Button, Dropdown } from "react-bootstrap";
-import useContactCard from "./useContactCard";
-import RSIcon from "../RSIcon/RSIcon";
-import { ERSIcon } from "../../enums/ERSIcon";
-import ContactLink from "./ContactLink";
 
-export type ContactCardProps = {
-    contactId: string,
-    role?: string
+
+import { EPerson } from '../../enums/EPerson';
+import { EProjectRole } from '../../enums/EProjectRole';
+import usePerson from '../../hooks/usePerson';
+
+type ContactCardType = {
+    personId: EPerson,
+    role?: EProjectRole,
 }
+function ContactCard(props: ContactCardType) {
 
-function ContactCard(props: ContactCardProps) {
     const {
-        contactId,
+        personId,
         role
     } = props
-    
-    const {
-        person,
-        imgUrl,
-        name,
-        handleImageLoadingError
-    } = useContactCard(contactId);
 
-    return person && (
+    // const {} = usePerson(personId);
 
-        <div
-            className="cc-cntr shadow"
-        >
-            <div className={`content-wrapper`}>
-                <Image
-                    className="cc-image"
-                    src={imgUrl}
-                    onError={handleImageLoadingError}
-                    roundedCircle
-                />
-                <div
-                    className="cc-content"
-                >
-                    <p className="cc-name cc-details">{name}</p>
-                    <p className="cc-role cc-details">{role}</p>
-                </div>
-            </div>
-            {
-                person.reflinks && person.reflinks.length > 0 &&
-                <div className={`dropdown-wrapper`} >
-                    <Dropdown
-                        className={`cc-dropdown-toggle`}
-                    >
-                        <Dropdown.Toggle
-                            className={`dropdown-trigger`}
-                            variant={' '}
-                            bsPrefix={' '}
-                            as="button"
-                        >
-                            <RSIcon iconName={ERSIcon.EllipsisH}/>
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            {
-                                person.reflinks.map((link: any) => 
-                                    <ContactLink
-                                        name={link.name}
-                                        type={link.type}
-                                        url={link.url}
-                                    />
-                                )
-                            }
-                        </Dropdown.Menu>
-                    </Dropdown>
-                </div>
-            }
+    return (
+        <div>
+
         </div>
     )
-};
+}
 
 export default ContactCard;

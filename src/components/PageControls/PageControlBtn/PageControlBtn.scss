@@ -1,0 +1,16 @@
+@use '../../../styling/main.scss' as main;
+
+$triggerSize: 2em;
+
+.pg-cntrl-btn-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+    .pg-cntrl-btn {
+        border: none;
+        color: main.$rsMainColor;
+        background-color: transparent;
+        border-radius: 0.2em;
+        font-size: $triggerSize;
+    
+    }
+}

@@ -1,0 +1,101 @@
+@use '../../styling/main.scss' as main;
+
+$mediaDisplayWidth: 60em;
+.display-page {
+    padding: 0 !important;
+    
+    .display-header {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        gap: 10px;
+        background-color: #ced4da;
+
+        .display-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 10px;
+            margin-bottom: 5px;
+            text-transform: capitalize;
+            
+
+            .title.with-type {
+                margin-bottom: 0px;
+            }
+
+            .title {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .type {
+                margin: 0;
+                font-size: 15px;
+            }
+        }
+        
+        .display-ref-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            padding-top: 10px;
+            padding-right: 5px;
+            > * {
+                margin-left: 10px;
+            }
+            
+        }
+
+    }
+
+    .display-header.sticky-header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: calc(main.$rsNavbarHeight);
+        z-index: 90000;
+    }
+
+    .display-body {
+
+        .display-start-date {
+            display: flex;
+            flex-direction: left;
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+            p {
+                margin: 0 0 0 12px;
+            }
+        }
+
+        .tag-listing-wrapper {
+            // border: 2px solid red;
+            margin: auto;
+            width: $mediaDisplayWidth; // align with the media thats displayed
+        }
+
+        .media-display-wrapper {
+            width: $mediaDisplayWidth;
+            margin: auto;
+            overflow: hidden;
+            margin-bottom: 1em;
+            margin-top: 1em; 
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .display-page {
+        .display-body {
+            .tag-listing-wrapper {
+                
+                width: 90vw;
+            }
+            .media-display-wrapper {
+                width: 90vw;
+            }
+        }
+    }
+}

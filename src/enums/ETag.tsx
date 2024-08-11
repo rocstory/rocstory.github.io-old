@@ -1,0 +1,20 @@
+export enum ETag {
+    Css = "css",
+    Html = "html",
+    Javascript = "javascript",
+    React = "react",
+    Github = "github",
+    Firebase = "firebase",
+    TypeScript = "typescript",
+    PostgreSQL = "postgre-sql",
+    MongoDB = "mongoDB",
+    Python = "python",
+    Twitter = "twitter",
+    CSharp = "c#",
+    Arduino = "arduino",
+    Cpp = "cpp",
+    Fritzing = "fritzing",
+    RaspberryPi = "raspberry-pi",
+    OpenSCAD = "open-scad",
+
+}

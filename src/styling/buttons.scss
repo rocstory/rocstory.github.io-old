@@ -1,0 +1,26 @@
+@use './brandColors.scss' as brand;
+@use './main.scss' as main;
+
+@mixin hoverState {
+    color: main.$rsTextLight;
+    i.rsIcon {
+        color: main.$rsTextLight;
+    }
+}
+
+btn.instagram:hover, a.rsbtn.instagram:hover {
+    background-color: brand.$instagram !important;
+    @include hoverState;
+}
+
+btn.linkedIn:hover, a.rsbtn.linkedIn:hover {
+    background-color: brand.$linkedin;
+    @include hoverState;
+
+}
+
+btn.github:hover, a.rsbtn.github:hover {
+    background-color: brand.$github;
+    @include hoverState;
+
+}

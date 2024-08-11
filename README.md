@@ -1,107 +1,46 @@
-<link rel="stylesheet" type="text/css" media="all" href="./markdown.css" />
+# Getting Started with Create React App
 
-# Roc Portfolio
-Roc Portfolio is my online web page showcasing the projects and activities that I'm a part of.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Introduction 
-This portfolio was intended to be a project within itself. The intentions is to build and maintain a webpage from the ground up.
+## Available Scripts
 
-## Technologies
-- ReactJS
-- Firebase
-- Angular (Version 2.0)
+In the project directory, you can run:
 
-## Future implementation
-- Implement Google analytics (maybe)
-- Integrate test cases
+### `npm start`
 
-## Current Bug(s)
-- 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Versions
-- [Version 3.0 - ReactJS & Firebase](#version-30---react-library) 
-- [Version 2.0 - Angular Framework](#version-20---angular-framework)
-- [Version 1.0 - Vanilla JavaScript](#version-10---vanilla-javascript)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-### Version 3.0 - React Library
-Version 3 is built using the ReactJS and Firebase 
-<div class="version-map-wrapper">
-    <img src="./screenshots/v3map.jpg">
-</div>
+### `npm test`
 
-### Screenshots
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-#### Version 3.2 
-#### Version 3.2.2 
-- Bootstrap
-- Caching
-- Tab buttons
-- Like feature UI update
-- Filter feature
-- Contact Card
-- Entry panel
-- Entry filter feature
-- Page footer update
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v3/v030202_entrymenu.png">
-    <img src="./screenshots/v3/v030202_midpage.png">
-</div>
+### `npm run build`
 
-#### Version 3.2.1
-- Entry panel
-- Entry filter feature
-- Like feature
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v3/v030201_topOfPage.png">
-    <img src="./screenshots/v3/v030201_entryCard.png">
-</div>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-#### Version 3.1
-- Animations
-- Video integrations
-- Toggle Button
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v3/v0301_desktop_header.png">
-    <img src="./screenshots/v3/v0301_desktop_entry.png">
-</div>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### Version 3.0
-- Horizontal entry cards
-- Entry tabs
+### `npm run eject`
 
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v3/v03_laptopview.jpg">
-    <img src="./screenshots/v3/v03_laptopview2.jpg">
-</div>
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-### Version 2.0 - Angular Framework
-After understaning HTML, CSS, JavaScript, and JSON I decided to take the next step into learning web development by rebuilding the portfolio using Angular Framework and JSON data file.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<div class="version-map-wrapper">
-    <img src="./screenshots/v2map.jpg">
-</div>
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-#### Screenshots
+## Learn More
 
-#### Version 2.0
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v2/topview.jpg" >
-    <img src="./screenshots/v2/topview2.jpg" >
-</div>
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-
-### Version 1.0 - Vanilla JavaScript
-This portfolio was initially designed by using vanilla JavaScript. This project was my introduction to web development.
-
-<div class="version-map-wrapper">
-    <img src="./screenshots/v1map.jpg">
-</div>
-
-#### Screenshots
-#### Version 1.0
-
-<div class="screenshot-wrapper">
-    <img src="./screenshots/v1/v1_laptopview2.jpg" >
-</div>
+To learn React, check out the [React documentation](https://reactjs.org/).

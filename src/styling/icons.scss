@@ -1,0 +1,96 @@
+@use './brandColors.scss' as brand;
+@use './main.scss' as main;
+
+.rsIcon.instagram {
+    color: brand.$instagram;
+}
+
+.rsIcon.linkedin {
+    color: brand.$linkedin;
+}
+
+.rsIcon.github {
+    color: brand.$github;
+}
+
+.rsIcon.discord {
+    color: brand.$discord;
+}
+
+.rsIcon.play {
+    color: #1ce783;
+}
+
+.rsIcon.basic {
+    color: main.$rsTextDark;
+}
+
+.rsIcon.css  {
+    color: brand.$css; 
+}
+
+.rsIcon.html {
+    color: brand.$html;
+}
+
+.rsIcon.javascript {
+    color: brand.$javascript; 
+}
+
+.rsIcon.react {
+    color: brand.$react;
+}
+
+.rsIcon.firebase {
+    color: brand.$firebase;
+}
+
+.rsIcon.raspberryPi {
+    color: brand.$raspberryPi;
+}
+
+.rsIcon.arduino  {
+    color: brand.$arduino;
+}
+
+.rsIcon.csharp {
+    color: brand.$cSharp
+}
+
+.rsIcon.cpp {
+    color: brand.$cpp;
+}
+
+.rsIcon.fritzing {
+    color: brand.$fritzing;
+}
+
+.rsIcon.mongodb {
+    color: brand.$mongoDB;
+}
+
+.rsIcon.openscad {
+    color: brand.$openScad;
+}
+
+.rsIcon.postgresql {
+    color: brand.$postgreSQL;
+}
+
+.rsIcon.python {
+    color: brand.$python;
+}
+
+
+.rsIcon.raspberrypi {
+    color: brand.$raspberryPi;
+}
+
+.rsIcon.twitter {
+    color: brand.$twitter;
+}
+
+.rsIcon.typescript {
+    color: brand.$typescript;
+}
+

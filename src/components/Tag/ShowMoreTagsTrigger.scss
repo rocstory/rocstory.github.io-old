@@ -1,0 +1,24 @@
+.popover-tags-list {
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 5px;
+
+    max-height: 10em;
+    overflow-y: auto;
+
+    >li:not(:first-child) {
+        border-top: 1px solid #D3D3D3;
+    }
+
+    
+    
+}
+
+.tagpop-card {
+    padding: 5px;
+    margin: 0 5px;
+    >:first-child {
+        margin-right: 5px;
+    }
+    text-transform: capitalize;
+}

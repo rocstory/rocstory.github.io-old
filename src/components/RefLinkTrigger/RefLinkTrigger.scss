@@ -1,0 +1,43 @@
+@use '../../styling/main.scss' as main;
+@use '../../styling/brandColors.scss' as brand;
+
+$triggerSize: 2em;
+$iconSize: 1.2em;
+$triggerLabelFontSize: 0.6em;
+
+.reflink-trigger {
+    margin: 0 auto;
+    border-radius: 0.5em;
+    width: $triggerSize !important;
+    height: $triggerSize !important;
+    background-color: main.$rsBlack;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    text-decoration:  none;
+
+    i.rsIcon {
+        font-size: $iconSize;
+        color: main.$rsWhite;
+    }
+}
+
+.reflink-trigger-wrapper {
+    p {
+        margin: 0;
+        font-size: $triggerLabelFontSize;
+        color: main.$rsTextDark;
+        text-transform: capitalize;
+        white-space: nowrap;
+    }
+}
+
+.reflink-trigger:hover {
+    background-color: main.$rsWhite;
+    i {
+        color: main.$rsAccentColor;
+    }
+
+}

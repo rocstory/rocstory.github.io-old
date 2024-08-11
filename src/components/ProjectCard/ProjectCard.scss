@@ -1,0 +1,181 @@
+@use '../../styling/main.scss' as main;
+
+$thumbnailSize: 12em;
+$titleSize: 1.4rem;
+$typeSize: 0.9rem;
+$descrFontSize: 12px;
+$descrWrapperColor: #636363; //main.$rsBlack;
+$descrWrapperSize: 30em;
+
+.rs-project {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5em;
+
+    .prj-thumbnail-wrapper {
+        width: $thumbnailSize;
+        height: $thumbnailSize;
+        border: 6px solid main.$rsBlack;
+        border-radius: 0.2em;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .prj-descr-wrapper {
+        border-color: $descrWrapperColor;
+        border-style: solid;
+        border-width: 2px 2px 2px 0px;
+        margin: auto 0;
+        width: $descrWrapperSize;
+        display: flex;
+        flex-direction: row;
+        border-radius: 0 0.3em 0.3em 0;
+        border-left: none;
+    }
+
+    .prj-descr {
+        // border: 2px solid red;
+        margin: auto 0;
+        margin-left: 0px;
+        height: calc($thumbnailSize - ($thumbnailSize * .10));
+        width: 30em;
+        padding: 0 10px;
+        color: main.$rsTextDark;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+        
+        h1, h2 {
+            text-transform: capitalize;
+            text-align: left;
+        }
+
+        h1 {
+            margin-top: 10px;
+            font-size: $titleSize;
+        }
+        
+        h2 {
+            font-size: $typeSize;
+        }
+
+        .prj-short-descr {
+            text-align: left;
+            margin-bottom: 5px;
+            font-size: $descrFontSize;
+            height: calc($descrFontSize * 3.35);
+            overflow: hidden;
+            text-overflow:clip;
+        }
+
+        .tag-container {
+            margin: auto 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+            > * {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .ref-links-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0 0.4em;
+        
+        > :first-child {
+            margin-top: 1em;
+        }
+
+        > * {
+            // margin: 0.5em 0;
+            margin-bottom: 0.5em;
+        }
+    }
+
+}
+
+.rs-project:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 425px) {
+    .rs-project {
+    
+        .prj-thumbnail-wrapper {
+            width: 8em;
+            height: 8em; //calc($thumbnailSize - 40%);
+        }
+    
+        .prj-descr-wrapper {
+            
+            width: 15em; //$descrWrapperSize;
+        }
+    
+        .prj-descr {
+            // display: none;
+            height: calc($thumbnailSize - ($thumbnailSize * .45));
+            
+            h1 {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-top: 10px;
+                font-size: 15px //calc($titleSize * 50%);
+            }
+            
+            h2 {
+                font-size: 10px; //$typeSize;
+            }
+    
+            .prj-short-descr {
+                display: none;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .rs-project {
+
+        .prj-thumbnail-wrapper {
+            width: 8em;
+            height: 8em; //calc($thumbnailSize - 40%);
+        }
+    
+        .prj-descr-wrapper {
+            
+            width: 10em; //$descrWrapperSize;
+        }
+    
+        .prj-descr {
+            // display: none;
+            height: calc($thumbnailSize - ($thumbnailSize * .45));
+            
+            h1 {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-top: 10px;
+                font-size: 15px //calc($titleSize * 50%);
+            }
+            
+            h2 {
+                font-size: 10px; //$typeSize;
+            }
+    
+            .prj-short-descr {
+                display: none;
+            }
+        }
+    
+    }
+}
