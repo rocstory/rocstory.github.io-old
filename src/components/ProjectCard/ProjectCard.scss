@@ -124,12 +124,52 @@ $descrWrapperSize: 30em;
             height: calc($thumbnailSize - ($thumbnailSize * .45));
             
             h1 {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 margin-top: 10px;
-                font-size: $titleSize;
+                font-size: 15px //calc($titleSize * 50%);
             }
             
             h2 {
-                font-size: $typeSize;
+                font-size: 10px; //$typeSize;
+            }
+    
+            .prj-short-descr {
+                display: none;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .rs-project {
+
+        .prj-thumbnail-wrapper {
+            width: 8em;
+            height: 8em; //calc($thumbnailSize - 40%);
+        }
+    
+        .prj-descr-wrapper {
+            
+            width: 10em; //$descrWrapperSize;
+        }
+    
+        .prj-descr {
+            // display: none;
+            height: calc($thumbnailSize - ($thumbnailSize * .45));
+            
+            h1 {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                margin-top: 10px;
+                font-size: 15px //calc($titleSize * 50%);
+            }
+            
+            h2 {
+                font-size: 10px; //$typeSize;
             }
     
             .prj-short-descr {

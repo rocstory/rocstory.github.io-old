@@ -10,6 +10,20 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .intro-card {
+        width: 30em;
+        min-height: 10em;
+        padding: 0.8em;
+        // padding-bottom: 0.2em;
+
+        .intro-paragraph {
+            font-size: 12px;
+        }
+    }
+}
+
+
 @media screen and (max-width: 425px) {
     .intro-card {
         width: 24em;
@@ -19,6 +33,19 @@
 
         .intro-paragraph {
             font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .intro-card {
+        width: 20em;
+        min-height: 10em;
+        padding: 0.8em;
+        // padding-bottom: 0.2em;
+
+        .intro-paragraph {
+            font-size: 10px;
         }
     }
 }

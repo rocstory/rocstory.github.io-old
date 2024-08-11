@@ -22,7 +22,7 @@ function ProjectsPage() {
 
     return (
         <Container
-            className='project-page page debugr'
+            className='project-page page'
             fluid
         >
             <div className={`project-list-wrapper`}>
