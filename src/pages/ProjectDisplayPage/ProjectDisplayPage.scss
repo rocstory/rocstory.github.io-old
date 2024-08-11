@@ -79,9 +79,23 @@ $mediaDisplayWidth: 60em;
             margin: auto;
             overflow: hidden;
             margin-bottom: 1em;
-            margin-top: 1em;
+            margin-top: 1em; 
         }
     }
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .display-page {
+        .display-body {
+            .tag-listing-wrapper {
+                
+                width: 90vw;
+            }
+            .media-display-wrapper {
+                width: 90vw;
+            }
+        }
+    }
 }

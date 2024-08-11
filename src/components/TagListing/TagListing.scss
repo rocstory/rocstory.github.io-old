@@ -4,3 +4,11 @@
     column-gap: 15px;
     row-gap: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    .tag-listing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
