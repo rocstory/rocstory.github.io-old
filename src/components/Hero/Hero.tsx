@@ -1,12 +1,16 @@
 import Container from 'react-bootstrap/Container';
 import IntroCard from './IntroCard/IntroCard';
-import { ProfilePicture } from '../../helpers/imageHelper';
+// import { ProfilePicture } from '../../helpers/imageHelper';
 import "./Hero.scss";
 import { Image } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import MyContacts from './MyContacts/MyContacts';
+import ImageHelper from '../../helpers/imageHelper';
 
 function Hero() {
+    const {
+        ProfilePicture
+    } = ImageHelper();
 
     return (
         <Container
