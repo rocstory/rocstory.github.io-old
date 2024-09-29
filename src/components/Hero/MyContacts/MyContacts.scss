@@ -1,0 +1,10 @@
+.my-contacts {
+    display: flex;
+    flex-direction: row;
+    padding-left: 8px;
+    margin-top: 8px;
+
+    a {
+        margin-right: 8px;
+    }
+}

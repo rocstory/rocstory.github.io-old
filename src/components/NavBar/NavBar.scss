@@ -1,0 +1,33 @@
+@use "../../styling/main.scss" as *;
+
+// $navbarHeight: 3.5em;
+.rs-navbar {
+    background-color: $rsMainColor;
+    // border: 1px solid red;
+    height: $rsNavbarHeight;
+
+    
+    .disabled {
+        cursor: default;
+    }
+    .disabled:hover {
+        color: $rsTextLight;
+    }
+
+    a, span, a:focus {
+        color: $rsTextLight;
+    }
+
+    a {
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    a:hover  {
+        color: $rsAccentColor;
+    }
+
+    a.rsPageTab.selected {
+        color: $rsAccentColor;
+    }
+}
