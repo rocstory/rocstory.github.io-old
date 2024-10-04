@@ -3,6 +3,7 @@ import { Children } from 'react';
 import { ERSIcon } from '../../enums/ERSIcons';
 import { EInfoCardType } from '../../enums/EInfoCardType';
 import './InfoCard.scss';
+import { Card } from 'react-bootstrap';
 
 type InfoCardType = {
     type: EInfoCardType,
@@ -30,18 +31,18 @@ const InfoCard: React.FC<InfoCardType> = ({ type, title, isRightAligned, childre
 
 
     return (
-        <div className={`info-card-wrapper ${isRightAligned ? 'right-aligned' : ''}`}>
-            <div className={`info-card shadow`}>
-                <div className={'info-header'}>
-                    <h1>{cardTitle}</h1>
-                </div>
-                <div
-                    className={`info-body`}
-                >
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Header>
+                    <Card.Title>{cardTitle}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
+                </Card.Header>
+                <Card.Body>
                     {children}
-                </div>
-            </div>
-        </div>
+                </Card.Body>
+            </Card.Body>
+        </Card>
+
     )
 }
 

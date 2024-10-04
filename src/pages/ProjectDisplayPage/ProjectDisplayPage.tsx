@@ -13,6 +13,7 @@ import TagListing from '../../components/TagListing/TagListing';
 import { ETagGroup } from '../../enums/ETagGroup';
 import ContactCard from '../../components/ContactCard/ContactCard';
 import { ICollaborator } from '../../interfaces/ICollaborator';
+import { Button, Card } from 'react-bootstrap';
 
 
 function ProjectDisplayPage() {
